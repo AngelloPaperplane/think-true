@@ -1,0 +1,51 @@
+.afterHeroSection {
+  width: 100%;
+}
+
+.afterHeroContainer {
+  padding-top: 33vh;
+  padding-bottom: 15vh;
+}
+
+.textAfterHero {
+  font-size: 31px;
+  line-height: 34px;
+  color: #363233;
+  max-width: 50%;
+  margin-bottom: 40px;
+}
+
+.wrapperAfterHeroTeam .textAfterHero{
+  margin-left: auto;
+  max-width: 60%;
+}
+
+
+.videoContainer{
+    margin: 0 auto;
+    margin-top: 15vh;
+    width: 80%;
+    aspect-ratio: 16/9;
+    position: relative;
+}
+
+.bigCircle{
+    position: absolute;
+    width: 200vh;
+    height: 200vh;
+    border: 1px solid #000;
+    border-radius: 50%;
+    top: 50%;
+    left: -50%;
+}
+
+.playVideo{
+    background-image: url(/icons/play.png);
+    cursor: pointer;
+    height: 100px;
+    left: 50%;
+    margin: -50px 0 0 -50px;
+    position: absolute;
+    top: 50%;
+    width: 100px;
+}

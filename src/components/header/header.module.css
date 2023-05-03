@@ -1,0 +1,30 @@
+.siteHeader{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    padding: 30px 0;
+}
+
+.siteLogo{
+    width: 100px;
+    height: 75px;
+    background-image: url(/icons/logo-dark.png);
+    cursor: pointer;
+}
+
+.activeMenu .siteLogo{
+    background-image: url(/icons/logo-white.png);
+}
+
+.burger{
+    width: 40px;
+    height: 40px;
+    background-image: url(/icons/menu-dark.png);
+    cursor: pointer;
+}
+
+.activeMenu .burger{
+    background-image: url(/icons/close-white.png);
+}

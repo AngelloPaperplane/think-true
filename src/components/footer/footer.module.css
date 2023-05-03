@@ -1,0 +1,208 @@
+.formSection {
+  z-index: 1;
+}
+
+.formContainer {
+  position: relative;
+}
+
+.patternForm {
+  width: 2vw;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: -10vh;
+  background-color: #faa300;
+}
+
+.patternForm:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: 155px;
+  background-repeat: repeat;
+  background-position: center center;
+  background-image: url(/icons/04-circle-orange.png);
+  mix-blend-mode: multiply;
+}
+
+.formTitle {
+  font-weight: 700;
+  font-size: 260px;
+  text-align: center;
+  color: #00b099;
+  margin-bottom: 15vh;
+}
+
+.infoForm {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: #363233;
+  width: 50%;
+}
+
+.wrapperForm {
+  width: 100%;
+  gap: 2%;
+  margin-top: 7vh;
+  margin-bottom: -10vh;
+}
+
+.siteForm {
+  width: 50%;
+  flex-wrap: wrap;
+
+  gap: 2%;
+  width: 48%;
+}
+
+.inputForm {
+  padding: 15px 15px;
+  width: 48%;
+  border: 1px solid #363233;
+  color: #363233;
+  font-size: 22px;
+}
+
+.inputForm:focus {
+  outline: none;
+}
+
+textarea.inputForm {
+  width: 100%;
+  margin-top: 20px;
+  resize: none;
+  aspect-ratio: 16/4;
+}
+
+.contactBlock {
+  width: 48%;
+  color: #363233;
+  gap: 2%;
+  flex-wrap: wrap;
+}
+
+.directionGroup {
+  width: 48%;
+  padding-left: 30px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.pinIcon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  background-image: url(/icons/pin.png);
+}
+
+.cityName {
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  letter-spacing: 0.06em;
+  margin-bottom: 2.5px;
+}
+
+.infoUbication {
+  font-size: 19px;
+  line-height: 21px;
+  letter-spacing: 0.08em;
+}
+
+.infoUbication span {
+  font-weight: 700;
+}
+
+.imgSiteFooter {
+  width: 97%;
+  margin-left: 3%;
+  aspect-ratio: 5/7;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.siteFooter {
+  background-color: #363233;
+  padding: 50px 0 30px;
+}
+
+.footerLogo {
+  background-image: url(/icons/logo-large.png);
+  width: 200px;
+  height: 50px;
+}
+
+.footerItems {
+  width: 50%;
+  margin-top: 25px;
+}
+
+.socialWrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2%;
+  width: 50%;
+}
+
+.followText {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 23px;
+  color: #f2f0eb;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.socialIcon {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.footerMenu {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.itemFooterMenu {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 23px;
+  letter-spacing: 0.08em;
+  color: #f2f0eb;
+  margin-bottom: 25px;
+}
+
+.legacyText {
+  font-style: normal;
+  font-weight: 325;
+  font-size: 20px;
+  line-height: 24px;
+  color: #ffffff;
+  margin-top: 30px;
+}
+
+.paperplaneText {
+  font-style: normal;
+  font-weight: 325;
+  font-size: 15px;
+  line-height: 18px;
+  color: #ffffff;
+  margin: 10px 0 0;
+  text-align: center;
+}

@@ -1,0 +1,87 @@
+.wrapperMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: #363233;
+  display: flex;
+  padding: 22.5vh 0;
+  overflow-y: auto;
+}
+
+.containerMenu {
+  height: calc(100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  color: #f2f0eb;
+}
+
+.containerMenu.containerMenu {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.ulMenu {
+  width: 100%;
+}
+
+.itemMenu {
+  padding: 0vh 0;
+  width: 100%;
+  background-color: transparent;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  padding-left: 0;
+}
+
+.itemMenu:hover{
+  padding-left: 2vw;
+}
+
+.itemMenu:hover .itemName {
+  background-color: #d02e2a;
+  padding-left: 2.5vw;
+  transition: all 0.5s ease-in-out;
+}
+
+.itemName {
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 77px;
+  letter-spacing: 0.11em;
+  padding: 2.5vh 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.innerUlItemMenu {
+  width: 100%;
+  max-height: 0px;
+  overflow: hidden;
+  padding: 0px 0 0px 0;
+  padding-left: 5vw;
+  transition: all 0.5s linear 0s, padding-left 0s linear 0.5s;
+}
+
+.itemMenu:hover .innerUlItemMenu {
+  max-height: 40vh;
+  padding: 30px 0 15px;
+  padding-left: 5vw;
+  transition: all 0.5s linear 0.4s, padding-left 0s;
+}
+
+.innerItemMenu {
+  font-size: 30px;
+  line-height: 27px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  opacity: 0.7;
+  transition: all .5s ease-in-out;
+}
+
+.innerItemMenu:hover {
+  font-weight: 700;
+  opacity: 1;
+}

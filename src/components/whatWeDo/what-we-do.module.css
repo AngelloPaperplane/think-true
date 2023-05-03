@@ -1,0 +1,82 @@
+.whatWeDoSection {
+  width: 100%;
+  position: relative;
+}
+
+.whatWeDoCo {
+  padding: 20vh 0;
+}
+
+.titleSection {
+  font-weight: 700;
+  font-size: 220px;
+  line-height: 146px;
+  color: #363233;
+  text-align: center;
+}
+
+.subtitleSection {
+  text-transform: uppercase;
+  font-size: 50px;
+  line-height: 43px;
+  text-transform: uppercase;
+  color: #faa300;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.infoSection {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+  color: #363233;
+  margin: 50px auto 150px;
+  width: 60%;
+}
+
+.detailsSec {
+  width: 100%;
+  align-items: stretch;
+  gap: 2%;
+}
+
+.imgSection {
+  width: 48%;
+  background-image: url(/images/04-home.jpg);
+}
+
+.detailsWhatWeDo {
+  width: 48%;
+  padding: 10vh 0;
+}
+
+.itemWhatWeDo{
+    padding: 40px 0;
+    gap: 20px;
+}
+
+.textFeature {
+  color: #363233;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 29px;
+}
+
+.line{
+    width: 50px;
+    height: 3px;
+    background-color: #FAA300;
+    position: relative;
+}
+
+.ballLine{
+    width: 20px;
+    height: 20px;
+    background-color: #FAA300;
+    position: absolute;
+    top: 50%;
+    margin-top: -10px;
+    left: calc(100% - 10px);
+    border-radius: 50%;
+}

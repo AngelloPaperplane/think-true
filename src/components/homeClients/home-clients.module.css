@@ -1,0 +1,50 @@
+.clientsSection {
+  padding: 40vh 0 10vh;
+  text-align: center;
+}
+
+.clientsContainer {
+  position: relative;
+}
+
+.clientsTitle {
+  font-weight: 700;
+  font-size: 300px;
+  color: #363233;
+}
+
+.subtitleClients {
+  color: #00b099;
+  font-weight: 700;
+  font-size: 50px;
+}
+
+.infoClients,
+.infoCollaborators {
+  font-size: 25px;
+  line-height: 34px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+  color: #363233;
+}
+
+.infoClients {
+  margin: 60px auto 30px;
+  margin-bottom: 30px;
+}
+
+.collaboratorsContainer{
+    width: 100%;
+    margin: 100px 0;
+}
+
+.collaboratorsContainer{
+    gap: 0%;
+}
+
+
+.collaboratorBox{
+    width: 25%;
+    aspect-ratio: 10/3;
+}
