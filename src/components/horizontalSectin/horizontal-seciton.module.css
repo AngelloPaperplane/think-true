@@ -3,6 +3,10 @@
   display: flex;
 }
 
+.horizontalSection.whatWeDoSec {
+  margin-top: 50vh;
+}
+
 .containerHorizontal {
   overflow: hidden;
 }
@@ -39,12 +43,25 @@
   position: relative;
 }
 
+.whatWeDoSec .solidColod {
+  background-color: #fff;
+}
+
 .patternBg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 7.5vh;
+}
+
+.whatWeDoSec .patternBg {
+  width: 10vw;
+  left: initial;
+  right: 0;
+  transform: translateX(50%);
+  top: 5%;
+  mix-blend-mode: multiply;
 }
 
 .innerPatternBg {
@@ -55,6 +72,10 @@
   background-repeat: repeat;
   background-position: center center;
   mix-blend-mode: multiply;
+}
+
+.whatWeDoSec .innerPatternBg {
+  background-repeat: no-repeat;
 }
 
 .imgBlock {
@@ -69,12 +90,33 @@
   position: absolute;
 }
 
+.whatWeDoSec .contentBlock {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
 .titleBlock {
   font-weight: 700;
-  font-size: 130px;
+  font-size: 7vw;
   line-height: 154px;
   color: #f2f0eb;
   text-shadow: 0px 4px 10px rgba(54, 50, 51, 0.5);
+}
+
+.whatWeDoSec .titleBlock {
+  color: #363233;
+}
+
+.indexBlock {
+  font-size: 21vw;
+  line-height: 198px;
+  color: #363233;
+  align-self: center;
+}
+
+.whatWeDoSec .block:nth-child(odd) .indexBlock {
+  transform: translateX(-62.5%);
 }
 
 .subtitleBlock {
@@ -93,8 +135,19 @@
   margin: 5vh 0;
 }
 
-.ctaBlock{
-    cursor: pointer;
+.whatWeDoSec .infoBlock {
+  width: 50%;
+  padding-right: 5vw;
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: #f2f0eb;
+  margin: 5vh 0;
+}
+
+.ctaBlock {
+  cursor: pointer;
 }
 
 .ctaText {
@@ -118,4 +171,317 @@
   height: 30px;
   border-radius: 50%;
   margin-top: -15px;
+}
+
+.afterHeroAbout {
+  width: 100vw;
+  height: 100vh;
+  background-color: #faa300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleAfterHeroAbout {
+  font-size: 13vw;
+  line-height: 13vw;
+  color: #363233;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.textAfterHeroAbout {
+  width: 50%;
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: #000000;
+  padding-right: 5%;
+}
+
+.embraceBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.embraceBlock:before {
+  content: '';
+  position: absolute;
+  bottom: 5%;
+  left: 35%;
+  width: 120vw;
+  height: 120vw;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+.embraceBlockContainer {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.titleEmbrace {
+  font-weight: 400;
+  font-size: 160px;
+  line-height: 10vw;
+  text-align: center;
+  color: #363233;
+}
+
+.callToActionBlockContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0 5% 0 0;
+  gap: 5%;
+}
+
+.imgCallToAction {
+  width: 40%;
+  height: 100%;
+}
+
+.titleCallToAction {
+  font-weight: 400;
+  font-size: 8vw;
+  line-height: 95px;
+  color: #000000;
+  align-self: flex-end;
+  padding-bottom: 5%;
+  width: 55%;
+}
+
+.bigTitle {
+  width: 50%;
+  background-size: 90%;
+}
+
+.textBigTitleBlock {
+  width: 45%;
+  align-self: flex-end;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 49px;
+  color: #363233;
+  margin-bottom: 2.5%;
+}
+
+.imgTextRight {
+  padding-left: 5%;
+  padding-right: 0;
+}
+
+.imgTextRight .titleCallToAction {
+  font-weight: 400;
+  font-size: 52px;
+  line-height: 64px;
+  color: #000000;
+}
+
+.imgBlockImgText {
+  width: 50%;
+}
+
+.videoBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoContainerBlock {
+  width: 90%;
+  aspect-ratio: 16/9;
+  background-color: #8c8c8c;
+  position: relative;
+}
+
+.iconPlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  margin-top: -60px;
+  margin-left: -60px;
+  background-image: url(/icons/play.png);
+}
+
+.impactBlock {
+  z-index: 1;
+}
+
+.textImpactBlock {
+  width: 50%;
+  padding: 0 2.5% 0 5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleImpact {
+  font-weight: 700;
+  font-size: 10vw;
+  line-height: 10vw;
+  color: #363233;
+}
+
+.textImpact {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 27px;
+  color: #000000;
+  width: 70%;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.contImgImpact {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background: #4eb4c8;
+}
+
+.wrapperImgImpact {
+  width: 80%;
+  aspect-ratio: 4/5;
+  margin-left: -5%;
+  position: relative;
+}
+
+.imgImpact {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.committedSubtitle {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 60px;
+  color: #363233;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.committed.embraceBlock:before {
+  left: -60%;
+  width: 150vw;
+  height: 150vw;
+}
+
+.circlesBlock {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.circleContainer {
+  border-radius: 50%;
+  border: 1px solid #000;
+  text-align: center;
+  width: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.partnersCircle {
+  margin-bottom: -40%;
+}
+
+.thinkCircle {
+  width: 70%;
+}
+
+.communitiesCircle {
+  width: 60%;
+}
+
+.thinkCircle .textInnerCircle {
+  top: 10%;
+}
+.communitiesCircle .textInnerCircle {
+  top: 30%;
+}
+
+.textInnerCircle {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 34px;
+  text-align: center;
+  color: #363233;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 7%;
+}
+
+.titleBlock {
+  position: relative;
+}
+
+.textTitleBlock::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1%;
+  height: 100%;
+}
+
+.textTitleBlock {
+  font-weight: 700;
+  font-size: 10vw;
+  line-height: 151px;
+  color: #f2f0eb;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.titleBlockWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smallBlockTextImg {
+  width: 100%;
+  height: 100%;
+  padding: 5% 5%;
+  gap: 5%;
+}
+
+.smallTextBlockImgText {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 51px;
+  color: #363233;
+  width: 45%;
+  align-self: flex-end;
+}
+
+.wrapperImgBlockImgText{
+  width: 45%;
+  height: 100%;
+  position: relative;
+}
+
+.innerImgBlockImgtext{
+  object-fit: cover;
+  object-position: center center;
 }

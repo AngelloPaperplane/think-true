@@ -12,10 +12,17 @@
     height: 75px;
     background-image: url(/icons/logo-dark.png);
     cursor: pointer;
+    position: relative;
 }
 
 .activeMenu .siteLogo{
     background-image: url(/icons/logo-white.png);
+}
+
+.siteLogo a{
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .burger{

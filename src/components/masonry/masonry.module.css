@@ -1,0 +1,18 @@
+.masonrySection{
+    padding-bottom: 20vh;
+}
+
+.masonryContainer{
+    display: grid;
+    grid-auto-rows: 30vh;
+    gap: 2.5vh;
+}
+
+.innerImgMasonry{
+    position: relative;
+}
+
+.imgMasonry{
+    object-fit: cover;
+    object-position: center center;
+}

@@ -60,7 +60,7 @@ export default function Home() {
         align={'left'}
       />
       <AfterHero content={contentAfterHero} />
-      <HorizontalSection blocksToIterate={horizontalBlocks}/>
+      <HorizontalSection blocksToIterate={horizontalBlocks} classParent='01'/>
       <WhatWeDo />
       <Agency image={'/images/05-home.jpg'} />
       <Clients />
