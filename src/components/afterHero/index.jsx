@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './after-hero.module.css';
 
 const AfterHero = ({ content }) => {
+  console.log(content);
   return (
     <section className={`siteSection ${styles.afterHeroSection}`}>
       <div className={`container ${styles.afterHeroContainer}`}>

@@ -23,7 +23,7 @@ const Jobs = () => {
         lineStyles={{ color: '#D02E2A', left: '20%' }}
         layout={'secondary'}
       />
-      <AfterHero contentAfterHero={contentAfterHero} />
+      <AfterHero content={contentAfterHero} />
     </>
   );
 };
