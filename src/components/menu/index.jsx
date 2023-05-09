@@ -40,7 +40,7 @@ const Menu = ({ setMenuOpened }) => {
               <li
                 className={`${styles.innerItemMenu} news`}
                 onClick={() => setMenuOpened(false)}>
-                JOBS
+                <Link href={'/jobs'}>JOBS</Link>
               </li>
             </ul>
           </li>

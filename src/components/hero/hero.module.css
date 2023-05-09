@@ -9,8 +9,9 @@
 }
 
 .titleHero{
-    font-size: 15vw;
+    font-size: 13vw;
     position: relative;
+    text-align: center;
 }
 
 .lineHero{
