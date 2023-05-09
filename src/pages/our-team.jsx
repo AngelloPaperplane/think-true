@@ -44,7 +44,12 @@ const OurTeam = () => {
         colorLine="#D02E2A"
       />
       <Masonry columns={3} />
-      {Object.entries(popUpMember).length > 0 && <PopUpMember popUpMember={popUpMember} setPopUpMember={setPopUpMember}/>}
+      {Object.entries(popUpMember).length > 0 && (
+        <PopUpMember
+          popUpMember={popUpMember}
+          setPopUpMember={setPopUpMember}
+        />
+      )}
     </>
   );
 };

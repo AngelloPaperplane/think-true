@@ -1,12 +1,11 @@
-import React from "react";
-import styles from "./agency.module.css";
+import React from 'react';
+import styles from './agency.module.css';
 
 const Agency = ({ image }) => {
   return (
     <section
       className={`siteSection bg-cv ${styles.agencySection}`}
-      style={{ backgroundImage: `url(${image})` }}
-    >
+      style={{ backgroundImage: `url(${image})` }}>
       <div className={`${styles.agencyContainer} container`}>
         <h2 className={`${styles.titleAgency} news`}>AGENCY </h2>
         <h3 className={`news ${styles.subtitleAgency}`}>OUR TEAM</h3>

@@ -1,5 +1,5 @@
-.meetUsContainer{
-    padding-bottom: 20vh;
+.meetUsContainer {
+  padding-bottom: 20vh;
 }
 
 .meetUsTitle {
@@ -30,8 +30,6 @@
   position: relative;
 }
 
-
-
 .innerImgMember {
   object-fit: cover;
   object-position: center top;
@@ -39,7 +37,6 @@
   transform: scale(1);
   transition: all 15s linear;
 }
-
 
 .lineColor {
   position: absolute;
@@ -64,7 +61,7 @@
   width: 5px;
   height: 30%;
   transform: perspective(1000px) rotateX(0deg);
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 .ballLine {

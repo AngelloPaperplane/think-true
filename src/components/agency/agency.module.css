@@ -8,7 +8,7 @@
   margin: 20vh 0;
 }
 
-.agencySection:before{
+.agencySection:before {
   content: '';
   position: absolute;
   top: 50%;
@@ -51,6 +51,6 @@
   margin: 5vh 0 -30vh;
 }
 
-.infoAgency:first-of-type{
+.infoAgency:first-of-type {
   margin-bottom: 25px;
 }

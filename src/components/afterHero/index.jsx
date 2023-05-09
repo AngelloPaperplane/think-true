@@ -13,7 +13,10 @@ const AfterHero = ({ content }) => {
 
             <div className={styles.wrapperAfterHeroHome}>
               {content.title.text && (
-                <h2 className={`${styles.titleAfterHero} ${styles[content.title.position]}`}>
+                <h2
+                  className={`${styles.titleAfterHero} ${
+                    styles[content.title.position]
+                  }`}>
                   {content.title.text}
                 </h2>
               )}

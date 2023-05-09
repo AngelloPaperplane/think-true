@@ -1,5 +1,5 @@
-import React from "react";
-import styles from "./home-clients.module.css";
+import React from 'react';
+import styles from './home-clients.module.css';
 
 const Clients = () => {
   return (
@@ -18,10 +18,18 @@ const Clients = () => {
         <p className={styles.infoCollaborators}>These are our collaborators.</p>
       </div>
       <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
-        <div className={`bg-ct ${styles.collaboratorBox}`} style={{backgroundImage: `url(/icons/logo-nike.png)`}}></div>
-        <div className={`bg-ct ${styles.collaboratorBox}`} style={{backgroundImage: `url(/icons/jp-logo.png)`}}></div>
-        <div className={`bg-ct ${styles.collaboratorBox}`} style={{backgroundImage: `url(/icons/una-logo.png)`}}></div>
-        <div className={`bg-ct ${styles.collaboratorBox}`} style={{backgroundImage: `url(/icons/rise-logo.png)`}}></div>
+        <div
+          className={`bg-ct ${styles.collaboratorBox}`}
+          style={{ backgroundImage: 'url(/icons/logo-nike.png)' }}></div>
+        <div
+          className={`bg-ct ${styles.collaboratorBox}`}
+          style={{ backgroundImage: 'url(/icons/jp-logo.png)' }}></div>
+        <div
+          className={`bg-ct ${styles.collaboratorBox}`}
+          style={{ backgroundImage: 'url(/icons/una-logo.png)' }}></div>
+        <div
+          className={`bg-ct ${styles.collaboratorBox}`}
+          style={{ backgroundImage: 'url(/icons/rise-logo.png)' }}></div>
       </div>
     </section>
   );

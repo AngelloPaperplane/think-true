@@ -1,8 +1,8 @@
-.containerTitleLine{
-    /* width: 100%; */
-    position: relative;
-    padding-bottom: 50vh;
-    margin-bottom: 15vh;
+.containerTitleLine {
+  /* width: 100%; */
+  position: relative;
+  padding-bottom: 50vh;
+  margin-bottom: 15vh;
 }
 
 .titleLine {
@@ -13,21 +13,20 @@
   color: #363233;
 }
 
-
-.lineTitle{
-    position: absolute;
-    top: 110%;
-    width: 5px;
-    height: 48vh;
+.lineTitle {
+  position: absolute;
+  top: 110%;
+  width: 5px;
+  height: 48vh;
 }
 
-.ballLine{
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-top: -15px;
-    margin-left: -15px;
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
+.ballLine {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-top: -15px;
+  margin-left: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
 }

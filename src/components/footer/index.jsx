@@ -1,6 +1,6 @@
-import Image from "next/image";
-import React from "react";
-import styles from "./footer.module.css";
+import Image from 'next/image';
+import React from 'react';
+import styles from './footer.module.css';
 
 const Footer = () => {
   return (
@@ -28,19 +28,18 @@ const Footer = () => {
               />
               <textarea
                 className={styles.inputForm}
-                placeholder="Message"
-              ></textarea>
+                placeholder="Message"></textarea>
             </form>
             <div className={`flex j-s a-s ${styles.contactBlock}`}>
               <div className={styles.directionGroup}>
                 <div className={`${styles.pinIcon} bg-ct`}></div>
                 <h3 className={`bold ${styles.cityName}`}>Los Angeles</h3>
                 <p className={styles.infoUbication}>
-                  <span>A.</span> 5220 Pacific Concourse{" "}
+                  <span>A.</span> 5220 Pacific Concourse{' '}
                 </p>
                 <p className={styles.infoUbication}>Dr. #190 - 90045</p>
                 <p className={styles.infoUbication}>
-                  <span>P.</span> 310.558.0425{" "}
+                  <span>P.</span> 310.558.0425{' '}
                 </p>
               </div>
               <div className={styles.directionGroup}>
@@ -49,11 +48,11 @@ const Footer = () => {
                   New York <br /> (Partner hub)
                 </h3>
                 <p className={styles.infoUbication}>
-                  <span>A.</span> 18 W. 27th St 2nd{" "}
+                  <span>A.</span> 18 W. 27th St 2nd{' '}
                 </p>
                 <p className={styles.infoUbication}>Floor - 10001 CA</p>
                 <p className={styles.infoUbication}>
-                  <span>P.</span> 917.342.0010{" "}
+                  <span>P.</span> 917.342.0010{' '}
                 </p>
               </div>
               <div className={styles.directionGroup}>
@@ -68,11 +67,11 @@ const Footer = () => {
                   295B, Mill Valley - 94941
                 </p>
                 <p className={styles.infoUbication}>
-                  <span>P.</span> 415.331.4789{" "}
+                  <span>P.</span> 415.331.4789{' '}
                 </p>
               </div>
               <div className={`${styles.imgSiteFooter}`}>
-                <Image src={"/images/footer.jpg"} fill alt="" />
+                <Image src={'/images/footer.jpg'} fill alt="" />
               </div>
             </div>
           </div>
@@ -94,8 +93,15 @@ const Footer = () => {
               <li className={styles.itemFooterMenu}>Contact</li>
             </ul>
           </div>
-          <p className={`flex j-c a-c ${styles.legacyText}`}>© 2023 Think-True / All Rights Reserved / Terms & Conditions</p>
-          <p className={styles.paperplaneText}>Designed by: <a href="https://paperplane.com.co" target='_blank' rel='noreferer'>paperplane.co</a></p>
+          <p className={`flex j-c a-c ${styles.legacyText}`}>
+            © 2023 Think-True / All Rights Reserved / Terms & Conditions
+          </p>
+          <p className={styles.paperplaneText}>
+            Designed by:{' '}
+            <a href="https://paperplane.com.co" target="_blank" rel="noreferer">
+              paperplane.co
+            </a>
+          </p>
         </div>
       </footer>
     </>

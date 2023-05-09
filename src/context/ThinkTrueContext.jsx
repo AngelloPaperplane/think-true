@@ -1,17 +1,17 @@
-import React from "react";
-import localFont from "next/font/local";
-const Aleo = localFont({ src: "../styles/fonts/Aleo-Regular.ttf" });
+import React from 'react';
+import localFont from 'next/font/local';
+const Aleo = localFont({ src: '../styles/fonts/Aleo-Regular.ttf' });
 const NewsCycle = localFont({
   src: [
     {
-      path: "../styles/fonts/NewsCycle-Bold.ttf",
-      weight: "400",
-      style: "normal",
+      path: '../styles/fonts/NewsCycle-Bold.ttf',
+      weight: '400',
+      style: 'normal',
     },
     {
-      path: "../styles/fonts/NewsCycle-Bold.ttf",
-      weight: "700",
-      style: "normal",
+      path: '../styles/fonts/NewsCycle-Bold.ttf',
+      weight: '700',
+      style: 'normal',
     },
   ],
 });

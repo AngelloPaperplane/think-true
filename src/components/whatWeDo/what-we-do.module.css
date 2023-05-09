@@ -51,9 +51,9 @@
   padding: 10vh 0;
 }
 
-.itemWhatWeDo{
-    padding: 40px 0;
-    gap: 20px;
+.itemWhatWeDo {
+  padding: 40px 0;
+  gap: 20px;
 }
 
 .textFeature {
@@ -63,20 +63,20 @@
   line-height: 29px;
 }
 
-.line{
-    width: 50px;
-    height: 3px;
-    background-color: #FAA300;
-    position: relative;
+.line {
+  width: 50px;
+  height: 3px;
+  background-color: #faa300;
+  position: relative;
 }
 
-.ballLine{
-    width: 20px;
-    height: 20px;
-    background-color: #FAA300;
-    position: absolute;
-    top: 50%;
-    margin-top: -10px;
-    left: calc(100% - 10px);
-    border-radius: 50%;
+.ballLine {
+  width: 20px;
+  height: 20px;
+  background-color: #faa300;
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  left: calc(100% - 10px);
+  border-radius: 50%;
 }

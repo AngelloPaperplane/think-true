@@ -34,17 +34,16 @@
   margin-bottom: 30px;
 }
 
-.collaboratorsContainer{
-    width: 100%;
-    margin: 100px 0;
+.collaboratorsContainer {
+  width: 100%;
+  margin: 100px 0;
 }
 
-.collaboratorsContainer{
-    gap: 0%;
+.collaboratorsContainer {
+  gap: 0%;
 }
 
-
-.collaboratorBox{
-    width: 25%;
-    aspect-ratio: 10/3;
+.collaboratorBox {
+  width: 25%;
+  aspect-ratio: 10/3;
 }

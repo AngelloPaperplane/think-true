@@ -475,13 +475,13 @@
   align-self: flex-end;
 }
 
-.wrapperImgBlockImgText{
+.wrapperImgBlockImgText {
   width: 45%;
   height: 100%;
   position: relative;
 }
 
-.innerImgBlockImgtext{
+.innerImgBlockImgtext {
   object-fit: cover;
   object-position: center center;
 }

@@ -27,7 +27,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
             invalidateOnRefresh: true,
             anticipatePin: 1,
 
-            end: () => '+=' + window.innerWidth,
+            end: () => `+=${window.innerWidth}`,
           },
         });
 
@@ -200,7 +200,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                   <div
                     className={`${styles.imgCallToAction} bg-cv`}
                     style={{
-                      backgroundImage: `url(/images/02-about.jpg)`,
+                      backgroundImage: 'url(/images/02-about.jpg)',
                     }}></div>
                   <h2 className={styles.titleCallToAction}>
                     We are a paradigm shift and clarion call to action.
@@ -215,7 +215,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                   <div
                     className={`${styles.bigTitle} bg-ct`}
                     style={{
-                      backgroundImage: `url(/icons/logo-white.png)`,
+                      backgroundImage: 'url(/icons/logo-white.png)',
                       backgroundColor: '#00B099',
                     }}></div>
                   <h2 className={styles.textBigTitleBlock}>
@@ -240,7 +240,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                   <div
                     className={`${styles.imgBlockImgText} bg-cv`}
                     style={{
-                      backgroundImage: `url(/images/about-03.jpg)`,
+                      backgroundImage: 'url(/images/about-03.jpg)',
                     }}></div>
                 </div>
               </div>
@@ -310,7 +310,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
                   className={styles.titleBlockWrapper}
-                  style={{ backgroundColor: `#D02E2A` }}>
+                  style={{ backgroundColor: '#D02E2A' }}>
                   <h2 className={styles.textTitleBlock}>PHILANTHROPY</h2>
                 </div>
               </div>
@@ -336,7 +336,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
                   className={styles.titleBlockWrapper}
-                  style={{ backgroundColor: `#00B099` }}>
+                  style={{ backgroundColor: '#00B099' }}>
                   <h2 className={styles.textTitleBlock}>PEOPLE</h2>
                 </div>
               </div>
@@ -363,7 +363,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
                   className={styles.titleBlockWrapper}
-                  style={{ backgroundColor: `#FAA300` }}>
+                  style={{ backgroundColor: '#FAA300' }}>
                   <h2 className={styles.textTitleBlock}>PARTNERS</h2>
                 </div>
               </div>
@@ -464,7 +464,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
 
                     {type === 'whatWeDo' && (
                       <div className={`news ${styles.indexBlock}`}>
-                        {i + 1 < 10 ? '0' + (i + 1) : i + 1}
+                        {i + 1 < 10 ? `0${i + 1}` : i + 1}
                       </div>
                     )}
                   </div>

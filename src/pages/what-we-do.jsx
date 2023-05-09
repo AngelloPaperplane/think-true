@@ -77,7 +77,11 @@ const WhatWeDo = () => {
         lineStyles={{ color: '#D02E2A', left: '30%' }}
         layout={'secondary'}
       />
-      <HorizontalSection blocksToIterate={horizontalBlocks} classParent='01' type="whatWeDo" />
+      <HorizontalSection
+        blocksToIterate={horizontalBlocks}
+        classParent="01"
+        type="whatWeDo"
+      />
     </>
   );
 };

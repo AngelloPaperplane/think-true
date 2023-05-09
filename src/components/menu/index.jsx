@@ -5,7 +5,8 @@ import { useRouter } from 'next/router';
 
 const Menu = ({ setMenuOpened }) => {
   const router = useRouter();
-  const {pathname} = router;
+  const { pathname } = router;
+  console.log(pathname);
   return (
     <div className={styles.wrapperMenu}>
       <div className={`container ${styles.containerMenu}`}>

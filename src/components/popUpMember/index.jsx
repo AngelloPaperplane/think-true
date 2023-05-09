@@ -4,14 +4,18 @@ import React from 'react';
 import styles from './pop-up-member.module.css';
 
 const PopUpMember = ({ popUpMember, setPopUpMember }) => {
-  const closePopUp = () => {
-    setPopUpMember({});
-  };
+  // const closePopUp = () => {
+  //   setPopUpMember({});
+  // };
   return (
     <div className={styles.popUpMember}>
-      <div className={styles.bgPopUpMember} onClick={() => setPopUpMember({})}></div>
+      <div
+        className={styles.bgPopUpMember}
+        onClick={() => setPopUpMember({})}></div>
       <div className={`flex j-c a-c ${styles.wrapperPopUpMember}`}>
-        <div className={`${styles.closePopUp} bg-ct`} onClick={() => setPopUpMember({})}></div>
+        <div
+          className={`${styles.closePopUp} bg-ct`}
+          onClick={() => setPopUpMember({})}></div>
         <div className={styles.wrapperImgMember}>
           <Image
             className={styles.imgMember}
@@ -20,9 +24,13 @@ const PopUpMember = ({ popUpMember, setPopUpMember }) => {
             alt={`${popUpMember.name.toLowerCase()} image`}
           />
         </div>
-        <div className={styles.infoMember} style={{backgroundColor: `${popUpMember.color}`}}>
+        <div
+          className={styles.infoMember}
+          style={{ backgroundColor: `${popUpMember.color}` }}>
           <h3 className={`news ${styles.nameMember}`}>{popUpMember.name}</h3>
-          <h4 className={`news ${styles.professionMember}`}>{popUpMember.profession}</h4>
+          <h4 className={`news ${styles.professionMember}`}>
+            {popUpMember.profession}
+          </h4>
           <div
             className={styles.descriptionMember}
             dangerouslySetInnerHTML={{

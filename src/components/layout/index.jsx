@@ -1,10 +1,10 @@
-import { ThinkTrue } from "@/context/ThinkTrueContext";
-import React, { useContext } from "react";
-import Footer from "../footer";
-import Header from "../header";
-import styles from "./layout.module.css";
+import { ThinkTrue } from '@/context/ThinkTrueContext';
+import React, { useContext } from 'react';
+import Footer from '../footer';
+import Header from '../header';
+import styles from './layout.module.css';
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   const { Aleo } = useContext(ThinkTrue);
   return (
     <>
