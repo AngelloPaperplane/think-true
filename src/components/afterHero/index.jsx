@@ -12,7 +12,7 @@ const AfterHero = ({ content }) => {
             )}
 
             <div className={styles.wrapperAfterHeroHome}>
-              {content.title.text && (
+              {content.title && content.title.text && (
                 <h2
                   className={`${styles.titleAfterHero} ${
                     styles[content.title.position]

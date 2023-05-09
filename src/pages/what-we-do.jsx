@@ -19,6 +19,7 @@ const WhatWeDo = () => {
       colorText: '#363233',
       pattern: 'arrows',
       color: '#D02E2A',
+      // eslint-disable-next-line quotes
       text: "We craft effective and creative multicultural marketing by understanding and profiling target personas. Your success lies in our ability to capture and hold people's attention by understanding what makes them tick.",
     },
     {
@@ -59,6 +60,7 @@ const WhatWeDo = () => {
       colorText: '#363233',
       pattern: 'circles',
       color: '#D9AEA7',
+      // eslint-disable-next-line quotes
       text: "Our digital strategy expertise specializes in creating a unique brand perspective in digital channels. We'll help you connect with your target audience through tailored content and build a sustainable ecosystem for your brand.",
     },
   ];

@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import Image from 'next/image';
 import React from 'react';
 import styles from './meet-us.module.css';

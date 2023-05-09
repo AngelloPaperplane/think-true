@@ -1,3 +1,4 @@
+/* eslint-disable quotes */
 import HorizontalSection from '@/components/horizontalSectin';
 import React from 'react';
 

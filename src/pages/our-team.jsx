@@ -12,6 +12,7 @@ const OurTeam = () => {
   const contentAfterHero = {
     text: [
       'Our team members bring a wealth of knowledge and experience that allows us to create unique and multidimensional marketing experiences for our clients.',
+      // eslint-disable-next-line quotes
       "We believe that our multicultural approach to marketing is essential in today's globalized world and allows us to connect with audiences on a deeper level.",
     ],
     posterVideo: '/images/02-home.jpg',
