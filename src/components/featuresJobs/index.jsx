@@ -24,10 +24,9 @@ const FeaturesJobs = ({ contentFeaturesJobs, last }) => {
       {last && (
         <div className={styles.growWrapper}>
           <div className={styles.line}>
-            <div className={styles.ball}>
-            </div>
+            <div className={styles.ball}></div>
           </div>
-              <p className={styles.growText}>GROW WITH US</p>
+          <p className={styles.growText}>GROW WITH US</p>
         </div>
       )}
     </div>

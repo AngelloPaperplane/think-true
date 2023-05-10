@@ -63,9 +63,15 @@ const Hero = ({
       </div>
       {layout === 'poster' && (
         <div className={`container ${styles.infoClientContainer}`}>
-          <p>Client: <span>Rise</span></p>
-          <p>Location: <span>Los Angeles</span></p>
-          <p>Date: <span>November 2022</span></p>
+          <p>
+            Client: <span>Rise</span>
+          </p>
+          <p>
+            Location: <span>Los Angeles</span>
+          </p>
+          <p>
+            Date: <span>November 2022</span>
+          </p>
         </div>
       )}
     </section>

@@ -25,7 +25,9 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
             }}>
             {img.content && (
               <>
-                <Link href={`/work/${img.content.link}`} className={styles.linkDetailWork}></Link>
+                <Link
+                  href={`/work/${img.content.link}`}
+                  className={styles.linkDetailWork}></Link>
                 <div className={styles.contentImgGrid}>
                   <h2 className={`news ${styles.titleGridImg}`}>
                     {img.content.title}{' '}

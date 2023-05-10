@@ -7,7 +7,10 @@ const DetailWork = () => {
     text: [
       'RISE is a national nonprofit that educates and empowers the sports community to end racism, champion social justice and improve race relations.',
     ],
-    title: { text: 'RISE Develops Champions of Change Amongst Sports Fans', position: 'left' },
+    title: {
+      text: 'RISE Develops Champions of Change Amongst Sports Fans',
+      position: 'left',
+    },
     layout: 'team',
   };
   return (

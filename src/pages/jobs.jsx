@@ -40,7 +40,7 @@ const Jobs = () => {
   const contentImgText = {
     order: 'textImg',
     text: '<p>Sometimes you just need an opportunity: If you are looking for an <span>internship</span> opportunity reach out. </p>',
-    img: '/images/02-jobs.jpg'
+    img: '/images/02-jobs.jpg',
   };
   return (
     <>

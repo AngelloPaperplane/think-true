@@ -56,7 +56,7 @@ const OurTeam = () => {
         title={'Chemistry that goes beyond everything'}
         colorLine="#D02E2A"
       />
-      <Masonry columns={3} gridPictures={gridPictures}/>
+      <Masonry columns={3} gridPictures={gridPictures} />
       {Object.entries(popUpMember).length > 0 && (
         <PopUpMember
           popUpMember={popUpMember}

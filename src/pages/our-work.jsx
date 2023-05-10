@@ -16,7 +16,7 @@ const OurWork = () => {
         title: 'VISA',
         subtitle: 'ANOTHER DIMENSION',
         color: '#00B099',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -27,7 +27,7 @@ const OurWork = () => {
         title: 'NIKE',
         subtitle: 'EMPLOYEE EMPOWERMENT',
         color: '#D02E2A',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -38,7 +38,7 @@ const OurWork = () => {
         title: 'JPMC',
         subtitle: 'BACK TO THE YARD',
         color: '#FAA300',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -49,7 +49,7 @@ const OurWork = () => {
         title: 'NIKE N7',
         subtitle: 'NATIVE AMERICAN & INDIGENOUS COMMUNITIES',
         color: '#4EB4C8',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -60,7 +60,7 @@ const OurWork = () => {
         title: 'NBA 2K LEAGUE',
         subtitle: 'AN ALL STAR EXPERIENCE',
         color: '#D02E2A',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -71,7 +71,7 @@ const OurWork = () => {
         title: 'NIKE STRENGTHENING',
         subtitle: 'A COMMUNITY THROUGH SPORT',
         color: '#FAA300',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -82,7 +82,7 @@ const OurWork = () => {
         title: 'UBS',
         subtitle: 'A NEW ERA OF WEALTH MANAGEMENT',
         color: '#4EB4C8',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -93,7 +93,7 @@ const OurWork = () => {
         title: 'RISE',
         subtitle: 'DEVELOPS CHAMPIONS OF CHANGE AMONGST SPORTS FANS',
         color: '#00B099',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -104,7 +104,7 @@ const OurWork = () => {
         title: 'NIKE UNITE',
         subtitle: 'A CURATED GRAND OPENING EXPERIENCE',
         color: '#FAA300',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -115,7 +115,7 @@ const OurWork = () => {
         title: 'CHASE',
         subtitle: '#SHOWMEYOURWALK',
         color: '#D02E2A',
-        link: '1'
+        link: '1',
       },
     },
     {
@@ -126,7 +126,7 @@ const OurWork = () => {
         title: 'JPMC',
         subtitle: 'CLOSING THE RACIAL WEALTH GAP',
         color: '#4EB4C8',
-        link: '1'
+        link: '1',
       },
     },
   ];
