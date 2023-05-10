@@ -1,0 +1,64 @@
+.imgTextSection {
+  width: 100%;
+  position: relative;
+}
+
+.imgTextContainer {
+  position: relative;
+  gap: 5%;
+}
+
+.textBlock {
+  width: 40%;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: #000000;
+}
+
+.textBlock span {
+  font-weight: 700;
+  font-size: 30px;
+}
+
+.imgBlock {
+  width: 50%;
+  aspect-ratio: 4/5;
+  position: relative;
+}
+
+.innerImgBlock {
+  object-fit: cover;
+}
+
+.line {
+  width: 5px;
+  height: 20vh;
+  margin: 30px auto 0;
+  position: relative;
+  background-color: #faa300;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #faa300;
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 50%;
+  margin-left: -10px;
+}
+
+.textBallLine {
+  position: absolute;
+  top: calc(100% + 30px);
+  white-space: nowrap;
+  left: 0;
+  transform: translateX(-50%);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 25px;
+  letter-spacing: 0.12em;
+  color: #363233;
+}

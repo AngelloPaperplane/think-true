@@ -1,5 +1,5 @@
 /* eslint-disable quotes */
-import HorizontalSection from '@/components/horizontalSectin';
+import HorizontalSection from '@/components/horizontalSection';
 import React from 'react';
 
 const AboutUs = () => {

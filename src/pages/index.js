@@ -2,7 +2,7 @@ import Head from 'next/head';
 // import styles from '@/styles/Home.module.css';
 import Hero from '@/components/hero';
 import AfterHero from '@/components/afterHero';
-import HorizontalSection from '@/components/horizontalSectin';
+import HorizontalSection from '@/components/horizontalSection';
 import WhatWeDo from '@/components/whatWeDo';
 import Agency from '@/components/agency';
 import Clients from '@/components/homeClients';

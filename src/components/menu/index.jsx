@@ -49,7 +49,7 @@ const Menu = ({ setMenuOpened }) => {
             <p
               className={`news bold uppercase ${styles.itemName}`}
               onClick={() => setMenuOpened(false)}>
-              OUR WORK
+              <Link href={'/our-work'}>OUR WORK</Link>
             </p>
           </li>
           <li className={styles.itemMenu}>

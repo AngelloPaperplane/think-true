@@ -1,5 +1,5 @@
 import Hero from '@/components/hero';
-import HorizontalSection from '@/components/horizontalSectin';
+import HorizontalSection from '@/components/horizontalSection';
 import Head from 'next/head';
 import React from 'react';
 

@@ -1,0 +1,19 @@
+.heroText{
+    padding: 15vh 0 20vh;
+}
+.heroTextContainer {
+  text-align: center;
+}
+
+.titleHeroText {
+  font-weight: 700;
+  font-size: 256px;
+  color: #363233;
+  margin-bottom: 1vh;
+}
+
+.subtitleHeroText {
+  font-weight: 700;
+  font-size: 50px;
+  color: #000000;
+}

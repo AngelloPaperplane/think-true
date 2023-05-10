@@ -3,8 +3,18 @@
 }
 
 .afterHeroContainer {
-  padding-top: 35vh;
+  padding-top: 37vh;
   padding-bottom: 15vh;
+}
+
+.titleAfterHero {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5vw;
+  line-height: 91px;
+  width: 65%;
+  color: #363233;
+  margin-bottom: 50px;
 }
 
 .textAfterHero {

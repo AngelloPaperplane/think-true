@@ -13,15 +13,6 @@ const AfterHero = ({ content }) => {
             )}
 
             <div className={styles.wrapperAfterHeroHome}>
-              {content.title && content.title.text && (
-                <h2
-                  className={`${styles.titleAfterHero} ${
-                    styles[content.title.position]
-                  }`}>
-                  {content.title.text}
-                </h2>
-              )}
-
               {content.text &&
                 content.text.map((text, i) => (
                   <p
@@ -47,6 +38,14 @@ const AfterHero = ({ content }) => {
         {content && content.layout === 'team' && (
           <>
             <div className={styles.wrapperAfterHeroTeam}>
+              {content.title && content.title.text && (
+                <h2
+                  className={`${styles.titleAfterHero} ${
+                    styles[content.title.position]
+                  }`}>
+                  {content.title.text}
+                </h2>
+              )}
               {content.text &&
                 content.text.map((text, i) => (
                   <p
