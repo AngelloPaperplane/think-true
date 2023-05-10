@@ -1,4 +1,3 @@
-// import DOMPurify from 'dompurify';
 import React from 'react';
 import styles from './features-jobs.module.css';
 
