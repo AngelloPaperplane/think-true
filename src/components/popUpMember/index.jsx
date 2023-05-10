@@ -1,4 +1,4 @@
-import DOMPurify from 'dompurify';
+// import DOMPurify from 'dompurify';
 import Image from 'next/image';
 import React from 'react';
 import styles from './pop-up-member.module.css';
@@ -34,7 +34,7 @@ const PopUpMember = ({ popUpMember, setPopUpMember }) => {
           <div
             className={styles.descriptionMember}
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(popUpMember.description),
+              __html: popUpMember.description,
             }}></div>
         </div>
       </div>

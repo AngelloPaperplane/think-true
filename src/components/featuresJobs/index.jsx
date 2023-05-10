@@ -1,4 +1,4 @@
-import DOMPurify from 'dompurify';
+// import DOMPurify from 'dompurify';
 import React from 'react';
 import styles from './features-jobs.module.css';
 
@@ -17,7 +17,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last }) => {
           <div
             className={styles.featuresJob}
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(contentFeaturesJobs.features),
+              __html: contentFeaturesJobs.features,
             }}></div>
         </div>
       </div>

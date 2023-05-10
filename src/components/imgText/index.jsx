@@ -1,4 +1,4 @@
-import DOMPurify from 'dompurify';
+// import DOMPurify from 'dompurify';
 import Image from 'next/image';
 import React from 'react';
 import styles from './img-text.module.css';
@@ -14,7 +14,7 @@ const ImgText = ({ content }) => {
           <div
             className={styles.wrapperTextBlock}
             dangerouslySetInnerHTML={{
-              __html: DOMPurify.sanitize(content.text),
+              __html: content.text,
             }}></div>
           <div className={styles.line}>
             <div className={styles.ball}></div>
