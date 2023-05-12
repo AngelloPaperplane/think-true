@@ -1,0 +1,40 @@
+.yellowTextImgSection {
+  padding: 20vh 0 10vh;
+}
+
+.topText {
+  width: 50%;
+  text-align: center;
+  margin: 0 auto 10vh;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.2;
+  text-align: center;
+  color: #000000;
+}
+
+.wrapperItems {
+  width: 100%;
+}
+
+.sideYellowText {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: #363233;
+  width: 60%;
+  margin-right: -10%;
+  position: relative;
+  z-index: 1;
+  background-color: #FAA300;
+  padding: 50px 50px;
+  text-align: center;
+  margin-bottom: -4%;
+}
+
+.wrapperSideImg{
+    width: 50%;
+    aspect-ratio: 1/1.1;
+    position: relative;
+}

@@ -2,7 +2,6 @@ import React from 'react';
 import styles from './after-hero.module.css';
 
 const AfterHero = ({ content }) => {
-  console.log(content);
   return (
     <section className={`siteSection ${styles.afterHeroSection}`}>
       <div className={`container ${styles.afterHeroContainer}`}>
@@ -37,7 +36,7 @@ const AfterHero = ({ content }) => {
         )}
         {content && content.layout === 'team' && (
           <>
-            <div className={styles.wrapperAfterHeroTeam}>
+            <div className={`${content.align === 'right' ? styles.alignRight : ''} ${styles.wrapperAfterHeroTeam}`}>
               {content.title && content.title.text && (
                 <h2
                   className={`${styles.titleAfterHero} ${

@@ -1,4 +1,5 @@
 import AfterHero from '@/components/afterHero';
+import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import Masonry from '@/components/masonry';
 import MeetUs from '@/components/meetUs';
@@ -63,6 +64,7 @@ const OurTeam = () => {
           setPopUpMember={setPopUpMember}
         />
       )}
+      <Footer />
     </>
   );
 };

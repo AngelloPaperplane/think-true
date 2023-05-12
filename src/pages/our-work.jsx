@@ -1,3 +1,4 @@
+import Footer from '@/components/footer';
 import HeroText from '@/components/heroText';
 import Masonry from '@/components/masonry';
 import React from 'react';
@@ -139,6 +140,7 @@ const OurWork = () => {
         columns={2}
         gridPictures={gridPictures}
       />
+      <Footer />
     </>
   );
 };

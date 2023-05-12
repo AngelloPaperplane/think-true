@@ -1,4 +1,5 @@
 /* eslint-disable quotes */
+import Footer from '@/components/footer';
 import HorizontalSection from '@/components/horizontalSection';
 import React from 'react';
 
@@ -194,6 +195,8 @@ const AboutUs = () => {
         classParent="03"
         type="about-3"
       />
+
+      <Footer />
     </>
   );
 };

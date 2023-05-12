@@ -47,6 +47,18 @@
   transition: all 0.5s ease-in-out;
 }
 
+.itemMenu:nth-of-type(1):hover .itemName {
+  background-color: #FAA300;
+}
+.itemMenu:nth-of-type(3):hover .itemName {
+  background-color: #00B099;
+}
+.itemMenu:nth-of-type(4):hover .itemName {
+  background-color: #CDB74E;
+}
+
+
+
 .itemName {
   font-weight: 700;
   font-size: 100px;

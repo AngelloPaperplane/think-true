@@ -10,7 +10,7 @@
 .titleSection {
   font-weight: 700;
   font-size: 220px;
-  line-height: 146px;
+  line-height: 1;
   color: #363233;
   text-align: center;
 }
@@ -39,6 +39,7 @@
   width: 100%;
   align-items: stretch;
   gap: 2%;
+  margin: 10vh 0;
 }
 
 .imgSection {
@@ -79,4 +80,17 @@
   margin-top: -10px;
   left: calc(100% - 10px);
   border-radius: 50%;
+}
+
+.sideText {
+  font-size: 25px;
+  line-height: 1.1;
+  color: #000000;
+  width: 45%;
+  padding: 10vh 0;
+}
+
+
+.sideText p{
+  margin-bottom: 5vh;
 }
