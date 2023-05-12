@@ -26,7 +26,7 @@ const SiteSlider = ({ title, projects }) => {
               }
               className={styles.project}>
               <div
-                className={styles.projectImg}
+                className={`bg-cv ${styles.projectImg}`}
                 style={{ backgroundImage: `url(${project.imgProject})` }}></div>
               <div className={`news ${styles.contentProject}`}>
                 <h2 className={styles.titleProject}>{project.title}</h2>

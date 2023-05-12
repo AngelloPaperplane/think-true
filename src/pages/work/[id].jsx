@@ -1,5 +1,6 @@
 import AfterHero from '@/components/afterHero';
 import BigImage from '@/components/bigIMage';
+import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import ImgTextB from '@/components/imgTextB';
 import SiteSlider from '@/components/slider';
@@ -71,6 +72,7 @@ const DetailWork = () => {
         sideText="<p>A 360 rebrand of Champions of Change​</p> <p>Onsite production in addition to physical and digital assets for activation enhancements, such as self-reflection booths for fans to share their stories, a check-in process, and KPI development and reporting. ​</p> <p>Digital strategy of the Champions of Change virtual experience, along with athlete content capture and video production. ​</p> <p>Launch of a virtual reality experience and digital game to further reach sports fans in the digital space. ​</p> <p>With the influx of partnership requests for RISE, we expect to see even more brand presence for Champions of Change as we move into 2024.​</p>"
       />
       <SiteSlider {...otherProjects} />
+      <Footer />
     </>
   );
 };
