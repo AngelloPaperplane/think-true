@@ -66,7 +66,7 @@ export default function Home() {
         title="WHAT WE DO"
         subtitle="TRUE OFFERINGS"
         color="#faa300"
-        image='images/04-home.jpg'
+        image="images/04-home.jpg"
         topText="We commit to honor and celebrate our diverse, culture-creating communities through brand initiatives that center around inclusive and authentic marketing."
         withList={true}
       />

@@ -26,23 +26,23 @@ const DetailWork = () => {
         subtitle: 'NFL',
         color: '#D02E2A',
         text: 'Brand Consulting',
-        imgProject: '/images/nike-1.jpg'
+        imgProject: '/images/nike-1.jpg',
       },
       {
         title: 'SED UT',
         subtitle: 'PERSPICIATIS',
         color: '#FAA300',
         text: 'Brand Consulting',
-        imgProject: '/images/jpmc-1.jpg'
+        imgProject: '/images/jpmc-1.jpg',
       },
       {
         title: 'VISA',
         subtitle: 'NFL',
         color: '#D02E2A',
         text: 'Brand Consulting',
-        imgProject: '/images/nike-1.jpg'
+        imgProject: '/images/nike-1.jpg',
       },
-    ]
+    ],
   };
   return (
     <>

@@ -95,7 +95,8 @@ const Footer = () => {
             </ul>
           </div>
           <p className={`flex j-c a-c ${styles.legacyText}`}>
-            © 2023 Think-True / All Rights Reserved /{' '} <Link href='/privacy-policy'>Terms & Conditions</Link>
+            © 2023 Think-True / All Rights Reserved /{' '}
+            <Link href="/privacy-policy">Terms & Conditions</Link>
           </p>
           <p className={styles.paperplaneText}>
             Designed by:{' '}

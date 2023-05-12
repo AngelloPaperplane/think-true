@@ -36,7 +36,10 @@ const AfterHero = ({ content }) => {
         )}
         {content && content.layout === 'team' && (
           <>
-            <div className={`${content.align === 'right' ? styles.alignRight : ''} ${styles.wrapperAfterHeroTeam}`}>
+            <div
+              className={`${
+                content.align === 'right' ? styles.alignRight : ''
+              } ${styles.wrapperAfterHeroTeam}`}>
               {content.title && content.title.text && (
                 <h2
                   className={`${styles.titleAfterHero} ${

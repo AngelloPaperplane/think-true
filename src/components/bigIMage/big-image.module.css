@@ -33,24 +33,23 @@
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-
-.ballLine{
-    position: absolute;
-    top: 80%;
-    left: 50%;
-    height: 30vh;
-    width: 5px;
-    background-color: #D02E2A;
+.ballLine {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  height: 30vh;
+  width: 5px;
+  background-color: #d02e2a;
 }
 
-.ball{
-    background-color: #D02E2A;
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    width: 20px;
-    height: 20px;
-    margin-top: -10px;
-    margin-left: -10px;
-    border-radius: 50%;
+.ball {
+  background-color: #d02e2a;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
 }
