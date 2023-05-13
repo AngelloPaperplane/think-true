@@ -7,7 +7,9 @@ import WhatWeDo from '@/components/whatWeDo';
 import Agency from '@/components/agency';
 import Clients from '@/components/homeClients';
 
-export default function Home() {
+function Home({data}) {
+  const {hero} = data;
+  console.log(data);
   const contentAfterHero = {
     text: [
       'We are an experiential marketing agency that specializes in brand initiatives that center around engaging diverse communities.',
@@ -51,14 +53,7 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Hero
-        title="Think true"
-        image="/images/01-home.jpg"
-        colorTitle="#FAA300"
-        lineStyles={{ color: '#D02E2A', left: '14%' }}
-        layout={'principal'}
-        align={'left'}
-      />
+      <Hero dataHero={hero} />
       <AfterHero content={contentAfterHero} />
       <HorizontalSection blocksToIterate={horizontalBlocks} classParent="01" />
       <WhatWeDo />
@@ -67,3 +62,14 @@ export default function Home() {
     </>
   );
 }
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`https://paperplane.com.co/dev/thinktrue/wp-json/thinktrue-api/v1/home`);
+  const data = await res.json();
+ 
+  // Pass data to the page via props
+  return { props: { data } };
+}
+
+export default Home;
