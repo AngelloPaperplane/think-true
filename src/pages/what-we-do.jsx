@@ -1,3 +1,4 @@
+import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import HorizontalSection from '@/components/horizontalSection';
 import Head from 'next/head';
@@ -84,6 +85,7 @@ const WhatWeDo = () => {
         classParent="01"
         type="whatWeDo"
       />
+      <Footer />
     </>
   );
 };

@@ -333,3 +333,18 @@ a {
     color-scheme: dark;
   }
 } */
+
+.slick-arrow,
+.slick-dots {
+  display: none;
+  font-size: 0px;
+  opacity: 0;
+  visibility: 0;
+  position: relative;
+  z-index: -100000;
+}
+
+.slick-track {
+  display: flex;
+  gap: 2%;
+}

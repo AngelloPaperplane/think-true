@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import styles from './footer.module.css';
 
@@ -14,7 +15,7 @@ const Footer = () => {
             a plan to capture the key performance indicators (KPIs) to
             materialize impact for your brand.
           </p>
-          <div className={`${styles.wrapperForm} flex j-s a-s`}>
+          <div className={`${styles.wrapperForm} flex j-b a-s`}>
             <form className={`${styles.siteForm} flex j-b a-c`}>
               <input
                 type="text"
@@ -94,7 +95,8 @@ const Footer = () => {
             </ul>
           </div>
           <p className={`flex j-c a-c ${styles.legacyText}`}>
-            © 2023 Think-True / All Rights Reserved / Terms & Conditions
+            © 2023 Think-True / All Rights Reserved /{' '}
+            <Link href="/privacy-policy">Terms & Conditions</Link>
           </p>
           <p className={styles.paperplaneText}>
             Designed by:{' '}

@@ -1,5 +1,6 @@
 import AfterHero from '@/components/afterHero';
 import FeaturesJobs from '@/components/featuresJobs';
+import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import ImgText from '@/components/imgText';
 import React from 'react';
@@ -60,6 +61,7 @@ const Jobs = () => {
         />
       ))}
       <ImgText content={contentImgText} />
+      <Footer />
     </>
   );
 };

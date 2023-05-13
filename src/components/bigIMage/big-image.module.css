@@ -1,0 +1,55 @@
+.bigImageSection {
+  position: relative;
+}
+
+.bigImageSection::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #0000006e;
+  backdrop-filter: blur(7px);
+}
+
+.bigImgContainer {
+  text-align: center;
+  z-index: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85%;
+  padding: 25vh 0;
+}
+
+.textBigImg {
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 1.1;
+  text-align: center;
+  color: #f2f0eb;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.ballLine {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  height: 30vh;
+  width: 5px;
+  background-color: #d02e2a;
+}
+
+.ball {
+  background-color: #d02e2a;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  border-radius: 50%;
+}

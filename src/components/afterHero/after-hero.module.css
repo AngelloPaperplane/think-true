@@ -26,8 +26,11 @@
 }
 
 .wrapperAfterHeroTeam .textAfterHero {
+  max-width: 70%;
+}
+
+.alignRight.wrapperAfterHeroTeam .textAfterHero {
   margin-left: auto;
-  max-width: 60%;
 }
 
 .videoContainer {

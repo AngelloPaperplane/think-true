@@ -23,11 +23,11 @@ const Menu = ({ setMenuOpened }) => {
                 onClick={() => setMenuOpened(false)}>
                 <Link href={'/about-us'}>ABOUT</Link>
               </li>
-              <li
+              {/* <li
                 className={`${styles.innerItemMenu} news`}
                 onClick={() => setMenuOpened(false)}>
                 PHILOSOPHY
-              </li>
+              </li> */}
               <li
                 className={`${styles.innerItemMenu} news`}
                 onClick={() => setMenuOpened(false)}>
@@ -63,7 +63,7 @@ const Menu = ({ setMenuOpened }) => {
             <p
               className={`news bold uppercase ${styles.itemName}`}
               onClick={() => setMenuOpened(false)}>
-              CONTACT
+              <Link href={'/contact'}>CONTACT</Link>
             </p>
           </li>
         </ul>

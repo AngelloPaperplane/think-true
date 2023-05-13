@@ -5,7 +5,7 @@
 }
 
 .posterHero {
-  margin-bottom: 25vh;
+  margin-bottom: 30vh;
   padding-top: 115px;
 }
 
@@ -17,6 +17,7 @@
 .posterHero .heroContainer {
   height: 130vh;
   width: 80%;
+  position: relative;
 }
 
 .titleHero {
@@ -58,7 +59,7 @@
   display: block;
   text-align: left;
   font-size: 3vw;
-  margin-bottom: -5vh;
+  margin-bottom: -2vw;
   color: #fff;
 }
 

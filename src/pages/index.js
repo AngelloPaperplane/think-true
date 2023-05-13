@@ -3,9 +3,10 @@ import Head from 'next/head';
 import Hero from '@/components/hero';
 import AfterHero from '@/components/afterHero';
 import HorizontalSection from '@/components/horizontalSection';
-import WhatWeDo from '@/components/whatWeDo';
+import ImgTextB from '@/components/imgTextB';
 import Agency from '@/components/agency';
 import Clients from '@/components/homeClients';
+import Footer from '@/components/footer';
 
 function Home({data}) {
   const {hero} = data;
@@ -56,9 +57,17 @@ function Home({data}) {
       <Hero dataHero={hero} />
       <AfterHero content={contentAfterHero} />
       <HorizontalSection blocksToIterate={horizontalBlocks} classParent="01" />
-      <WhatWeDo />
+      <ImgTextB
+        title="WHAT WE DO"
+        subtitle="TRUE OFFERINGS"
+        color="#faa300"
+        image="images/04-home.jpg"
+        topText="We commit to honor and celebrate our diverse, culture-creating communities through brand initiatives that center around inclusive and authentic marketing."
+        withList={true}
+      />
       <Agency image={'/images/05-home.jpg'} />
       <Clients />
+      <Footer />
     </>
   );
 }
