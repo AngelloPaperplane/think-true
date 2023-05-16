@@ -1,20 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './after-hero.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AfterHero = ({ content }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className={`siteSection ${styles.afterHeroSection}`}>
       <div className={`container ${styles.afterHeroContainer}`}>
         {content && content.layout === 'home' && (
           <>
             {content.posterVideo && content.video && (
-              <div className={`${styles.bigCircle}`}></div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0"
+                className={`${styles.bigCircle}`}></div>
             )}
 
             <div className={styles.wrapperAfterHeroHome}>
               {content.text &&
                 content.text.map((text, i) => (
                   <p
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aous-delay="0"
                     key={
                       typeof window !== 'undefined'
                         ? window.crypto.randomUUID()
@@ -26,6 +38,9 @@ const AfterHero = ({ content }) => {
                 ))}
               {content.posterVideo && content.video && (
                 <div
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
                   className={`${styles.videoContainer} bg-cv`}
                   style={{ backgroundImage: `url(${content.posterVideo})` }}>
                   <div className={`bg-ct ${styles.playVideo}`}></div>
@@ -42,6 +57,9 @@ const AfterHero = ({ content }) => {
               } ${styles.wrapperAfterHeroTeam}`}>
               {content.title && content.title.text && (
                 <h2
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
                   className={`${styles.titleAfterHero} ${
                     styles[content.title.position]
                   }`}>
@@ -51,6 +69,9 @@ const AfterHero = ({ content }) => {
               {content.text &&
                 content.text.map((text, i) => (
                   <p
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aous-delay="0"
                     key={
                       typeof window !== 'undefined'
                         ? window.crypto.randomUUID()

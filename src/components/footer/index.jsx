@@ -1,16 +1,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './footer.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Footer = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <section className={`siteSection ${styles.formSection}`}>
         <div className={`bg-ct ${styles.patternForm}`}></div>
         <div className={`container ${styles.formContainer}`}>
-          <h2 className={`titleSec news ${styles.formTitle}`}>LET’S MEET</h2>
-          <p className={styles.infoForm}>
+          <h2
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`titleSec news ${styles.formTitle}`}>
+            LET’S MEET
+          </h2>
+          <p
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={styles.infoForm}>
             We are more than this website and REAL people. Let’s meet to create
             a plan to capture the key performance indicators (KPIs) to
             materialize impact for your brand.
@@ -18,60 +33,139 @@ const Footer = () => {
           <div className={`${styles.wrapperForm} flex j-b a-s`}>
             <form className={`${styles.siteForm} flex j-b a-c`}>
               <input
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0"
                 type="text"
                 placeholder="Full name"
                 className={styles.inputForm}
               />
               <input
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0"
                 type="email"
                 placeholder="Email"
                 className={styles.inputForm}
               />
               <textarea
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0"
                 className={styles.inputForm}
                 placeholder="Message"></textarea>
             </form>
             <div className={`flex j-s a-s ${styles.contactBlock}`}>
               <div className={styles.directionGroup}>
-                <div className={`${styles.pinIcon} bg-ct`}></div>
-                <h3 className={`bold ${styles.cityName}`}>Los Angeles</h3>
-                <p className={styles.infoUbication}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`${styles.pinIcon} bg-ct`}></div>
+                <h3
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`bold ${styles.cityName}`}>
+                  Los Angeles
+                </h3>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
                   <span>A.</span> 5220 Pacific Concourse{' '}
                 </p>
-                <p className={styles.infoUbication}>Dr. #190 - 90045</p>
-                <p className={styles.infoUbication}>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
+                  Dr. #190 - 90045
+                </p>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
                   <span>P.</span> 310.558.0425{' '}
                 </p>
               </div>
               <div className={styles.directionGroup}>
-                <div className={`${styles.pinIcon} bg-ct`}></div>
-                <h3 className={`bold ${styles.cityName}`}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`${styles.pinIcon} bg-ct`}></div>
+                <h3
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`bold ${styles.cityName}`}>
                   New York <br /> (Partner hub)
                 </h3>
-                <p className={styles.infoUbication}>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
                   <span>A.</span> 18 W. 27th St 2nd{' '}
                 </p>
-                <p className={styles.infoUbication}>Floor - 10001 CA</p>
-                <p className={styles.infoUbication}>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
+                  Floor - 10001 CA
+                </p>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
                   <span>P.</span> 917.342.0010{' '}
                 </p>
               </div>
               <div className={styles.directionGroup}>
-                <div className={`${styles.pinIcon} bg-ct`}></div>
-                <h3 className={`bold ${styles.cityName}`}>
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`${styles.pinIcon} bg-ct`}></div>
+                <h3
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`bold ${styles.cityName}`}>
                   Francisco <br /> (Partner hub)
                 </h3>
-                <p className={styles.infoUbication}>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
                   <span>A.</span> 100 Shoreline Hwy Suite
                 </p>
-                <p className={styles.infoUbication}>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
                   295B, Mill Valley - 94941
                 </p>
-                <p className={styles.infoUbication}>
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoUbication}>
                   <span>P.</span> 415.331.4789{' '}
                 </p>
               </div>
-              <div className={`${styles.imgSiteFooter}`}>
+              <div
+                data-aos="fade"
+                data-aos-duration="900"
+                data-aous-delay="0"
+                className={`${styles.imgSiteFooter}`}>
                 <Image src={'/images/footer.jpg'} fill alt="" />
               </div>
             </div>

@@ -81,6 +81,7 @@
 .imgBlock {
   width: 65%;
   height: 100%;
+  clip-path: circle(0% at 0% 0%);
 }
 
 .contentBlock {

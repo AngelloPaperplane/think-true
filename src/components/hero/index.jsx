@@ -1,5 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './hero.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Hero = ({
   image,
@@ -10,6 +12,9 @@ const Hero = ({
   align,
   bgColor,
 }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section
       className={`${styles.heroSection} bg-cv ${
@@ -26,6 +31,9 @@ const Hero = ({
         }}>
         {title && (
           <h2
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
             className={`news ${styles.titleHero}`}
             style={{ color: colorTitle ?? '#fff' }}>
             {layout === 'principal' && (
@@ -35,6 +43,10 @@ const Hero = ({
             {title}
             {lineStyles && (
               <div
+                data-aos="fade-down"
+                data-aos-duration="900"
+                data-aos-delay="900"
+                data-aos-offset="0"
                 className={`${styles.lineHero} bg-complete`}
                 style={{
                   backgroundColor: `${lineStyles.color}`,
@@ -62,7 +74,11 @@ const Hero = ({
         )}
       </div>
       {layout === 'poster' && (
-        <div className={`container ${styles.infoClientContainer}`}>
+        <div
+          className={`container ${styles.infoClientContainer}`}
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aous-delay="0">
           <p>
             Client: <span>Rise</span>
           </p>

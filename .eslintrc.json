@@ -29,6 +29,10 @@
     "no-lonely-if": "error",
     "no-undef-init": "error",
     "no-unneeded-ternary": "error",
+    "no-unused-vars": [
+      "warn",
+      { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }
+    ],
     "no-var": "error",
     "object-shorthand": "error",
     "prefer-const": "error",

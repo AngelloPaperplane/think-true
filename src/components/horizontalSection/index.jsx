@@ -13,7 +13,6 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
     const blocks = gsap.utils.toArray(
       `.siteSection-${classParent} .itemHorizontal`
     );
-    console.log(blocks);
     ScrollTrigger.matchMedia({
       '(min-width: 1025px)': () => {
         const to = gsap.to(blocks, {
@@ -31,68 +30,140 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           },
         });
 
-        // let changeBackground = (bg, parent) => {
-        //   parent.classList.remove(styles.hide);
-        //   gsap.to(scroller.current, {
-        //     backgroundColor: bg,
-        //   });
-        // };
+        let titleTl;
+        let subTitleTl;
+        let textTl;
+        let buttonTl;
+        let imgTl;
 
-        // let blockTl;
+        blocks.forEach((block, i) => {
+          titleTl = gsap.from(block.querySelector('.translateX'), {
+            transform: `translateX(${
+              i === blocks.length - 1 ? '100' : '100'
+            }%)`,
+            scrollTrigger: {
+              trigger: block.querySelector('.wrapperBlock'),
+              containerAnimation: to,
+              start:
+                i === blocks.length - 1
+                  ? '-70% 0%'
+                  : i === 0
+                  ? '-40% 0%'
+                  : 'top 80%',
+              end:
+                i === blocks.length - 1
+                  ? '100% 95%'
+                  : i === 0
+                  ? '120% 80%'
+                  : 'end -50%',
+              scrub: 3,
+              // markers: i === blocks.length - 1 ? true : false
+            },
+          });
+          subTitleTl = gsap.from(block.querySelector('.subtitleParallax'), {
+            transform: `translateX(${
+              i === blocks.length - 1 ? '120' : '120'
+            }%)`,
+            scrollTrigger: {
+              trigger: block.querySelector('.wrapperBlock'),
+              containerAnimation: to,
+              start:
+                i === blocks.length - 1
+                  ? '-70% 0%'
+                  : i === 0
+                  ? '-40% 0%'
+                  : 'top 80%',
+              end:
+                i === blocks.length - 1
+                  ? '100% 95%'
+                  : i === 0
+                  ? '120% 80%'
+                  : 'end -50%',
+              scrub: 3,
 
-        // blocks.forEach((block, i) => {
-        //   blockTl = gsap.to(block.querySelector(".wrapperBlock"), {
-        //     transform: `translateX(-${
-        //       i === blocks.length - 1 ? 0 : 0
-        //     }%) scale(1)`,
-        //     scrollTrigger: {
-        //       trigger: block.querySelector(".wrapperBlock"),
-        //       containerAnimation: to,
-        //       start:
-        //         i === blocks.length - 1
-        //           ? "-70% 0%"
-        //           : i === 0
-        //           ? "-40% 0%"
-        //           : "top 80%",
-        //       end:
-        //         i === blocks.length - 1
-        //           ? "100% 95%"
-        //           : i === 0
-        //           ? "120% 80%"
-        //           : "end -50%",
-        //       scrub: 3,
-        //       onEnter: (e) => {
-        //         changeBackground(
-        //           e.trigger._gsap.target.parentElement.getAttribute("data-bg"),
-        //           e.trigger._gsap.target.parentElement
-        //         );
-        //       },
-        //       onEnterBack: (e) => {
-        //         changeBackground(
-        //           e.trigger._gsap.target.parentElement.getAttribute("data-bg"),
-        //           e.trigger._gsap.target.parentElement
-        //         );
-        //       },
-        //       onLeave: (e) => {
-        //         e.trigger._gsap.target.parentElement.classList.add(styles.hide);
-        //       },
-        //       onLeaveBack: (e) => {
-        //         i === blocks.length - 1 || i === 0
-        //           ? ""
-        //           : e.trigger._gsap.target.parentElement.classList.add(
-        //               styles.hide
-        //             );
-        //       },
-        //       // markers: i === blocks.length - 1 ? true : false
-        //     },
-        //   });
-        // });
+              // markers: i === blocks.length - 1 ? true : false
+            },
+          });
+          textTl = gsap.from(block.querySelector('.textParallax'), {
+            transform: `translateX(${
+              i === blocks.length - 1 ? '160' : '160'
+            }%)`,
+            scrollTrigger: {
+              trigger: block.querySelector('.wrapperBlock'),
+              containerAnimation: to,
+              start:
+                i === blocks.length - 1
+                  ? '-70% 0%'
+                  : i === 0
+                  ? '-40% 0%'
+                  : 'top 80%',
+              end:
+                i === blocks.length - 1
+                  ? '100% 95%'
+                  : i === 0
+                  ? '120% 80%'
+                  : 'end -50%',
+              scrub: 3,
+              // markers: i === blocks.length - 1 ? true : false
+            },
+          });
+          buttonTl = gsap.from(block.querySelector('.btnParallax'), {
+            transform: `translateX(${
+              i === blocks.length - 1 ? '200' : '200'
+            }%)`,
+            scrollTrigger: {
+              trigger: block.querySelector('.wrapperBlock'),
+              containerAnimation: to,
+              start:
+                i === blocks.length - 1
+                  ? '-70% 0%'
+                  : i === 0
+                  ? '-40% 0%'
+                  : 'top 80%',
+              end:
+                i === blocks.length - 1
+                  ? '100% 95%'
+                  : i === 0
+                  ? '120% 80%'
+                  : 'end -50%',
+              scrub: 3,
+              // markers: i === blocks.length - 1 ? true : false
+            },
+          });
+          imgTl = gsap.to(block.querySelector('.imgParallax'), {
+            clipPath: `circle(${
+              i === blocks.length - 1 ? '100' : '100'
+            }% at 50% 50%)`,
+            scrollTrigger: {
+              trigger: block.querySelector('.wrapperBlock'),
+              containerAnimation: to,
+              start:
+                i === blocks.length - 1
+                  ? '-70% 0%'
+                  : i === 0
+                  ? '-30% 0%'
+                  : 'top 80%',
+              end:
+                i === blocks.length - 1
+                  ? '100% 95%'
+                  : i === 0
+                  ? '120% 80%'
+                  : 'end -50%',
+              scrub: 3,
+              // markers: i === 0
+            },
+          });
+        });
 
         return () => {
           to.kill();
-          //   blocks.forEach((block, i) => {
-          //     blockTl.kill();
-          //   });
+          blocks.forEach(() => {
+            titleTl.kill();
+            subTitleTl.kill();
+            textTl.kill();
+            buttonTl.kill();
+            imgTl.kill();
+          });
         };
       },
     });
@@ -414,7 +485,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                     </div>
                   </div>
                   <div
-                    className={`bg-cv ${styles.imgBlock}`}
+                    className={`bg-cv imgParallax ${styles.imgBlock}`}
                     style={
                       type === 'whatWeDo'
                         ? {
@@ -426,14 +497,14 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                     }></div>
                   <div className={styles.contentBlock}>
                     <h2
-                      className={`news ${styles.titleBlock}`}
+                      className={`news translateX ${styles.titleBlock}`}
                       style={{ width: block.titleWidth }}>
                       {block.title}
                     </h2>
 
                     {block.subtitle && (
                       <h3
-                        className={styles.subtitleBlock}
+                        className={`subtitleParallax ${styles.subtitleBlock}`}
                         style={{
                           color: block.color,
                         }}>
@@ -441,10 +512,13 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                       </h3>
                     )}
 
-                    <p className={styles.infoBlock}>{block.text}</p>
+                    <p className={`textParallax ${styles.infoBlock}`}>
+                      {block.text}
+                    </p>
 
                     {type !== 'whatWeDo' && (
-                      <div className={`${styles.ctaBlock} flex j-b a-c`}>
+                      <div
+                        className={`${styles.ctaBlock} btnParallax flex j-b a-c`}>
                         <p className={`news ${styles.ctaText}`}>
                           SEE US IN ACTION
                         </p>
