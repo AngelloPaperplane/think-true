@@ -100,13 +100,13 @@ const Menu = ({ setMenuOpened }) => {
                 <Link href={'/our-work'}>OUR WORK</Link>
               </p>
             </li>
-            <li className={styles.itemMenu}>
+            {/* <li className={styles.itemMenu}>
               <p
                 className={`news bold uppercase ${styles.itemName}`}
                 onClick={() => setMenuOpened(false)}>
                 NEWS
               </p>
-            </li>
+            </li> */}
             <li className={styles.itemMenu}>
               <p
                 className={`news bold uppercase ${styles.itemName}`}
