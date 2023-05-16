@@ -1,5 +1,4 @@
-import Head from 'next/head';
-// import styles from '@/styles/Home.module.css';
+import Metas from '@/components/metaDatas';
 import Hero from '@/components/hero';
 import AfterHero from '@/components/afterHero';
 import HorizontalSection from '@/components/horizontalSection';
@@ -8,8 +7,8 @@ import Agency from '@/components/agency';
 import Clients from '@/components/homeClients';
 import Footer from '@/components/footer';
 
-function Home({data}) {
-  const {hero} = data;
+function Home({ data }) {
+  const { meta, hero, mediablock } = data;
   console.log(data);
   const contentAfterHero = {
     text: [
@@ -48,14 +47,9 @@ function Home({data}) {
   ];
   return (
     <>
-      <Head>
-        <title>Think True</title>
-        <meta name="description" content="Think True" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Metas metadata={meta} />
       <Hero dataHero={hero} />
-      <AfterHero content={contentAfterHero} />
+      <AfterHero content={contentAfterHero} mediaBlockContent={mediablock} />
       <HorizontalSection blocksToIterate={horizontalBlocks} classParent="01" />
       <ImgTextB
         title="WHAT WE DO"
@@ -74,9 +68,11 @@ function Home({data}) {
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(`https://paperplane.com.co/dev/thinktrue/wp-json/thinktrue-api/v1/home`);
+  const res = await fetch(
+    'https://paperplane.com.co/dev/thinktrue/wp-json/thinktrue-api/v1/home'
+  );
   const data = await res.json();
- 
+
   // Pass data to the page via props
   return { props: { data } };
 }
