@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Hero from '../hero';
 import Image from 'next/image';
+import SplitType from 'split-type';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -13,6 +14,9 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
     const blocks = gsap.utils.toArray(
       `.siteSection-${classParent} .itemHorizontal`
     );
+
+    const text = new SplitType('.splitText', { types: 'words, chars' });
+
     ScrollTrigger.matchMedia({
       '(min-width: 1025px)': () => {
         const to = gsap.to(blocks, {
@@ -36,123 +40,312 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
         let buttonTl;
         let imgTl;
 
-        blocks.forEach((block, i) => {
-          titleTl = gsap.from(block.querySelector('.translateX'), {
-            transform: `translateX(${
-              i === blocks.length - 1 ? '100' : '100'
-            }%)`,
-            scrollTrigger: {
-              trigger: block.querySelector('.wrapperBlock'),
-              containerAnimation: to,
-              start:
-                i === blocks.length - 1
-                  ? '-70% 0%'
-                  : i === 0
-                  ? '-40% 0%'
-                  : 'top 80%',
-              end:
-                i === blocks.length - 1
-                  ? '100% 95%'
-                  : i === 0
-                  ? '120% 80%'
-                  : 'end -50%',
-              scrub: 3,
-              // markers: i === blocks.length - 1 ? true : false
-            },
-          });
-          subTitleTl = gsap.from(block.querySelector('.subtitleParallax'), {
-            transform: `translateX(${
-              i === blocks.length - 1 ? '120' : '120'
-            }%)`,
-            scrollTrigger: {
-              trigger: block.querySelector('.wrapperBlock'),
-              containerAnimation: to,
-              start:
-                i === blocks.length - 1
-                  ? '-70% 0%'
-                  : i === 0
-                  ? '-40% 0%'
-                  : 'top 80%',
-              end:
-                i === blocks.length - 1
-                  ? '100% 95%'
-                  : i === 0
-                  ? '120% 80%'
-                  : 'end -50%',
-              scrub: 3,
+        // Vars for about
 
-              // markers: i === blocks.length - 1 ? true : false
-            },
-          });
-          textTl = gsap.from(block.querySelector('.textParallax'), {
-            transform: `translateX(${
-              i === blocks.length - 1 ? '160' : '160'
-            }%)`,
-            scrollTrigger: {
-              trigger: block.querySelector('.wrapperBlock'),
-              containerAnimation: to,
-              start:
-                i === blocks.length - 1
-                  ? '-70% 0%'
-                  : i === 0
-                  ? '-40% 0%'
-                  : 'top 80%',
-              end:
-                i === blocks.length - 1
-                  ? '100% 95%'
-                  : i === 0
-                  ? '120% 80%'
-                  : 'end -50%',
-              scrub: 3,
-              // markers: i === blocks.length - 1 ? true : false
-            },
-          });
-          buttonTl = gsap.from(block.querySelector('.btnParallax'), {
-            transform: `translateX(${
-              i === blocks.length - 1 ? '200' : '200'
-            }%)`,
-            scrollTrigger: {
-              trigger: block.querySelector('.wrapperBlock'),
-              containerAnimation: to,
-              start:
-                i === blocks.length - 1
-                  ? '-70% 0%'
-                  : i === 0
-                  ? '-40% 0%'
-                  : 'top 80%',
-              end:
-                i === blocks.length - 1
-                  ? '100% 95%'
-                  : i === 0
-                  ? '120% 80%'
-                  : 'end -50%',
-              scrub: 3,
-              // markers: i === blocks.length - 1 ? true : false
-            },
-          });
-          imgTl = gsap.to(block.querySelector('.imgParallax'), {
-            clipPath: `circle(${
-              i === blocks.length - 1 ? '100' : '100'
-            }% at 50% 50%)`,
-            scrollTrigger: {
-              trigger: block.querySelector('.wrapperBlock'),
-              containerAnimation: to,
-              start:
-                i === blocks.length - 1
-                  ? '-70% 0%'
-                  : i === 0
-                  ? '-30% 0%'
-                  : 'top 80%',
-              end:
-                i === blocks.length - 1
-                  ? '100% 95%'
-                  : i === 0
-                  ? '120% 80%'
-                  : 'end -50%',
-              scrub: 3,
-              // markers: i === 0
-            },
-          });
+        let bigTitleBlock;
+        let revealText;
+        let splitText;
+        let imgAnimation;
+
+        // gsap.set(text.chars, {y: 70});
+
+        // const tweenChars = gsap.from(text.chars, {
+        //   opacity: 0,
+        //   y: 20,
+        //   duration: 1.5,
+        //   stagger: { amount: 0.1 },
+        // });
+
+        // text.chars.forEach((char, i) => {
+
+        // });
+
+        // gsap.from(text.chars, {
+        //   scrollTrigger: {
+        //     trigger: '.splitText',
+        //     toggleActions: 'restart resume restart resume',
+        //     // containerAnimation: to,
+        //     markers: true,
+        //     start: '0% 100%',
+        //     end: '100% 0%',
+        //   },
+        //   opacity: 0,
+        //   y: 20,
+        //   duration: 1.5,
+        //   stagger: { amount: 0.5 },
+        // });
+
+        const tween = gsap.from(text.chars, {
+          opacity: 0,
+          y: 20,
+          duration: 1.5,
+          stagger: { amount: 0.5 },
+        });
+
+        blocks.forEach((block, i) => {
+          if (block.querySelector('.imgAnimation')) {
+            imgAnimation = gsap.from(block.querySelector('.imgAnimation'), {
+              transform: 'translateY(150%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.imgAnimation'),
+                containerAnimation: to,
+                start: '0% 100%',
+                end: '100% 0%',
+                scrub: 5,
+                // markers: true,
+                onEnter: () => {
+                  block.querySelector('.imgAnimation').classList.add('active');
+                },
+                onEnterBack: () => {
+                  block.querySelector('.imgAnimation').classList.add('active');
+                  // tweenChars.play();
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.imgAnimation')
+                    .classList.remove('active');
+                  // tweenChars.reverse();
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.imgAnimation')
+                    .classList.remove('active');
+                  // tweenChars.reverse();
+                },
+              },
+            });
+          }
+          if (block.querySelector('.splitText')) {
+            splitText = gsap.from(block.querySelector('.splitText'), {
+              transform: 'translateY(100%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.splitText'),
+                containerAnimation: to,
+                start: '-60% 100%',
+                end: '100% 50%',
+                scrub: 5,
+                onEnter: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.add(styles.active);
+                  console.log(text.chars);
+                },
+                onEnterBack: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.add(styles.active);
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.remove(styles.active);
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.remove(styles.active);
+                  // tweenChars.reverse();
+                },
+              },
+            });
+          }
+          if (block.querySelector('.revealText')) {
+            revealText = gsap.from(block.querySelector('.revealText'), {
+              transform: 'translateX(-50%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.revealText'),
+                containerAnimation: to,
+                start: '0% 100%',
+                end: '100% 0%',
+                scrub: 5,
+                // markers: true,
+                onEnter: () => {
+                  block
+                    .querySelector('.revealText')
+                    .classList.add(styles.active);
+                },
+                onEnterBack: () => {
+                  block
+                    .querySelector('.revealText')
+                    .classList.add(styles.active);
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.revealText')
+                    .classList.remove(styles.active);
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.revealText')
+                    .classList.remove(styles.active);
+                },
+              },
+            });
+          }
+          if (block.querySelector(`.${styles.titleAfterHeroAbout}`)) {
+            bigTitleBlock = gsap.from(
+              block.querySelector(`.${styles.titleAfterHeroAbout}`),
+              {
+                transform: 'translateX(100%)',
+                scrollTrigger: {
+                  trigger: block.querySelector(
+                    `.${styles.titleAfterHeroAbout}`
+                  ),
+                  containerAnimation: to,
+                  start: '-250% 0%',
+                  end: '150% 100%',
+                  scrub: 3,
+                  onEnter: () => {
+                    block
+                      .querySelector(`.${styles.titleAfterHeroAbout}`)
+                      .classList.add('active');
+                  },
+                  onEnterBack: () => {
+                    block
+                      .querySelector(`.${styles.titleAfterHeroAbout}`)
+                      .classList.add('active');
+                  },
+                  onLeave: () => {
+                    block
+                      .querySelector(`.${styles.titleAfterHeroAbout}`)
+                      .classList.remove('active');
+                  },
+                  onLeaveBack: () => {
+                    block
+                      .querySelector(`.${styles.titleAfterHeroAbout}`)
+                      .classList.remove('active');
+                  },
+                },
+              }
+            );
+          }
+          if (block.querySelector('.translateX')) {
+            titleTl = gsap.from(block.querySelector('.translateX'), {
+              transform: `translateX(${
+                i === blocks.length - 1 ? '100' : '100'
+              }%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                containerAnimation: to,
+                start:
+                  i === blocks.length - 1
+                    ? '-70% 0%'
+                    : i === 0
+                    ? '-40% 0%'
+                    : 'top 80%',
+                end:
+                  i === blocks.length - 1
+                    ? '100% 95%'
+                    : i === 0
+                    ? '120% 80%'
+                    : 'end -50%',
+                scrub: 3,
+                // markers: i === blocks.length - 1 ? true : false
+              },
+            });
+          }
+          if (block.querySelector('.subtitleParallax')) {
+            subTitleTl = gsap.from(block.querySelector('.subtitleParallax'), {
+              transform: `translateX(${
+                i === blocks.length - 1 ? '120' : '120'
+              }%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                containerAnimation: to,
+                start:
+                  i === blocks.length - 1
+                    ? '-70% 0%'
+                    : i === 0
+                    ? '-40% 0%'
+                    : 'top 80%',
+                end:
+                  i === blocks.length - 1
+                    ? '100% 95%'
+                    : i === 0
+                    ? '120% 80%'
+                    : 'end -50%',
+                scrub: 3,
+
+                // markers: i === blocks.length - 1 ? true : false
+              },
+            });
+          }
+
+          if (block.querySelector('.textParallax')) {
+            textTl = gsap.from(block.querySelector('.textParallax'), {
+              transform: `translateX(${
+                i === blocks.length - 1 ? '160' : '160'
+              }%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                containerAnimation: to,
+                start:
+                  i === blocks.length - 1
+                    ? '-70% 0%'
+                    : i === 0
+                    ? '-40% 0%'
+                    : 'top 80%',
+                end:
+                  i === blocks.length - 1
+                    ? '100% 95%'
+                    : i === 0
+                    ? '120% 80%'
+                    : 'end -50%',
+                scrub: 3,
+                // markers: i === blocks.length - 1 ? true : false
+              },
+            });
+          }
+          if (block.querySelector('.btnParallax')) {
+            buttonTl = gsap.from(block.querySelector('.btnParallax'), {
+              transform: `translateX(${
+                i === blocks.length - 1 ? '200' : '200'
+              }%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                containerAnimation: to,
+                start:
+                  i === blocks.length - 1
+                    ? '-70% 0%'
+                    : i === 0
+                    ? '-40% 0%'
+                    : 'top 80%',
+                end:
+                  i === blocks.length - 1
+                    ? '100% 95%'
+                    : i === 0
+                    ? '120% 80%'
+                    : 'end -50%',
+                scrub: 3,
+                // markers: i === blocks.length - 1 ? true : false
+              },
+            });
+          }
+          if (block.querySelector('.imgParallax')) {
+            imgTl = gsap.to(block.querySelector('.imgParallax'), {
+              clipPath: `circle(${
+                i === blocks.length - 1 ? '100' : '100'
+              }% at 50% 50%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                containerAnimation: to,
+                start:
+                  i === blocks.length - 1
+                    ? '-70% 0%'
+                    : i === 0
+                    ? '-30% 0%'
+                    : 'top 80%',
+                end:
+                  i === blocks.length - 1
+                    ? '100% 95%'
+                    : i === 0
+                    ? '120% 80%'
+                    : 'end -50%',
+                scrub: 3,
+                // markers: i === 0
+              },
+            });
+          }
         });
 
         return () => {
@@ -163,6 +356,10 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
             textTl.kill();
             buttonTl.kill();
             imgTl.kill();
+            bigTitleBlock.kill();
+            revealText.kill();
+            splitText.kill();
+            imgAnimation.kill();
           });
         };
       },
@@ -241,10 +438,11 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               <div
                 className={`${styles.block} ${styles.blockAfterHero} itemHorizontal`}>
                 <div className={styles.afterHeroAbout}>
-                  <h2 className={styles.titleAfterHeroAbout}>
+                  <h2
+                    className={`titleAfterHeroAbout ${styles.titleAfterHeroAbout}`}>
                     What does it mean to Think True?
                   </h2>
-                  <p className={styles.textAfterHeroAbout}>
+                  <p className={`revealText ${styles.textAfterHeroAbout}`}>
                     There’s a gap, a gap in diversity, a gap in culture, and a
                     gap in inclusion.
                     <br /> <br />
@@ -258,7 +456,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               <div
                 className={`${styles.block} ${styles.embraceBlock} itemHorizontal`}>
                 <div className={styles.embraceBlockContainer}>
-                  <h2 className={styles.titleEmbrace}>
+                  <h2 className={`splitText ${styles.titleEmbrace}`}>
                     We embrace our responsibility
                   </h2>
                 </div>
@@ -269,11 +467,11 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 <div
                   className={`${styles.callToActionBlockContainer} flex j-c`}>
                   <div
-                    className={`${styles.imgCallToAction} bg-cv`}
+                    className={`${styles.imgCallToAction} imgAnimation bg-cv`}
                     style={{
                       backgroundImage: 'url(/images/02-about.jpg)',
                     }}></div>
-                  <h2 className={styles.titleCallToAction}>
+                  <h2 className={`splitText ${styles.titleCallToAction}`}>
                     We are a paradigm shift and clarion call to action.
                   </h2>
                 </div>
@@ -284,12 +482,12 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 <div
                   className={`${styles.callToActionBlockContainer} flex j-c`}>
                   <div
-                    className={`${styles.bigTitle} bg-ct`}
+                    className={`${styles.bigTitle} imgAnimation bg-ct`}
                     style={{
                       backgroundImage: 'url(/icons/logo-white.png)',
                       backgroundColor: '#00B099',
                     }}></div>
-                  <h2 className={styles.textBigTitleBlock}>
+                  <h2 className={`${styles.textBigTitleBlock} splitText`}>
                     Makes a social and cultural impact by starting conversations
                     and finding common ground while also celebrating our
                     differences...
@@ -304,12 +502,12 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 className={`${styles.block} ${styles.callToActionBlock} itemHorizontal`}>
                 <div
                   className={`${styles.callToActionBlockContainer} ${styles.imgTextRight} flex j-c`}>
-                  <h2 className={styles.titleCallToAction}>
+                  <h2 className={`splitText ${styles.titleCallToAction}`}>
                     And we keep the industry and partners honest to understand
                     that multiculturalism is the norm, not the exception.
                   </h2>
                   <div
-                    className={`${styles.imgBlockImgText} bg-cv`}
+                    className={`${styles.imgBlockImgText} imgAnimation bg-cv`}
                     style={{
                       backgroundImage: 'url(/images/about-03.jpg)',
                     }}></div>
@@ -318,7 +516,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
 
               <div
                 className={`${styles.block} ${styles.videoBlock} itemHorizontal`}>
-                <div className={styles.videoContainerBlock}>
+                <div className={`imgAnimation ${styles.videoContainerBlock}`}>
                   <div className={`${styles.iconPlay} bg-ct`}></div>
                 </div>
               </div>
@@ -326,10 +524,10 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               <div
                 className={`${styles.block} itemHorizontal ${styles.impactBlock} flex j-c a-c`}>
                 <div className={styles.textImpactBlock}>
-                  <h2 className={styles.titleImpact}>
+                  <h2 className={`revealText ${styles.titleImpact}`}>
                     Impact is our North Star
                   </h2>
-                  <p className={styles.textImpact}>
+                  <p className={`splitText ${styles.textImpact}`}>
                     We reverence cultural movements with a community and people
                     first focus. <br /> <br /> This way of living and seeing
                     multicultural marketing help us to set the tone and close
@@ -337,7 +535,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                   </p>
                 </div>
                 <div className={styles.contImgImpact}>
-                  <div className={styles.wrapperImgImpact}>
+                  <div className={`imgAnimation ${styles.wrapperImgImpact}`}>
                     <Image
                       fill
                       src="/images/06-about.jpg"
@@ -351,10 +549,12 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               <div
                 className={`${styles.block} ${styles.embraceBlock} ${styles.committed} itemHorizontal`}>
                 <div className={styles.embraceBlockContainer}>
-                  <h3 className={styles.committedSubtitle}>
+                  <h3 className={`revealText ${styles.committedSubtitle}`}>
                     THINK TRUE ALSO MEANS
                   </h3>
-                  <h2 className={styles.titleEmbrace}>COMMITTED</h2>
+                  <h2 className={`splitText ${styles.titleEmbrace}`}>
+                    COMMITTED
+                  </h2>
                 </div>
               </div>
 
@@ -362,13 +562,19 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 className={`${styles.block} ${styles.circlesBlock} itemHorizontal`}>
                 <div
                   className={`${styles.circleContainer} ${styles.partnersCircle}`}>
-                  <h3 className={styles.textInnerCircle}>Partners </h3>
+                  <h3 className={`splitText ${styles.textInnerCircle}`}>
+                    Partners{' '}
+                  </h3>
                   <div
                     className={`${styles.circleContainer} ${styles.thinkCircle} `}>
-                    <h3 className={styles.textInnerCircle}>Think True </h3>
+                    <h3 className={`splitText ${styles.textInnerCircle}`}>
+                      Think True{' '}
+                    </h3>
                     <div
                       className={`${styles.circleContainer} ${styles.communitiesCircle}`}>
-                      <h3 className={styles.textInnerCircle}>Communities</h3>
+                      <h3 className={`splitText ${styles.textInnerCircle}`}>
+                        Communities
+                      </h3>
                     </div>
                   </div>
                 </div>
@@ -382,18 +588,21 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: '#D02E2A' }}>
-                  <h2 className={styles.textTitleBlock}>PHILANTHROPY</h2>
+                  <h2 className={`revealText ${styles.textTitleBlock}`}>
+                    PHILANTHROPY
+                  </h2>
                 </div>
               </div>
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div className={`${styles.smallBlockTextImg} flex j-c a-c`}>
-                  <p className={styles.smallTextBlockImgText}>
+                  <p className={`splitText ${styles.smallTextBlockImgText}`}>
                     Whenever possible we will seek out opportunities to share
                     its expertise as an in-kind offering as well as provide pro
                     bono services to elevate our communities.
                   </p>
-                  <div className={styles.wrapperImgBlockImgText}>
+                  <div
+                    className={`imgAnimation ${styles.wrapperImgBlockImgText}`}>
                     <Image
                       src="/images/06-about.jpg"
                       alt=""
@@ -408,19 +617,22 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: '#00B099' }}>
-                  <h2 className={styles.textTitleBlock}>PEOPLE</h2>
+                  <h2 className={`splitText ${styles.textTitleBlock}`}>
+                    PEOPLE
+                  </h2>
                 </div>
               </div>
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div className={`${styles.smallBlockTextImg} flex j-c a-c`}>
-                  <p className={styles.smallTextBlockImgText}>
+                  <p className={`splitText ${styles.smallTextBlockImgText}`}>
                     Think True has its roots firmly planted in ensuring all
                     businesses not only expand their consumer base, but also
                     create opportunities for a wider range of talented
                     professionals and service providers.
                   </p>
-                  <div className={styles.wrapperImgBlockImgText}>
+                  <div
+                    className={`imgAnimation ${styles.wrapperImgBlockImgText}`}>
                     <Image
                       src="/images/08-team.jpg"
                       alt=""
@@ -435,17 +647,20 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: '#FAA300' }}>
-                  <h2 className={styles.textTitleBlock}>PARTNERS</h2>
+                  <h2 className={`splitText ${styles.textTitleBlock}`}>
+                    PARTNERS
+                  </h2>
                 </div>
               </div>
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div className={`${styles.smallBlockTextImg} flex j-c a-c`}>
-                  <p className={styles.smallTextBlockImgText}>
+                  <p className={`splitText ${styles.smallTextBlockImgText}`}>
                     Think TRUE commits to partnering with diverse suppliers who
                     reflect the community of the consumer.
                   </p>
-                  <div className={styles.wrapperImgBlockImgText}>
+                  <div
+                    className={`imgAnimation ${styles.wrapperImgBlockImgText}`}>
                     <Image
                       src="/images/03-about.jpg"
                       alt=""

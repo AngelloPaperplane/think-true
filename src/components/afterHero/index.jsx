@@ -14,7 +14,11 @@ const AfterHero = ({ content, mediaBlockContent }) => {
           {mediaBlockContent.layout === 'home' && (
             <>
               {mediaBlockContent.image && (
-                <div className={`${styles.bigCircle}`}></div>
+                <div
+                  className={`${styles.bigCircle}`}
+                  data-aos="zoom-in"
+                  data-aos-duration="1900"
+                  data-aous-delay="0"></div>
               )}
 
               <div className={styles.wrapperAfterHeroHome}>
@@ -22,11 +26,17 @@ const AfterHero = ({ content, mediaBlockContent }) => {
                   <p
                     className={styles.textAfterHero}
                     dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
+                    data-aos="fade-up"
+                    data-aos-duration="1900"
+                    data-aous-delay="0"
                   />
                 )}
                 {mediaBlockContent.image && (
                   <div
                     className={`${styles.videoContainer} bg-cv`}
+                    data-aos="zoom-out"
+                    data-aos-duration="1500"
+                    data-aous-delay="0"
                     style={{
                       backgroundImage: `url(${mediaBlockContent.image.medium})`,
                     }}>

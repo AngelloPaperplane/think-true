@@ -9,46 +9,45 @@ const Menu = ({ setMenuOpened }) => {
   const router = useRouter();
   const { pathname } = router;
   console.log(pathname);
-  // useEffect(() => {
-  //   const path = document.querySelector('.pathNode');
-  //   console.log(path);
-  //   const tl = gsap.timeline({ paused: true });
-  //   gsap.set(`.${styles.wrapperMenu}`, { visibility: 'hidden' });
-  //   const start = 'M0 502S175 272 500 272s500 230 500 230V0H0Z';
-  //   const end = 'M0,10055175,995,500,995s500,5,500,5V0H0Z';
-  //   const power2 = 'power2.inOut';
-
-  //   tl.to(
-  //     path,
-  //     0.8,
-  //     {
-  //       attr: {
-  //         d: start,
-  //       },
-  //       ease: 'Power2.easeIn',
-  //     },
-  //     '<'
-  //   ).to(
-  //     path,
-  //     0.8,
-  //     {
-  //       attr: {
-  //         d: end,
-  //       },
-  //       ease: 'Power2.easeIn',
-  //     },
-  //     '-=0.5'
-  //   );
-
-  //   tl.to(
-  //     `-${styles.wrapperMenu}`,
-  //     1,
-  //     {
-  //       visibility: 'visible',
-  //     },
-  //     '-=0.5'
-  //   );
-  // }, []);
+  useEffect(() => {
+    // setIsOpened(true);
+    // const path = document.querySelector('.pathNode');
+    // console.log(path);
+    // const tl = gsap.timeline({ paused: true });
+    // gsap.set(`.${styles.wrapperMenu}`, { visibility: 'hidden', opacity:  });
+    // const start = 'M0 502S175 272 500 272s500 230 500 230V0H0Z';
+    // const end = 'M0,10055175,995,500,995s500,5,500,5V0H0Z';
+    // const power2 = 'power2.inOut';
+    // tl.to(
+    //   path,
+    //   0.8,
+    //   {
+    //     attr: {
+    //       d: start,
+    //     },
+    //     ease: 'Power2.easeIn',
+    //   },
+    //   '<'
+    // ).to(
+    //   path,
+    //   0.8,
+    //   {
+    //     attr: {
+    //       d: end,
+    //     },
+    //     ease: 'Power2.easeIn',
+    //   },
+    //   '-=0.5'
+    // );
+    // tl.to(
+    //   `-${styles.wrapperMenu}`,
+    //   1,
+    //   {
+    //     visibility: 'visible',
+    //   },
+    //   '-=0.5'
+    // );
+  }, []);
   return (
     <>
       <div className={styles.overlayMenu}>
