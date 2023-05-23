@@ -4,6 +4,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Hero from '../hero';
 import Image from 'next/image';
+import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -421,7 +422,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                             backgroundColor: block.color,
                           }
                         : {
-                            backgroundImage: `${`url(${block.img})`}`,
+                            backgroundImage: `${`url(${block.img.large?block.img.large:''})`}`,
                           }
                     }></div>
                   <div className={styles.contentBlock}>
@@ -445,9 +446,9 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
 
                     {type !== 'whatWeDo' && (
                       <div className={`${styles.ctaBlock} flex j-b a-c`}>
-                        <p className={`news ${styles.ctaText}`}>
-                          SEE US IN ACTION
-                        </p>
+                        <Link className={`news ${styles.ctaText}`} href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>
+                          {block.label}
+                        </Link>
                         <div
                           className={styles.ballLine}
                           style={{

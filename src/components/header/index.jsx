@@ -5,6 +5,7 @@ import styles from './header.module.css';
 import { useRouter } from 'next/router';
 
 const Header = () => {
+
   const [menuOpened, setMenuOpened] = useState(false);
   const router = useRouter();
   const { pathname } = router;

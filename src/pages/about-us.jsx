@@ -3,7 +3,7 @@ import Footer from '@/components/footer';
 import HorizontalSection from '@/components/horizontalSection';
 import React from 'react';
 
-const AboutUs = () => {
+const AboutUs = ({data}) => {
   const horizontalBlocks1 = [
     {
       title: 'BRAND CONSULTING',
@@ -200,5 +200,17 @@ const AboutUs = () => {
     </>
   );
 };
+
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}home`
+  );
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
 
 export default AboutUs;
