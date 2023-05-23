@@ -1,9 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './masonry.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className={`siteSection ${styles.masonrySection}`}>
       <div
@@ -22,7 +27,11 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
               gridColumn:
                 img.spaceColumn !== 'normal' ? img.spaceColumn : 'initial',
               gridRow: img.spaceRow !== 'normal' ? img.spaceRow : 'initial',
-            }}>
+            }}
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            data-aos-offset="-100">
             {img.content && (
               <>
                 <Link

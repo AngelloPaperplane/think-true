@@ -1,7 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './after-hero.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const AfterHero = ({ content, mediaBlockContent }) => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   if (mediaBlockContent) {
     return (
       <section className={`siteSection ${styles.afterHeroSection}`}>
@@ -9,7 +14,11 @@ const AfterHero = ({ content, mediaBlockContent }) => {
           {mediaBlockContent.layout === 'home' && (
             <>
               {mediaBlockContent.image && (
-                <div className={`${styles.bigCircle}`}></div>
+                <div
+                  className={`${styles.bigCircle}`}
+                  data-aos="zoom-in"
+                  data-aos-duration="1900"
+                  data-aous-delay="0"></div>
               )}
 
               <div className={styles.wrapperAfterHeroHome}>
@@ -17,11 +26,17 @@ const AfterHero = ({ content, mediaBlockContent }) => {
                   <p
                     className={styles.textAfterHero}
                     dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
+                    data-aos="fade-up"
+                    data-aos-duration="1900"
+                    data-aous-delay="0"
                   />
                 )}
                 {mediaBlockContent.image && (
                   <div
                     className={`${styles.videoContainer} bg-cv`}
+                    data-aos="zoom-out"
+                    data-aos-duration="1500"
+                    data-aous-delay="0"
                     style={{
                       backgroundImage: `url(${mediaBlockContent.image.medium})`,
                     }}>
@@ -73,13 +88,20 @@ const AfterHero = ({ content, mediaBlockContent }) => {
         {content && content.layout === 'home' && (
           <>
             {content.posterVideo && content.video && (
-              <div className={`${styles.bigCircle}`}></div>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0"
+                className={`${styles.bigCircle}`}></div>
             )}
 
             <div className={styles.wrapperAfterHeroHome}>
               {content.text &&
                 content.text.map((text, i) => (
                   <p
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aous-delay="0"
                     key={
                       typeof window !== 'undefined'
                         ? window.crypto.randomUUID()
@@ -91,6 +113,9 @@ const AfterHero = ({ content, mediaBlockContent }) => {
                 ))}
               {content.posterVideo && content.video && (
                 <div
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
                   className={`${styles.videoContainer} bg-cv`}
                   style={{ backgroundImage: `url(${content.posterVideo})` }}>
                   <div className={`bg-ct ${styles.playVideo}`}></div>
@@ -107,6 +132,9 @@ const AfterHero = ({ content, mediaBlockContent }) => {
               } ${styles.wrapperAfterHeroTeam}`}>
               {content.title && content.title.text && (
                 <h2
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
                   className={`${styles.titleAfterHero} ${
                     styles[content.title.position]
                   }`}>
@@ -116,6 +144,9 @@ const AfterHero = ({ content, mediaBlockContent }) => {
               {content.text &&
                 content.text.map((text, i) => (
                   <p
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aous-delay="0"
                     key={
                       typeof window !== 'undefined'
                         ? window.crypto.randomUUID()

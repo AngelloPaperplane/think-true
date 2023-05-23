@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './hero.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+import SplitType from 'split-type';
 
 const Hero = ({
   image,
@@ -11,6 +16,26 @@ const Hero = ({
   bgColor,
   dataHero, // es el ultimo que va a quedar...
 }) => {
+  useEffect(() => {
+    AOS.init();
+    if (document) {
+      document.querySelectorAll('.splitText').forEach((splitText) => {
+        const text = new SplitType(splitText, { types: 'words, chars' });
+        gsap.from(text.chars, {
+          opacity: 0,
+          y: 50,
+          duration: 1.5,
+          stagger: { amount: 1 },
+        });
+      });
+    }
+
+    // const tl = gsap.timeline({});
+    // tl.from(`.${styles.titleHeroText}`, {
+    //   opacity: 0,
+    //   duration: 1,
+    // });
+  }, []);
   if (dataHero) {
     // es el que va a quedar...
     const {
@@ -43,7 +68,7 @@ const Hero = ({
           }}>
           {title && (
             <h1
-              className={`news ${styles.titleHero}`}
+              className={`news splitText ${styles.titleHero}`}
               style={{ color: title_color ?? '#fff' }}
               dangerouslySetInnerHTML={{
                 __html:
@@ -98,15 +123,24 @@ const Hero = ({
         }}>
         {title && (
           <h2
-            className={`news ${styles.titleHero}`}
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`news splitText ${styles.titleHero}`}
             style={{ color: colorTitle ?? '#fff' }}>
             {layout === 'principal' && (
-              <span className={`${styles.weAreText} uppercase`}>WE ARE</span>
+              <span className={`${styles.weAreText} splitText uppercase`}>
+                WE ARE
+              </span>
             )}
 
             {title}
             {lineStyles && (
               <div
+                data-aos="fade-down"
+                data-aos-duration="900"
+                data-aos-delay="900"
+                data-aos-offset="0"
                 className={`${styles.lineHero} bg-complete`}
                 style={{
                   backgroundColor: `${lineStyles.color}`,
@@ -134,7 +168,11 @@ const Hero = ({
         )}
       </div>
       {layout === 'poster' && (
-        <div className={`container ${styles.infoClientContainer}`}>
+        <div
+          className={`container ${styles.infoClientContainer}`}
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aous-delay="0">
           <p>
             Client: <span>Rise</span>
           </p>

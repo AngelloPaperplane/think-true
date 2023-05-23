@@ -348,3 +348,12 @@ a {
   display: flex;
   gap: 2%;
 }
+
+.imgAnimation {
+  clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+  transition: all 0.7s ease-in-out;
+}
+
+.imgAnimation.active {
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}

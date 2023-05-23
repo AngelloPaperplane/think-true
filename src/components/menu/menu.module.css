@@ -95,3 +95,16 @@
   font-weight: 700;
   opacity: 1;
 }
+
+.overlayMenu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 20;
+  pointer-events: none;
+}
+.svgNode path {
+  fill: #000000;
+}

@@ -131,6 +131,7 @@ const OurWork = () => {
       },
     },
   ];
+
   return (
     <>
       <HeroText content={contentHeroText} />

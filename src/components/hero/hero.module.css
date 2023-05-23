@@ -21,16 +21,16 @@
 }
 
 .titleHero {
-  font-size: 13vw;
+  font-size: clamp(40px, 13vw, 200px);
   position: relative;
   text-align: center;
 }
 
 .titleHero span {
-  display: block;
+  display: block !important;
   text-align: left;
   font-size: 3vw;
-  margin-bottom: -5vh;
+  margin-bottom: -2vw;
   color: #fff;
 }
 
@@ -42,7 +42,7 @@
 }
 
 .posterHero .lineHero {
-  top: 120%;
+  top: 85%;
 }
 
 .ballLine {

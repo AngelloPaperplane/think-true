@@ -1,7 +1,9 @@
 /* eslint-disable quotes */
 import Image from 'next/image';
-import React from 'react';
+import React, { useEffect } from 'react';
 import styles from './meet-us.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MeetUs = ({ setPopUpMember }) => {
   const members = [
@@ -94,10 +96,19 @@ const MeetUs = ({ setPopUpMember }) => {
         "<p>Our team members bring a wealth of knowledge and experience that allows us to create unique and multidimensional marketing experiences for our clients.</p> <br> <p>We believe that our multicultural approach to marketing is essential in today's globalized world and allows us to connect with audiences on a deeper level.</p>",
     },
   ];
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <section className={`siteSection ${styles.meetUsSection}`}>
       <div className={`container ${styles.meetUsContainer}`}>
-        <h2 className={`news uppercase bold ${styles.meetUsTitle}`}>Meet us</h2>
+        <h2
+          className={`news uppercase bold ${styles.meetUsTitle}`}
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aous-delay="0">
+          Meet us
+        </h2>
 
         <div className={`${styles.wrapperTeam} flex j-s a-c`}>
           {members.map((member, i) => (
@@ -106,7 +117,10 @@ const MeetUs = ({ setPopUpMember }) => {
                 typeof window !== 'undefined' ? window.crypto.randomUUID() : i
               }
               className={`${styles.wrapperMember}`}
-              onClick={() => setPopUpMember(member)}>
+              onClick={() => setPopUpMember(member)}
+              data-aos="fade-down"
+              data-aos-duration="900"
+              data-aous-delay="0">
               <div className={styles.imgMember}>
                 <Image
                   className={styles.innerImgMember}
