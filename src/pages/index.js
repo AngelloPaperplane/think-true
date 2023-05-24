@@ -8,7 +8,7 @@ import Clients from '@/components/homeClients';
 import Footer from '@/components/footer';
 
 function Home({ data }) {
-  const { meta, hero, mediablock } = data;
+  const { meta, hero, mediablock, work} = data;
   console.log(data);
   const contentAfterHero = {
     text: [
@@ -19,6 +19,7 @@ function Home({ data }) {
     posterVideo: '/images/02-home.jpg',
     layout: 'home',
   };
+/*
   const horizontalBlocks = [
     {
       title: 'NIKE DREW LEAGUE',
@@ -45,12 +46,13 @@ function Home({ data }) {
       text: 'Bringing signature athletes, local legends, Hollywood stars, and thousands of fans to South Central to create a destination for high-caliber basketball within a resilient community.',
     },
   ];
+  */
   return (
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
       <AfterHero content={contentAfterHero} mediaBlockContent={mediablock} />
-      <HorizontalSection blocksToIterate={horizontalBlocks} classParent="01" />
+      <HorizontalSection blocksToIterate={work} classParent="01" />
       <ImgTextB
         title="WHAT WE DO"
         subtitle="TRUE OFFERINGS"
@@ -69,7 +71,7 @@ function Home({ data }) {
 export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(
-    'https://paperplane.com.co/dev/thinktrue/wp-json/thinktrue-api/v1/home'
+    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}home`
   );
   const data = await res.json();
 
