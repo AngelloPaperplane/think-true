@@ -54,3 +54,36 @@
 .infoAgency:first-of-type {
   margin-bottom: 25px;
 }
+
+@media only screen and (max-width: 1300px) {
+  .titleAgency {
+    font-size: 24vw;
+  }
+
+  .floatInfoAgency {
+    width: 65%;
+    font-size: 22px;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .agencyContainer{
+    width: 100%;
+  }
+
+  .floatInfoAgency{
+    width: 100%;
+    margin-bottom: -40vh;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .agencySection{
+    height: 70vh;
+    margin-bottom: 80vh;
+    margin-top: 5vh;
+  }
+  .floatInfoAgency{
+    margin-bottom: -80vh;
+  }
+}

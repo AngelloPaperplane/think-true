@@ -51,6 +51,7 @@
   height: 40px;
   cursor: pointer;
   background-image: url(/icons/close-white.png);
+  z-index: 1;
 }
 
 .nameMember {
@@ -72,4 +73,58 @@
   font-size: 25px;
   line-height: 34px;
   color: #f2f0eb;
+}
+
+@media only screen and (max-width: 1300px) {
+  .nameMember {
+    font-size: 70px;
+    line-height: 1;
+  }
+  .professionMember {
+    font-size: 28px;
+    line-height: 1;
+  }
+
+  .descriptionMember {
+    margin-top: 7%;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .nameMember {
+    font-size: 60px;
+  }
+  .professionMember {
+    font-size: 26px;
+  }
+  
+  .descriptionMember {
+    font-size: 18px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .wrapperPopUpMember{
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+  }
+  
+  .wrapperImgMember{
+    width: 100%;
+    height: 50%;
+  }
+
+  .infoMember{
+    width: 100%;
+    height: 50%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .closePopUp{
+    width: 35px;
+    height: 35px;
+  }
 }

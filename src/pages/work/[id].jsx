@@ -1,5 +1,5 @@
 import AfterHero from '@/components/afterHero';
-import BigImage from '@/components/bigIMage';
+import BigImage from '@/components/bigImage';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import ImgTextB from '@/components/imgTextB';

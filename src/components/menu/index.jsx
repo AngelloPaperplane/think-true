@@ -4,49 +4,26 @@ import styles from './menu.module.css';
 import { useRouter } from 'next/router';
 import { gsap } from 'gsap';
 
-const Menu = ({ setMenuOpened }) => {
+const Menu = ({ menuOpened, setMenuOpened }) => {
   const [isOpened, setIsOpened] = useState(false);
   const router = useRouter();
   const { pathname } = router;
   console.log(pathname);
   useEffect(() => {
-    // setIsOpened(true);
-    // const path = document.querySelector('.pathNode');
-    // console.log(path);
-    // const tl = gsap.timeline({ paused: true });
-    // gsap.set(`.${styles.wrapperMenu}`, { visibility: 'hidden', opacity:  });
-    // const start = 'M0 502S175 272 500 272s500 230 500 230V0H0Z';
-    // const end = 'M0,10055175,995,500,995s500,5,500,5V0H0Z';
-    // const power2 = 'power2.inOut';
-    // tl.to(
-    //   path,
-    //   0.8,
-    //   {
-    //     attr: {
-    //       d: start,
-    //     },
-    //     ease: 'Power2.easeIn',
-    //   },
-    //   '<'
-    // ).to(
-    //   path,
-    //   0.8,
-    //   {
-    //     attr: {
-    //       d: end,
-    //     },
-    //     ease: 'Power2.easeIn',
-    //   },
-    //   '-=0.5'
-    // );
-    // tl.to(
-    //   `-${styles.wrapperMenu}`,
-    //   1,
-    //   {
-    //     visibility: 'visible',
-    //   },
-    //   '-=0.5'
-    // );
+    setIsOpened(menuOpened);
+    const tl = gsap.timeline({});
+    tl.from(
+      `.${styles.itemName}`,
+      0.8,
+      {
+        transform: 'translateX(-50%)',
+        // ease: 'Power2.easeIn',
+      },
+      '<'
+    );
+  }, [menuOpened]);
+  useEffect(() => {
+   
   }, []);
   return (
     <>
@@ -55,7 +32,7 @@ const Menu = ({ setMenuOpened }) => {
           <path className="pathNode" d="M0 2S175 1 500 1s500 1 500 1V0H0Z" />
         </svg>
       </div>
-      <div className={styles.wrapperMenu}>
+      <div className={`${styles.wrapperMenu} ${isOpened ? styles.active : ''}`}>
         <div className={`container ${styles.containerMenu}`}>
           <ul className={styles.ulMenu}>
             <li className={styles.itemMenu}>

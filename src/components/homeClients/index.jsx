@@ -40,31 +40,119 @@ const Clients = () => {
           These are our collaborators.
         </p>
       </div>
-      <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`bg-ct ${styles.collaboratorBox}`}
-          style={{ backgroundImage: 'url(/icons/logo-nike.png)' }}></div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`bg-ct ${styles.collaboratorBox}`}
-          style={{ backgroundImage: 'url(/icons/jp-logo.png)' }}></div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`bg-ct ${styles.collaboratorBox}`}
-          style={{ backgroundImage: 'url(/icons/una-logo.png)' }}></div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`bg-ct ${styles.collaboratorBox}`}
-          style={{ backgroundImage: 'url(/icons/rise-logo.png)' }}></div>
+      <div className={styles.wrapperCollaborators}>
+        <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/nike.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/jp-logo.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/ubs.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/visa.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/nba.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/ote.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/paypal.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/rise.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/robert.jpg)' }}></div>
+        </div>
+        <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/nike.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/jp-logo.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/ubs.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/visa.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/nba.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/ote.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/paypal.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/rise.jpg)' }}></div>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-ct ${styles.collaboratorBox}`}
+            style={{ backgroundImage: 'url(/icons/robert.jpg)' }}></div>
+        </div>
       </div>
     </section>
   );

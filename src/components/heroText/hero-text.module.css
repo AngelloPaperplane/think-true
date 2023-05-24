@@ -7,13 +7,19 @@
 
 .titleHeroText {
   font-weight: 700;
-  font-size: 256px;
+  font-size: clamp(60px, 12vw, 220px);
   color: #363233;
   margin-bottom: 1vh;
 }
 
 .subtitleHeroText {
   font-weight: 700;
-  font-size: 50px;
+  font-size: clamp(30px, 4.5vw, 50px);
   color: #000000;
+}
+
+@media only screen and (max-width:1024px){
+  .heroText{
+    padding: 15vh 0;
+  }
 }

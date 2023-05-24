@@ -74,3 +74,68 @@
   margin-top: 5vh;
   margin-bottom: 20vh;
 }
+
+
+@media only screen and (max-width: 1300px){
+  .titleFeatureJobIndex{
+    font-size: 17vw;
+    line-height: 1;
+  }
+
+  .titleFeatureJob{
+    font-size: 7vw;
+    line-height: 1;
+  }
+
+  .featuresJob{
+    font-size: 27px;
+    line-height: 1;
+  }
+
+  .growText{
+    font-size: 25px;
+    margin-top: 2.5vh;
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .contentFeature{
+    flex-direction: column;
+    margin-bottom: 25vh;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .featureBlock:nth-child(odd) .contentFeature{
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .contentTextFeature{
+    max-width: 80%;
+  }
+
+  .titleFeatureJobIndex{
+    font-size: 40vw;
+  }
+
+  .titleFeatureJob{
+    font-size: 12vw;
+  }
+  
+}
+
+@media only screen and (max-width: 520px){
+  .contentTextFeature{
+    max-width: 100%;
+  }
+
+  .featuresJob{
+    font-size: 23px;
+    margin-top: 5vh;
+  }
+
+  .growText{
+    margin-bottom: 5vh;
+    font-size: 20px;
+  }
+}

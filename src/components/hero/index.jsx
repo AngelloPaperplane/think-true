@@ -14,7 +14,8 @@ const Hero = ({
   layout,
   align,
   bgColor,
-  dataHero, // es el ultimo que va a quedar...
+  dataHero,
+  noAos // es el ultimo que va a quedar...
 }) => {
   useEffect(() => {
     AOS.init();
@@ -113,19 +114,20 @@ const Hero = ({
         align === 'right' ? styles.alignRight : ''
       } ${layout === 'poster' ? styles.posterHero : ''}`}
       style={{
-        backgroundImage: layout !== 'poster' ? `url(${image})` : '',
+        backgroundImage: layout !== 'poster' ? `url(${image})` : 'url()',
         backgroundColor: layout !== 'poster' ? 'transparent' : bgColor,
       }}>
       <div
         className={`container ${styles.heroContainer} flex j-c a-e bg-cv`}
         style={{
           backgroundImage: layout === 'poster' ? `url(${image})` : '',
-        }}>
+        }}
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aous-delay="0">
         {title && (
+
           <h2
-            data-aos="fade-up"
-            data-aos-duration="900"
-            data-aous-delay="0"
             className={`news splitText ${styles.titleHero}`}
             style={{ color: colorTitle ?? '#fff' }}>
             {layout === 'principal' && (
