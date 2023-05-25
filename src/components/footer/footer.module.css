@@ -124,9 +124,14 @@ textarea.inputForm {
 .imgSiteFooter {
   width: 97%;
   margin-left: 3%;
-  aspect-ratio: 5/7;
+  /* aspect-ratio: 5/7; */
   position: relative;
   margin-top: 5vh;
+}
+
+.imgSiteFooter img {
+  position: relative !important;
+  height: auto !important;
 }
 
 .siteFooter {
@@ -170,6 +175,15 @@ textarea.inputForm {
   background-color: #fff;
   border-radius: 50%;
   cursor: pointer;
+  background-size: 50%;
+}
+
+.ins {
+  background-image: url(/icons/ig.png);
+}
+
+.in {
+  background-image: url(/icons/in.png);
 }
 
 .footerMenu {

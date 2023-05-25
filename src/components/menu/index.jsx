@@ -34,11 +34,7 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
         <div className={`container ${styles.containerMenu}`}>
           <ul className={styles.ulMenu}>
             <li className={styles.itemMenu}>
-              <p
-                className={`news bold uppercase ${styles.itemName}`}
-                onClick={() => setMenuOpened(false)}>
-                Agency
-              </p>
+              <p className={`news bold uppercase ${styles.itemName}`}>Agency</p>
               <ul className={styles.innerUlItemMenu}>
                 <li
                   className={`${styles.innerItemMenu} news`}

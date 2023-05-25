@@ -35,7 +35,7 @@
 }
 
 .collaboratorsContainer {
-  width: 200%;
+  width: 100%;
   margin: 100px 0 50px;
   gap: 1%;
   display: flex;
@@ -47,7 +47,7 @@
 .collaboratorsContainer:last-of-type {
   position: absolute;
   top: -100px;
-  left: 200%;
+  left: 100%;
   animation: translateMembersB 15s infinite linear 7.5s forwards;
 }
 
