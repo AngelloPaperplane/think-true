@@ -67,7 +67,7 @@ const Hero = ({
             backgroundImage:
               layout === 'poster' ? `url(${image['super-large']})` : '',
           }}>
-          {title && !logo && (
+          {title && !logo && layout !== 'poster' && (
             <h1
               className={`news splitText ${styles.titleHero}`}
               style={{ color: title_color ?? '#fff' }}

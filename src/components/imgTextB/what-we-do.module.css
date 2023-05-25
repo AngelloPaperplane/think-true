@@ -131,7 +131,7 @@
   color: #363233;
 }
 
-.mobileLine{
+.mobileLine {
   display: none;
 }
 
@@ -191,11 +191,11 @@
     padding: 5vh 0 0;
   }
 
-  .redLine{
+  .redLine {
     display: none;
   }
 
-  .mobileLine{
+  .mobileLine {
     display: block;
     position: relative;
     top: initial;
@@ -206,11 +206,11 @@
     height: 5px;
   }
 
-  .mobileLine .ballRedLine{
+  .mobileLine .ballRedLine {
     left: -12.5px;
   }
 
-  .mobileLine .linkBallRedLine{
+  .mobileLine .linkBallRedLine {
     top: 0%;
     left: initial;
     right: 120%;

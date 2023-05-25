@@ -115,7 +115,7 @@ const ImgTextB = ({
                 ))}
               </ul>
             )}
-            
+
             {!withList && sideText && (
               <div
                 className={styles.sideText}
@@ -126,20 +126,20 @@ const ImgTextB = ({
             )}
           </div>
           {link && (
-              <div
-                className={`${styles.redLine} ${styles.mobileLine}`}
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aous-delay="0">
-                <div className={styles.ballRedLine}>
-                  <Link
-                    href={`/${link}`}
-                    className={`news ${styles.linkBallRedLine}`}>
-                    DIVE DEEPER
-                  </Link>
-                </div>
+            <div
+              className={`${styles.redLine} ${styles.mobileLine}`}
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aous-delay="0">
+              <div className={styles.ballRedLine}>
+                <Link
+                  href={`/${link}`}
+                  className={`news ${styles.linkBallRedLine}`}>
+                  DIVE DEEPER
+                </Link>
               </div>
-            )}
+            </div>
+          )}
         </div>
       </section>
     );
