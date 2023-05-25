@@ -53,7 +53,7 @@ function Home({ data }) {
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
       <AfterHero content={contentAfterHero} mediaBlockContent={mediablock} />
-      <HorizontalSection blocksToIterate={work} classParent="01" />
+      <HorizontalSection blocksToIterate={work} type='home' classParent="01" />
       <ImgTextB contentData={whatdo} />
       <Agency dataContent={team} image={'/images/05-home.jpg'} />
       <Clients dataContent={clients} />

@@ -1000,7 +1000,13 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                       <div
                         className={styles.innerPatternBg}
                         style={{
-                          backgroundImage: `url(/icons/${block.pattern}.png)`,
+                          backgroundImage: `url(/icons/${block.pattern}${
+                            type === 'home'
+                              ? block.pattern === 'arrows'
+                                ? '-b'
+                                : ''
+                              : ''
+                          }.png)`,
                         }}></div>
                     </div>
                   </div>
