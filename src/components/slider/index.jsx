@@ -52,20 +52,42 @@ const SiteSlider = ({ title, projects }) => {
               data-aous-delay="0">
               <div
                 className={`bg-cv ${styles.projectImg}`}
-                style={{ backgroundImage: `url(${project.imgProject.medium})` }}></div>
+                style={{
+                  backgroundImage: `url(${project.imgProject.medium})`,
+                }}></div>
               <div className={`news ${styles.contentProject}`}>
-                <h2 
+                <h2
                   className={styles.titleProject}
-                  style={{fontSize:`${project.numchartitle<8?'7vw':project.numchartext<13?'6vw':'5vw'}`}}
-                >{project.title}</h2>
+                  style={{
+                    fontSize: `${
+                      project.numchartitle < 8
+                        ? '7vw'
+                        : project.numchartext < 13
+                        ? '6vw'
+                        : '5vw'
+                    }`,
+                  }}>
+                  {project.title}
+                </h2>
                 <h3
                   className={`news ${styles.subtitleProject}`}
-                  style={{ color: project.color, fontSize: `${project.numchartext<15?'4vw':project.numchartext<25?'3vw':'2vw'}` }}>
+                  style={{
+                    color: project.color,
+                    fontSize: `${
+                      project.numchartext < 15
+                        ? '4vw'
+                        : project.numchartext < 25
+                        ? '3vw'
+                        : '2vw'
+                    }`,
+                  }}>
                   {project.subtitle}
                 </h3>
                 <p className={styles.infoProject}>{project.text}</p>
               </div>
-              <Link className={styles.linkOtherProject} href={`work/${project.link}`}></Link>
+              <Link
+                className={styles.linkOtherProject}
+                href={`work/${project.link}`}></Link>
             </div>
           ))}
         </Slider>
