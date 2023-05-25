@@ -7,6 +7,9 @@ const AfterHero = ({ content, mediaBlockContent }) => {
   useEffect(() => {
     AOS.init();
   }, []);
+  // const playVideo = () => {
+  //   document.querySelector('.iframeVideo').src += '&autoplay=1';
+  // };
   if (mediaBlockContent) {
     return (
       <section className={`siteSection ${styles.afterHeroSection}`}>
@@ -41,7 +44,20 @@ const AfterHero = ({ content, mediaBlockContent }) => {
                       backgroundImage: `url(${mediaBlockContent.image.medium})`,
                     }}>
                     {mediaBlockContent.video && (
-                      <div className={`bg-ct ${styles.playVideo}`}></div>
+                      <>
+                        {/* <iframe
+                          src="https://player.vimeo.com/video/783453809?autoplay=1"
+                          frameBorder="0"
+                          allow="autoplay"
+                          allowFullScreen
+                          className={styles.iframeVideo}></iframe> */}
+                        <iframe
+                          src="https://player.vimeo.com/video/816732114?h=c558db96ab&title=0&byline=0&portrait=0"
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          className={`iframeVideo ${styles.iframeVideo}`}></iframe>
+                        {/* <div className={`bg-ct ${styles.playVideo}`} onClick={playVideo}></div> */}
+                      </>
                     )}
                   </div>
                 )}

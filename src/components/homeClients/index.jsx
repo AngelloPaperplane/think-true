@@ -34,7 +34,11 @@ const Clients = ({ dataContent }) => {
         />
       </div>
       <div className={styles.wrapperCollaborators}>
-        <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
+        <div
+          className={`${styles.collaboratorsContainer} flex j-c a-c`}
+          style={{
+            width: `${clients.length * 12 > 100 ? clients.length * 12 : 100}vw`,
+          }}>
           {clients.map((logo, i) => (
             <div
               key={i}
@@ -49,7 +53,12 @@ const Clients = ({ dataContent }) => {
             />
           ))}
         </div>
-        <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
+        <div
+          className={`${styles.collaboratorsContainer} flex j-c a-c`}
+          style={{
+            width: `${clients.length * 12 > 100 ? clients.length * 12 : 100}vw`,
+            left: `${clients.length * 12 > 100 ? clients.length * 12 : 100}vw`,
+          }}>
           {clients.map((logo, i) => (
             <div
               key={100 + i}

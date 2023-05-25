@@ -770,7 +770,12 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               <div
                 className={`${styles.block} ${styles.videoBlock} itemHorizontal`}>
                 <div className={`imgAnimation ${styles.videoContainerBlock}`}>
-                  <div className={`${styles.iconPlay} bg-ct`}></div>
+                  {/* <div className={`${styles.iconPlay} bg-ct`}></div> */}
+                  <iframe
+                    src="https://player.vimeo.com/video/816732114?h=c558db96ab&title=0&byline=0&portrait=0"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    className={`iframeVideo ${styles.iframeVideo}`}></iframe>
                 </div>
               </div>
 

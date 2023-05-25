@@ -309,6 +309,12 @@
   position: relative;
 }
 
+.iframeVideo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
 .iconPlay {
   position: absolute;
   top: 50%;
