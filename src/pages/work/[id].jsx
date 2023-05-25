@@ -10,7 +10,7 @@ import React from 'react';
 import OurNumbers from '@/components/ourNumbers';
 
 const DetailWork = ({ data }) => {
-  const { meta, hero, blocks, analytics, formfooter } = data;
+  const { meta, hero, blocks, moreprojects, formfooter } = data;
 
   const contentAfterHero = {
     text: [
@@ -72,7 +72,7 @@ const DetailWork = ({ data }) => {
       <Hero dataHero={hero} />
 
       {blocks.map((block, i) => get_block_content(block, i))}
-      <SiteSlider {...otherProjects} />
+      <SiteSlider {...moreprojects} />
       <Footer dataContent={formfooter} />
     </>
   );
