@@ -3,7 +3,7 @@ import styles from './after-hero.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const AfterHero = ({ content, mediaBlockContent }) => {
+const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -13,7 +13,7 @@ const AfterHero = ({ content, mediaBlockContent }) => {
   if (mediaBlockContent) {
     return (
       <section className={`siteSection ${styles.afterHeroSection}`}>
-        <div className={`container ${styles.afterHeroContainer}`}>
+        <div className={`container ${styles.afterHeroContainer} ${afterhero?styles.noPadding:''}` }>
           {(mediaBlockContent.layout === 'home' ||
             mediaBlockContent.layout === 'team') && (
             <>

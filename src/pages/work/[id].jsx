@@ -53,7 +53,7 @@ const DetailWork = ({ data }) => {
   function get_block_content(block, index) {
     switch (block.block_name) {
       case 'text_block':
-        return <AfterHero key={index} mediaBlockContent={block} />;
+        return <AfterHero key={index} mediaBlockContent={block} afterhero={index>0} />;
       case 'image_block':
         return <BigImage key={index} dataImage={block} />;
       case 'analytics_block':
