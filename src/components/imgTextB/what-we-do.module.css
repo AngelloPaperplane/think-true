@@ -131,6 +131,10 @@
   color: #363233;
 }
 
+.mobileLine{
+  display: none;
+}
+
 @media only screen and (max-width: 1300px) {
   .titleSection {
     font-size: 12vw;
@@ -185,6 +189,33 @@
   .sideText {
     width: 100%;
     padding: 5vh 0 0;
+  }
+
+  .redLine{
+    display: none;
+  }
+
+  .mobileLine{
+    display: block;
+    position: relative;
+    top: initial;
+    left: initial;
+    right: -5vw;
+    margin: 0 0 0 auto;
+    width: 30vw;
+    height: 5px;
+  }
+
+  .mobileLine .ballRedLine{
+    left: -12.5px;
+  }
+
+  .mobileLine .linkBallRedLine{
+    top: 0%;
+    left: initial;
+    right: 120%;
+    transform: none;
+    font-size: 20px;
   }
 }
 
