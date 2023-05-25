@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './what-we-do.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const ImgTextB = ({
   title,
@@ -16,9 +17,11 @@ const ImgTextB = ({
   useEffect(() => {
     AOS.init();
   }, []);
+  console.log(contentData);
   if (contentData) {
-    const { title, subtitle, color, topText, image, withList, list } =
+    const { title, subtitle, color, topText, image, withList, list, link } =
       contentData;
+    console.log(contentData);
     return (
       <section className={`siteSection ${styles.whatWeDoSection}`}>
         <div className={`container ${styles.whatWeDoCo}`}>
@@ -70,13 +73,17 @@ const ImgTextB = ({
               style={{
                 backgroundImage: `url(${image.large ? image.large : ''})`,
               }}>
-              <div
-                className={styles.redLine}
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aous-delay="0">
-                <div className={styles.ballRedLine}></div>
-              </div>
+              {link && (
+                <div
+                  className={styles.redLine}
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0">
+                  <div className={styles.ballRedLine}>
+                    <Link href={link}>DIVE DEEPER</Link>
+                  </div>
+                </div>
+              )}
             </div>
             {withList && (
               <ul className={`${styles.detailsWhatWeDo}`}>

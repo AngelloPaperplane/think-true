@@ -46,6 +46,7 @@ const Hero = ({
       line_position,
       line_color,
       image,
+      logo = true,
       layout,
       align,
       bg_color,
@@ -66,7 +67,7 @@ const Hero = ({
             backgroundImage:
               layout === 'poster' ? `url(${image['super-large']})` : '',
           }}>
-          {title && (
+          {title && !logo && (
             <h1
               className={`news splitText ${styles.titleHero}`}
               style={{ color: title_color ?? '#fff' }}
@@ -78,6 +79,7 @@ const Hero = ({
               }}
             />
           )}
+          {logo && <img className={styles.imgLogo} alt="" src={'/icons/logo-hero.png'} />}
           {line_color && (
             <div
               className={`${styles.lineHero} bg-complete`}
@@ -129,7 +131,11 @@ const Hero = ({
             className={`news splitText ${styles.titleHero}`}
             style={{ color: colorTitle ?? '#fff' }}>
             {layout === 'principal' && (
-              <img src className={`${styles.imgText} splitText uppercase`} alt='' />
+              <img
+                src
+                className={`${styles.imgLogo} splitText uppercase`}
+                alt=""
+              />
             )}
 
             {layout !== 'principal' && title}
