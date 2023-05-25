@@ -85,11 +85,10 @@ const OurNumbers = () => {
               data-aos="fade-up"
               data-aos-duration="900"
               data-aos-delay={i * 200}>
-              <p className={`news ${styles.bigNumber}`}>
-                {number.number}
+              <p className={`news ${styles.bigNumber}`}>                
                 {number.typeNumber === 'number' && <IncrementNumber n={number.number} />}
-                {number.typeNumber === 'text' && <span className={styles.typeNumber}>{number.type}</span>}
-                
+                {number.typeNumber === 'text' && number.number}
+                <span className={styles.typeNumber}>{number.type}</span>
               </p>
               <p className={`news ${styles.infoNumber}`}>{number.info}</p>
             </div>
