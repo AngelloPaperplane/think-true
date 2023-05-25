@@ -8,7 +8,8 @@ import Clients from '@/components/homeClients';
 import Footer from '@/components/footer';
 
 function Home({ data }) {
-  const { meta, hero, mediablock, work, whatdo, team, clients, formfooter} = data;
+  const { meta, hero, mediablock, work, whatdo, team, clients, formfooter } =
+    data;
   console.log(data);
   const contentAfterHero = {
     text: [
@@ -56,7 +57,7 @@ function Home({ data }) {
       <ImgTextB contentData={whatdo} />
       <Agency dataContent={team} image={'/images/05-home.jpg'} />
       <Clients dataContent={clients} />
-      <Footer dataContent={formfooter}/>
+      <Footer dataContent={formfooter} />
     </>
   );
 }

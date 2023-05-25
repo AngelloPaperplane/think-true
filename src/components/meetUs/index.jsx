@@ -6,7 +6,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const MeetUs = ({ setPopUpMember, membersData }) => {
-/*
+  /*
   const members = [
     {
       img: '/images/alvin-1.jpg',
@@ -128,7 +128,7 @@ const MeetUs = ({ setPopUpMember, membersData }) => {
                   className={styles.innerImgMember}
                   src={member.img.medium}
                   fill
-                  alt={member.img.alt?member.img.alt:member.name}
+                  alt={member.img.alt ? member.img.alt : member.name}
                 />
                 <div
                   className={styles.lineColor}
@@ -144,7 +144,7 @@ const MeetUs = ({ setPopUpMember, membersData }) => {
               </div>
               <h2 className={`news ${styles.memberName}`}>{member.name}</h2>
               <h3 className={`news ${styles.profession}`}>
-                <p dangerouslySetInnerHTML={{__html:member.profession}} />
+                <p dangerouslySetInnerHTML={{ __html: member.profession }} />
               </h3>
             </div>
           ))}

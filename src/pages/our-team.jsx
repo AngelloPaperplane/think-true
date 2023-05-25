@@ -9,10 +9,11 @@ import TitleLine from '@/components/titleLine';
 import Head from 'next/head';
 import React, { useState } from 'react';
 
-const OurTeam = ({data}) => {
+const OurTeam = ({ data }) => {
   const [popUpMember, setPopUpMember] = useState({});
 
-  const {meta, hero, description, members, featuredtext, grid, formfooter} = data;
+  const { meta, hero, description, members, featuredtext, grid, formfooter } =
+    data;
   /*
   const contentAfterHero = {
     text: [
@@ -25,7 +26,7 @@ const OurTeam = ({data}) => {
     align: 'right',
   };
   */
- /*
+  /*
   const gridPictures = [
     { img: '/images/01-team.jpg', spaceRow: '1/2', spaceColumn: '1/2' },
     { img: '/images/02-team.jpg', spaceRow: '1/3', spaceColumn: '2/3' },
@@ -77,9 +78,7 @@ const OurTeam = ({data}) => {
 };
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}team`
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}team`);
   const data = await res.json();
 
   // Pass data to the page via props

@@ -21,7 +21,11 @@ const PopUpMember = ({ popUpMember, setPopUpMember }) => {
             className={styles.imgMember}
             src={popUpMember.imgfull.large}
             fill
-            alt={`${popUpMember.imgfull.alt?popUpMember.imgfull.alt:popUpMember.name.toLowerCase()} image`}
+            alt={`${
+              popUpMember.imgfull.alt
+                ? popUpMember.imgfull.alt
+                : popUpMember.name.toLowerCase()
+            } image`}
           />
         </div>
         <div

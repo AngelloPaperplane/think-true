@@ -5,7 +5,7 @@ import HorizontalSection from '@/components/horizontalSection';
 import React from 'react';
 
 const AboutUs = ({ data }) => {
-  const {meta,formfooter} = data;
+  const { meta, formfooter } = data;
   const horizontalBlocks1 = [
     {
       title: 'BRAND CONSULTING',
@@ -199,16 +199,14 @@ const AboutUs = ({ data }) => {
         type="about-3"
       />
 
-      <Footer dataContent={formfooter}/>
+      <Footer dataContent={formfooter} />
     </>
   );
 };
 
 export async function getServerSideProps() {
   // Fetch data from external API
-  const res = await fetch(
-    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}about`
-  );
+  const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}about`);
   const data = await res.json();
 
   // Pass data to the page via props

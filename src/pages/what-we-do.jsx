@@ -5,8 +5,8 @@ import HorizontalSection from '@/components/horizontalSection';
 import Head from 'next/head';
 import React from 'react';
 
-const WhatWeDo = ({data}) => {
-  const {meta, hero, formfooter} =  data;
+const WhatWeDo = ({ data }) => {
+  const { meta, hero, formfooter } = data;
   const horizontalBlocks = [
     {
       title: 'BRAND CONSULTING',
@@ -85,7 +85,7 @@ const WhatWeDo = ({data}) => {
         classParent="01"
         type="whatWeDo"
       />
-      <Footer dataContent={formfooter}/>
+      <Footer dataContent={formfooter} />
     </>
   );
 };

@@ -7,8 +7,8 @@ const TitleLine = ({ width, align, left, colorLine, title, featuredText }) => {
   useEffect(() => {
     AOS.init();
   }, []);
-  if(featuredText){
-    const {title, colorLine, left, align, width} = featuredText;
+  if (featuredText) {
+    const { title, colorLine, left, align, width } = featuredText;
     return (
       <div className={`container ${styles.containerTitleLine}`}>
         <h2

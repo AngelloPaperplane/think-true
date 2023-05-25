@@ -62,13 +62,12 @@ const AfterHero = ({ content, mediaBlockContent }) => {
                     {mediaBlockContent.title.text}
                   </h2>
                 )}
-                {mediaBlockContent.text &&
-                   (
-                    <p
-                      className={styles.textAfterHero}
-                      dangerouslySetInnerHTML={{__html:mediaBlockContent.text}}
-                    />
-                  )}
+                {mediaBlockContent.text && (
+                  <p
+                    className={styles.textAfterHero}
+                    dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
+                  />
+                )}
               </div>
             </>
           )}

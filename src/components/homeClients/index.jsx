@@ -3,8 +3,8 @@ import styles from './home-clients.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Clients = ({dataContent}) => {
-  const {title, subtitle, text, clients} = dataContent;
+const Clients = ({ dataContent }) => {
+  const { title, subtitle, text, clients } = dataContent;
   useEffect(() => {
     AOS.init();
   }, []);
@@ -16,34 +16,34 @@ const Clients = ({dataContent}) => {
           data-aos-duration="900"
           data-aous-delay="0"
           className={`${styles.clientsTitle} bold uppercase news`}
-          dangerouslySetInnerHTML={{__html:title}}
+          dangerouslySetInnerHTML={{ __html: title }}
         />
         <h3
           data-aos="fade-up"
           data-aos-duration="900"
           data-aous-delay="0"
           className={`${styles.subtitleClients} news`}
-          dangerouslySetInnerHTML={{__html:subtitle}}
+          dangerouslySetInnerHTML={{ __html: subtitle }}
         />
         <p
           data-aos="fade-up"
           data-aos-duration="900"
           data-aous-delay="0"
           className={styles.infoClients}
-          dangerouslySetInnerHTML={{__html:text}}
+          dangerouslySetInnerHTML={{ __html: text }}
         />
       </div>
       <div className={styles.wrapperCollaborators}>
         <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
-          {clients.map((logo,i)=>(
-              <div
-                key={i}
-                data-aos="fade-up"
-                data-aos-duration="900"
-                data-aous-delay="0"
-                className={`bg-ct ${styles.collaboratorBox}`}
-                style={{ backgroundImage: `url(${logo.medium}})` }}
-              />
+          {clients.map((logo, i) => (
+            <div
+              key={i}
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aous-delay="0"
+              className={`bg-ct ${styles.collaboratorBox}`}
+              style={{ backgroundImage: `url(${logo.medium}})` }}
+            />
           ))}
         </div>
       </div>
