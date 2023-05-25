@@ -34,7 +34,7 @@ const ImgTextB = ({
             <h2
               data-aos="fade-up"
               data-aos-duration="900"
-              data-aous-delay="0"
+              data-aos-delay="0"
               className={`titleSec ${styles.titleSection} news`}
               dangerouslySetInnerHTML={{ __html: title }}
             />

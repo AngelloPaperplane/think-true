@@ -25,6 +25,7 @@
     "react-dom": "18.2.0",
     "react-slick": "^0.29.0",
     "react-split": "^2.0.14",
+    "react-spring": "^9.7.1",
     "split-type": "^0.3.3",
     "spltjs": "^1.1.0",
     "textify.js": "^2.4.3"
