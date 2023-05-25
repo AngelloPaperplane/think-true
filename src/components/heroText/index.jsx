@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './hero-text.module.css';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from 'split-type';
 
 const HeroText = ({ content }) => {
