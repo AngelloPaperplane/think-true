@@ -48,6 +48,7 @@ const Hero = ({
       image,
       layout,
       align,
+      bg_color
     } = dataHero;
     return (
       <section
@@ -57,7 +58,7 @@ const Hero = ({
         style={{
           backgroundImage:
             layout !== 'poster' ? `url(${image['super-large']})` : '',
-          backgroundColor: layout !== 'poster' ? 'transparent' : bgColor,
+          backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
         }}>
         <div
           className={`container ${styles.heroContainer} flex j-c a-e bg-cv`}
