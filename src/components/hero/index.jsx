@@ -3,7 +3,7 @@ import styles from './hero.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from 'split-type';
 
 const Hero = ({
@@ -15,7 +15,7 @@ const Hero = ({
   align,
   bgColor,
   dataHero,
-  noAos, // es el ultimo que va a quedar...
+  // noAos, // es el ultimo que va a quedar...
 }) => {
   useEffect(() => {
     AOS.init();

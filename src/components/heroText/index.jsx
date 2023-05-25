@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import styles from './hero-text.module.css';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+// import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import SplitType from 'split-type';
 
 const HeroText = ({ content }) => {
@@ -31,7 +31,7 @@ const HeroText = ({ content }) => {
           {content.title}
         </h2>
         <h3 className={`news splitText ${styles.subtitleHeroText}`}>
-          {content.subtitle}
+          {content.subtitle ? content.subtitle : content.text}
         </h3>
       </div>
     </section>

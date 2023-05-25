@@ -6,7 +6,6 @@ import Masonry from '@/components/masonry';
 import MeetUs from '@/components/meetUs';
 import PopUpMember from '@/components/popUpMember';
 import TitleLine from '@/components/titleLine';
-import Head from 'next/head';
 import React, { useState } from 'react';
 
 const OurTeam = ({ data }) => {

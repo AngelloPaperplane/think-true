@@ -75,14 +75,14 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
         //   duration: 1.5,
         //   stagger: { amount: 0.5 },
         // });
-
+        /*
         const tween = gsap.from(text.chars, {
           opacity: 0,
           y: 20,
           duration: 1.5,
           stagger: { amount: 0.5 },
         });
-
+*/
         blocks.forEach((block, i) => {
           if (block.querySelector('.imgAnimation')) {
             imgAnimation = gsap.from(block.querySelector('.imgAnimation'), {
@@ -687,6 +687,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                   noAos={true}
                 />
               </div>
+
               <div
                 className={`${styles.block} ${styles.blockAfterHero} itemHorizontal`}>
                 <div className={styles.afterHeroAbout}>
@@ -975,10 +976,9 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                     }`}>
                     <h2
                       className={`news translateX ${styles.titleBlock}`}
-                      style={{ width: block.titleWidth }}>
-                      {block.title}
-                    </h2>
-
+                      style={{ width: block.titleWidth }}
+                      dangerouslySetInnerHTML={{ __html: block.title }}
+                    />
                     {block.subtitle && (
                       <h3
                         className={`subtitleParallax ${styles.subtitleBlock}`}
@@ -989,9 +989,10 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                       </h3>
                     )}
 
-                    <p className={`textParallax ${styles.infoBlock}`}>
-                      {block.text}
-                    </p>
+                    <p
+                      className={`textParallax ${styles.infoBlock}`}
+                      dangerouslySetInnerHTML={{ __html: block.text }}
+                    />
 
                     {type !== 'whatWeDo' && (
                       <div

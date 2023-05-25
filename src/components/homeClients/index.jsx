@@ -42,7 +42,25 @@ const Clients = ({ dataContent }) => {
               data-aos-duration="900"
               data-aous-delay="0"
               className={`bg-ct ${styles.collaboratorBox}`}
-              style={{ backgroundImage: `url(${logo.medium}})` }}
+              style={{
+                backgroundImage: `url(${logo.medium}})`,
+                width: `${100 / clients.length}%`,
+              }}
+            />
+          ))}
+        </div>
+        <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
+          {clients.map((logo, i) => (
+            <div
+              key={100 + i}
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aous-delay="0"
+              className={`bg-ct ${styles.collaboratorBox}`}
+              style={{
+                backgroundImage: `url(${logo.medium}})`,
+                width: `${100 / clients.length}%`,
+              }}
             />
           ))}
         </div>

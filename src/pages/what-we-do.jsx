@@ -2,11 +2,11 @@ import Metas from '@/components/metaDatas';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import HorizontalSection from '@/components/horizontalSection';
-import Head from 'next/head';
 import React from 'react';
 
 const WhatWeDo = ({ data }) => {
-  const { meta, hero, formfooter } = data;
+  const { meta, hero, horizontalcontent, formfooter } = data;
+  /*
   const horizontalBlocks = [
     {
       title: 'BRAND CONSULTING',
@@ -67,10 +67,17 @@ const WhatWeDo = ({ data }) => {
       text: "Our digital strategy expertise specializes in creating a unique brand perspective in digital channels. We'll help you connect with your target audience through tailored content and build a sustainable ecosystem for your brand.",
     },
   ];
+  */
   return (
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
+      <HorizontalSection
+        blocksToIterate={horizontalcontent}
+        classParent="01"
+        type="whatWeDo"
+      />
+      <Footer dataContent={formfooter} />
       {/*
       <Hero
         title="WHAT WE DO"
@@ -79,13 +86,12 @@ const WhatWeDo = ({ data }) => {
         lineStyles={{ color: '#D02E2A', left: '30%' }}
         layout={'secondary'}
       />
-      */}
       <HorizontalSection
         blocksToIterate={horizontalBlocks}
         classParent="01"
         type="whatWeDo"
       />
-      <Footer dataContent={formfooter} />
+      */}
     </>
   );
 };
