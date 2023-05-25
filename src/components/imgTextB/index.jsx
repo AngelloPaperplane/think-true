@@ -108,7 +108,7 @@ const ImgTextB = ({
       </section>
     );
   }
-  
+
   return (
     <section className={`siteSection ${styles.whatWeDoSection}`}>
       <div className={`container ${styles.whatWeDoCo}`}>
