@@ -6,13 +6,13 @@ import Masonry from '@/components/masonry';
 import React from 'react';
 
 const OurWork = ({ data }) => {
-  const { meta, hero, formfooter } = data;
+  const { meta, hero, works, formfooter } = data;
   /*
   const contentHeroText = {
     title: 'OUR WORK',
     subtitle: 'FULL PRODUCTION & FULL FLEXIBILITY',
   };
-  */
+  
   const gridPictures = [
     {
       img: '/images/01-detail.jpg',
@@ -136,6 +136,7 @@ const OurWork = ({ data }) => {
       },
     },
   ];
+  */
 
   return (
     <>
@@ -149,7 +150,7 @@ const OurWork = ({ data }) => {
         layout="ourWork"
         heightColumn={65}
         columns={2}
-        gridPictures={gridPictures}
+        gridPictures={works}
       />
       <Footer dataContent={formfooter} />
     </>
