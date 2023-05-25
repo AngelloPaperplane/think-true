@@ -8,7 +8,8 @@ import Clients from '@/components/homeClients';
 import Footer from '@/components/footer';
 
 function Home({ data }) {
-  const { meta, hero, mediablock, work } = data;
+  const { meta, hero, mediablock, work, whatdo, team, clients, formfooter } =
+    data;
   console.log(data);
   const contentAfterHero = {
     text: [
@@ -53,17 +54,10 @@ function Home({ data }) {
       <Hero dataHero={hero} />
       <AfterHero content={contentAfterHero} mediaBlockContent={mediablock} />
       <HorizontalSection blocksToIterate={work} classParent="01" />
-      <ImgTextB
-        title="WHAT WE DO"
-        subtitle="TRUE OFFERINGS"
-        color="#faa300"
-        image="images/04-home.jpg"
-        topText="We commit to honor and celebrate our diverse, culture-creating communities through brand initiatives that center around inclusive and authentic marketing."
-        withList={true}
-      />
-      <Agency image={'/images/05-home.jpg'} />
-      <Clients />
-      <Footer />
+      <ImgTextB contentData={whatdo} />
+      <Agency dataContent={team} image={'/images/05-home.jpg'} />
+      <Clients dataContent={clients} />
+      <Footer dataContent={formfooter} />
     </>
   );
 }

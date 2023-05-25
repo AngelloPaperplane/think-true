@@ -1,5 +1,6 @@
+import Metas from '@/components/metaDatas';
 import AfterHero from '@/components/afterHero';
-import BigImage from '@/components/bigImage';
+import BigImage from '@/components/bigIMage';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import ImgTextB from '@/components/imgTextB';
@@ -7,7 +8,9 @@ import SiteSlider from '@/components/slider';
 import YellowTextImg from '@/components/yellowTextImg';
 import React from 'react';
 
-const DetailWork = () => {
+const DetailWork = ({ data }) => {
+  const { meta, hero, formfooter } = data;
+
   const contentAfterHero = {
     text: [
       'RISE is a national nonprofit that educates and empowers the sports community to end racism, champion social justice and improve race relations.',
@@ -47,6 +50,9 @@ const DetailWork = () => {
   };
   return (
     <>
+      <Metas metadata={meta} />
+      <Hero dataHero={hero} />
+      {/*
       <Hero
         image="/images/01-detail.jpg"
         lineStyles={{ color: '#D02E2A', left: '17%' }}
@@ -54,6 +60,7 @@ const DetailWork = () => {
         align={'left'}
         bgColor={'#00B099'}
       />
+      */}
       <AfterHero content={contentAfterHero} />
       <BigImage
         image="/images/02-detail.jpg"
@@ -72,9 +79,17 @@ const DetailWork = () => {
         sideText="<p>A 360 rebrand of Champions of Change​</p> <p>Onsite production in addition to physical and digital assets for activation enhancements, such as self-reflection booths for fans to share their stories, a check-in process, and KPI development and reporting. ​</p> <p>Digital strategy of the Champions of Change virtual experience, along with athlete content capture and video production. ​</p> <p>Launch of a virtual reality experience and digital game to further reach sports fans in the digital space. ​</p> <p>With the influx of partnership requests for RISE, we expect to see even more brand presence for Champions of Change as we move into 2024.​</p>"
       />
       <SiteSlider {...otherProjects} />
-      <Footer />
+      <Footer dataContent={formfooter} />
     </>
   );
 };
+export async function getServerSideProps(req) {
+  const id = req.params.id;
+  const resData = await fetch(
+    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}workdetail?datawork=${id}`
+  );
+  const data = await resData.json();
 
+  return { props: { data } };
+}
 export default DetailWork;

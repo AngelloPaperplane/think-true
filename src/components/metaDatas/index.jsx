@@ -16,7 +16,7 @@ const Metas = ({ metadata }) => {
       <meta property="og:image" content={metadata.image.large} />
       <meta property="og:description" content={metadata.description} />
       <meta property="og:site_name" content={metadata.sitename} />
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/images/favicon.jpg" />
     </Head>
   );
 };

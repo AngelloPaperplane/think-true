@@ -48,32 +48,26 @@ const AfterHero = ({ content, mediaBlockContent }) => {
               </div>
             </>
           )}
-          {content && content.layout === 'team' && (
+          {mediaBlockContent && mediaBlockContent.layout === 'team' && (
             <>
               <div
                 className={`${
-                  content.align === 'right' ? styles.alignRight : ''
+                  mediaBlockContent.align === 'right' ? styles.alignRight : ''
                 } ${styles.wrapperAfterHeroTeam}`}>
-                {content.title && content.title.text && (
+                {mediaBlockContent.title && mediaBlockContent.title.text && (
                   <h2
                     className={`${styles.titleAfterHero} ${
-                      styles[content.title.position]
+                      styles[mediaBlockContent.title.position]
                     }`}>
-                    {content.title.text}
+                    {mediaBlockContent.title.text}
                   </h2>
                 )}
-                {content.text &&
-                  content.text.map((text, i) => (
-                    <p
-                      key={
-                        typeof window !== 'undefined'
-                          ? window.crypto.randomUUID()
-                          : i
-                      }
-                      className={styles.textAfterHero}>
-                      {text}
-                    </p>
-                  ))}
+                {mediaBlockContent.text && (
+                  <p
+                    className={styles.textAfterHero}
+                    dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
+                  />
+                )}
               </div>
             </>
           )}

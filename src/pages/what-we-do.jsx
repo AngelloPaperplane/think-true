@@ -1,10 +1,12 @@
+import Metas from '@/components/metaDatas';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import HorizontalSection from '@/components/horizontalSection';
-import Head from 'next/head';
 import React from 'react';
 
-const WhatWeDo = () => {
+const WhatWeDo = ({ data }) => {
+  const { meta, hero, horizontalcontent, formfooter } = data;
+  /*
   const horizontalBlocks = [
     {
       title: 'BRAND CONSULTING',
@@ -65,14 +67,18 @@ const WhatWeDo = () => {
       text: "Our digital strategy expertise specializes in creating a unique brand perspective in digital channels. We'll help you connect with your target audience through tailored content and build a sustainable ecosystem for your brand.",
     },
   ];
+  */
   return (
     <>
-      <Head>
-        <title>Think True</title>
-        <meta name="description" content="Think True" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
+      <Metas metadata={meta} />
+      <Hero dataHero={hero} />
+      <HorizontalSection
+        blocksToIterate={horizontalcontent}
+        classParent="01"
+        type="whatWeDo"
+      />
+      <Footer dataContent={formfooter} />
+      {/*
       <Hero
         title="WHAT WE DO"
         image="/images/services.jpg"
@@ -85,9 +91,20 @@ const WhatWeDo = () => {
         classParent="01"
         type="whatWeDo"
       />
-      <Footer />
+      */}
     </>
   );
 };
+
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}services`
+  );
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
 
 export default WhatWeDo;

@@ -30,7 +30,7 @@ const HeroText = ({ content }) => {
           {content.title}
         </h2>
         <h3 className={`news splitText ${styles.subtitleHeroText}`}>
-          {content.subtitle}
+          {content.subtitle ? content.subtitle : content.text}
         </h3>
       </div>
     </section>
