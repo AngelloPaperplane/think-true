@@ -10,8 +10,8 @@ import React from 'react';
 import OurNumbers from '@/components/ourNumbers';
 
 const DetailWork = ({ data }) => {
-  const { meta, hero, blocks, analytics, formfooter } = data;
-
+  const { meta, hero, blocks, moreprojects, formfooter } = data;
+  /*
   const contentAfterHero = {
     text: [
       'RISE is a national nonprofit that educates and empowers the sports community to end racism, champion social justice and improve race relations.',
@@ -49,7 +49,7 @@ const DetailWork = ({ data }) => {
       },
     ],
   };
-
+  */
   function get_block_content(block, index) {
     switch (block.block_name) {
       case 'text_block':
@@ -72,7 +72,7 @@ const DetailWork = ({ data }) => {
       <Hero dataHero={hero} />
 
       {blocks.map((block, i) => get_block_content(block, i))}
-      <SiteSlider {...otherProjects} />
+      <SiteSlider {...moreprojects} />
       <Footer dataContent={formfooter} />
     </>
   );
