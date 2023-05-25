@@ -9,7 +9,7 @@
 
 .clientsTitle {
   font-weight: 700;
-  font-size: 300px;
+  font-size: clamp(60px, 15vw, 300px);
   color: #363233;
 }
 
@@ -41,18 +41,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  animation: translateMembers 15s infinite linear 0s forwards;
+  animation: translateMembers 25s infinite linear 0s forwards;
 }
 
 .collaboratorsContainer:last-of-type {
   position: absolute;
   top: -100px;
   left: 100%;
-  animation: translateMembersB 15s infinite linear 7.5s forwards;
+  animation: translateMembersB 25s infinite linear 7.5s forwards;
 }
 
 .collaboratorBox {
-  max-width: 250px;
+  /* max-width: 250px; */
   width: 10.1111111%;
   aspect-ratio: 1/1;
 }
