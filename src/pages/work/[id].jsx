@@ -1,6 +1,6 @@
 import Metas from '@/components/metaDatas';
 import AfterHero from '@/components/afterHero';
-import BigImage from '@/components/bigImage';
+import BigImage from '@/components/bigIMage';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import ImgTextB from '@/components/imgTextB';
