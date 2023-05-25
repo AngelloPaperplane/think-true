@@ -15,7 +15,7 @@ const Hero = ({
   align,
   bgColor,
   dataHero,
-  noAos // es el ultimo que va a quedar...
+  noAos, // es el ultimo que va a quedar...
 }) => {
   useEffect(() => {
     AOS.init();
@@ -126,7 +126,6 @@ const Hero = ({
         data-aos-duration="900"
         data-aous-delay="0">
         {title && (
-
           <h2
             className={`news splitText ${styles.titleHero}`}
             style={{ color: colorTitle ?? '#fff' }}>

@@ -79,22 +79,21 @@
   font-weight: normal;
 }
 
-
-@media only screen and (max-width: 1300px){
-  .titleHero{
+@media only screen and (max-width: 1300px) {
+  .titleHero {
     font-size: clamp(40px, 11vw, 150px);
   }
 }
-@media only screen and (max-width: 768px){
-  .titleHero{
+@media only screen and (max-width: 768px) {
+  .titleHero {
     font-size: clamp(40px, 20vw, 150px);
   }
 
-  .titleHero span{
+  .titleHero span {
     font-size: 5vw;
   }
 
-  .posterHero{
+  .posterHero {
     padding-top: 0;
     margin-bottom: -5vh;
   }

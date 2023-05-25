@@ -18,8 +18,8 @@
   color: #000000;
 }
 
-@media only screen and (max-width:1024px){
-  .heroText{
+@media only screen and (max-width: 1024px) {
+  .heroText {
     padding: 15vh 0;
   }
 }

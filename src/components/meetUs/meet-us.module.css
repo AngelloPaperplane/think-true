@@ -93,40 +93,39 @@
   opacity: 0.7;
 }
 
-
-@media only screen and (max-width: 1300px){
-  .meetUsTitle{
+@media only screen and (max-width: 1300px) {
+  .meetUsTitle {
     font-size: clamp(50px, 14vw, 200px);
   }
-  
-  .memberName{
+
+  .memberName {
     font-size: 25px;
   }
-  
-  .profession{
+
+  .profession {
     line-height: 1.1;
     font-size: 18px;
   }
-  
-  .wrapperMember{
+
+  .wrapperMember {
     width: 31.333333%;
   }
 }
-@media only screen and (max-width: 768px){
-  .wrapperMember{
+@media only screen and (max-width: 768px) {
+  .wrapperMember {
     width: 48%;
     margin-bottom: 5vh;
   }
 }
-@media only screen and (max-width: 520px){
-  .memberName{
+@media only screen and (max-width: 520px) {
+  .memberName {
     margin-top: 60px;
   }
-  .memberName{
+  .memberName {
     font-size: 22px;
   }
-  
-  .profession{
+
+  .profession {
     font-size: 16px;
   }
 }

@@ -554,8 +554,8 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
-                start:'top 80%',
-                end:'end -50%',
+                start: 'top 80%',
+                end: 'end -50%',
                 scrub: 3,
                 // markers: i === blocks.length - 1 ? true : false
               },
@@ -568,8 +568,8 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
-                start:'top 80%',
-                end:'end -50%',
+                start: 'top 80%',
+                end: 'end -50%',
                 scrub: 3,
 
                 // markers: i === blocks.length - 1 ? true : false
@@ -584,8 +584,8 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
-                start:'top 80%',
-                end:'end -50%',
+                start: 'top 80%',
+                end: 'end -50%',
                 scrub: 3,
                 // markers: i === blocks.length - 1 ? true : false
               },
@@ -598,8 +598,8 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
-                start:'top 80%',
-                end:'end -50%',
+                start: 'top 80%',
+                end: 'end -50%',
                 scrub: 3,
                 // markers: i === blocks.length - 1 ? true : false
               },
@@ -612,8 +612,8 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               }% at 50% 50%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
-                start:'top 80%',
-                end:'end -50%',
+                start: 'top 80%',
+                end: 'end -50%',
                 scrub: 3,
               },
             });
@@ -936,7 +936,10 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 className={`${styles.block} itemHorizontal itemHorizontal-${i}`}>
                 <div
                   className={`${styles.wrapperBlock} wrapperBlock flex j-b a-s`}>
-                  <div className={`${styles.solidColod} ${type === 'whatWeDo' ? styles.solidColorWhatWeDo : ''}`}>
+                  <div
+                    className={`${styles.solidColod} ${
+                      type === 'whatWeDo' ? styles.solidColorWhatWeDo : ''
+                    }`}>
                     <div
                       className={`${styles.patternBg} bg-complete`}
                       style={{
@@ -952,17 +955,24 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                     </div>
                   </div>
                   <div
-                    className={`bg-cv imgParallax ${styles.imgBlock} ${type === 'whatWeDo' ? styles.colorWhatWeDo : ''}`}
+                    className={`bg-cv imgParallax ${styles.imgBlock} ${
+                      type === 'whatWeDo' ? styles.colorWhatWeDo : ''
+                    }`}
                     style={
                       type === 'whatWeDo'
                         ? {
                             backgroundColor: block.color,
                           }
                         : {
-                            backgroundImage: `${`url(${block.img.large?block.img.large:''})`}`,
+                            backgroundImage: `${`url(${
+                              block.img.large ? block.img.large : ''
+                            })`}`,
                           }
                     }></div>
-                  <div className={`${styles.contentBlock} ${type === 'whatWeDo' ? styles.contentWhatWeDo : ''}`}>
+                  <div
+                    className={`${styles.contentBlock} ${
+                      type === 'whatWeDo' ? styles.contentWhatWeDo : ''
+                    }`}>
                     <h2
                       className={`news translateX ${styles.titleBlock}`}
                       style={{ width: block.titleWidth }}>
@@ -986,7 +996,9 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                     {type !== 'whatWeDo' && (
                       <div
                         className={`${styles.ctaBlock} btnParallax flex j-b a-c`}>
-                        <Link className={`news ${styles.ctaText}`} href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>
+                        <Link
+                          className={`news ${styles.ctaText}`}
+                          href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>
                           {block.label}
                         </Link>
                         <div

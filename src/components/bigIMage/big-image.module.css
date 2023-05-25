@@ -54,29 +54,28 @@
   border-radius: 50%;
 }
 
-
-@media only screen and (max-width: 1300px){
-  .textBigImg{
+@media only screen and (max-width: 1300px) {
+  .textBigImg {
     font-size: 60px;
     line-height: 1.1;
   }
 }
 
-@media only screen and (max-width: 1024px){
-  .bigImgContainer{
+@media only screen and (max-width: 1024px) {
+  .bigImgContainer {
     padding: 20vh 0;
   }
-  .textBigImg{
+  .textBigImg {
     font-size: 50px;
   }
 }
-@media only screen and (max-width: 768px){
-  .textBigImg{
+@media only screen and (max-width: 768px) {
+  .textBigImg {
     font-size: 40px;
   }
 }
-@media only screen and (max-width: 520px){
-  .textBigImg{
+@media only screen and (max-width: 520px) {
+  .textBigImg {
     font-size: 30px;
   }
 }

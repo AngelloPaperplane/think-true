@@ -11,10 +11,10 @@
   overflow-y: auto;
   visibility: hidden;
   opacity: 0;
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
-.wrapperMenu.active{
+.wrapperMenu.active {
   visibility: visible;
   opacity: 1;
 }
@@ -118,31 +118,31 @@
   fill: #000000;
 }
 
-@media only screen and (max-width: 1300px){
-  .itemName{
+@media only screen and (max-width: 1300px) {
+  .itemName {
     font-size: 70px;
   }
 
-  .innerItemMenu{
+  .innerItemMenu {
     font-size: 25px;
   }
 }
 
-@media only screen and (max-width: 768px){
-  .itemName{
+@media only screen and (max-width: 768px) {
+  .itemName {
     font-size: 65px;
   }
 
-  .innerItemMenu{
+  .innerItemMenu {
     font-size: 23px;
   }
 }
-@media only screen and (max-width: 768px){
-  .itemName{
+@media only screen and (max-width: 768px) {
+  .itemName {
     font-size: 50px;
   }
 
-  .innerItemMenu{
+  .innerItemMenu {
     font-size: 20px;
     line-height: 1;
   }

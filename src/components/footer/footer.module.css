@@ -249,17 +249,17 @@ textarea.inputForm {
     aspect-ratio: 5/8;
   }
 
-  .siteFooter{
+  .siteFooter {
     padding-top: 100px;
   }
 
-  .footerItems{
+  .footerItems {
     width: 100%;
     align-items: flex-end;
     padding-bottom: 75px;
   }
 
-  .footerLogo{
+  .footerLogo {
     margin-bottom: -100px;
     background-image: url(/icons/logo-white.png);
     height: 100px;
@@ -267,32 +267,32 @@ textarea.inputForm {
     background-position: center left;
   }
 
-  .directionGroup{
+  .directionGroup {
     width: 100%;
   }
 
-  .socialWrapper{
+  .socialWrapper {
     margin-bottom: -75px;
   }
 
-  .infoUbication{
+  .infoUbication {
     font-size: 16px;
   }
 }
 
-@media only screen and (max-width: 520px){
-  .legacyText{
+@media only screen and (max-width: 520px) {
+  .legacyText {
     font-size: 12px;
     white-space: nowrap;
   }
 
-  .itemFooterMenu{
+  .itemFooterMenu {
     font-size: 22px;
     line-height: 1;
     margin-bottom: 15px;
   }
 
-  .followText{
+  .followText {
     font-size: 22px;
   }
 }

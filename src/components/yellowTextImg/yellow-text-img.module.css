@@ -39,37 +39,36 @@
   position: relative;
 }
 
-
-@media only screen and (max-width: 768px){
-  .topText{
+@media only screen and (max-width: 768px) {
+  .topText {
     width: 70%;
   }
 
-  .wrapperItems{
+  .wrapperItems {
     flex-direction: column-reverse;
   }
 
-  .sideYellowText{
+  .sideYellowText {
     width: 100%;
     margin: 0;
     text-align: left;
   }
 
-  .wrapperSideImg{
+  .wrapperSideImg {
     width: 100%;
   }
 
-  .yellowTextImgContainer{
+  .yellowTextImgContainer {
     width: 100%;
   }
 }
 
-@media only screen and (max-width: 520px){
-  .topText{
+@media only screen and (max-width: 520px) {
+  .topText {
     width: 100%;
   }
 
-  .yellowTextImgSection{
+  .yellowTextImgSection {
     padding: 10vh 0 5vh;
   }
 }

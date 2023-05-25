@@ -31,18 +31,17 @@
   border-radius: 50%;
 }
 
-
-@media only screen and (max-width: 1300px){
-  .titleLine{
+@media only screen and (max-width: 1300px) {
+  .titleLine {
     font-size: clamp(40px, 11vw, 130px);
     line-height: 1.1;
   }
 }
-@media only screen and (max-width: 768px){
-  .lineTitle{
+@media only screen and (max-width: 768px) {
+  .lineTitle {
     height: 30vh;
   }
-  .containerTitleLine{
+  .containerTitleLine {
     padding-bottom: 30vh;
   }
 }

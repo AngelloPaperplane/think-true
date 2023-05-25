@@ -22,9 +22,7 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
       '<'
     );
   }, [menuOpened]);
-  useEffect(() => {
-   
-  }, []);
+  useEffect(() => {}, []);
   return (
     <>
       <div className={styles.overlayMenu}>

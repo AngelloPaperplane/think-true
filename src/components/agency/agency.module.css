@@ -66,24 +66,23 @@
   }
 }
 
-
 @media only screen and (max-width: 768px) {
-  .agencyContainer{
+  .agencyContainer {
     width: 100%;
   }
 
-  .floatInfoAgency{
+  .floatInfoAgency {
     width: 100%;
     margin-bottom: -40vh;
   }
 }
 @media only screen and (max-width: 520px) {
-  .agencySection{
+  .agencySection {
     height: 70vh;
     margin-bottom: 80vh;
     margin-top: 5vh;
   }
-  .floatInfoAgency{
+  .floatInfoAgency {
     margin-bottom: -80vh;
   }
 }

@@ -89,21 +89,21 @@
     display: block;
   }
 
-  .innerImgMasonry{
+  .innerImgMasonry {
     width: 100%;
     aspect-ratio: 1/1;
     margin-bottom: 20px;
   }
 
-  .contentImgGrid{
+  .contentImgGrid {
     padding-left: 20px;
   }
 
-  .titleGridImg{
+  .titleGridImg {
     font-size: 12vw;
   }
 
-  .subTitleGridImg{
+  .subTitleGridImg {
     font-size: 5vw;
   }
 }
