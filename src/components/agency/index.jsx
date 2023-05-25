@@ -2,13 +2,14 @@ import React, { useEffect } from 'react';
 import styles from './agency.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const Agency = ({ image, dataContent }) => {
   useEffect(() => {
     AOS.init();
   }, []);
   if (dataContent) {
-    const { title, subtitle, text, image } = dataContent;
+    const { title, subtitle, text, image, link } = dataContent;
     return (
       <section
         className={`siteSection bg-cv ${styles.agencySection}`}
@@ -30,13 +31,25 @@ const Agency = ({ image, dataContent }) => {
           />
 
           <div className={styles.floatInfoAgency}>
+            <div
+              className={styles.redLine}
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aous-delay="0">
+              <div className={styles.ballRedLine}>
+                <Link
+                  href={'/contact'}
+                  className={`news ${styles.linkBallRedLine}`}>
+                  MEET US
+                </Link>
+              </div>
+            </div>
             <p
               data-aos="fade-up"
               data-aos-duration="900"
               data-aous-delay="0"
               className={styles.infoAgency}
-              dangerouslySetInnerHTML={{ __html: text }}
-            />
+              dangerouslySetInnerHTML={{ __html: text }}></p>
           </div>
         </div>
       </section>

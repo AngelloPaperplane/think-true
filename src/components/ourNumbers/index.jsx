@@ -4,7 +4,9 @@ import React, { useEffect } from 'react';
 import { useSpring, animated } from 'react-spring';
 import styles from './our-numbers.module.css';
 
-const OurNumbers = () => {
+const OurNumbers = ({ data }) => {
+  const { title, numbers } = data;
+  /*
   const numbers = [
     {
       number: 310,
@@ -25,6 +27,7 @@ const OurNumbers = () => {
       typeNumber: 'number'
     },
     {
+      number: '2050',
       number: '2,050',
       type: '',
       info: 'PARTICIPANTS EXPERIENCED EXCLUSIVE 3D HOLOGRAM CONTENT',
@@ -49,16 +52,16 @@ const OurNumbers = () => {
       typeNumber: 'text'
     },
   ];
-
-    const IncrementNumber = ({n}) => {
-      const { number } = useSpring({
-        from: { number: 0 },
-        number: n,
-        delay: 200,
-        config: { mass: 1, tension: 20, friction: 10 },
-      });
-      return <animated.span>{number.to((n) => n.toFixed(0))}</animated.span>;
-    };
+*/
+  const IncrementNumber = ({ n }) => {
+    const { number } = useSpring({
+      from: { number: 0 },
+      number: n,
+      delay: 200,
+      config: { mass: 1, tension: 20, friction: 10 },
+    });
+    return <animated.span>{number.to((n) => n.toFixed(0))}</animated.span>;
+  };
 
   useEffect(() => {
     AOS.init();
@@ -71,9 +74,9 @@ const OurNumbers = () => {
           className={`news ${styles.ourNumbersTitle}`}
           data-aos="fade-up"
           data-aos-duration="900"
-          data-aous-delay="0">
-          OUR <br /> NUMBERS
-        </h2>
+          data-aous-delay="0"
+          dangerouslySetInnerHTML={{ __html: title }}
+        />
 
         <div className={`flex j-b a-s ${styles.wrapperOurNumbers}`}>
           {numbers.map((number, i) => (
@@ -85,10 +88,11 @@ const OurNumbers = () => {
               data-aos="fade-up"
               data-aos-duration="900"
               data-aos-delay={i * 200}>
-              <p className={`news ${styles.bigNumber}`}>                
-                {number.typeNumber === 'number' && <IncrementNumber n={number.number} />}
-                {number.typeNumber === 'text' && number.number}
-                <span className={styles.typeNumber}>{number.type}</span>
+              <p className={`news ${styles.bigNumber}`}>
+                {number.prepend}
+                {/* <IncrementNumber n={parseFloat(number.number)} />*/}
+                {number.number}
+                <span className={styles.typeNumber}>{number.append}</span>
               </p>
               <p className={`news ${styles.infoNumber}`}>{number.info}</p>
             </div>

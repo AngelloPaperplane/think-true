@@ -6,8 +6,8 @@ import Hero from '@/components/hero';
 import ImgText from '@/components/imgText';
 import React from 'react';
 
-const Jobs = ({data}) => {
-  const {meta,hero,formfooter} = data;
+const Jobs = ({ data }) => {
+  const { meta, hero, formfooter } = data;
   const contentAfterHero = {
     title: { text: 'Hustle, fun, and diverse', position: 'left' },
     text: [
@@ -48,7 +48,7 @@ const Jobs = ({data}) => {
   return (
     <>
       <Metas metadata={meta} />
-      <Hero dataHero={hero}/>
+      <Hero dataHero={hero} />
       {/*
       <Hero
         title="WELCOME TO THE FAMILY"
@@ -67,7 +67,7 @@ const Jobs = ({data}) => {
         />
       ))}
       <ImgText content={contentImgText} />
-      <Footer dataContent={formfooter}/>
+      <Footer dataContent={formfooter} />
     </>
   );
 };

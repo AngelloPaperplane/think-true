@@ -19,8 +19,17 @@ const ImgTextB = ({
   }, []);
   console.log(contentData);
   if (contentData) {
-    const { title, subtitle, color, topText, image, withList, list, link } =
-      contentData;
+    const {
+      title,
+      subtitle,
+      color,
+      topText,
+      image,
+      withList,
+      list,
+      link,
+      sideText,
+    } = contentData;
     console.log(contentData);
     return (
       <section className={`siteSection ${styles.whatWeDoSection}`}>
@@ -80,7 +89,11 @@ const ImgTextB = ({
                   data-aos-duration="900"
                   data-aous-delay="0">
                   <div className={styles.ballRedLine}>
-                    <Link href={link}>DIVE DEEPER</Link>
+                    <Link
+                      href={`/${link}`}
+                      className={`news ${styles.linkBallRedLine}`}>
+                      DIVE DEEPER
+                    </Link>
                   </div>
                 </div>
               )}
@@ -207,8 +220,8 @@ const ImgTextB = ({
                 data-aos="fade-up"
                 data-aos-duration="900"
                 data-aous-delay="0">
-                <div className={`bg-ct ${styles.line}`}>
-                  <div className={`bg-ct ${styles.ballLine}`}></div>
+                <div className={`bg-ct line ${styles.line}`}>
+                  <div className={`bg-ct ballLine ${styles.ballLine}`}></div>
                 </div>
                 <p className={styles.textFeature}>
                   PR CONSULTATION & ISSUE MARKETIG

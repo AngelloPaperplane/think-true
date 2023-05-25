@@ -85,6 +85,16 @@ const Footer = ({ dataContent }) => {
                   data-aos-duration="900"
                   data-aous-delay="0"
                   className={`${styles.imgSiteFooter}`}>
+                  <button className={`news ${styles.sendBtnForm}`}>
+                    SEND
+                    <div
+                      className={styles.redLine}
+                      data-aos="fade-up"
+                      data-aos-duration="900"
+                      data-aous-delay="0">
+                      <div className={styles.ballRedLine}></div>
+                    </div>
+                  </button>
                   <Image src={image.large} fill alt={image.alt} />
                 </div>
               </div>
@@ -173,6 +183,23 @@ const Footer = ({ dataContent }) => {
                 data-aous-delay="0"
                 className={styles.inputForm}
                 placeholder="Message"></textarea>
+
+              <button className={styles.sendBtnForm}>
+                SEND
+                <div
+                  className={styles.redLine}
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0">
+                  <div className={styles.ballRedLine}>
+                    <Link
+                      href={'/contact'}
+                      className={`news ${styles.linkBallRedLine}`}>
+                      MEET US
+                    </Link>
+                  </div>
+                </div>
+              </button>
             </form>
             <div className={`flex j-s a-s ${styles.contactBlock}`}>
               <div className={styles.directionGroup}>
@@ -300,12 +327,12 @@ const Footer = ({ dataContent }) => {
               <a
                 href="https://www.instagram.com/thinktrue_/?hl=en"
                 rel="noreferrer"
-                target='_blank'
+                target="_blank"
                 className={`bg-ct ${styles.socialIcon} ${styles.ins}`}></a>
               <a
                 href="https://www.linkedin.com/company/think-true/"
                 rel="noreferrer"
-                target='_blank'
+                target="_blank"
                 className={`bg-ct ${styles.socialIcon} ${styles.in}`}></a>
             </div>
             <ul className={styles.footerMenu}>

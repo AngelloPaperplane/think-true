@@ -98,6 +98,39 @@
   margin-bottom: 5vh;
 }
 
+.redLine {
+  position: absolute;
+  width: 5px;
+  height: 40vh;
+  background-color: #d02e2a;
+  top: 80%;
+  right: 10%;
+}
+
+.ballRedLine {
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  top: calc(100% - 12.5px);
+  left: 50%;
+  margin-left: -12.5px;
+  border-radius: 50%;
+  background-color: #d02e2a;
+}
+
+.linkBallRedLine {
+  position: absolute;
+  top: 140%;
+  text-align: center;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-weight: 700;
+  font-size: 28px;
+  letter-spacing: 0.12em;
+  color: #363233;
+}
+
 @media only screen and (max-width: 1300px) {
   .titleSection {
     font-size: 12vw;

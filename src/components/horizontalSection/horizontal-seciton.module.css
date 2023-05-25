@@ -41,6 +41,8 @@
   height: 100%;
   background-color: #363233;
   position: relative;
+  mix-blend-mode: multiply;
+  z-index: 1;
 }
 
 .whatWeDoSec .solidColod {
@@ -89,6 +91,7 @@
   bottom: 10vh;
   left: 5vw;
   position: absolute;
+  z-index: 2;
 }
 
 .whatWeDoSec .contentBlock {
@@ -103,6 +106,17 @@
   margin-bottom: 5vh;
   color: #f2f0eb;
   /* text-shadow: 0px 4px 10px rgba(54, 50, 51, 0.5); */
+  position: relative;
+}
+
+.bgPatternAbout{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background-repeat: repeat-y;
+  mix-blend-mode: multiply;
 }
 
 .whatWeDoSec .titleBlock {

@@ -46,7 +46,7 @@ const Hero = ({
       line_position,
       line_color,
       image,
-      logo = true,
+      logo,
       layout,
       align,
       bg_color,

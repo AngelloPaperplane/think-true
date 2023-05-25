@@ -47,6 +47,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
         let revealText;
         let splitText;
         let imgAnimation;
+        let partnersCircle;
 
         // gsap.set(text.chars, {y: 70});
 
@@ -123,6 +124,40 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 trigger: block.querySelector('.splitText'),
                 containerAnimation: to,
                 start: '-60% 100%',
+                end: '100% 50%',
+                scrub: 5,
+                onEnter: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.add(styles.active);
+                  console.log(text.chars);
+                },
+                onEnterBack: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.add(styles.active);
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.remove(styles.active);
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.remove(styles.active);
+                  // tweenChars.reverse();
+                },
+              },
+            });
+          }
+          if (block.querySelector('.partnersCircle')) {
+            partnersCircle = gsap.from(block.querySelector('.partnersCircle'), {
+              transform: 'perspective(10000px) rotateZ(90deg) rotateX(90deg)',
+              scrollTrigger: {
+                trigger: block.querySelector('.partnersCircle'),
+                containerAnimation: to,
+                start: '-0% 100%',
                 end: '100% 50%',
                 scrub: 5,
                 onEnter: () => {
@@ -819,7 +854,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               <div
                 className={`${styles.block} ${styles.circlesBlock} itemHorizontal`}>
                 <div
-                  className={`${styles.circleContainer} ${styles.partnersCircle}`}>
+                  className={`${styles.circleContainer} ${styles.partnersCircle} partnersCircle`}>
                   <h3 className={`splitText ${styles.textInnerCircle}`}>
                     Partners{' '}
                   </h3>
@@ -843,6 +878,9 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
             <>
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
+                <div
+                  className={`bg-ct ${styles.bgPatternAbout}`}
+                  style={{ backgroundImage: 'url(/icons/arrows.png)' }}></div>
                 <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: '#D02E2A' }}>
@@ -873,6 +911,9 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
+                  className={`bg-ct ${styles.bgPatternAbout}`}
+                  style={{ backgroundImage: 'url(/icons/plus.png)' }}></div>
+                <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: '#00B099' }}>
                   <h2 className={`splitText ${styles.textTitleBlock}`}>
@@ -902,6 +943,9 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               </div>
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
+                <div
+                  className={`bg-ct ${styles.bgPatternAbout}`}
+                  style={{ backgroundImage: 'url(/icons/circles.png)' }}></div>
                 <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: '#FAA300' }}>
