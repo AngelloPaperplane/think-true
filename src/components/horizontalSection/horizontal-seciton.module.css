@@ -100,7 +100,7 @@
 .titleBlock {
   font-weight: 700;
   font-size: 7vw;
-  line-height: 154px;
+  margin-bottom: 5vh;
   color: #f2f0eb;
   /* text-shadow: 0px 4px 10px rgba(54, 50, 51, 0.5); */
 }
@@ -116,9 +116,9 @@
   align-self: center;
 }
 
-.whatWeDoSec .block:nth-child(odd) .indexBlock {
+/* .whatWeDoSec .block:nth-child(odd) .indexBlock {
   transform: translateX(-62.5%);
-}
+} */
 
 .subtitleBlock {
   font-size: 34px;
@@ -185,8 +185,8 @@
 }
 
 .titleAfterHeroAbout {
-  font-size: clamp(40px, 13vw, 200px);
-  line-height: 1.1;
+  font-size: clamp(40px, 11vw, 200px);
+  line-height: 1;
   color: #363233;
   width: 90%;
   margin: 0 auto;
@@ -236,7 +236,7 @@
 
 .titleEmbrace {
   font-weight: 400;
-  font-size: clamp(40px, 12vw, 180px);
+  font-size: clamp(40px, 10vw, 180px);
   line-height: 1;
   text-align: center;
   color: #363233;
@@ -256,7 +256,7 @@
 
 .titleCallToAction {
   font-weight: 400;
-  font-size: clamp(50px, 8vw, 100px);
+  font-size: clamp(50px, 7vw, 100px);
   line-height: 1.05;
   color: #000000;
   align-self: flex-end;
@@ -337,7 +337,7 @@
 
 .titleImpact {
   font-weight: 700;
-  font-size: clamp(70px, 10vw, 120px);
+  font-size: clamp(70px, 9vw, 120px);
   line-height: 1.05;
   color: #363233;
 }
@@ -493,4 +493,325 @@
 .innerImgBlockImgtext {
   object-fit: cover;
   object-position: center center;
+}
+
+@media only screen and (max-width: 1300px) {
+  .subtitleBlock {
+    font-size: 27px;
+    width: 75%;
+  }
+  .infoBlock {
+    font-size: 26px;
+    line-height: 34px;
+  }
+
+  .titleBlock {
+    font-size: 6vw;
+    margin: 0;
+  }
+
+  .contentBlock {
+    bottom: 5vh;
+  }
+
+  .whatWeDoSec .infoBlock {
+    width: 65%;
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 2.5vh 0;
+  }
+
+  .indexBlock {
+    font-size: 18vw;
+    line-height: 1;
+  }
+
+  .titleAfterHeroAbout {
+    width: 95%;
+  }
+
+  .textAfterHeroAbout {
+    width: 60%;
+    line-height: 1.2;
+  }
+
+  .textBigTitleBlock {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+
+  .imgTextRight .titleCallToAction {
+    font-size: 45px;
+    line-height: 1.2;
+  }
+
+  .smallTextBlockImgText {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .wrapperScroller {
+    height: auto;
+    display: block;
+  }
+
+  .wrapperBlock {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .block {
+    height: auto;
+  }
+
+  .imgBlock {
+    width: 100%;
+    aspect-ratio: 4/3;
+  }
+
+  .solidColod {
+    width: 100%;
+    height: 70vh;
+  }
+
+  .solidColod.solidColorWhatWeDo {
+    display: none;
+  }
+
+  .contentBlock {
+    width: 90%;
+    max-height: 60vh;
+    bottom: 5vh;
+  }
+
+  .colorWhatWeDo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .contentWhatWeDo {
+    position: relative;
+    bottom: initial;
+    left: initial;
+    padding: 10vh 0;
+    max-height: initial;
+  }
+
+  .whatWeDoSec .titleBlock {
+    font-size: 7vw;
+  }
+
+  .indexBlock {
+    font-size: 30vw;
+  }
+
+  .embraceBlock {
+    padding: 30vh 0;
+  }
+
+  .titleBlockWrapper {
+    padding: 30vh 0;
+  }
+
+  .callToActionBlockContainer {
+    padding: 0;
+    /* flex-direction: row-reverse; */
+  }
+
+  .imgCallToAction {
+    height: 80vh;
+  }
+
+  .callToActionBlock {
+    padding: 10vh 0;
+  }
+
+  .titleCallToAction {
+    font-size: clamp(50px, 6vw, 100px);
+  }
+  .imgTextRight .titleCallToAction {
+    font-size: 40px;
+    line-height: 1.1;
+    padding-left: 2vw;
+  }
+  .embraceBlock:before {
+    display: none;
+  }
+
+  .impactBlock {
+    padding: 10vh 0;
+  }
+  .textImpact {
+    width: 100%;
+  }
+
+  .contImgImpact {
+    padding: 10vh 0;
+  }
+
+  .wrapperImgBlockImgText {
+    height: 70vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .titleBlock {
+    font-size: 10vw;
+    margin-bottom: 2vh;
+  }
+
+  .subtitleBlock {
+    font-size: 23px;
+    width: 85%;
+    line-height: 1.2;
+  }
+
+  .infoBlock {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+
+  .ctaText {
+    font-size: 18px;
+  }
+
+  .ballLine {
+    width: calc(100% - 200px);
+  }
+
+  .ball {
+    width: 25px;
+    height: 25px;
+    left: -12.5px;
+    margin-top: -12.5px;
+  }
+
+  .titleAfterHeroAbout {
+    margin-bottom: 5vh;
+  }
+
+  .callToActionBlockContainer {
+    flex-wrap: wrap;
+  }
+
+  .imgCallToAction,
+  .bigTitle,
+  .imgBlockImgText {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .titleCallToAction,
+  .textBigTitleBlock {
+    width: 90%;
+  }
+
+  .callToActionBlock {
+    padding: 0;
+  }
+
+  .imgTextRight {
+    flex-direction: column-reverse;
+  }
+
+  .impactBlock {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .textImpactBlock {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .contImgImpact {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .wrapperImgImpact {
+    margin: 0 auto;
+  }
+
+  .circleContainer {
+    width: 90%;
+  }
+
+  .thinkCircle {
+    width: 70%;
+  }
+
+  .communitiesCircle {
+    width: 60%;
+  }
+
+  .textInnerCircle {
+    font-size: 35px;
+  }
+  .smallBlockTextImg {
+    flex-wrap: wrap;
+    padding: 15% 5%;
+  }
+
+  .smallTextBlockImgText {
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 50px;
+  }
+
+  .wrapperImgBlockImgText {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .textAfterHeroAbout {
+    width: 100%;
+    font-size: 20px;
+  }
+
+  .titleCallToAction,
+  .textBigTitleBlock {
+    font-size: 27px;
+    align-self: flex-start;
+    padding: 15vh 0;
+  }
+
+  .callToActionBlockContainer {
+    align-items: center;
+  }
+  .imgTextRight .titleCallToAction {
+    font-size: 27px;
+    padding-left: 5vw;
+  }
+
+  .iconPlay {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+  }
+
+  .titleImpact {
+    font-size: clamp(60px, 8vw, 120px);
+  }
+
+  .textInnerCircle {
+    font-size: 20px;
+    top: 5%;
+  }
+  .thinkCircle .textInnerCircle {
+    top: 5%;
+  }
+  .communitiesCircle .textInnerCircle {
+    top: 25%;
+  }
+
+  .smallTextBlockImgText {
+    font-size: 28px;
+  }
 }

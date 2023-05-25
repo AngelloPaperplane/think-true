@@ -9,7 +9,7 @@
 
 .titleSlider {
   font-weight: 700;
-  font-size: 150px;
+  font-size: clamp(50px, 9vw, 150px);
   line-height: 1;
   color: #363233;
   margin-bottom: 5vh;

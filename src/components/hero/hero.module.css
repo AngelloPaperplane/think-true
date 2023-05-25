@@ -35,7 +35,7 @@
 }
 
 .lineHero {
-  position: absolute;
+  position: absolute !important;
   top: calc(93%);
   height: 40vh;
   width: 5px;
@@ -77,4 +77,28 @@
 
 .infoClientContainer span {
   font-weight: normal;
+}
+
+@media only screen and (max-width: 1300px) {
+  .titleHero {
+    font-size: clamp(40px, 11vw, 150px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .titleHero {
+    font-size: clamp(40px, 20vw, 150px);
+  }
+
+  .titleHero span {
+    font-size: 5vw;
+  }
+
+  .posterHero {
+    padding-top: 0;
+    margin-bottom: -5vh;
+  }
+  .posterHero .heroContainer {
+    height: 100vh;
+    width: 100%;
+  }
 }

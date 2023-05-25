@@ -61,3 +61,46 @@
   top: 50%;
   width: 100px;
 }
+
+@media only screen and (max-width: 1300px) {
+  .textAfterHero {
+    font-size: 25px;
+  }
+
+  .titleAfterHero {
+    font-size: 4.5vw;
+    line-height: 1;
+  }
+
+  .afterHeroContainer {
+    padding-top: 40vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .textAfterHero {
+    font-size: 22px;
+    max-width: 80%;
+  }
+
+  .videoContainer {
+    width: 100%;
+  }
+  .titleAfterHero {
+    font-size: 7vw;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .textAfterHero {
+    max-width: 90%;
+    line-height: 1.5;
+  }
+  .wrapperAfterHeroTeam .textAfterHero {
+    max-width: 90%;
+    font-size: 18px;
+  }
+  .afterHeroContainer {
+    padding-bottom: 5vh;
+  }
+}

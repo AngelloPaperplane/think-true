@@ -1,14 +1,30 @@
 import Link from 'next/link';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Menu from '../menu';
 import styles from './header.module.css';
 import { useRouter } from 'next/router';
 
 const Header = () => {
-
   const [menuOpened, setMenuOpened] = useState(false);
+  const [hideMenu, setHideMenu] = useState(true);
   const router = useRouter();
   const { pathname } = router;
+
+  useEffect(() => {
+    let clearTimeOut;
+    if (menuOpened) {
+      setHideMenu(false);
+    } else {
+      clearTimeOut = setTimeout(() => {
+        setHideMenu(true);
+      }, 1000);
+    }
+    return () => {
+      // 👇️ clear timeout when the component unmounts
+      clearTimeout(clearTimeOut);
+    };
+  }, [menuOpened]);
+
   return (
     <>
       <header
@@ -27,7 +43,9 @@ const Header = () => {
             onClick={() => setMenuOpened(!menuOpened)}></div>
         </div>
       </header>
-      {menuOpened && <Menu setMenuOpened={setMenuOpened} />}
+      {!hideMenu && (
+        <Menu menuOpened={menuOpened} setMenuOpened={setMenuOpened} />
+      )}
     </>
   );
 };

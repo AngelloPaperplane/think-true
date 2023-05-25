@@ -9,6 +9,14 @@
   display: flex;
   padding: 22.5vh 0;
   overflow-y: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.wrapperMenu.active {
+  visibility: visible;
+  opacity: 1;
 }
 
 .containerMenu {
@@ -16,6 +24,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  justify-content: center;
   color: #f2f0eb;
 }
 
@@ -60,7 +69,7 @@
 .itemName {
   font-weight: 700;
   font-size: 100px;
-  line-height: 77px;
+  line-height: 0.8;
   letter-spacing: 0.11em;
   padding: 2.5vh 0;
   transition: all 0.5s ease-in-out;
@@ -107,4 +116,39 @@
 }
 .svgNode path {
   fill: #000000;
+}
+
+@media only screen and (max-width: 1300px) {
+  .itemName {
+    font-size: 70px;
+  }
+
+  .innerItemMenu {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .itemName {
+    font-size: 65px;
+  }
+
+  .innerItemMenu {
+    font-size: 23px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .itemName {
+    font-size: 50px;
+  }
+
+  .innerItemMenu {
+    font-size: 20px;
+    line-height: 1;
+  }
+  .itemMenu:hover .innerUlItemMenu {
+    max-height: 35vh;
+    padding: 20px 0 10px;
+    padding-left: 5vw;
+  }
 }

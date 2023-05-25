@@ -35,3 +35,15 @@
 .activeMenu .burger {
   background-image: url(/icons/close-white.png);
 }
+
+@media only screen and (max-width: 520px) {
+  .siteLogo {
+    width: 75px;
+    height: 45px;
+  }
+
+  .burger {
+    width: 30px;
+    height: 30px;
+  }
+}

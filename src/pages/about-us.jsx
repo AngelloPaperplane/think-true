@@ -4,7 +4,7 @@ import Footer from '@/components/footer';
 import HorizontalSection from '@/components/horizontalSection';
 import React from 'react';
 
-const AboutUs = ({data}) => {
+const AboutUs = ({ data }) => {
   const {meta,formfooter} = data;
   const horizontalBlocks1 = [
     {
@@ -203,7 +203,6 @@ const AboutUs = ({data}) => {
     </>
   );
 };
-
 
 export async function getServerSideProps() {
   // Fetch data from external API

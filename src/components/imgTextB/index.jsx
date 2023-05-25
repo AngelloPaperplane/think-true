@@ -21,6 +21,13 @@ const ImgTextB = ({
     return (
       <section className={`siteSection ${styles.whatWeDoSection}`}>
         <div className={`container ${styles.whatWeDoCo}`}>
+          <div
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`bg-cv ${styles.imgSection} ${styles.imgSectionMobile}`}
+            style={{ backgroundImage: `url(${image.large?image.large:''})` }}>
+          </div>
           {title && (
             <h2
               data-aos="fade-up"
@@ -89,7 +96,9 @@ const ImgTextB = ({
             {!withList && sideText && (
               <div
                 className={styles.sideText}
-                dangerouslySetInnerHTML={{ __html: sideText }}></div>
+                dangerouslySetInnerHTML={{ __html: sideText }}data-aos="fade-left"
+                data-aos-duration="1900"
+                data-aous-delay="0"></div>
             )}
           </div>
         </div>
@@ -99,7 +108,13 @@ const ImgTextB = ({
       return (
         <section className={`siteSection ${styles.whatWeDoSection}`}>
           <div className={`container ${styles.whatWeDoCo}`}>
-            {title && (
+            <div
+          data-aos="fade-up"
+          data-aos-duration="900"
+          data-aous-delay="0"
+          className={`bg-cv ${styles.imgSection} ${styles.imgSectionMobile}`}
+          style={{ backgroundImage: `url(${image})` }}></div>
+        {title && (
               <h2
                 data-aos="fade-up"
                 data-aos-duration="900"
@@ -135,7 +150,7 @@ const ImgTextB = ({
                 data-aos="fade-up"
                 data-aos-duration="900"
                 data-aous-delay="0"
-                className={`bg-cv ${styles.imgSection}`}
+                className={`bg-cv ${styles.imgSection} `}
                 style={{ backgroundImage: `url(${image})` }}>
                 <div
                   className={styles.redLine}
@@ -228,7 +243,10 @@ const ImgTextB = ({
               {!withList && sideText && (
                 <div
                   className={styles.sideText}
-                  dangerouslySetInnerHTML={{ __html: sideText }}></div>
+                  dangerouslySetInnerHTML={{ __html: sideText }}
+              data-aos="fade-left"
+              data-aos-duration="1900"
+              data-aous-delay="0"></div>
               )}
             </div>
           </div>

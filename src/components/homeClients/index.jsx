@@ -33,17 +33,19 @@ const Clients = ({dataContent}) => {
           dangerouslySetInnerHTML={{__html:text}}
         />
       </div>
-      <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
-        {clients.map((logo,i)=>(
-            <div
-              key={i}
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0"
-              className={`bg-ct ${styles.collaboratorBox}`}
-              style={{ backgroundImage: `url(${logo.medium}})` }}
-            />
-        ))}
+      <div className={styles.wrapperCollaborators}>
+        <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
+          {clients.map((logo,i)=>(
+              <div
+                key={i}
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0"
+                className={`bg-ct ${styles.collaboratorBox}`}
+                style={{ backgroundImage: `url(${logo.medium}})` }}
+              />
+          ))}
+        </div>
       </div>
     </section>
   );

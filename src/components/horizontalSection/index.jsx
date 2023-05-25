@@ -352,64 +352,308 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
         return () => {
           to.kill();
           blocks.forEach(() => {
-            titleTl.kill();
-            subTitleTl.kill();
-            textTl.kill();
-            buttonTl.kill();
-            imgTl.kill();
-            bigTitleBlock.kill();
-            revealText.kill();
-            splitText.kill();
-            imgAnimation.kill();
+            if (titleTl) {
+              titleTl.kill();
+            }
+            if (subTitleTl) {
+              subTitleTl.kill();
+            }
+            if (textTl) {
+              textTl.kill();
+            }
+            if (buttonTl) {
+              buttonTl.kill();
+            }
+            if (imgTl) {
+              imgTl.kill();
+            }
+            if (bigTitleBlock) {
+              bigTitleBlock.kill();
+            }
+            if (revealText) {
+              revealText.kill();
+            }
+            if (splitText) {
+              splitText.kill();
+            }
+            if (imgAnimation) {
+              imgAnimation.kill();
+            }
           });
         };
       },
     });
-    // ScrollTrigger.matchMedia({
-    //   "(max-width: 1024px)": () => {
-    //     let changeBackground = (bg, parent) => {
-    //       parent.classList.remove(styles.hide);
-    //       gsap.to(scroller.current, {
-    //         backgroundColor: bg,
-    //       });
-    //     };
+    ScrollTrigger.matchMedia({
+      '(max-width: 1024px)': () => {
+        const to = gsap.to(blocks, {
+          // xPercent: () => -100 * (blocks.length - 1),
+          ease: 'none',
+          scrollTrigger: {
+            trigger: scroller.current,
+            pin: false,
+            pinSpacing: false,
+            scrub: 1,
+            invalidateOnRefresh: true,
+            anticipatePin: 1,
+            end: () => `+=${window.innerWidth}`,
+          },
+        });
 
-    //     let blockTl;
+        let titleTl;
+        let subTitleTl;
+        let textTl;
+        let buttonTl;
+        let imgTl;
 
-    //     blocks.forEach((block, i) => {
-    //       blockTl = gsap.to(block.querySelector(".wrapperBlock"), {
-    //         transform: `translateX(-${
-    //           i === blocks.length - 1 ? 0 : 0
-    //         }%) scale(1)`,
-    //         scrollTrigger: {
-    //           trigger: block.querySelector(".wrapperBlock"),
-    //           // containerAnimation: to,
-    //           start: "top 80%",
-    //           end: "100% 0%",
-    //           scrub: 3,
-    //           onEnter: (e) => {
-    //             changeBackground(
-    //               e.trigger._gsap.target.parentElement.getAttribute("data-bg"),
-    //               e.trigger._gsap.target.parentElement
-    //             );
-    //           },
-    //           onEnterBack: (e) => {
-    //             changeBackground(
-    //               e.trigger._gsap.target.parentElement.getAttribute("data-bg"),
-    //               e.trigger._gsap.target.parentElement
-    //             );
-    //           },
-    //         },
-    //       });
-    //     });
+        // Vars for about
 
-    //     return () => {
-    //       blocks.forEach((block, i) => {
-    //         blockTl.kill();
-    //       });
-    //     };
-    //   },
-    // });
+        let bigTitleBlock;
+        let revealText;
+        let splitText;
+        let imgAnimation;
+
+        blocks.forEach((block, i) => {
+          if (block.querySelector('.imgAnimation')) {
+            imgAnimation = gsap.from(block.querySelector('.imgAnimation'), {
+              transform: 'translateY(150%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.imgAnimation'),
+                start: '0% 100%',
+                end: '100% 0%',
+                scrub: 5,
+                // markers: true,
+                onEnter: () => {
+                  block.querySelector('.imgAnimation').classList.add('active');
+                },
+                onEnterBack: () => {
+                  block.querySelector('.imgAnimation').classList.add('active');
+                  // tweenChars.play();
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.imgAnimation')
+                    .classList.remove('active');
+                  // tweenChars.reverse();
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.imgAnimation')
+                    .classList.remove('active');
+                  // tweenChars.reverse();
+                },
+              },
+            });
+          }
+          if (block.querySelector('.splitText')) {
+            splitText = gsap.from(block.querySelector('.splitText'), {
+              transform: 'translateY(100%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.splitText'),
+                start: '-50% 100%',
+                end: '100% 100%',
+                scrub: 5,
+                // markers: true,
+                onEnter: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.add(styles.active);
+                  console.log(text.chars);
+                },
+                onEnterBack: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.add(styles.active);
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.remove(styles.active);
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.splitText')
+                    .classList.remove(styles.active);
+                  // tweenChars.reverse();
+                },
+              },
+            });
+          }
+          if (block.querySelector('.revealText')) {
+            revealText = gsap.from(block.querySelector('.revealText'), {
+              transform: 'translateX(-50%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.revealText'),
+                start: '0% 100%',
+                end: '100% 0%',
+                scrub: 5,
+                // markers: true,
+                onEnter: () => {
+                  block
+                    .querySelector('.revealText')
+                    .classList.add(styles.active);
+                },
+                onEnterBack: () => {
+                  block
+                    .querySelector('.revealText')
+                    .classList.add(styles.active);
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.revealText')
+                    .classList.remove(styles.active);
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.revealText')
+                    .classList.remove(styles.active);
+                },
+              },
+            });
+          }
+          if (block.querySelector(`.${styles.titleAfterHeroAbout}`)) {
+            bigTitleBlock = gsap.from(
+              block.querySelector(`.${styles.titleAfterHeroAbout}`),
+              {
+                transform: 'translateX(50%)',
+                scrollTrigger: {
+                  trigger: block.querySelector(
+                    `.${styles.titleAfterHeroAbout}`
+                  ),
+                  start: '0% 50%',
+                  end: '100% 35%',
+                  scrub: 3,
+                  // markers: true,
+                  onEnter: () => {
+                    block
+                      .querySelector(`.${styles.titleAfterHeroAbout}`)
+                      .classList.add('active');
+                  },
+                  onEnterBack: () => {
+                    block
+                      .querySelector(`.${styles.titleAfterHeroAbout}`)
+                      .classList.add('active');
+                  },
+                  onLeave: () => {
+                    block
+                      .querySelector(`.${styles.titleAfterHeroAbout}`)
+                      .classList.remove('active');
+                  },
+                  onLeaveBack: () => {
+                    block
+                      .querySelector(`.${styles.titleAfterHeroAbout}`)
+                      .classList.remove('active');
+                  },
+                },
+              }
+            );
+          }
+          if (block.querySelector('.translateX')) {
+            titleTl = gsap.from(block.querySelector('.translateX'), {
+              transform: `translateX(${
+                i === blocks.length - 1 ? '100' : '100'
+              }%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                start: 'top 80%',
+                end: 'end -50%',
+                scrub: 3,
+                // markers: i === blocks.length - 1 ? true : false
+              },
+            });
+          }
+          if (block.querySelector('.subtitleParallax')) {
+            subTitleTl = gsap.from(block.querySelector('.subtitleParallax'), {
+              transform: `translateX(${
+                i === blocks.length - 1 ? '120' : '120'
+              }%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                start: 'top 80%',
+                end: 'end -50%',
+                scrub: 3,
+
+                // markers: i === blocks.length - 1 ? true : false
+              },
+            });
+          }
+
+          if (block.querySelector('.textParallax')) {
+            textTl = gsap.from(block.querySelector('.textParallax'), {
+              transform: `translateX(${
+                i === blocks.length - 1 ? '160' : '160'
+              }%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                start: 'top 80%',
+                end: 'end -50%',
+                scrub: 3,
+                // markers: i === blocks.length - 1 ? true : false
+              },
+            });
+          }
+          if (block.querySelector('.btnParallax')) {
+            buttonTl = gsap.from(block.querySelector('.btnParallax'), {
+              transform: `translateX(${
+                i === blocks.length - 1 ? '200' : '200'
+              }%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                start: 'top 80%',
+                end: 'end -50%',
+                scrub: 3,
+                // markers: i === blocks.length - 1 ? true : false
+              },
+            });
+          }
+          if (block.querySelector('.imgParallax')) {
+            imgTl = gsap.to(block.querySelector('.imgParallax'), {
+              clipPath: `circle(${
+                i === blocks.length - 1 ? '100' : '100'
+              }% at 50% 50%)`,
+              scrollTrigger: {
+                trigger: block.querySelector('.wrapperBlock'),
+                start: 'top 80%',
+                end: 'end -50%',
+                scrub: 3,
+              },
+            });
+          }
+        });
+
+        return () => {
+          to.kill();
+          blocks.forEach(() => {
+            if (titleTl) {
+              titleTl.kill();
+            }
+            if (subTitleTl) {
+              subTitleTl.kill();
+            }
+            if (textTl) {
+              textTl.kill();
+            }
+            if (buttonTl) {
+              buttonTl.kill();
+            }
+            if (imgTl) {
+              imgTl.kill();
+            }
+            if (bigTitleBlock) {
+              bigTitleBlock.kill();
+            }
+            if (revealText) {
+              revealText.kill();
+            }
+            if (splitText) {
+              splitText.kill();
+            }
+            if (imgAnimation) {
+              imgAnimation.kill();
+            }
+          });
+        };
+      },
+    });
   }, []);
   return (
     <section
@@ -423,7 +667,13 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           id="block"
           className={`${styles.wrapperScroller} wrapperScroller`}
           style={{
-            width: `${blocksToIterate.length * 100}vw`,
+            width: `${
+              typeof window !== 'undefined'
+                ? window.innerWidth > 1024
+                  ? `${blocksToIterate.length * 100}vw`
+                  : '100%'
+                : '100%'
+            }`,
           }}
           ref={scroller}>
           {type === 'about-1' && (
@@ -434,6 +684,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                   title="ABOUT US"
                   type="secondary"
                   colorTitle="#fff"
+                  noAos={true}
                 />
               </div>
               <div
@@ -685,7 +936,10 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                 className={`${styles.block} itemHorizontal itemHorizontal-${i}`}>
                 <div
                   className={`${styles.wrapperBlock} wrapperBlock flex j-b a-s`}>
-                  <div className={styles.solidColod}>
+                  <div
+                    className={`${styles.solidColod} ${
+                      type === 'whatWeDo' ? styles.solidColorWhatWeDo : ''
+                    }`}>
                     <div
                       className={`${styles.patternBg} bg-complete`}
                       style={{
@@ -701,17 +955,24 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                     </div>
                   </div>
                   <div
-                    className={`bg-cv imgParallax ${styles.imgBlock}`}
+                    className={`bg-cv imgParallax ${styles.imgBlock} ${
+                      type === 'whatWeDo' ? styles.colorWhatWeDo : ''
+                    }`}
                     style={
                       type === 'whatWeDo'
                         ? {
                             backgroundColor: block.color,
                           }
                         : {
-                            backgroundImage: `${`url(${block.img.large?block.img.large:''})`}`,
+                            backgroundImage: `${`url(${
+                              block.img.large ? block.img.large : ''
+                            })`}`,
                           }
                     }></div>
-                  <div className={styles.contentBlock}>
+                  <div
+                    className={`${styles.contentBlock} ${
+                      type === 'whatWeDo' ? styles.contentWhatWeDo : ''
+                    }`}>
                     <h2
                       className={`news translateX ${styles.titleBlock}`}
                       style={{ width: block.titleWidth }}>
@@ -735,7 +996,9 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                     {type !== 'whatWeDo' && (
                       <div
                         className={`${styles.ctaBlock} btnParallax flex j-b a-c`}>
-                        <Link className={`news ${styles.ctaText}`} href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>
+                        <Link
+                          className={`news ${styles.ctaText}`}
+                          href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>
                           {block.label}
                         </Link>
                         <div

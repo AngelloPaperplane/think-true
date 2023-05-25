@@ -38,3 +38,37 @@
   aspect-ratio: 1/1.1;
   position: relative;
 }
+
+@media only screen and (max-width: 768px) {
+  .topText {
+    width: 70%;
+  }
+
+  .wrapperItems {
+    flex-direction: column-reverse;
+  }
+
+  .sideYellowText {
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+
+  .wrapperSideImg {
+    width: 100%;
+  }
+
+  .yellowTextImgContainer {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .topText {
+    width: 100%;
+  }
+
+  .yellowTextImgSection {
+    padding: 10vh 0 5vh;
+  }
+}
