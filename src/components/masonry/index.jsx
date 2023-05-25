@@ -57,7 +57,7 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
               </>
             )}
 
-            <Image src={img.img} alt="" fill className={styles.imgMasonry} />
+            <Image src={img.img.large?img.img.large:img.img} alt={img.img.alt?img.img.alt:''} fill className={styles.imgMasonry} />
           </div>
         ))}
       </div>

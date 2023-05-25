@@ -1,3 +1,4 @@
+import Metas from '@/components/metaDatas';
 import AfterHero from '@/components/afterHero';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
@@ -8,8 +9,11 @@ import TitleLine from '@/components/titleLine';
 import Head from 'next/head';
 import React, { useState } from 'react';
 
-const OurTeam = () => {
+const OurTeam = ({data}) => {
   const [popUpMember, setPopUpMember] = useState({});
+
+  const {meta, hero, description, members, featuredtext, grid, formfooter} = data;
+  /*
   const contentAfterHero = {
     text: [
       'Our team members bring a wealth of knowledge and experience that allows us to create unique and multidimensional marketing experiences for our clients.',
@@ -20,6 +24,8 @@ const OurTeam = () => {
     layout: 'team',
     align: 'right',
   };
+  */
+ /*
   const gridPictures = [
     { img: '/images/01-team.jpg', spaceRow: '1/2', spaceColumn: '1/2' },
     { img: '/images/02-team.jpg', spaceRow: '1/3', spaceColumn: '2/3' },
@@ -32,15 +38,24 @@ const OurTeam = () => {
     { img: '/images/footer.jpg', spaceRow: '6/8', spaceColumn: '1/2' },
     { img: '/images/07-team.jpg', spaceRow: '6/8', spaceColumn: '2/4' },
   ];
+  */
   return (
     <>
-      <Head>
-        <title>Think True</title>
-        <meta name="description" content="Think True" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <Hero
+      <Metas metadata={meta} />
+      <Hero dataHero={hero} />
+      <AfterHero mediaBlockContent={description} />
+      <MeetUs membersData={members} setPopUpMember={setPopUpMember} />
+      <TitleLine featuredText={featuredtext} />
+      <Masonry columns={3} gridPictures={grid} />
+      {Object.entries(popUpMember).length > 0 && (
+        <PopUpMember
+          popUpMember={popUpMember}
+          setPopUpMember={setPopUpMember}
+        />
+      )}
+      <Footer dataContent={formfooter} />
+      {/*
+      <Hero 
         title="OUR TEAM"
         image="/images/team.jpg"
         colorTitle="#F2F0EB"
@@ -48,8 +63,6 @@ const OurTeam = () => {
         layout={'secondary'}
         align={'right'}
       />
-      <AfterHero content={contentAfterHero} />
-      <MeetUs setPopUpMember={setPopUpMember} />
       <TitleLine
         width={70}
         align={'left'}
@@ -58,15 +71,18 @@ const OurTeam = () => {
         colorLine="#D02E2A"
       />
       <Masonry columns={3} gridPictures={gridPictures} />
-      {Object.entries(popUpMember).length > 0 && (
-        <PopUpMember
-          popUpMember={popUpMember}
-          setPopUpMember={setPopUpMember}
-        />
-      )}
-      <Footer />
+      */}
     </>
   );
 };
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(
+    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}team`
+  );
+  const data = await res.json();
 
+  // Pass data to the page via props
+  return { props: { data } };
+}
 export default OurTeam;

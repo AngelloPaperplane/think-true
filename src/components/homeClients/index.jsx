@@ -3,7 +3,8 @@ import styles from './home-clients.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Clients = () => {
+const Clients = ({dataContent}) => {
+  const {title, subtitle, text, clients} = dataContent;
   useEffect(() => {
     AOS.init();
   }, []);
@@ -14,57 +15,35 @@ const Clients = () => {
           data-aos="fade-up"
           data-aos-duration="900"
           data-aous-delay="0"
-          className={`${styles.clientsTitle} bold uppercase news`}>
-          Clients
-        </h2>
+          className={`${styles.clientsTitle} bold uppercase news`}
+          dangerouslySetInnerHTML={{__html:title}}
+        />
         <h3
           data-aos="fade-up"
           data-aos-duration="900"
           data-aous-delay="0"
-          className={`${styles.subtitleClients} news`}>
-          MULTICULTURALISM IS THE DEFAULT
-        </h3>
+          className={`${styles.subtitleClients} news`}
+          dangerouslySetInnerHTML={{__html:subtitle}}
+        />
         <p
           data-aos="fade-up"
           data-aos-duration="900"
           data-aous-delay="0"
-          className={styles.infoClients}>
-          We aim to raise the standards of the marketing industry to ensure
-          diverse perspectives are acknowledged, engaged, and amplified.
-        </p>
-        <p
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={styles.infoCollaborators}>
-          These are our collaborators.
-        </p>
+          className={styles.infoClients}
+          dangerouslySetInnerHTML={{__html:text}}
+        />
       </div>
       <div className={`${styles.collaboratorsContainer} flex j-c a-c`}>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`bg-ct ${styles.collaboratorBox}`}
-          style={{ backgroundImage: 'url(/icons/logo-nike.png)' }}></div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`bg-ct ${styles.collaboratorBox}`}
-          style={{ backgroundImage: 'url(/icons/jp-logo.png)' }}></div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`bg-ct ${styles.collaboratorBox}`}
-          style={{ backgroundImage: 'url(/icons/una-logo.png)' }}></div>
-        <div
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`bg-ct ${styles.collaboratorBox}`}
-          style={{ backgroundImage: 'url(/icons/rise-logo.png)' }}></div>
+        {clients.map((logo,i)=>(
+            <div
+              key={i}
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aous-delay="0"
+              className={`bg-ct ${styles.collaboratorBox}`}
+              style={{ backgroundImage: `url(${logo.medium}})` }}
+            />
+        ))}
       </div>
     </section>
   );
