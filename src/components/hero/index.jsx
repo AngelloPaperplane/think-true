@@ -48,7 +48,7 @@ const Hero = ({
       image,
       layout,
       align,
-      bg_color
+      bg_color,
     } = dataHero;
     return (
       <section
@@ -124,17 +124,15 @@ const Hero = ({
         data-aos="fade-up"
         data-aos-duration="900"
         data-aous-delay="0">
-        {title && (
+        {title && layout !== 'poster' && (
           <h2
             className={`news splitText ${styles.titleHero}`}
             style={{ color: colorTitle ?? '#fff' }}>
             {layout === 'principal' && (
-              <span className={`${styles.weAreText} splitText uppercase`}>
-                WE ARE
-              </span>
+              <img src className={`${styles.imgText} splitText uppercase`} alt='' />
             )}
 
-            {title}
+            {layout !== 'principal' && title}
             {lineStyles && (
               <div
                 data-aos="fade-down"

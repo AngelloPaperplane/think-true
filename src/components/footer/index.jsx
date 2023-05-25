@@ -300,10 +300,12 @@ const Footer = ({ dataContent }) => {
               <a
                 href="https://www.instagram.com/thinktrue_/?hl=en"
                 rel="noreferrer"
+                target='_blank'
                 className={`bg-ct ${styles.socialIcon} ${styles.ins}`}></a>
               <a
                 href="https://www.linkedin.com/company/think-true/"
                 rel="noreferrer"
+                target='_blank'
                 className={`bg-ct ${styles.socialIcon} ${styles.in}`}></a>
             </div>
             <ul className={styles.footerMenu}>
