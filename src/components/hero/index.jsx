@@ -79,7 +79,13 @@ const Hero = ({
               }}
             />
           )}
-          {logo && <img className={styles.imgLogo} alt="" src={'/icons/logo-hero.png'} />}
+          {logo && (
+            <img
+              className={styles.imgLogo}
+              alt=""
+              src={'/icons/logo-hero.png'}
+            />
+          )}
           {line_color && (
             <div
               className={`${styles.lineHero} bg-complete`}

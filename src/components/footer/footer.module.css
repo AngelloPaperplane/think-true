@@ -355,6 +355,6 @@ textarea.inputForm {
     width: 15px;
     height: 15px;
     right: calc(100% - 7.5px);
-  margin-top: -7.5px;
+    margin-top: -7.5px;
   }
 }
