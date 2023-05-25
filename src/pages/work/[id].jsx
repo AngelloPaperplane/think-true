@@ -10,7 +10,7 @@ import React from 'react';
 import OurNumbers from '@/components/ourNumbers';
 
 const DetailWork = ({ data }) => {
-  const { meta, hero, formfooter } = data;
+  const { meta, hero, blocks, analytics, formfooter } = data;
 
   const contentAfterHero = {
     text: [
@@ -49,37 +49,29 @@ const DetailWork = ({ data }) => {
       },
     ],
   };
+
+  function get_block_content(block, index) {
+    switch (block.block_name) {
+      case 'text_block':
+        return <AfterHero key={index} mediaBlockContent={block} />;
+      case 'image_block':
+        return <BigImage key={index} dataImage={block} />;
+      case 'analytics_block':
+        return <OurNumbers key={index} data={block} />;
+      case 'split_block':
+        if (block.layout === 'full') {
+          return <ImgTextB key={index} contentData={block} />;
+        }
+        return <YellowTextImg key={index} contentData={block} />;
+    }
+  }
+
   return (
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
-      {/*
-      <Hero
-        image="/images/01-detail.jpg"
-        lineStyles={{ color: '#D02E2A', left: '17%' }}
-        layout={'poster'}
-        align={'left'}
-        bgColor={'#00B099'}
-      />
-      */}
-      <AfterHero content={contentAfterHero} />
-      <BigImage
-        image="/images/02-detail.jpg"
-        text="Champions of Change - RISE’s umbrella campaign that celebrates individuals who have led the way in the quest for racial equality and social justice"
-      />
-      <YellowTextImg
-        text="is an innovative fan experience that is typically hosted in-person at the Super Bowl, NCAA Championships and other major sporting events. "
-        image="/images/03-detail.jpg"
-        yellowText="The 360-experience takes fans on a multi-sensory journey designed to educate, evoke empathy and inspire action, while highlighting the impact sports have on inspiring social change."
-      />
-      <ImgTextB
-        title="THINK TRUE OWNED"
-        subtitle="SINCE 2020"
-        color="#00B099"
-        image="/images/04-detail.jpg"
-        sideText="<p>A 360 rebrand of Champions of Change​</p> <p>Onsite production in addition to physical and digital assets for activation enhancements, such as self-reflection booths for fans to share their stories, a check-in process, and KPI development and reporting. ​</p> <p>Digital strategy of the Champions of Change virtual experience, along with athlete content capture and video production. ​</p> <p>Launch of a virtual reality experience and digital game to further reach sports fans in the digital space. ​</p> <p>With the influx of partnership requests for RISE, we expect to see even more brand presence for Champions of Change as we move into 2024.​</p>"
-      />
-      <OurNumbers />
+
+      {blocks.map((block, i) => get_block_content(block, i))}
       <SiteSlider {...otherProjects} />
       <Footer dataContent={formfooter} />
     </>

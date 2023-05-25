@@ -17,7 +17,7 @@ const ImgTextB = ({
     AOS.init();
   }, []);
   if (contentData) {
-    const { title, subtitle, color, topText, image, withList, list } =
+    const { title, subtitle, color, topText, image, withList, sideText, list } =
       contentData;
     return (
       <section className={`siteSection ${styles.whatWeDoSection}`}>

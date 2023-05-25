@@ -129,7 +129,11 @@ const Hero = ({
             className={`news splitText ${styles.titleHero}`}
             style={{ color: colorTitle ?? '#fff' }}>
             {layout === 'principal' && (
-              <img src className={`${styles.imgText} splitText uppercase`} alt='' />
+              <img
+                src
+                className={`${styles.imgText} splitText uppercase`}
+                alt=""
+              />
             )}
 
             {layout !== 'principal' && title}

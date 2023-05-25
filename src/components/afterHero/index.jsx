@@ -14,7 +14,8 @@ const AfterHero = ({ content, mediaBlockContent }) => {
     return (
       <section className={`siteSection ${styles.afterHeroSection}`}>
         <div className={`container ${styles.afterHeroContainer}`}>
-          {mediaBlockContent.layout === 'home' && (
+          {(mediaBlockContent.layout === 'home' ||
+            mediaBlockContent.layout === 'team') && (
             <>
               {mediaBlockContent.image && (
                 <div
@@ -25,6 +26,14 @@ const AfterHero = ({ content, mediaBlockContent }) => {
               )}
 
               <div className={styles.wrapperAfterHeroHome}>
+                {mediaBlockContent.title && mediaBlockContent.title.text && (
+                  <h2
+                    className={`${styles.titleAfterHero} ${
+                      styles[mediaBlockContent.title.position]
+                    }`}>
+                    {mediaBlockContent.title.text}
+                  </h2>
+                )}
                 {mediaBlockContent.text && (
                   <p
                     className={styles.textAfterHero}
@@ -52,7 +61,7 @@ const AfterHero = ({ content, mediaBlockContent }) => {
                           allowFullScreen
                           className={styles.iframeVideo}></iframe> */}
                         <iframe
-                          src="https://player.vimeo.com/video/816732114?h=c558db96ab&title=0&byline=0&portrait=0"
+                          src={mediaBlockContent.video}
                           frameBorder="0"
                           allow="autoplay; fullscreen; picture-in-picture"
                           className={`iframeVideo ${styles.iframeVideo}`}></iframe>
@@ -64,7 +73,8 @@ const AfterHero = ({ content, mediaBlockContent }) => {
               </div>
             </>
           )}
-          {mediaBlockContent && mediaBlockContent.layout === 'team' && (
+          {/*
+          mediaBlockContent && mediaBlockContent.layout === 'team' && (
             <>
               <div
                 className={`${
@@ -84,9 +94,37 @@ const AfterHero = ({ content, mediaBlockContent }) => {
                     dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
                   />
                 )}
+                { (
+                  <div
+                    className={`${styles.videoContainer} bg-cv`}
+                    data-aos="zoom-out"
+                    data-aos-duration="1500"
+                    data-aous-delay="0"
+                    style={{
+                      backgroundImage: `url(${mediaBlockContent.image.medium})`,
+                    }}>
+                    {mediaBlockContent.video && (
+                      <>
+                        {/* <iframe
+                          src="https://player.vimeo.com/video/783453809?autoplay=1"
+                          frameBorder="0"
+                          allow="autoplay"
+                          allowFullScreen
+                          className={styles.iframeVideo}></iframe> }
+                        <iframe
+                          src={mediaBlockContent.video}
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          className={`iframeVideo ${styles.iframeVideo}`}></iframe>
+                        {/* <div className={`bg-ct ${styles.playVideo}`} onClick={playVideo}></div> }
+                      </>
+                    )}
+                  </div>
+                )}
               </div>
             </>
-          )}
+          )
+          */}
         </div>
       </section>
     );
