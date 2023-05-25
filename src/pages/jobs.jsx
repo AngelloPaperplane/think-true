@@ -1,3 +1,4 @@
+import Metas from '@/components/metaDatas';
 import AfterHero from '@/components/afterHero';
 import FeaturesJobs from '@/components/featuresJobs';
 import Footer from '@/components/footer';
@@ -5,7 +6,8 @@ import Hero from '@/components/hero';
 import ImgText from '@/components/imgText';
 import React from 'react';
 
-const Jobs = () => {
+const Jobs = ({data}) => {
+  const {meta,hero,formfooter} = data;
   const contentAfterHero = {
     title: { text: 'Hustle, fun, and diverse', position: 'left' },
     text: [
@@ -45,6 +47,9 @@ const Jobs = () => {
   };
   return (
     <>
+      <Metas metadata={meta} />
+      <Hero dataHero={hero}/>
+      {/*
       <Hero
         title="WELCOME TO THE FAMILY"
         image="/images/07-team.jpg"
@@ -52,6 +57,7 @@ const Jobs = () => {
         lineStyles={{ color: '#D02E2A', left: '20%' }}
         layout={'secondary'}
       />
+      */}
       <AfterHero content={contentAfterHero} />
       {contentFeatures.map((feature, i) => (
         <FeaturesJobs
@@ -61,9 +67,17 @@ const Jobs = () => {
         />
       ))}
       <ImgText content={contentImgText} />
-      <Footer />
+      <Footer dataContent={formfooter}/>
     </>
   );
 };
 
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}jobs`);
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
 export default Jobs;
