@@ -109,3 +109,7 @@
     padding-bottom: 5vh;
   }
 }
+
+.noPadding {
+  padding-top: 5vh;
+}

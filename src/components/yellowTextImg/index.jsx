@@ -38,6 +38,7 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
               data-aos-duration="1900"
               data-aous-delay="0">
               <Image
+                className={styles.innerImg}
                 src={image.large ? image.large : ''}
                 alt={image.alt ? image.alt : ''}
                 fill
