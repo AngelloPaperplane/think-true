@@ -5,7 +5,8 @@ import Hero from '@/components/hero';
 import React from 'react';
 
 const Contact = ({ data }) => {
-  const { meta, hero, formfooter } = data;
+  const { meta, hero, contentContact, formfooter } = data;
+  /*
   const contentAfterHero = {
     text: [
       'We want to meet, develop a plan with you, and create impact work to shake multicultural marketing.',
@@ -16,11 +17,12 @@ const Contact = ({ data }) => {
     layout: 'team',
     align: 'left',
   };
+  */
   return (
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
-      <AfterHero content={contentAfterHero} />
+      <AfterHero mediaBlockContent={contentContact} />
       <Footer dataContent={formfooter} />
     </>
   );
