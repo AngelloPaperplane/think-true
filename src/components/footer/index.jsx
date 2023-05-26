@@ -338,7 +338,7 @@ const Footer = ({ dataContent }) => {
             <ul className={styles.footerMenu}>
               <li className={styles.itemFooterMenu}>Agency</li>
               <li className={styles.itemFooterMenu}>Our Work</li>
-              <li className={styles.itemFooterMenu}>News</li>
+              {/* <li className={styles.itemFooterMenu}>News</li> */}
               <li className={styles.itemFooterMenu}>Contact</li>
             </ul>
           </div>
