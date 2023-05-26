@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './home-clients.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -37,7 +37,7 @@ const Clients = ({ dataContent }) => {
         <div
           className={`${styles.collaboratorsContainer} flex j-c a-c`}
           style={{
-            width: `${clients.length * 12 > 100 ? clients.length * 12 : 100}vw`,
+            width: `${clients.length * 16 > 100 ? clients.length * 16 : 100}vw`,
           }}>
           {clients.map((logo, i) => (
             <div
@@ -56,8 +56,8 @@ const Clients = ({ dataContent }) => {
         <div
           className={`${styles.collaboratorsContainer} flex j-c a-c`}
           style={{
-            width: `${clients.length * 12 > 100 ? clients.length * 12 : 100}vw`,
-            left: `${clients.length * 12 > 100 ? clients.length * 12 : 100}vw`,
+            width: `${clients.length * 16 > 100 ? clients.length * 16 : 100}vw`,
+            left: `${clients.length * 16 > 100 ? clients.length * 16 : 100}vw`,
           }}>
           {clients.map((logo, i) => (
             <div

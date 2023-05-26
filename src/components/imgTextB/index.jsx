@@ -17,7 +17,6 @@ const ImgTextB = ({
   useEffect(() => {
     AOS.init();
   }, []);
-  console.log(contentData);
   if (contentData) {
     const {
       title,
@@ -30,7 +29,6 @@ const ImgTextB = ({
       link,
       sideText,
     } = contentData;
-    console.log(contentData);
     return (
       <section className={`siteSection ${styles.whatWeDoSection}`}>
         <div className={`container ${styles.whatWeDoCo}`}>

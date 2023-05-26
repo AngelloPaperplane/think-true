@@ -8,7 +8,6 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
   const [isOpened, setIsOpened] = useState(false);
   const router = useRouter();
   const { pathname } = router;
-  console.log(pathname);
   useEffect(() => {
     setIsOpened(menuOpened);
     const tl = gsap.timeline({});

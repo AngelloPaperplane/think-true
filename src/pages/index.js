@@ -10,7 +10,6 @@ import Footer from '@/components/footer';
 function Home({ data }) {
   const { meta, hero, mediablock, work, whatdo, team, clients, formfooter } =
     data;
-  console.log(data);
   const contentAfterHero = {
     text: [
       'We are an experiential marketing agency that specializes in brand initiatives that center around engaging diverse communities.',

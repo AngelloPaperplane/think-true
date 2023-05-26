@@ -135,7 +135,6 @@ const HorizontalSection = ({
                   block
                     .querySelector('.splitText')
                     .classList.add(styles.active);
-                  console.log(text.chars);
                 },
                 onEnterBack: () => {
                   block
@@ -169,7 +168,6 @@ const HorizontalSection = ({
                   block
                     .querySelector('.splitText')
                     .classList.add(styles.active);
-                  console.log(text.chars);
                 },
                 onEnterBack: () => {
                   block
@@ -288,7 +286,7 @@ const HorizontalSection = ({
           if (block.querySelector('.subtitleParallax')) {
             subTitleTl = gsap.from(block.querySelector('.subtitleParallax'), {
               transform: `translateX(${
-                i === blocks.length - 1 ? '170' : '170'
+                i === blocks.length - 1 ? '200' : '200'
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
@@ -497,7 +495,6 @@ const HorizontalSection = ({
                   block
                     .querySelector('.splitText')
                     .classList.add(styles.active);
-                  console.log(text.chars);
                 },
                 onEnterBack: () => {
                   block
