@@ -35,7 +35,7 @@
 
 .ballLine {
   position: absolute;
-  top: 80%;
+  bottom: -15vh;
   left: 50%;
   height: 30vh;
   width: 5px;
@@ -72,6 +72,9 @@
 @media only screen and (max-width: 768px) {
   .textBigImg {
     font-size: 40px;
+  }
+  .bigImageSection{
+    margin-bottom: 10vh;
   }
 }
 @media only screen and (max-width: 520px) {

@@ -164,27 +164,6 @@ const HorizontalSection = ({
                 start: '-0% 100%',
                 end: '100% 50%',
                 scrub: 5,
-                onEnter: () => {
-                  block
-                    .querySelector('.splitText')
-                    .classList.add(styles.active);
-                },
-                onEnterBack: () => {
-                  block
-                    .querySelector('.splitText')
-                    .classList.add(styles.active);
-                },
-                onLeave: () => {
-                  block
-                    .querySelector('.splitText')
-                    .classList.remove(styles.active);
-                },
-                onLeaveBack: () => {
-                  block
-                    .querySelector('.splitText')
-                    .classList.remove(styles.active);
-                  // tweenChars.reverse();
-                },
               },
             });
           }
@@ -417,6 +396,10 @@ const HorizontalSection = ({
             if (imgAnimation) {
               imgAnimation.kill();
             }
+
+            if (partnersCircle) {
+              partnersCircle.kill();
+            }
           });
         };
       },
@@ -449,8 +432,20 @@ const HorizontalSection = ({
         let revealText;
         let splitText;
         let imgAnimation;
+        let partnersCircle;
 
         blocks.forEach((block, i) => {
+          if (block.querySelector('.partnersCircle')) {
+            partnersCircle = gsap.from(block.querySelector('.partnersCircle'), {
+              transform: 'translateY(50%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.partnersCircle'),
+                start: '-100% 50%',
+                end: '100% 100%',
+                scrub: 3,
+              },
+            });
+          }
           if (block.querySelector('.imgAnimation')) {
             imgAnimation = gsap.from(block.querySelector('.imgAnimation'), {
               transform: 'translateY(150%)',
@@ -520,9 +515,9 @@ const HorizontalSection = ({
               transform: 'translateX(-50%)',
               scrollTrigger: {
                 trigger: block.querySelector('.revealText'),
-                start: '0% 100%',
-                end: '100% 0%',
-                scrub: 5,
+                start: '-50% 100%',
+                end: '100% 50%',
+                scrub: 3,
                 // markers: true,
                 onEnter: () => {
                   block
@@ -686,6 +681,9 @@ const HorizontalSection = ({
             }
             if (imgAnimation) {
               imgAnimation.kill();
+            }
+            if (partnersCircle) {
+              partnersCircle.kill();
             }
           });
         };
@@ -888,7 +886,7 @@ const HorizontalSection = ({
                 <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: '#D02E2A' }}>
-                  <h2 className={`revealText ${styles.textTitleBlock}`}>
+                  <h2 className={`splitText ${styles.textTitleBlock}`}>
                     PHILANTHROPY
                   </h2>
                 </div>
@@ -989,7 +987,9 @@ const HorizontalSection = ({
                 }
                 className={`${styles.block} itemHorizontal itemHorizontal-${i}`}>
                 <div
-                  className={`${styles.wrapperBlock} wrapperBlock flex j-b a-s`}>
+                  className={`${styles.wrapperBlock} ${
+                    type === 'whatWeDo' ? styles.wrapperBlockWhatWeDo : ''
+                  } wrapperBlock flex j-b a-s`}>
                   <div
                     className={`${styles.solidColod} ${
                       type === 'whatWeDo' ? styles.solidColorWhatWeDo : ''
