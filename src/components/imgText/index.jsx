@@ -39,9 +39,9 @@ const ImgText = ({ content }) => {
           data-aos-duration="900"
           data-aous-delay="0">
           <Image
-            src={content.img}
+            src={content.img.large}
             fill
-            alt=""
+            alt={content.img.alt}
             className={styles.innerImgBlock}
           />
         </div>
