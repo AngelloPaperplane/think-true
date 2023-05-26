@@ -1,9 +1,11 @@
+import Metas from '@/components/metaDatas';
 import AfterHero from '@/components/afterHero';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import React from 'react';
 
-const Contact = () => {
+const Contact = ({ data }) => {
+  const { meta, hero, formfooter } = data;
   const contentAfterHero = {
     text: [
       'We want to meet, develop a plan with you, and create impact work to shake multicultural marketing.',
@@ -16,17 +18,20 @@ const Contact = () => {
   };
   return (
     <>
-      <Hero
-        title="LET’S TALK"
-        image="/images/contact.jpg"
-        colorTitle="#F2F0EB"
-        lineStyles={{ color: '#FAA300', left: '20%' }}
-        layout={'secondary'}
-      />
+      <Metas metadata={meta} />
+      <Hero dataHero={hero} />
       <AfterHero content={contentAfterHero} />
-      <Footer />
+      <Footer dataContent={formfooter} />
     </>
   );
 };
 
+export async function getServerSideProps() {
+  // Fetch data from external API
+  const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}contact`);
+  const data = await res.json();
+
+  // Pass data to the page via props
+  return { props: { data } };
+}
 export default Contact;

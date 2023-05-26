@@ -51,6 +51,7 @@ const Hero = ({
       align,
       bg_color,
     } = dataHero;
+    const logoShow = layout === 'principal';
     return (
       <section
         className={`${styles.heroSection} bg-cv ${
@@ -67,7 +68,7 @@ const Hero = ({
             backgroundImage:
               layout === 'poster' ? `url(${image['super-large']})` : '',
           }}>
-          {title && !logo && layout !== 'poster' && (
+          {title && !logoShow && layout !== 'poster' && (
             <h1
               className={`news splitText ${styles.titleHero}`}
               style={{ color: title_color ?? '#fff' }}
@@ -79,7 +80,7 @@ const Hero = ({
               }}
             />
           )}
-          {logo && (
+          {logoShow && (
             <img
               className={styles.imgLogo}
               alt=""
