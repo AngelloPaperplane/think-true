@@ -6,7 +6,6 @@ import ImgTextB from '@/components/imgTextB';
 import Agency from '@/components/agency';
 import Clients from '@/components/homeClients';
 import Footer from '@/components/footer';
-import Overlay from '@/components/overlay';
 
 function Home({ data }) {
   const { meta, hero, mediablock, work, whatdo, team, clients, formfooter } =
@@ -50,8 +49,7 @@ function Home({ data }) {
   */
   return (
     <>
-      <Metas metadata={meta} />
-      <Overlay />
+      <Metas metadata={meta} />      
       <Hero dataHero={hero} />
       <AfterHero content={contentAfterHero} mediaBlockContent={mediablock} />
       <HorizontalSection blocksToIterate={work} type="home" classParent="01" />
