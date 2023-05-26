@@ -62,9 +62,11 @@ const SiteSlider = ({ title, projects }) => {
                     fontSize: `${
                       project.numchartitle < 8
                         ? '7vw'
-                        : project.numchartext < 13
+                        : project.numchartitle < 13
                         ? '6vw'
-                        : '5vw'
+                        : project.numchartitle < 20
+                        ? '5vw'
+                        : '4vw'
                     }`,
                   }}>
                   {project.title}
@@ -87,7 +89,7 @@ const SiteSlider = ({ title, projects }) => {
               </div>
               <Link
                 className={styles.linkOtherProject}
-                href={`work/${project.link}`}></Link>
+                href={`${project.link}`}></Link>
             </div>
           ))}
         </Slider>
