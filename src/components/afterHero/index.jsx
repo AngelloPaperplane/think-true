@@ -46,7 +46,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     data-aous-delay="0"
                   />
                 )}
-                {mediaBlockContent.image &&  mediaBlockContent.image.medium && (
+                {mediaBlockContent.image && mediaBlockContent.image.medium && (
                   <div
                     className={`${styles.videoContainer} bg-cv`}
                     data-aos="zoom-out"

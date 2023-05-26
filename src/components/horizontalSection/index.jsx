@@ -9,7 +9,12 @@ import Link from 'next/link';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HorizontalSection = ({ blocksToIterate, type, classParent, heroData }) => {
+const HorizontalSection = ({
+  blocksToIterate,
+  type,
+  classParent,
+  heroData,
+}) => {
   const scroller = useRef();
   useEffect(() => {
     const blocks = gsap.utils.toArray(
@@ -714,7 +719,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent, heroData }) => 
           {type === 'about-1' && (
             <>
               <div className={`${styles.block} itemHorizontal`}>
-                <Hero dataHero={heroData}/>
+                <Hero dataHero={heroData} />
                 {/*
                 <Hero
                   image={'/images/01-about.jpg'}
