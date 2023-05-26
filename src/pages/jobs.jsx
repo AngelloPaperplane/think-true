@@ -7,9 +7,9 @@ import ImgText from '@/components/imgText';
 import React from 'react';
 
 const Jobs = ({ data }) => {
-  const { meta, hero, formfooter } = data;
+  const { meta, hero, description, features, sendusemail, formfooter } = data;
   const contentAfterHero = {
-    title: { text: 'Hustle, fun, and diverse', position: 'left' },
+    title: { text: 'OUR CULTURE', position: 'left' },
     text: [
       // eslint-disable-next-line quotes
       'We believe in embracing multicultural perspectives and celebrating diversity. ',
@@ -20,6 +20,7 @@ const Jobs = ({ data }) => {
     layout: 'team',
     align: 'right',
   };
+  /*
   const contentFeatures = [
     {
       index: '01',
@@ -45,28 +46,20 @@ const Jobs = ({ data }) => {
     text: '<p>Sometimes you just need an opportunity: If you are looking for an <span>internship</span> opportunity reach out. </p>',
     img: '/images/02-jobs.jpg',
   };
+*/
   return (
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
-      {/*
-      <Hero
-        title="WELCOME TO THE FAMILY"
-        image="/images/07-team.jpg"
-        colorTitle="#F2F0EB"
-        lineStyles={{ color: '#D02E2A', left: '20%' }}
-        layout={'secondary'}
-      />
-      */}
-      <AfterHero content={contentAfterHero} />
-      {contentFeatures.map((feature, i) => (
+      <AfterHero mediaBlockContent={description} />
+      {features.map((feature, i) => (
         <FeaturesJobs
           key={typeof window !== 'undefined' ? window.crypto.randomUUID() : i}
           contentFeaturesJobs={feature}
-          last={i === contentFeatures.length - 1 ?? false}
+          last={i === features.length - 1 ?? false}
         />
       ))}
-      <ImgText content={contentImgText} />
+      <ImgText content={sendusemail} />
       <Footer dataContent={formfooter} />
     </>
   );
