@@ -5,7 +5,7 @@ import HorizontalSection from '@/components/horizontalSection';
 import React from 'react';
 
 const AboutUs = ({ data }) => {
-  const { meta, formfooter } = data;
+  const { meta, hero, formfooter } = data;
   const horizontalBlocks1 = [
     {
       title: 'BRAND CONSULTING',
@@ -184,6 +184,7 @@ const AboutUs = ({ data }) => {
     <>
       <Metas metadata={meta} />
       <HorizontalSection
+        heroData={hero}
         blocksToIterate={horizontalBlocks1}
         classParent="01"
         type="about-1"
