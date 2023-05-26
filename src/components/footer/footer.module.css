@@ -216,8 +216,8 @@ textarea.inputForm {
 .paperplaneText {
   font-style: normal;
   font-weight: 325;
-  font-size: 15px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 1;
   color: #ffffff;
   margin: 10px 0 0;
   text-align: center;
