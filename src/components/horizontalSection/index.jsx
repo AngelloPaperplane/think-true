@@ -1040,7 +1040,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                         style={{
                           color: block.color,
                         }}>
-                        STRENGTHENING A COMMUNITY THROUGH SPORT
+                        {block.subtitle}
                       </h3>
                     )}
 
