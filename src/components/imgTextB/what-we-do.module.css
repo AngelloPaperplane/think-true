@@ -238,6 +238,7 @@
 
   .textFeature {
     font-size: 18px;
+    width: calc(100% - 50px);
   }
 
   .detailsWhatWeDo {
