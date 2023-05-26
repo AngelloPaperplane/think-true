@@ -153,7 +153,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           }
           if (block.querySelector('.partnersCircle')) {
             partnersCircle = gsap.from(block.querySelector('.partnersCircle'), {
-              transform: 'perspective(10000px) rotateZ(90deg) rotateX(90deg)',
+              transform: 'translateX(10%)',
               scrollTrigger: {
                 trigger: block.querySelector('.partnersCircle'),
                 containerAnimation: to,
@@ -283,7 +283,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           if (block.querySelector('.subtitleParallax')) {
             subTitleTl = gsap.from(block.querySelector('.subtitleParallax'), {
               transform: `translateX(${
-                i === blocks.length - 1 ? '120' : '120'
+                i === blocks.length - 1 ? '170' : '170'
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
@@ -310,7 +310,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           if (block.querySelector('.textParallax')) {
             textTl = gsap.from(block.querySelector('.textParallax'), {
               transform: `translateX(${
-                i === blocks.length - 1 ? '160' : '160'
+                i === blocks.length - 1 ? '100' : '100'
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
@@ -335,7 +335,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           if (block.querySelector('.btnParallax')) {
             buttonTl = gsap.from(block.querySelector('.btnParallax'), {
               transform: `translateX(${
-                i === blocks.length - 1 ? '200' : '200'
+                i === blocks.length - 1 ? '100' : '100'
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
@@ -599,7 +599,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           if (block.querySelector('.subtitleParallax')) {
             subTitleTl = gsap.from(block.querySelector('.subtitleParallax'), {
               transform: `translateX(${
-                i === blocks.length - 1 ? '120' : '120'
+                i === blocks.length - 1 ? '100' : '100'
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
@@ -615,7 +615,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           if (block.querySelector('.textParallax')) {
             textTl = gsap.from(block.querySelector('.textParallax'), {
               transform: `translateX(${
-                i === blocks.length - 1 ? '160' : '160'
+                i === blocks.length - 1 ? '100' : '100'
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
@@ -629,7 +629,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
           if (block.querySelector('.btnParallax')) {
             buttonTl = gsap.from(block.querySelector('.btnParallax'), {
               transform: `translateX(${
-                i === blocks.length - 1 ? '200' : '200'
+                i === blocks.length - 1 ? '100' : '100'
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
@@ -719,7 +719,6 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                   title="ABOUT US"
                   type="secondary"
                   colorTitle="#fff"
-                  noAos={true}
                 />
               </div>
 
