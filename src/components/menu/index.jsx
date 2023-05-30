@@ -1,13 +1,15 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import styles from './menu.module.css';
 import { useRouter } from 'next/router';
 import { gsap } from 'gsap';
+import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 const Menu = ({ menuOpened, setMenuOpened }) => {
   const [isOpened, setIsOpened] = useState(false);
   const router = useRouter();
   const { pathname } = router;
+  const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setIsOpened(menuOpened);
     const tl = gsap.timeline({});
@@ -21,14 +23,14 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
       '<'
     );
   }, [menuOpened]);
-  useEffect(() => {}, []);
+  const changePath = () => {
+    setPageLoaded(false);
+    setTimeout(() => {
+      setMenuOpened(false);
+    }, 3000);
+  };
   return (
     <>
-      <div className={styles.overlayMenu}>
-        <svg className={styles.svgNode} viewBox="0 0 1000 1000">
-          <path className="pathNode" d="M0 2S175 1 500 1s500 1 500 1V0H0Z" />
-        </svg>
-      </div>
       <div className={`${styles.wrapperMenu} ${isOpened ? styles.active : ''}`}>
         <div className={`container ${styles.containerMenu}`}>
           <ul className={styles.ulMenu}>
@@ -37,27 +39,34 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
               <ul className={styles.innerUlItemMenu}>
                 <li
                   className={`${styles.innerItemMenu} news`}
-                  onClick={() => setMenuOpened(false)}>
-                  <Link href={'/about-us'}>ABOUT</Link>
+                  onClick={() => changePath()}>
+                  {pathname !== '/about-us' && (
+                    <Link href={'/about-us'}>ABOUT</Link>
+                  )}
+                  {pathname === '/about-us' && 'ABOUT'}
                 </li>
                 {/* <li
                 className={`${styles.innerItemMenu} news`}
-                onClick={() => setMenuOpened(false)}>
+                onClick={() => changePath()}>
                 PHILOSOPHY
               </li> */}
                 <li
                   className={`${styles.innerItemMenu} news`}
-                  onClick={() => setMenuOpened(false)}>
+                  onClick={() => changePath()}>
                   <Link href={'/our-team'}>TEAM</Link>
                 </li>
                 <li
                   className={`${styles.innerItemMenu} news`}
-                  onClick={() => setMenuOpened(false)}>
-                  <Link href={'/what-we-do'}>SERVICES</Link>
+                  onClick={() => changePath()}>
+                  
+                  {pathname !== '/what-we-do' && (
+                    <Link href={'/what-we-do'}>SERVICES</Link>
+                  )}
+                  {pathname === '/what-we-do' && 'SERVICES'}
                 </li>
                 <li
                   className={`${styles.innerItemMenu} news`}
-                  onClick={() => setMenuOpened(false)}>
+                  onClick={() => changePath()}>
                   <Link href={'/jobs'}>JOBS</Link>
                 </li>
               </ul>
@@ -65,7 +74,7 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
             <li className={styles.itemMenu}>
               <p
                 className={`news bold uppercase ${styles.itemName}`}
-                onClick={() => setMenuOpened(false)}>
+                onClick={() => changePath()}>
                 <Link href={'/our-work'}>OUR WORK</Link>
               </p>
             </li>
@@ -79,7 +88,7 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
             <li className={styles.itemMenu}>
               <p
                 className={`news bold uppercase ${styles.itemName}`}
-                onClick={() => setMenuOpened(false)}>
+                onClick={() => changePath()}>
                 <Link href={'/contact'}>CONTACT</Link>
               </p>
             </li>

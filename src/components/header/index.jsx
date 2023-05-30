@@ -1,14 +1,23 @@
 import Link from 'next/link';
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import Menu from '../menu';
 import styles from './header.module.css';
 import { useRouter } from 'next/router';
+import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 const Header = () => {
+  const { setPageLoaded } = useContext(ThinkTrue);
   const [menuOpened, setMenuOpened] = useState(false);
   const [hideMenu, setHideMenu] = useState(true);
   const router = useRouter();
   const { pathname } = router;
+
+  const changePath = () => {
+    setPageLoaded(false);
+    setTimeout(() => {
+      setMenuOpened(false);
+    }, 3000);
+  };
 
   useEffect(() => {
     let clearTimeOut;
@@ -34,7 +43,7 @@ const Header = () => {
         <div className={`container flex j-b a-c ${styles.containerHeader}`}>
           <div
             className={`${styles.siteLogo} bg-ct`}
-            onClick={() => setMenuOpened(false)}>
+            onClick={() => changePath()}>
             {pathname !== '/' && <Link href="/"></Link>}
           </div>
 

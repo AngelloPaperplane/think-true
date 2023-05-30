@@ -107,10 +107,16 @@ const Footer = ({ dataContent }) => {
             <div className={`flex j-b a-s ${styles.footerItems}`}>
               <div className={styles.socialWrapper}>
                 <p className={`news ${styles.followText}`}>FOLLOW US</p>
-                <div
-                  className={`bg-ct ${styles.socialIcon} ${styles.ins}`}></div>
-                <div
-                  className={`bg-ct ${styles.socialIcon} ${styles.in}`}></div>
+                <a
+                  href="https://www.instagram.com/thinktrue_/?hl=en"
+                  rel="noreferrer"
+                  target="_blank"
+                  className={`bg-ct ${styles.socialIcon} ${styles.ins}`}></a>
+                <a
+                  href="https://www.linkedin.com/company/think-true/"
+                  rel="noreferrer"
+                  target="_blank"
+                  className={`bg-ct ${styles.socialIcon} ${styles.in}`}></a>
               </div>
               <ul className={styles.footerMenu}>
                 {itemsmenu.map((item, i) => (

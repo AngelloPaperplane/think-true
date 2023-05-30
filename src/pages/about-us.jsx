@@ -2,10 +2,17 @@
 import Metas from '@/components/metaDatas';
 import Footer from '@/components/footer';
 import HorizontalSection from '@/components/horizontalSection';
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
+import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 const AboutUs = ({ data }) => {
   const { meta, hero, formfooter } = data;
+  const { setPageLoaded } = useContext(ThinkTrue);
+  useEffect(() => {
+    setTimeout(() => {
+      setPageLoaded(true);
+    }, 1600);
+  }, []);
   const horizontalBlocks1 = [
     {
       title: 'BRAND CONSULTING',

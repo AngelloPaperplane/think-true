@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import localFont from 'next/font/local';
 const Aleo = localFont({ src: '../styles/fonts/Aleo-Regular.ttf' });
 const NewsCycle = localFont({
@@ -18,8 +18,9 @@ const NewsCycle = localFont({
 export const ThinkTrue = React.createContext({});
 
 const ThinkTrueProvider = ({ children }) => {
+  const [pageLoaded, setPageLoaded] = useState(true);
   return (
-    <ThinkTrue.Provider value={{ Aleo, NewsCycle }}>
+    <ThinkTrue.Provider value={{ Aleo, NewsCycle, pageLoaded, setPageLoaded }}>
       {children}
     </ThinkTrue.Provider>
   );

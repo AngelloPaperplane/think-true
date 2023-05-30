@@ -15,10 +15,10 @@ const Overlay = () => {
           setIndex(3);
           setTimeout(() => {
             setShow(false);
-          }, 700);
-        }, 700);
-      }, 700);
-    }, 700);
+          }, 350);
+        }, 350);
+      }, 350);
+    }, 350);
   }, []);
   return (
     <div
