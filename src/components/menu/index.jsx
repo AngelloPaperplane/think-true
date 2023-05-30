@@ -58,7 +58,6 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
                 <li
                   className={`${styles.innerItemMenu} news`}
                   onClick={() => changePath()}>
-                  
                   {pathname !== '/what-we-do' && (
                     <Link href={'/what-we-do'}>SERVICES</Link>
                   )}

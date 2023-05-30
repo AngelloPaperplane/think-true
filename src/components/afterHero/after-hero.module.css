@@ -25,6 +25,10 @@
   margin-bottom: 40px;
 }
 
+.textAfterHero a {
+  text-decoration: underline;
+}
+
 .wrapperAfterHeroTeam .textAfterHero {
   max-width: 70%;
 }
