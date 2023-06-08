@@ -13,6 +13,7 @@ const AboutUs = ({ data }) => {
       setPageLoaded(true);
     }, 1600);
   }, []);
+
   const horizontalBlocks1 = [
     {
       title: 'BRAND CONSULTING',
@@ -196,6 +197,7 @@ const AboutUs = ({ data }) => {
         classParent="01"
         type="about-1"
       />
+    {/*
       <HorizontalSection
         blocksToIterate={horizontalBlocks2}
         classParent="02"
@@ -206,7 +208,7 @@ const AboutUs = ({ data }) => {
         classParent="03"
         type="about-3"
       />
-
+      */}
       <Footer dataContent={formfooter} />
     </>
   );

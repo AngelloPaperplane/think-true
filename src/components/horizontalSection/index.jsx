@@ -784,10 +784,7 @@ const HorizontalSection = ({
                   </h2>
                 </div>
               </div>
-            </>
-          )}
-          {type === 'about-2' && (
-            <>
+            
               <div
                 className={`${styles.block} ${styles.callToActionBlock} itemHorizontal`}>
                 <div
@@ -874,10 +871,7 @@ const HorizontalSection = ({
                   </div>
                 </div>
               </div>
-            </>
-          )}
-          {type === 'about-3' && (
-            <>
+            
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
