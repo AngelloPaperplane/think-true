@@ -158,7 +158,7 @@ const HorizontalSection = ({
           }
           if (block.querySelector('.partnersCircle')) {
             partnersCircle = gsap.from(block.querySelector('.partnersCircle'), {
-              transform: 'translateX(10%)',
+              transform: 'translateX(5%)',
               scrollTrigger: {
                 trigger: block.querySelector('.partnersCircle'),
                 containerAnimation: to,
@@ -292,9 +292,7 @@ const HorizontalSection = ({
 
           if (block.querySelector('.textParallax')) {
             textTl = gsap.from(block.querySelector('.textParallax'), {
-              transform: `translateX(${
-                i === blocks.length - 1 ? '100' : '100'
-              }%)`,
+              transform: 'translateX(60%)',
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
                 containerAnimation: to,

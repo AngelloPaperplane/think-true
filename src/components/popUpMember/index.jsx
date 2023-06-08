@@ -12,7 +12,9 @@ const PopUpMember = ({ popUpMember, setPopUpMember }) => {
       <div
         className={styles.bgPopUpMember}
         onClick={() => setPopUpMember({})}></div>
-      <div className={`flex j-c a-c ${styles.wrapperPopUpMember}`}>
+      <div
+        className={`flex j-c a-c ${styles.wrapperPopUpMember}`}
+        style={{ backgroundColor: `${popUpMember.color}` }}>
         <div
           className={`${styles.closePopUp} bg-ct`}
           onClick={() => setPopUpMember({})}></div>

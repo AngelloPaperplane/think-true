@@ -8,7 +8,7 @@ import 'aos/dist/aos.css';
 const SiteSlider = ({ title, projects }) => {
   const settings = {
     dots: false,
-    arrows: false,
+    arrows: true,
     infinite: false,
     speed: 500,
     slidesToShow: 2,
