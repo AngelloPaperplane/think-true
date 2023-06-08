@@ -130,7 +130,14 @@
   font-size: 28px;
   letter-spacing: 0.12em;
   color: #363233;
+  background-image: url(/icons/cta.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 25px 35px 20px;
 }
+
+
 
 .mobileLine {
   display: none;

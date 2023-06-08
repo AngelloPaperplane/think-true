@@ -8,8 +8,15 @@
 .legalContent p {
   margin-bottom: 15px;
 }
+
+.legalContent h2 {
+  font-weight: bold;
+  margin: 25px 0;
+}
+
 .legalContent ul {
   margin-bottom: 15px;
+  padding-left: 30px;
 }
 .legalContent li {
   margin-bottom: 10px;
@@ -17,4 +24,5 @@
 }
 .legalContent strong {
   font-weight: bold;
+  margin: 15px 0;
 }

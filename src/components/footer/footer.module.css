@@ -101,7 +101,7 @@ textarea.inputForm {
   left: 0;
   width: 25px;
   height: 25px;
-  background-image: url(/icons/pin.png);
+  background-image: url(/icons/location.png);
 }
 
 .cityName {
@@ -237,16 +237,24 @@ textarea.inputForm {
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  background-image: url(/icons/cta.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 25px 35px 20px;
+  margin-left: 20vw;
 }
 
 .redLine {
-  position: relative;
-  width: 20vw;
+  position: absolute;
+  width: 23vw;
   height: 5px;
   background-color: #d02e2a;
   z-index: 1;
   cursor: default;
-  left: -5vw;
+  left: -25vw;
+  top: 50%;
+  margin-top: -2.5px;
 }
 
 .ballRedLine {
@@ -348,8 +356,14 @@ textarea.inputForm {
   }
 
   .sendBtnForm {
-    left: -70%;
+    margin-left: 35vw;
     font-size: 20px;
+    margin-top: 35px;
+  }
+
+  .redLine{
+    left: -40vw;
+    width: 35vw;
   }
 
   .ballRedLine {
