@@ -5,7 +5,8 @@ import styles from './header.module.css';
 import { useRouter } from 'next/router';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
 
-const Header = () => {
+const Header = ({ mainMenu }) => {
+  console.log(mainMenu);
   const { setPageLoaded } = useContext(ThinkTrue);
   const [menuOpened, setMenuOpened] = useState(false);
   const [hideMenu, setHideMenu] = useState(true);

@@ -6,14 +6,14 @@ import React, { useContext, useEffect } from 'react';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 const AboutUs = ({ data }) => {
-  const { meta, hero, formfooter } = data;
+  const { meta, hero, formfooter, blocks } = data;
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setTimeout(() => {
       setPageLoaded(true);
     }, 1600);
   }, []);
-
+  /*
   const horizontalBlocks1 = [
     {
       title: 'BRAND CONSULTING',
@@ -188,15 +188,18 @@ const AboutUs = ({ data }) => {
       text: "Our digital strategy expertise specializes in creating a unique brand perspective in digital channels. We'll help you connect with your target audience through tailored content and build a sustainable ecosystem for your brand.",
     },
   ];
+  */
   return (
     <>
       <Metas metadata={meta} />
-      <HorizontalSection
-        heroData={hero}
-        blocksToIterate={horizontalBlocks1}
-        classParent="01"
-        type="about-1"
-      />
+      {
+        <HorizontalSection
+          heroData={hero}
+          blocksToIterate={blocks[0]}
+          classParent="01"
+          type="about-1"
+        />
+      }
       {/*
       <HorizontalSection
         blocksToIterate={horizontalBlocks2}

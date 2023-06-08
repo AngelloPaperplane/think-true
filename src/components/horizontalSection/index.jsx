@@ -15,6 +15,7 @@ const HorizontalSection = ({
   classParent,
   heroData,
 }) => {
+  console.log(blocksToIterate);
   const scroller = useRef();
   useEffect(() => {
     const blocks = gsap.utils.toArray(
@@ -690,6 +691,238 @@ const HorizontalSection = ({
       },
     });
   }, []);
+
+  function get_blocks(block, i) {
+    console.log(block);
+    const bgColorClass =
+      block.bgcolor === 'na'
+        ? styles.embraceBlockContainer
+        : styles.afterHeroAbout;
+    const classParent =
+      block.bgcolor === 'na' ? styles.embraceBlock : styles.blockAfterHero;
+    const pattern_curr =
+      block.pattern === 'plus-light' ? 'plus' : block.pattern;
+    const isRight = block.imageposition === 'right';
+    const isImpactClass =
+      block.textboxPosition === 'Bottom'
+        ? styles.callToActionBlock
+        : styles.impactBlock;
+    const impactInner =
+      block.textboxPosition === 'Bottom' ? '' : styles.textImpactBlock;
+    const impactTitle =
+      block.textboxPosition === 'Bottom'
+        ? styles.titleCallToAction
+        : styles.titleImpact;
+    const impactText =
+      block.textboxPosition === 'Bottom'
+        ? styles.textBigTitleBlock
+        : styles.textImpact;
+    const innerTitle =
+      block.title !== '' ? (
+        <h2
+          className={`splitText ${impactTitle}`}
+          dangerouslySetInnerHTML={{ __html: block.title }}
+          style={{ fontSize: block.titleSize }}
+        />
+      ) : (
+        <></>
+      );
+
+    const innerText =
+      block.text !== '' ? (
+        <p
+          dangerouslySetInnerHTML={{ __html: block.text }}
+          className={`splitText ${impactText}`}
+        />
+      ) : (
+        <></>
+      );
+    switch (block.type) {
+      case 'text_block':
+        return (
+          <>
+            {block.pattern !== '' ? (
+              <div
+                className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
+                <div
+                  className={`bg-ct ${styles.bgPatternAbout}`}
+                  style={{
+                    backgroundImage: `url(/icons/${pattern_curr}.png)`,
+                  }}></div>
+                <div
+                  className={styles.titleBlockWrapper}
+                  style={{ backgroundColor: block.bgcolor }}>
+                  {block.subtitle !== '' && (
+                    <h3
+                      className={`revealText ${styles.committedSubtitle}`}
+                      dangerouslySetInnerHTML={{ __html: block.subtitle }}
+                      style={{ color: block.subtitlecolor }}
+                    />
+                  )}
+                  {block.title !== '' && (
+                    <h2
+                      className={`splitText ${styles.textTitleBlock}`}
+                      dangerouslySetInnerHTML={{ __html: block.title }}
+                      style={{ color: block.titlecolor }}
+                    />
+                  )}
+                  {block.text !== '' && (
+                    <p
+                      className={`revealText ${styles.textAfterHeroAbout}`}
+                      dangerouslySetInnerHTML={{ __html: block.text }}
+                      style={{ color: block.textcolor }}
+                    />
+                  )}
+                </div>
+              </div>
+            ) : (
+              <div
+                key={`textblock${i}`}
+                className={`${styles.block} ${classParent} itemHorizontal`}>
+                <div
+                  className={bgColorClass}
+                  style={{
+                    backgroundColor: `${
+                      block.bgcolor === 'na' ? 'none' : styles.bgcolor
+                    }`,
+                  }}>
+                  {block.subtitle !== '' && (
+                    <h3
+                      className={`revealText ${styles.committedSubtitle}`}
+                      dangerouslySetInnerHTML={{ __html: block.subtitle }}
+                      style={{ color: block.subtitlecolor }}
+                    />
+                  )}
+                  {block.title !== '' && (
+                    <h2
+                      className={`titleAfterHeroAbout ${styles.titleAfterHeroAbout}`}
+                      dangerouslySetInnerHTML={{ __html: block.title }}
+                      style={{ color: block.titlecolor }}
+                    />
+                  )}
+                  {block.text !== '' && (
+                    <p
+                      className={`revealText ${styles.textAfterHeroAbout}`}
+                      dangerouslySetInnerHTML={{ __html: block.text }}
+                      style={{ color: block.textcolor }}
+                    />
+                  )}
+                </div>
+              </div>
+            )}
+          </>
+        );
+      case 'split_block':
+        return (
+          <div
+            key={`splitblock${i}`}
+            className={`${styles.block} ${isImpactClass} itemHorizontal`}>
+            <div
+              className={`${styles.callToActionBlockContainer} ${
+                isRight ? styles.imgTextRight : ''
+              } flex j-c`}>
+              {isRight && (
+                <>
+                  {impactInner !== '' ? (
+                    <div className={impactInner}>
+                      {innerTitle}
+                      {innerText}
+                    </div>
+                  ) : (
+                    <>
+                      {innerTitle}
+                      {innerText}
+                    </>
+                  )}
+                </>
+              )}
+              {block.imagelayout === 'full' ? (
+                <div
+                  className={`${styles.imgCallToAction} imgAnimation bg-cv`}
+                  style={{
+                    backgroundImage: `url(${block.image.medium_large})`,
+                    backgroundColor: `${
+                      block.bgcolor === 'na' ? 'none' : block.bgcolor
+                    }`,
+                  }}></div>
+              ) : (
+                <div className={styles.contImgImpact}>
+                  <div className={`imgAnimation ${styles.wrapperImgImpact}`}>
+                    <Image
+                      fill
+                      src={block.image.medium_large}
+                      alt={block.image.alt}
+                      className={styles.imgImpact}
+                    />
+                  </div>
+                </div>
+              )}
+              {!isRight && (
+                <>
+                  {impactInner !== '' ? (
+                    <div className={impactInner}>
+                      {innerTitle}
+                      {innerText}
+                    </div>
+                  ) : (
+                    <>
+                      {innerTitle}
+                      {innerText}
+                    </>
+                  )}
+                </>
+              )}
+            </div>
+          </div>
+        );
+      case 'video_block':
+        return (
+          <>
+            {block.videotype === 'vm' && block.videourl !== '' && (
+              <div
+                key={`videoblock${i}`}
+                className={`${styles.block} ${styles.videoBlock} itemHorizontal`}>
+                <div className={`imgAnimation ${styles.videoContainerBlock}`}>
+                  <iframe
+                    src={block.videourl}
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    className={`iframeVideo ${styles.iframeVideo}`}></iframe>
+                </div>
+              </div>
+            )}
+          </>
+        );
+      case 'key_words_block':
+        return (
+          <div
+            className={`${styles.block} ${styles.circlesBlock} itemHorizontal`}>
+            <div
+              className={`${styles.circleContainer} ${styles.partnersCircle} partnersCircle`}>
+              <h3
+                className={`splitText ${styles.textInnerCircle}`}
+                dangerouslySetInnerHTML={{ __html: block.word1 }}
+              />
+              <div
+                className={`${styles.circleContainer} ${styles.thinkCircle} `}>
+                <h3
+                  className={`splitText ${styles.textInnerCircle}`}
+                  dangerouslySetInnerHTML={{ __html: block.word2 }}
+                />
+                <div
+                  className={`${styles.circleContainer} ${styles.communitiesCircle}`}>
+                  <h3
+                    className={`splitText ${styles.textInnerCircle}`}
+                    dangerouslySetInnerHTML={{ __html: block.word2 }}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        );
+    }
+  }
+
   return (
     <section
       className={`siteSection ${
@@ -724,6 +957,9 @@ const HorizontalSection = ({
                 />
                 */}
               </div>
+              {blocksToIterate.map((block, i) => get_blocks(block, i))}
+
+              {/*
 
               <div
                 className={`${styles.block} ${styles.blockAfterHero} itemHorizontal`}>
@@ -804,7 +1040,7 @@ const HorizontalSection = ({
               <div
                 className={`${styles.block} ${styles.videoBlock} itemHorizontal`}>
                 <div className={`imgAnimation ${styles.videoContainerBlock}`}>
-                  {/* <div className={`${styles.iconPlay} bg-ct`}></div> */}
+                  {/* <div className={`${styles.iconPlay} bg-ct`}></div> }
                   <iframe
                     src="https://player.vimeo.com/video/816732114?h=c558db96ab&title=0&byline=0&portrait=0"
                     frameBorder="0"
@@ -968,6 +1204,7 @@ const HorizontalSection = ({
                   </div>
                 </div>
               </div>
+          */}
             </>
           )}
           {type !== 'about-1' &&

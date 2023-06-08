@@ -5,10 +5,11 @@ import styles from './layout.module.css';
 
 const Layout = ({ children }) => {
   const { Aleo } = useContext(ThinkTrue);
+  const mainMenu = children.props ? children.props.data.menu : false;
   return (
     <>
       <main className={`${styles.siteMain} ${Aleo.className}`}>
-        <Header />
+        <Header mainMenu={mainMenu} />
         {children}
       </main>
     </>
