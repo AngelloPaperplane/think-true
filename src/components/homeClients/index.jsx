@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import styles from './home-clients.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

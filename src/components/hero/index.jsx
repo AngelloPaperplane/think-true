@@ -46,10 +46,10 @@ const Hero = ({
       line_position,
       line_color,
       image,
-      logo,
       layout,
       align,
       bg_color,
+      data_info,
     } = dataHero;
     const logoShow = layout === 'principal';
     return (
@@ -100,17 +100,14 @@ const Hero = ({
             </div>
           )}
         </div>
-        {layout === 'poster' && (
+        {layout === 'poster' && data_info && data_info.length > 0 && (
           <div className={`container ${styles.infoClientContainer}`}>
-            <p>
-              Client: <span>Rise</span>
-            </p>
-            <p>
-              Location: <span>Los Angeles</span>
-            </p>
-            <p>
-              Date: <span>November 2022</span>
-            </p>
+            {data_info.map((info, i) => (
+              <p key={`infoproject${i}`}>
+                {info.label}
+                <span>{info.value}</span>
+              </p>
+            ))}
           </div>
         )}
       </section>

@@ -53,6 +53,7 @@ const OurNumbers = ({ data }) => {
     },
   ];
 */
+  /*
   const IncrementNumber = ({ n }) => {
     const { number } = useSpring({
       from: { number: 0 },
@@ -62,7 +63,7 @@ const OurNumbers = ({ data }) => {
     });
     return <animated.span>{number.to((n) => n.toFixed(0))}</animated.span>;
   };
-
+  */
   useEffect(() => {
     AOS.init();
   }, []);

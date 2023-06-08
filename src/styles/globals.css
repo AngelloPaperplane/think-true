@@ -344,7 +344,7 @@ a {
   z-index: -100000;
 }
 
-.slick-arrow{
+.slick-arrow {
   position: absolute;
   top: 60%;
   left: 2%;
@@ -362,16 +362,16 @@ a {
   opacity: 1;
   visibility: visible;
   background-image: url(/icons/arrow-2.png);
-  transition: all .3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
-.slick-next{
+.slick-next {
   background-image: url(/icons/arrow-1.png);
   left: initial;
   right: 4%;
 }
 
-.slick-arrow.slick-disabled{
+.slick-arrow.slick-disabled {
   opacity: 0;
 }
 
@@ -389,9 +389,8 @@ a {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
 
-
-@media only screen and (max-width: 768px){
-  .slick-arrow{
+@media only screen and (max-width: 768px) {
+  .slick-arrow {
     width: 40px;
     height: 40px;
     margin-top: -20px;

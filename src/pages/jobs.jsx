@@ -8,6 +8,7 @@ import React from 'react';
 
 const Jobs = ({ data }) => {
   const { meta, hero, description, features, sendusemail, formfooter } = data;
+  /*
   const contentAfterHero = {
     title: { text: 'OUR CULTURE', position: 'left' },
     text: [
@@ -20,7 +21,7 @@ const Jobs = ({ data }) => {
     layout: 'team',
     align: 'right',
   };
-  /*
+  
   const contentFeatures = [
     {
       index: '01',

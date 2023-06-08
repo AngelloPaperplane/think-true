@@ -9,7 +9,7 @@ const Header = () => {
   const { setPageLoaded } = useContext(ThinkTrue);
   const [menuOpened, setMenuOpened] = useState(false);
   const [hideMenu, setHideMenu] = useState(true);
-  const [isInHero, setIsInHero] = useState(true);
+  // const [isInHero, setIsInHero] = useState(true);
   const router = useRouter();
   const { pathname } = router;
 
@@ -49,7 +49,6 @@ const Header = () => {
     //   }
     // };
     // window.addEventListener('scroll', switchHeader);
-
     // return () => {
     //   window.removeEventListener('scroll', switchHeader);
     // };

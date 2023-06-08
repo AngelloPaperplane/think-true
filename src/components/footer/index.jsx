@@ -5,7 +5,7 @@ import styles from './footer.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Footer = ({ dataContent }) => {
+const Footer = ({ dataContent, isContact }) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -17,20 +17,24 @@ const Footer = ({ dataContent }) => {
         <section className={`siteSection ${styles.formSection}`}>
           <div className={`bg-ct ${styles.patternForm}`}></div>
           <div className={`container ${styles.formContainer}`}>
-            <h2
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0"
-              className={`titleSec news ${styles.formTitle}`}
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
-            <p
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0"
-              className={styles.infoForm}
-              dangerouslySetInnerHTML={{ __html: text }}
-            />
+            {!isContact && (
+              <>
+                <h2
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`titleSec news ${styles.formTitle}`}
+                  dangerouslySetInnerHTML={{ __html: title }}
+                />
+                <p
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={styles.infoForm}
+                  dangerouslySetInnerHTML={{ __html: text }}
+                />
+              </>
+            )}
             <div className={`${styles.wrapperForm} flex j-b a-s`}>
               <form className={`${styles.siteForm} flex j-b a-c`}>
                 <input

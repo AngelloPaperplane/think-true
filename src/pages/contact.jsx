@@ -23,7 +23,7 @@ const Contact = ({ data }) => {
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
       <AfterHero mediaBlockContent={contentContact} />
-      <Footer dataContent={formfooter} />
+      <Footer dataContent={formfooter} isContact={true} />
     </>
   );
 };

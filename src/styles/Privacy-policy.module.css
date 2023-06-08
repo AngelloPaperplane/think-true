@@ -5,18 +5,16 @@
   color: #363233;
 }
 
-
-.legalContent p{
+.legalContent p {
   margin-bottom: 15px;
 }
-.legalContent ul{
+.legalContent ul {
   margin-bottom: 15px;
 }
-.legalContent li{
+.legalContent li {
   margin-bottom: 10px;
   list-style-type: disc;
 }
-.legalContent strong{
+.legalContent strong {
   font-weight: bold;
 }
-

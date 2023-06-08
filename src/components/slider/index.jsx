@@ -85,7 +85,9 @@ const SiteSlider = ({ title, projects }) => {
                   }}>
                   {project.subtitle}
                 </h3>
+                {/*
                 <p className={styles.infoProject}>{project.text}</p>
+                */}
               </div>
               <Link
                 className={styles.linkOtherProject}

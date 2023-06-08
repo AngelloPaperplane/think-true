@@ -6,13 +6,13 @@ import ImgTextB from '@/components/imgTextB';
 import Agency from '@/components/agency';
 import Clients from '@/components/homeClients';
 import Footer from '@/components/footer';
-import { useContext, useEffect } from 'react';
+// import { useContext, useEffect } from 'react';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 function Home({ data }) {
   const { meta, hero, mediablock, work, whatdo, team, clients, formfooter } =
     data;
-  const { setPageLoaded } = useContext(ThinkTrue);
+  // const { setPageLoaded } = useContext(ThinkTrue);
   const contentAfterHero = {
     text: [
       'We are an experiential marketing agency that specializes in brand initiatives that center around engaging diverse communities.',
@@ -22,39 +22,6 @@ function Home({ data }) {
     posterVideo: '/images/02-home.jpg',
     layout: 'home',
   };
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setPageLoaded(true);
-  //   }, 1000);
-  // }, []);
-  /*
-  const horizontalBlocks = [
-    {
-      title: 'NIKE DREW LEAGUE',
-      subtitle: 'STRENGTHENING A COMMUNITY THROUGH SPORT',
-      pattern: 'plus',
-      color: '#4EB4C8',
-      img: '/images/03-home.jpg',
-      text: 'Bringing signature athletes, local legends, Hollywood stars, and thousands of fans to South Central to create a destination for high-caliber basketball within a resilient community.',
-    },
-    {
-      title: 'NIKE DREW LEAGUE',
-      subtitle: 'STRENGTHENING A COMMUNITY THROUGH SPORT',
-      pattern: 'arrows',
-      color: '#D02E2A',
-      img: '/images/03-home.jpg',
-      text: 'Bringing signature athletes, local legends, Hollywood stars, and thousands of fans to South Central to create a destination for high-caliber basketball within a resilient community.',
-    },
-    {
-      title: 'NIKE DREW LEAGUE',
-      subtitle: 'STRENGTHENING A COMMUNITY THROUGH SPORT',
-      pattern: 'circles',
-      color: '#FAA300',
-      img: '/images/03-home.jpg',
-      text: 'Bringing signature athletes, local legends, Hollywood stars, and thousands of fans to South Central to create a destination for high-caliber basketball within a resilient community.',
-    },
-  ];
-  */
   return (
     <>
       <Metas metadata={meta} />
