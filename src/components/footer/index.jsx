@@ -203,11 +203,11 @@ const Footer = ({ dataContent, isContact }) => {
                   data-aos-duration="900"
                   data-aous-delay="0">
                   <div className={styles.ballRedLine}>
-                    <Link
+                    {/* <Link
                       href={'/contact'}
                       className={`news ${styles.linkBallRedLine}`}>
                       MEET US
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </button>
