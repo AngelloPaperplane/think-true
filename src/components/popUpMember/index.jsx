@@ -31,12 +31,18 @@ const PopUpMember = ({ popUpMember, setPopUpMember }) => {
         <div
           className={styles.infoMember}
           style={{ backgroundColor: `${popUpMember.color}` }}>
-          <h3 style={{color:popUpMember.name_color}} className={`news ${styles.nameMember}`}>{popUpMember.name}</h3>
-          <h4 style={{color:popUpMember.profession_color}} className={`news ${styles.professionMember}`}>
+          <h3
+            style={{ color: popUpMember.name_color }}
+            className={`news ${styles.nameMember}`}>
+            {popUpMember.name}
+          </h3>
+          <h4
+            style={{ color: popUpMember.profession_color }}
+            className={`news ${styles.professionMember}`}>
             {popUpMember.profession}
           </h4>
           <div
-            style={{color:popUpMember.description_color}}
+            style={{ color: popUpMember.description_color }}
             className={styles.descriptionMember}
             dangerouslySetInnerHTML={{
               __html: popUpMember.description,

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import styles from './menu.module.css';
 import { useRouter } from 'next/router';
 import { gsap } from 'gsap';

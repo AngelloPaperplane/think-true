@@ -21,7 +21,7 @@ const HorizontalSection = ({
       `.siteSection-${classParent} .itemHorizontal`
     );
 
-    const text = new SplitType('.splitText', { types: 'words, chars' });
+    //const text = new SplitType('.splitText', { types: 'words, chars' });
 
     ScrollTrigger.matchMedia({
       '(min-width: 1025px)': () => {
@@ -784,7 +784,7 @@ const HorizontalSection = ({
                   </h2>
                 </div>
               </div>
-            
+
               <div
                 className={`${styles.block} ${styles.callToActionBlock} itemHorizontal`}>
                 <div
@@ -871,7 +871,7 @@ const HorizontalSection = ({
                   </div>
                 </div>
               </div>
-            
+
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div

@@ -197,7 +197,7 @@ const AboutUs = ({ data }) => {
         classParent="01"
         type="about-1"
       />
-    {/*
+      {/*
       <HorizontalSection
         blocksToIterate={horizontalBlocks2}
         classParent="02"
