@@ -55,6 +55,17 @@ const Footer = ({ dataContent }) => {
                   data-aous-delay="0"
                   className={styles.inputForm}
                   placeholder="Message"></textarea>
+
+                <button
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`news ${styles.sendBtnForm}`}>
+                  <div className={styles.redLine}>
+                    <div className={styles.ballRedLine}></div>
+                  </div>
+                  SEND
+                </button>
               </form>
               <div className={`flex j-s a-s ${styles.contactBlock}`}>
                 {locations.map((location, i) => (
@@ -85,16 +96,6 @@ const Footer = ({ dataContent }) => {
                   data-aos-duration="900"
                   data-aous-delay="0"
                   className={`${styles.imgSiteFooter}`}>
-                  <button className={`news ${styles.sendBtnForm}`}>
-                    SEND
-                    <div
-                      className={styles.redLine}
-                      data-aos="fade-up"
-                      data-aos-duration="900"
-                      data-aous-delay="0">
-                      <div className={styles.ballRedLine}></div>
-                    </div>
-                  </button>
                   <Image src={image.large} fill alt={image.alt} />
                 </div>
               </div>

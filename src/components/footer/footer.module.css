@@ -14,6 +14,7 @@
   left: 0%;
   top: -10vh;
   background-color: #faa300;
+  z-index: 3;
 }
 
 .patternForm:before {
@@ -56,7 +57,7 @@
 .siteForm {
   width: 50%;
   flex-wrap: wrap;
-
+  position: relative;
   gap: 2%;
   width: 48%;
 }
@@ -224,28 +225,28 @@ textarea.inputForm {
 }
 
 .sendBtnForm {
-  display: block;
   background-color: transparent;
   border: none;
   font-weight: 700;
   font-size: 28px;
   letter-spacing: 0.12em;
   color: #363233;
-  position: absolute;
-  top: 15%;
-  left: -50%;
+  position: relative;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
 }
 
 .redLine {
-  position: absolute;
-  width: 27vw;
+  position: relative;
+  width: 20vw;
   height: 5px;
   background-color: #d02e2a;
-  top: 50%;
-  left: 140%;
   z-index: 1;
   cursor: default;
+  left: -5vw;
 }
 
 .ballRedLine {
@@ -253,7 +254,7 @@ textarea.inputForm {
   width: 25px;
   height: 25px;
   top: 50%;
-  right: calc(100% - 12.5px);
+  left: calc(100% - 12.5px);
   margin-top: -12.5px;
   border-radius: 50%;
   background-color: #d02e2a;

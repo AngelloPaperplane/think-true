@@ -9,6 +9,7 @@ const Header = () => {
   const { setPageLoaded } = useContext(ThinkTrue);
   const [menuOpened, setMenuOpened] = useState(false);
   const [hideMenu, setHideMenu] = useState(true);
+  const [isInHero, setIsInHero] = useState(true);
   const router = useRouter();
   const { pathname } = router;
 
@@ -34,12 +35,32 @@ const Header = () => {
     };
   }, [menuOpened]);
 
+  useEffect(() => {
+    // const switchHeader = () => {
+    //   if (isInHero) {
+    //     if (window.scrollY >= window.innerHeight / 2) {
+    //       setIsInHero(false);
+    //     }
+    //   }
+    //   if (!isInHero) {
+    //     if (window.scrollY <= window.innerHeight / 2) {
+    //       setIsInHero(true);
+    //     }
+    //   }
+    // };
+    // window.addEventListener('scroll', switchHeader);
+
+    // return () => {
+    //   window.removeEventListener('scroll', switchHeader);
+    // };
+  }, []);
+
   return (
     <>
       <header
         className={`${styles.siteHeader} ${
           menuOpened ? styles.activeMenu : ''
-        }`}>
+        } `}>
         <div className={`container flex j-b a-c ${styles.containerHeader}`}>
           <div
             className={`${styles.siteLogo} bg-ct`}

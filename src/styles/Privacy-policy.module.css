@@ -4,3 +4,19 @@
   line-height: 1.1;
   color: #363233;
 }
+
+
+.legalContent p{
+  margin-bottom: 15px;
+}
+.legalContent ul{
+  margin-bottom: 15px;
+}
+.legalContent li{
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+.legalContent strong{
+  font-weight: bold;
+}
+

@@ -12,7 +12,9 @@ const PopUpMember = ({ popUpMember, setPopUpMember }) => {
       <div
         className={styles.bgPopUpMember}
         onClick={() => setPopUpMember({})}></div>
-      <div className={`flex j-c a-c ${styles.wrapperPopUpMember}`}>
+      <div
+        className={`flex j-c a-c ${styles.wrapperPopUpMember}`}
+        style={{ backgroundColor: `${popUpMember.color}` }}>
         <div
           className={`${styles.closePopUp} bg-ct`}
           onClick={() => setPopUpMember({})}></div>
@@ -28,9 +30,7 @@ const PopUpMember = ({ popUpMember, setPopUpMember }) => {
             } image`}
           />
         </div>
-        <div
-          className={styles.infoMember}
-          style={{ backgroundColor: `${popUpMember.color}` }}>
+        <div className={styles.infoMember}>
           <h3 className={`news ${styles.nameMember}`}>{popUpMember.name}</h3>
           <h4 className={`news ${styles.professionMember}`}>
             {popUpMember.profession}
