@@ -21,7 +21,7 @@ const HorizontalSection = ({
       `.siteSection-${classParent} .itemHorizontal`
     );
 
-    //const text = new SplitType('.splitText', { types: 'words, chars' });
+    // const text = new SplitType('.splitText', { types: 'words, chars' });
 
     ScrollTrigger.matchMedia({
       '(min-width: 1025px)': () => {
