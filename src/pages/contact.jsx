@@ -6,18 +6,6 @@ import React from 'react';
 
 const Contact = ({ data }) => {
   const { meta, hero, contentContact, formfooter } = data;
-  /*
-  const contentAfterHero = {
-    text: [
-      'We want to meet, develop a plan with you, and create impact work to shake multicultural marketing.',
-      // eslint-disable-next-line quotes
-      'Here is our email: hello@think-true.com to learn more about our capabilities, projects, and open positions?',
-    ],
-    posterVideo: '/images/02-home.jpg',
-    layout: 'team',
-    align: 'left',
-  };
-  */
   return (
     <>
       <Metas metadata={meta} />

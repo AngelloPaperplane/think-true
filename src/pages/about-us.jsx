@@ -200,18 +200,6 @@ const AboutUs = ({ data }) => {
           type="about-1"
         />
       }
-      {/*
-      <HorizontalSection
-        blocksToIterate={horizontalBlocks2}
-        classParent="02"
-        type="about-2"
-      />
-      <HorizontalSection
-        blocksToIterate={horizontalBlocks3}
-        classParent="03"
-        type="about-3"
-      />
-      */}
       <Footer dataContent={formfooter} />
     </>
   );
