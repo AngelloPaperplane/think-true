@@ -285,7 +285,7 @@
 }
 
 .textBigTitleBlock {
-  width: 45%;
+  width: 100%;
   align-self: flex-end;
   font-style: normal;
   font-weight: 400;
@@ -369,7 +369,7 @@
   font-size: 19px;
   line-height: 27px;
   color: #000000;
-  width: 70%;
+  width: 100%;
   margin-top: 10px;
   align-self: flex-end;
 }
