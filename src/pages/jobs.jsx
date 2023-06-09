@@ -7,47 +7,26 @@ import ImgText from '@/components/imgText';
 import React from 'react';
 
 const Jobs = ({ data }) => {
-  const { meta, hero, description, features, sendusemail, formfooter } = data;
-  /*
-  const contentAfterHero = {
-    title: { text: 'OUR CULTURE', position: 'left' },
-    text: [
-      // eslint-disable-next-line quotes
-      'We believe in embracing multicultural perspectives and celebrating diversity. ',
-      // eslint-disable-next-line quotes
-      "We're flexible and always ready to adapt to changing needs, making the journey fun and enjoyable. Our positive attitude and determination are infused with laughter and grit, this is not a job, is a way of living. ",
-    ],
-    posterVideo: '/images/02-home.jpg',
-    layout: 'team',
-    align: 'right',
+  const {
+    meta,
+    hero,
+    description,
+    features,
+    sendusemail,
+    formfooter,
+    features_button_label,
+    features_button_link,
+    features_button_color,
+    features_button_color_name,
+    features_button_target,
+  } = data;
+  const linkBtn = {
+    'link': features_button_link,
+    'label': features_button_label,
+    'color': features_button_color,
+    'colorname': features_button_color_name,
+    'target': features_button_target,
   };
-  
-  const contentFeatures = [
-    {
-      index: '01',
-      title: 'CREATIVE',
-      features:
-        '<p>Freelance Senior UX Designer</p> <br> <p>Senior UI Designer</p>',
-    },
-    {
-      index: '02',
-      title: 'PRODUCTION',
-      features: '<p>Creative</p> <br> <p>Freelance Creative</p>',
-    },
-    {
-      index: '03',
-      title: 'ACCOUNT MANAGMENT',
-      features:
-        '<p>Freelance Senior UX Designer</p> <br> <p>Senior UI Designer</p>',
-    },
-  ];
-
-  const contentImgText = {
-    order: 'textImg',
-    text: '<p>Sometimes you just need an opportunity: If you are looking for an <span>internship</span> opportunity reach out. </p>',
-    img: '/images/02-jobs.jpg',
-  };
-*/
   return (
     <>
       <Metas metadata={meta} />
@@ -58,6 +37,7 @@ const Jobs = ({ data }) => {
           key={typeof window !== 'undefined' ? window.crypto.randomUUID() : i}
           contentFeaturesJobs={feature}
           last={i === features.length - 1 ?? false}
+          databtn={linkBtn}
         />
       ))}
       <ImgText content={sendusemail} />

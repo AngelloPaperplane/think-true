@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 import styles from './img-text.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const ImgText = ({ content }) => {
   useEffect(() => {
@@ -24,14 +25,20 @@ const ImgText = ({ content }) => {
             dangerouslySetInnerHTML={{
               __html: content.text,
             }}></div>
-          <div
-            className={styles.line}
-            data-aos="fade-up"
-            data-aos-duration="900"
-            data-aous-delay="0">
-            <div className={styles.ball}></div>
-            <p className={`news ${styles.textBallLine}`}>EMAIL TO HR</p>
-          </div>
+          {content.email_address && content.email_address !== '' && (
+            <div
+              className={styles.line}
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aous-delay="0">
+              <div className={styles.ball}></div>
+              <Link
+                href={`mailto:${content.email_address.trim()}`}
+                className={`news ${styles.textBallLine}`}>
+                {content.email_label}
+              </Link>
+            </div>
+          )}
         </div>
         <div
           className={styles.imgBlock}

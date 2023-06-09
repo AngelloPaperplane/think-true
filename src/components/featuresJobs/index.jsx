@@ -2,8 +2,9 @@ import React, { useEffect } from 'react';
 import styles from './features-jobs.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
-const FeaturesJobs = ({ contentFeaturesJobs, last }) => {
+const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -35,22 +36,28 @@ const FeaturesJobs = ({ contentFeaturesJobs, last }) => {
             data-aous-delay="0"></div>
         </div>
       </div>
-      {last && (
+      {last && databtn.label && databtn.link && (
         <div className={styles.growWrapper}>
           <div
+            style={{ backgroundColor: `${databtn.color}` }}
             className={styles.line}
             data-aos="fade-up"
             data-aos-duration="900"
             data-aous-delay="0">
-            <div className={styles.ball}></div>
+            <div
+              className={styles.ball}
+              style={{ backgroundColor: `${databtn.color}` }}></div>
           </div>
-          <p
+          <Link
+            style={{ backgroundImage: `url(/icons/${databtn.colorname}.png)` }}
+            href={databtn.link}
+            target={databtn.target}
             className={styles.growText}
             data-aos="fade-up"
             data-aos-duration="900"
             data-aous-delay="0">
-            GROW WITH US
-          </p>
+            {databtn.label}
+          </Link>
         </div>
       )}
     </div>

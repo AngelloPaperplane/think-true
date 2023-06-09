@@ -27,6 +27,8 @@ const ImgTextB = ({
       withList,
       list,
       link,
+      buttoncolor,
+      buttonlabel,
       sideText,
     } = contentData;
     return (
@@ -80,7 +82,7 @@ const ImgTextB = ({
               style={{
                 backgroundImage: `url(${image.large ? image.large : ''})`,
               }}>
-              {link && (
+              {buttonlabel && link !== '' && buttonlabel !== '' && (
                 <div
                   className={styles.redLine}
                   data-aos="fade-up"
@@ -89,8 +91,11 @@ const ImgTextB = ({
                   <div className={styles.ballRedLine}>
                     <Link
                       href={`/${link}`}
+                      style={{
+                        backgroundImage: `url(/icons/${buttoncolor}.png)`,
+                      }}
                       className={`news ${styles.linkBallRedLine}`}>
-                      DIVE DEEPER
+                      {buttonlabel}
                     </Link>
                   </div>
                 </div>
@@ -123,7 +128,7 @@ const ImgTextB = ({
                 data-aous-delay="0"></div>
             )}
           </div>
-          {link && (
+          {buttonlabel && link !== '' && buttonlabel !== '' && (
             <div
               className={`${styles.redLine} ${styles.mobileLine}`}
               data-aos="fade-up"
@@ -132,8 +137,9 @@ const ImgTextB = ({
               <div className={styles.ballRedLine}>
                 <Link
                   href={`/${link}`}
+                  style={{ backgroundImage: `url(/icons/${buttoncolor}.png)` }}
                   className={`news ${styles.linkBallRedLine}`}>
-                  DIVE DEEPER
+                  {buttonlabel}
                 </Link>
               </div>
             </div>
