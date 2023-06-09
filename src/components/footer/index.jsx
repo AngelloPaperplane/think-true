@@ -11,7 +11,17 @@ const Footer = ({ dataContent, isContact }) => {
   }, []);
 
   if (dataContent) {
-    const { title, text, image, locations, itemsmenu } = dataContent;
+    const {
+      title,
+      text,
+      image,
+      locations,
+      itemsmenu,
+      privacy_link,
+      privacy_label,
+      terms_label,
+      terms_link,
+    } = dataContent;
     return (
       <>
         <section className={`siteSection ${styles.formSection}`}>
@@ -132,8 +142,14 @@ const Footer = ({ dataContent, isContact }) => {
               </ul>
             </div>
             <p className={`flex j-c a-c ${styles.legacyText}`}>
-              © 2023 Think-True / All Rights Reserved /{' '}
-              <Link href="/privacy-policy">Terms & Conditions</Link>
+              © 2023 Think-True /{' '}
+              {privacy_link && privacy_link !== '' && (
+                <Link href={privacy_link}>{privacy_label}</Link>
+              )}
+              /{' '}
+              {terms_link && terms_link !== '' && (
+                <Link href={terms_link}>{terms_label}</Link>
+              )}
             </p>
             <p className={styles.paperplaneText}>
               Designed by:{' '}
