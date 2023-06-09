@@ -1,33 +1,35 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import styles from './masonry.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-
+const loadIsotope = () => require('isotope-layout');
+let Isotope;
 const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
+  const isotope = useRef(null);
   useEffect(() => {
+    if (typeof window === 'undefined') {
+      return;
+    }
     AOS.init();
+    Isotope = loadIsotope();
+    isotope.current = new Isotope('.filter-container', {
+      itemSelector: '.filter-item', 
+      layoutMode: 'masonry', 
+    });
+    return () => isotope.current.destroy();
   }, []);
   return (
     <section className={`siteSection ${styles.masonrySection}`}>
-      <div
-        className={`container ${styles.masonryContainer}`}
-        style={{
-          gridAutoRows: `${heightColumn ?? 30}vh`,
-          gridTemplateColumns: `repeat(${columns}, 1fr)`,
-        }}>
+      <div className={`container filter-container ${styles.masonryContainer}`}>
         {gridPictures.map((img, i) => (
           <div
             key={typeof window !== 'undefined' ? window.crypto.randomUUID() : i}
-            className={`${styles.innerImgMasonry} ${
+            className={`${styles.innerImgMasonry} filter-item ${
               layout === 'ourWork' ? styles.ourWorkLayout : ''
             }`}
-            style={{
-              gridColumn:
-                img.spaceColumn !== 'normal' ? img.spaceColumn : 'initial',
-              gridRow: img.spaceRow !== 'normal' ? img.spaceRow : 'initial',
-            }}
+            style={{ height: '400px', width: '30%' }}
             data-aos="fade-up"
             data-aos-duration="900"
             data-aous-delay="0"

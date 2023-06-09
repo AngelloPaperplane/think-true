@@ -9,7 +9,7 @@
   transition: all 0.5s ease-in-out, background-color 0.5s ease-in-out 0.25s;
 }
 
-.siteHeader:not(.activeMenu):hover {
+.siteHeader.lightHeader:not(.activeMenu) {
   background-color: #ffffff7d;
   backdrop-filter: blur(10px);
   padding: 5px 0;
@@ -25,7 +25,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-.siteHeader:not(.activeMenu):hover .siteLogo {
+.lightHeader.siteHeader:not(.activeMenu) .siteLogo {
   width: 80px;
   height: 65px;
 }
@@ -48,7 +48,7 @@
   transition: all 0.5s ease-in-out;
 }
 
-.siteHeader:not(.activeMenu):hover .burger {
+.lightHeader.siteHeader:not(.activeMenu) .burger {
   width: 35px;
   height: 35px;
 }

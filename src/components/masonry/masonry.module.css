@@ -3,13 +3,14 @@
 }
 
 .masonryContainer {
-  display: grid;
+  /* display: grid; */
   grid-auto-rows: 30vh;
   gap: 2.5vh;
 }
 
 .innerImgMasonry {
   position: relative;
+  margin: 1.5%;
 }
 
 .innerImgMasonry.ourWorkLayout:before {

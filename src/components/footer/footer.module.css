@@ -268,6 +268,17 @@ textarea.inputForm {
   background-color: #d02e2a;
 }
 
+@media only screen and (min-width: 1920px){
+  .redLine{
+    width: 10vw;
+    left: -12vw;
+  }
+
+  .sendBtnForm{
+    margin-left: 10vw;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .formTitle {
     font-size: 20vw;

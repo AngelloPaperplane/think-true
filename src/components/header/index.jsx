@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 import Menu from '../menu';
 import styles from './header.module.css';
 import { useRouter } from 'next/router';
@@ -9,9 +9,10 @@ const Header = () => {
   const { setPageLoaded } = useContext(ThinkTrue);
   const [menuOpened, setMenuOpened] = useState(false);
   const [hideMenu, setHideMenu] = useState(true);
-  // const [isInHero, setIsInHero] = useState(true);
+  const [isInHero, setIsInHero] = useState(true);
   const router = useRouter();
   const { pathname } = router;
+  const header = useRef(null);
 
   const changePath = () => {
     setPageLoaded(false);
@@ -36,30 +37,31 @@ const Header = () => {
   }, [menuOpened]);
 
   useEffect(() => {
-    // const switchHeader = () => {
-    //   if (isInHero) {
-    //     if (window.scrollY >= window.innerHeight / 2) {
-    //       setIsInHero(false);
-    //     }
-    //   }
-    //   if (!isInHero) {
-    //     if (window.scrollY <= window.innerHeight / 2) {
-    //       setIsInHero(true);
-    //     }
-    //   }
-    // };
-    // window.addEventListener('scroll', switchHeader);
-    // return () => {
-    //   window.removeEventListener('scroll', switchHeader);
-    // };
+    const switchHeader = () => {
+      if (!header.current.classList.contains(styles.lightHeader)) {
+        if (window.scrollY >= 50) {
+          setIsInHero((prev) => (prev = false));
+        }
+      }
+      if (header.current.classList.contains(styles.lightHeader)) {
+        if (window.scrollY <= 50) {
+          setIsInHero((prev) => (prev = true));
+        }
+      }
+    };
+    window.addEventListener('scroll', switchHeader);
+    return () => {
+      window.removeEventListener('scroll', switchHeader);
+    };
   }, []);
 
   return (
     <>
       <header
+        ref={header}
         className={`${styles.siteHeader} ${
-          menuOpened ? styles.activeMenu : ''
-        } `}>
+          !isInHero ? styles.lightHeader : ''
+        }  ${menuOpened ? styles.activeMenu : ''} `}>
         <div className={`container flex j-b a-c ${styles.containerHeader}`}>
           <div
             className={`${styles.siteLogo} bg-ct`}

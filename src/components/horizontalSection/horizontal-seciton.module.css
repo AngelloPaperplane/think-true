@@ -23,6 +23,7 @@
   width: 100vw;
   height: 100%;
   opacity: 1;
+  flex: 0 0 auto;
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -498,8 +499,12 @@
 .smallTextBlockImgText {
   font-weight: 400;
   font-size: 42px;
-  line-height: 51px;
+  line-height: 1;
   color: #363233;
+  width: 100%;
+}
+
+.lastWrapperText {
   width: 45%;
   align-self: flex-end;
 }
@@ -513,6 +518,40 @@
 .innerImgBlockImgtext {
   object-fit: cover;
   object-position: center center;
+}
+
+.lastCta {
+  z-index: 1;
+  margin-top: 20px;
+  position: relative;
+  justify-content: center;
+}
+
+.lastCta a {
+  /* background-image: url(/icons/cta.png); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 30px 40px 30px;
+  text-align: center;
+  color: #363233;
+}
+
+.lastCta .ballLine {
+  position: absolute;
+  width: 10vw;
+  left: 85%;
+  top: 50%;
+  width: 30vw;
+  margin-top: -2.5px;
+}
+
+@media only screen and (min-width: 2000px){
+  
+  .lastCta .ballLine {
+    left: 60%;
+    width: 30vw;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -799,6 +838,14 @@
   .smallBlockTextImg {
     flex-wrap: wrap;
     padding: 15% 5%;
+  }
+
+  .lastWrapperText{
+    width: 100%;
+  }
+
+  .lastCta{
+    margin-bottom: 20px;
   }
 
   .smallTextBlockImgText {

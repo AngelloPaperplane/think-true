@@ -21,6 +21,8 @@ const HorizontalSection = ({
       `.siteSection-${classParent} .itemHorizontal`
     );
 
+    console.log(blocks);
+
     // const text = new SplitType('.splitText', { types: 'words, chars' });
 
     ScrollTrigger.matchMedia({
@@ -32,7 +34,7 @@ const HorizontalSection = ({
             trigger: scroller.current,
             pin: true,
             pinSpacing: true,
-            scrub: 1,
+            scrub: 3,
             invalidateOnRefresh: true,
             anticipatePin: 1,
 
@@ -713,14 +715,6 @@ const HorizontalSection = ({
             <>
               <div className={`${styles.block} itemHorizontal`}>
                 <Hero dataHero={heroData} />
-                {/*
-                <Hero
-                  image={'/images/01-about.jpg'}
-                  title="ABOUT US"
-                  type="secondary"
-                  colorTitle="#fff"
-                />
-                */}
               </div>
 
               <div
@@ -951,10 +945,32 @@ const HorizontalSection = ({
               <div
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div className={`${styles.smallBlockTextImg} flex j-c a-c`}>
-                  <p className={`splitText ${styles.smallTextBlockImgText}`}>
-                    Think TRUE commits to partnering with diverse suppliers who
-                    reflect the community of the consumer.
-                  </p>
+                  <div className={styles.lastWrapperText}>
+                    <p className={`splitText ${styles.smallTextBlockImgText}`}>
+                      Think TRUE commits to partnering with diverse suppliers
+                      who reflect the community of the consumer.
+                    </p>
+                    <div
+                      className={`${styles.ctaBlock} ${styles.lastCta} revealText flex `}>
+                      <Link
+                        className={`news ${styles.ctaText}`}
+                        href={'/'}
+                        style={{ backgroundImage: 'url(/icons/cta.png)' }}>
+                        ON BOARD <br /> EXPERIENTIAL
+                      </Link>
+                      <div
+                        className={styles.ballLine}
+                        style={{
+                          backgroundColor: '#D02E2A',
+                        }}>
+                        <div
+                          className={styles.ball}
+                          style={{
+                            backgroundColor: '#D02E2A',
+                          }}></div>
+                      </div>
+                    </div>
+                  </div>
                   <div
                     className={`imgAnimation ${styles.wrapperImgBlockImgText}`}>
                     <Image

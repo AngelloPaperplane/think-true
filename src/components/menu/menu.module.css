@@ -105,6 +105,16 @@
   opacity: 1;
 }
 
+@media only screen and (min-width: 2000px){
+  .containerMenu.containerMenu{
+    margin-right: auto;
+  }
+
+  .itemMenu:hover .innerUlItemMenu {
+    padding-left: 2vw;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .itemName {
     font-size: 70px;
