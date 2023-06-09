@@ -9,7 +9,15 @@ const Agency = ({ image, dataContent }) => {
     AOS.init();
   }, []);
   if (dataContent) {
-    const { title, subtitle, text, image, link } = dataContent;
+    const {
+      title,
+      subtitle,
+      text,
+      image,
+      buttonlink,
+      buttoncolor,
+      buttonlabel,
+    } = dataContent;
     return (
       <section
         className={`siteSection bg-cv ${styles.agencySection}`}
@@ -31,19 +39,24 @@ const Agency = ({ image, dataContent }) => {
           />
 
           <div className={styles.floatInfoAgency}>
-            <div
-              className={styles.redLine}
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0">
-              <div className={styles.ballRedLine}>
-                <Link
-                  href={'/contact'}
-                  className={`news ${styles.linkBallRedLine}`}>
-                  MEET US
-                </Link>
+            {buttonlabel !== '' && buttonlink !== '' && (
+              <div
+                className={styles.redLine}
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0">
+                <div className={styles.ballRedLine}>
+                  <Link
+                    href={buttonlink}
+                    style={{
+                      backgroundImage: `url(/icons/${buttoncolor}.png)`,
+                    }}
+                    className={`news ${styles.linkBallRedLine}`}>
+                    {buttonlabel}
+                  </Link>
+                </div>
               </div>
-            </div>
+            )}
             <p
               data-aos="fade-up"
               data-aos-duration="900"

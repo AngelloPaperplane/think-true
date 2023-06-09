@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import styles from './after-hero.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Link from 'next/link';
 
 const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
   useEffect(() => {
@@ -46,6 +47,22 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     data-aous-delay="0"
                   />
                 )}
+                {mediaBlockContent.buttonlabel !== '' &&
+                  mediaBlockContent.buttonlink !== '' && (
+                    <p
+                      className={styles.textAfterHero}
+                      data-aos="fade-up"
+                      data-aos-duration="1900"
+                      data-aous-delay="0">
+                      <Link
+                        href={mediaBlockContent.buttonlink}
+                        style={{
+                          backgroundImage: `url(/icons/${mediaBlockContent.buttoncolor}.png)`,
+                        }}>
+                        {mediaBlockContent.buttonlabel}
+                      </Link>
+                    </p>
+                  )}
                 {mediaBlockContent.image && mediaBlockContent.image.medium && (
                   <div
                     className={`${styles.videoContainer} bg-cv`}
@@ -56,78 +73,17 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                       backgroundImage: `url(${mediaBlockContent.image.medium})`,
                     }}>
                     {mediaBlockContent.video && (
-                      <>
-                        {/* <iframe
-                          src="https://player.vimeo.com/video/783453809?autoplay=1"
-                          frameBorder="0"
-                          allow="autoplay"
-                          allowFullScreen
-                          className={styles.iframeVideo}></iframe> */}
-                        <iframe
-                          src={mediaBlockContent.video}
-                          frameBorder="0"
-                          allow="autoplay; fullscreen; picture-in-picture"
-                          className={`iframeVideo ${styles.iframeVideo}`}></iframe>
-                        {/* <div className={`bg-ct ${styles.playVideo}`} onClick={playVideo}></div> */}
-                      </>
+                      <iframe
+                        src={mediaBlockContent.video}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        className={`iframeVideo ${styles.iframeVideo}`}></iframe>
                     )}
                   </div>
                 )}
               </div>
             </>
           )}
-          {/*
-          mediaBlockContent && mediaBlockContent.layout === 'team' && (
-            <>
-              <div
-                className={`${
-                  mediaBlockContent.align === 'right' ? styles.alignRight : ''
-                } ${styles.wrapperAfterHeroTeam}`}>
-                {mediaBlockContent.title && mediaBlockContent.title.text && (
-                  <h2
-                    className={`${styles.titleAfterHero} ${
-                      styles[mediaBlockContent.title.position]
-                    }`}>
-                    {mediaBlockContent.title.text}
-                  </h2>
-                )}
-                {mediaBlockContent.text && (
-                  <p
-                    className={styles.textAfterHero}
-                    dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
-                  />
-                )}
-                { (
-                  <div
-                    className={`${styles.videoContainer} bg-cv`}
-                    data-aos="zoom-out"
-                    data-aos-duration="1500"
-                    data-aous-delay="0"
-                    style={{
-                      backgroundImage: `url(${mediaBlockContent.image.medium})`,
-                    }}>
-                    {mediaBlockContent.video && (
-                      <>
-                        {/* <iframe
-                          src="https://player.vimeo.com/video/783453809?autoplay=1"
-                          frameBorder="0"
-                          allow="autoplay"
-                          allowFullScreen
-                          className={styles.iframeVideo}></iframe> }
-                        <iframe
-                          src={mediaBlockContent.video}
-                          frameBorder="0"
-                          allow="autoplay; fullscreen; picture-in-picture"
-                          className={`iframeVideo ${styles.iframeVideo}`}></iframe>
-                        {/* <div className={`bg-ct ${styles.playVideo}`} onClick={playVideo}></div> }
-                      </>
-                    )}
-                  </div>
-                )}
-              </div>
-            </>
-          )
-          */}
         </div>
       </section>
     );
