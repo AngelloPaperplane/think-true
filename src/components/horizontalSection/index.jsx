@@ -731,7 +731,7 @@ const HorizontalSection = ({
         <div className={styles.lastWrapperText}>
           <p
             dangerouslySetInnerHTML={{ __html: block.text }}
-            className={`revealText ${impactText}`}
+            className={`splitText ${impactText}`}
           />
           <div
             className={`${styles.ctaBlock} ${styles.lastCta} revealText flex `}>

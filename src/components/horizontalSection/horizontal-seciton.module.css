@@ -277,6 +277,7 @@
   align-self: flex-end;
   padding-bottom: 5%;
   width: 55%;
+
 }
 
 .bigTitle {
@@ -302,7 +303,7 @@
 
 .imgTextRight .titleCallToAction {
   font-weight: 400;
-  font-size: 52px;
+  font-size: 52px !important;
   line-height: 64px;
   color: #000000;
 }
@@ -599,7 +600,7 @@
   }
 
   .imgTextRight .titleCallToAction {
-    font-size: 45px;
+    font-size: 45px !important;
     line-height: 1.2;
   }
 
@@ -712,7 +713,7 @@
     font-size: clamp(50px, 6vw, 100px);
   }
   .imgTextRight .titleCallToAction {
-    font-size: 40px;
+    font-size: 40px !important;
     line-height: 1.1;
     padding-left: 2vw;
   }
@@ -787,6 +788,7 @@
   .titleCallToAction,
   .textBigTitleBlock {
     width: 90%;
+    margin: 0 auto;
   }
 
   .callToActionBlock {
@@ -871,7 +873,7 @@
 
   .titleCallToAction,
   .textBigTitleBlock {
-    font-size: 27px;
+    font-size: 27px !important;
     align-self: flex-start;
     padding: 15vh 0;
   }
