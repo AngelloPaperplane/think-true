@@ -17,6 +17,11 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
     isotope.current = new Isotope('.filter-container', {
       itemSelector: '.filter-item',
       layoutMode: 'masonry',
+      /*
+      masonry: {
+        horizontalOrder: true
+      }
+      */
     });
     return () => isotope.current.destroy();
   }, []);
@@ -29,7 +34,7 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
             className={`${styles.innerImgMasonry} filter-item ${
               layout === 'ourWork' ? styles.ourWorkLayout : ''
             }`}
-            style={{ height: '400px', width: '30%' }}
+            style={{ height: `${img.spaceRow}`, width: `${img.spaceColumn}` }}
             data-aos="fade-up"
             data-aos-duration="900"
             data-aous-delay="0"

@@ -4,7 +4,7 @@ import React from 'react';
 import styles from '../styles/Privacy-policy.module.css';
 import Metas from '@/components/metaDatas';
 
-const PrivacyPolicy = ({ data }) => {
+const TermsConditions = ({ data }) => {
   const { meta, hero, content, formfooter } = data;
   return (
     <>
@@ -21,7 +21,7 @@ const PrivacyPolicy = ({ data }) => {
 export async function getServerSideProps() {
   // Fetch data from external API
   const res = await fetch(
-    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}privacy-policy`
+    `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}terms-conditions`
   );
   const data = await res.json();
 
@@ -29,4 +29,4 @@ export async function getServerSideProps() {
   return { props: { data } };
 }
 
-export default PrivacyPolicy;
+export default TermsConditions;
