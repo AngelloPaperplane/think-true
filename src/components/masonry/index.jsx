@@ -15,8 +15,8 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
     AOS.init();
     Isotope = loadIsotope();
     isotope.current = new Isotope('.filter-container', {
-      itemSelector: '.filter-item', 
-      layoutMode: 'masonry', 
+      itemSelector: '.filter-item',
+      layoutMode: 'masonry',
     });
     return () => isotope.current.destroy();
   }, []);

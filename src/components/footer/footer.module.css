@@ -268,13 +268,13 @@ textarea.inputForm {
   background-color: #d02e2a;
 }
 
-@media only screen and (min-width: 1920px){
-  .redLine{
+@media only screen and (min-width: 1920px) {
+  .redLine {
     width: 10vw;
     left: -12vw;
   }
 
-  .sendBtnForm{
+  .sendBtnForm {
     margin-left: 10vw;
   }
 }

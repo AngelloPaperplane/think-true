@@ -546,8 +546,7 @@
   margin-top: -2.5px;
 }
 
-@media only screen and (min-width: 2000px){
-  
+@media only screen and (min-width: 2000px) {
   .lastCta .ballLine {
     left: 60%;
     width: 30vw;
@@ -840,11 +839,11 @@
     padding: 15% 5%;
   }
 
-  .lastWrapperText{
+  .lastWrapperText {
     width: 100%;
   }
 
-  .lastCta{
+  .lastCta {
     margin-bottom: 20px;
   }
 
