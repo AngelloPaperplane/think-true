@@ -76,7 +76,11 @@ const Header = ({ mainMenu }) => {
         </div>
       </header>
       {!hideMenu && (
-        <Menu menuOpened={menuOpened} setMenuOpened={setMenuOpened} menuData={mainMenu} />
+        <Menu
+          menuOpened={menuOpened}
+          setMenuOpened={setMenuOpened}
+          menuData={mainMenu}
+        />
       )}
     </>
   );
