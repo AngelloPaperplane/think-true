@@ -22,7 +22,6 @@ const HorizontalSection = ({
       `.siteSection-${classParent} .itemHorizontal`
     );
 
-    console.log(blocks);
 
     // const text = new SplitType('.splitText', { types: 'words, chars' });
 
@@ -35,10 +34,9 @@ const HorizontalSection = ({
             trigger: scroller.current,
             pin: true,
             pinSpacing: true,
-            scrub: 3,
+            scrub: 5,
             invalidateOnRefresh: true,
             anticipatePin: 1,
-
             end: () => `+=${window.innerWidth}`,
           },
         });
@@ -730,10 +728,32 @@ const HorizontalSection = ({
 
     const innerText =
       block.text !== '' ? (
-        <p
-          dangerouslySetInnerHTML={{ __html: block.text }}
-          className={`splitText ${impactText}`}
-        />
+        <div className={styles.lastWrapperText}>
+          <p
+            dangerouslySetInnerHTML={{ __html: block.text }}
+            className={`revealText ${impactText}`}
+          />
+          <div
+            className={`${styles.ctaBlock} ${styles.lastCta} revealText flex `}>
+            <Link
+              className={`news ${styles.ctaText}`}
+              href={'/'}
+              style={{ backgroundImage: 'url(/icons/cta.png)' }}>
+              ON BOARD <br /> EXPERIENTIAL
+            </Link>
+            <div
+              className={styles.ballLine}
+              style={{
+                backgroundColor: '#D02E2A',
+              }}>
+              <div
+                className={styles.ball}
+                style={{
+                  backgroundColor: '#D02E2A',
+                }}></div>
+            </div>
+          </div>
+        </div>
       ) : (
         <></>
       );
