@@ -47,7 +47,8 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     data-aous-delay="0"
                   />
                 )}
-                {mediaBlockContent.buttonlabel !== '' &&
+                {mediaBlockContent.buttonlabel &&
+                  mediaBlockContent.buttonlabel !== '' &&
                   mediaBlockContent.buttonlink !== '' && (
                     <p
                       className={styles.textAfterHero}

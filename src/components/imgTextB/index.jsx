@@ -82,7 +82,7 @@ const ImgTextB = ({
               style={{
                 backgroundImage: `url(${image.large ? image.large : ''})`,
               }}>
-              {link !== '' && buttonlabel !== '' && (
+              {buttonlabel && link !== '' && buttonlabel !== '' && (
                 <div
                   className={styles.redLine}
                   data-aos="fade-up"
@@ -128,7 +128,7 @@ const ImgTextB = ({
                 data-aous-delay="0"></div>
             )}
           </div>
-          {link !== '' && buttonlabel !== '' && (
+          {buttonlabel && link !== '' && buttonlabel !== '' && (
             <div
               className={`${styles.redLine} ${styles.mobileLine}`}
               data-aos="fade-up"
