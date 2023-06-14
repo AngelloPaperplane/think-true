@@ -372,6 +372,18 @@
   color: #363233;
 }
 
+.titleImpact.title_large{
+  font-size: clamp(50px, 6vw, 120px);
+}
+.titleImpact.title_medium{
+  font-size: clamp(25px, 4vw, 100px);
+}
+.titleImpact.title_small{
+  font-size: clamp(20px, 3vw, 80px);
+}
+
+
+
 .textImpact {
   font-style: normal;
   font-weight: 400;
@@ -919,7 +931,17 @@
   }
 
   .titleImpact {
-    font-size: clamp(25px, 3vw, 80px);
+    font-size: clamp(25px, 3.5vw, 80px);
+  }
+
+  .titleImpact.title_large{
+    font-size: clamp(25px, 3.5vw, 80px);
+  }
+  .titleImpact.title_medium{
+    font-size: clamp(25px, 3.5vw, 80px);
+  }
+  .titleImpact.title_small{
+    font-size: clamp(25px, 3.5vw, 80px);
   }
 
   .textInnerCircle {
