@@ -785,12 +785,12 @@ const HorizontalSection = ({
       block.textboxPosition === 'Bottom'
         ? styles.textBigTitleBlock
         : styles.textImpact;
+    const titleSize = styles[block.titleSize];
     const innerTitle =
       block.title !== '' ? (
         <h2
-          className={`splitText ${impactTitle}`}
+          className={`splitText ${impactTitle} ${titleSize}`}
           dangerouslySetInnerHTML={{ __html: block.title }}
-          style={{ fontSize: block.titleSize }}
         />
       ) : (
         <></>
