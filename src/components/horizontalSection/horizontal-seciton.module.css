@@ -367,7 +367,7 @@
 
 .titleImpact {
   font-weight: 700;
-  font-size: clamp(70px, 6vw, 120px) !important;
+  font-size: clamp(70px, 6vw, 120px) ;
   line-height: 1.05;
   color: #363233;
 }
