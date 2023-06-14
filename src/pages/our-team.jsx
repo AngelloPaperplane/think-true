@@ -20,7 +20,10 @@ const OurTeam = ({ data }) => {
       <AfterHero mediaBlockContent={description} />
       <MeetUs membersData={members} setPopUpMember={setPopUpMember} />
       <TitleLine featuredText={featuredtext} />
-      <Masonry columns={3} gridPictures={grid} />
+      {Object.entries(popUpMember).length === 0 && (
+        <Masonry columns={3} gridPictures={grid} />
+      )}
+
       {Object.entries(popUpMember).length > 0 && (
         <PopUpMember
           popUpMember={popUpMember}

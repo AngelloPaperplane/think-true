@@ -236,47 +236,46 @@ textarea.inputForm {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 50px;
+  margin-top: 15px;
   background-image: url(/icons/cta.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
   padding: 25px 35px 20px;
-  margin-left: 20vw;
 }
 
 .redLine {
-  position: absolute;
-  width: 23vw;
-  height: 5px;
+  position: relative;
+  width: 5px;
+  height: 15vh;
   background-color: #d02e2a;
   z-index: 1;
   cursor: default;
-  left: -25vw;
-  top: 50%;
-  margin-top: -2.5px;
+  margin-left: 70px;
+  margin-right: calc(80% - 5px);
 }
 
 .ballRedLine {
   position: absolute;
   width: 25px;
   height: 25px;
-  top: 50%;
-  left: calc(100% - 12.5px);
+  top: 100%;
+  left: 50%;
+  margin-left: -12.5px;
   margin-top: -12.5px;
   border-radius: 50%;
   background-color: #d02e2a;
 }
 
 @media only screen and (min-width: 1920px) {
-  .redLine {
+  /* .redLine {
     width: 10vw;
     left: -12vw;
-  }
+  } */
 
-  .sendBtnForm {
-    margin-left: 10vw;
-  }
+  /* .sendBtnForm {
+    margin-left: 10vw; */
+  /* } */
 }
 
 @media only screen and (max-width: 1300px) {
@@ -366,21 +365,22 @@ textarea.inputForm {
     font-size: 22px;
   }
 
-  .sendBtnForm {
+  /* .sendBtnForm {
     margin-left: 35vw;
     font-size: 20px;
     margin-top: 35px;
-  }
+  } */
 
-  .redLine {
+  /* .redLine {
     left: -40vw;
     width: 35vw;
-  }
+  } */
 
   .ballRedLine {
     width: 15px;
     height: 15px;
-    right: calc(100% - 7.5px);
     margin-top: -7.5px;
+    left: 50%;
+    margin-left: -7.5px;
   }
 }

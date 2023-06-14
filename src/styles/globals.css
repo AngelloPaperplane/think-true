@@ -361,12 +361,12 @@ a {
   border: none;
   opacity: 1;
   visibility: visible;
-  background-image: url(/icons/arrow-2.png);
+  background-image: url(/icons/back.png);
   transition: all 0.3s ease-in-out;
 }
 
 .slick-next {
-  background-image: url(/icons/arrow-1.png);
+  background-image: url(/icons/next.png);
   left: initial;
   right: 4%;
 }

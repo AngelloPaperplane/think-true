@@ -1,7 +1,7 @@
 .legalContent {
   padding: 10vh 0;
   font-size: 25px;
-  line-height: 1.1;
+  line-height: 1.6;
   color: #363233;
 }
 
@@ -22,6 +22,10 @@
   margin-bottom: 10px;
   list-style-type: disc;
 }
+.legalContent ol li {
+  margin-bottom: 10px;
+  list-style-type: decimal;
+}
 .legalContent strong {
   font-weight: bold;
   margin: 15px 0;
@@ -29,4 +33,7 @@
 .legalContent b {
   font-weight: bold;
   margin: 15px 0;
+}
+.legalContent i {
+  font-style: italic;
 }

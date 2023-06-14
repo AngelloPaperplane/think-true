@@ -69,15 +69,18 @@ const Footer = ({ dataContent, isContact }) => {
                   data-aous-delay="0"
                   className={styles.inputForm}
                   placeholder="Message"></textarea>
-
+                <div
+                  className={styles.redLine}
+                  data-aos="fade-up"
+                  data-aos-duration="900"
+                  data-aous-delay="0">
+                  <div className={styles.ballRedLine}></div>
+                </div>
                 <button
                   data-aos="fade-up"
                   data-aos-duration="900"
                   data-aous-delay="0"
                   className={`news ${styles.sendBtnForm}`}>
-                  <div className={styles.redLine}>
-                    <div className={styles.ballRedLine}></div>
-                  </div>
                   SEND
                 </button>
               </form>
@@ -210,23 +213,14 @@ const Footer = ({ dataContent, isContact }) => {
                 data-aous-delay="0"
                 className={styles.inputForm}
                 placeholder="Message"></textarea>
-
-              <button className={styles.sendBtnForm}>
-                SEND
-                <div
-                  className={styles.redLine}
-                  data-aos="fade-up"
-                  data-aos-duration="900"
-                  data-aous-delay="0">
-                  <div className={styles.ballRedLine}>
-                    {/* <Link
-                      href={'/contact'}
-                      className={`news ${styles.linkBallRedLine}`}>
-                      MEET US
-                    </Link> */}
-                  </div>
-                </div>
-              </button>
+              <div
+                className={styles.redLine}
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0">
+                <div className={styles.ballRedLine}></div>
+              </div>
+              <button className={styles.sendBtnForm}>SEND</button>
             </form>
             <div className={`flex j-s a-s ${styles.contactBlock}`}>
               <div className={styles.directionGroup}>

@@ -6,6 +6,8 @@ import Hero from '../hero';
 import Image from 'next/image';
 import SplitType from 'split-type';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -15,13 +17,13 @@ const HorizontalSection = ({
   classParent,
   heroData,
 }) => {
-  console.log(blocksToIterate);
+  const pathname = useRouter();
+  console.log(pathname);
   const scroller = useRef();
   useEffect(() => {
     const blocks = gsap.utils.toArray(
       `.siteSection-${classParent} .itemHorizontal`
     );
-
 
     // const text = new SplitType('.splitText', { types: 'words, chars' });
 
@@ -34,10 +36,10 @@ const HorizontalSection = ({
             trigger: scroller.current,
             pin: true,
             pinSpacing: true,
-            scrub: 5,
+            scrub: 3,
             invalidateOnRefresh: true,
             anticipatePin: 1,
-            end: () => `+=${window.innerWidth}`,
+            end: () => `+=${5000}`,
           },
         });
 
@@ -52,6 +54,7 @@ const HorizontalSection = ({
         let bigTitleBlock;
         let revealText;
         let splitText;
+        let splitTextB;
         let imgAnimation;
         let partnersCircle;
 
@@ -150,6 +153,39 @@ const HorizontalSection = ({
                 onLeaveBack: () => {
                   block
                     .querySelector('.splitText')
+                    .classList.remove(styles.active);
+                  // tweenChars.reverse();
+                },
+              },
+            });
+          }
+          if (block.querySelector('.splitTextB')) {
+            splitTextB = gsap.from(block.querySelector('.splitTextB'), {
+              transform: 'translateY(100%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.splitTextB'),
+                containerAnimation: to,
+                start: '-60% 100%',
+                end: '100% 50%',
+                scrub: 5,
+                onEnter: () => {
+                  block
+                    .querySelector('.splitTextB')
+                    .classList.add(styles.active);
+                },
+                onEnterBack: () => {
+                  block
+                    .querySelector('.splitTextB')
+                    .classList.add(styles.active);
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.splitTextB')
+                    .classList.remove(styles.active);
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.splitTextB')
                     .classList.remove(styles.active);
                   // tweenChars.reverse();
                 },
@@ -392,6 +428,9 @@ const HorizontalSection = ({
             if (splitText) {
               splitText.kill();
             }
+            if (splitTextB) {
+              splitTextB.kill();
+            }
             if (imgAnimation) {
               imgAnimation.kill();
             }
@@ -430,6 +469,7 @@ const HorizontalSection = ({
         let bigTitleBlock;
         let revealText;
         let splitText;
+        let splitTextB;
         let imgAnimation;
         let partnersCircle;
 
@@ -509,6 +549,39 @@ const HorizontalSection = ({
               },
             });
           }
+          if (block.querySelector('.splitTextB')) {
+            splitTextB = gsap.from(block.querySelector('.splitTextB'), {
+              transform: 'translateY(100%)',
+              scrollTrigger: {
+                trigger: block.querySelector('.splitTextB'),
+                start: '-50% 100%',
+                end: '100% 100%',
+                scrub: 5,
+                // markers: true,
+                onEnter: () => {
+                  block
+                    .querySelector('.splitTextB')
+                    .classList.add(styles.active);
+                },
+                onEnterBack: () => {
+                  block
+                    .querySelector('.splitTextB')
+                    .classList.add(styles.active);
+                },
+                onLeave: () => {
+                  block
+                    .querySelector('.splitTextB')
+                    .classList.remove(styles.active);
+                },
+                onLeaveBack: () => {
+                  block
+                    .querySelector('.splitTextB')
+                    .classList.remove(styles.active);
+                  // tweenChars.reverse();
+                },
+              },
+            });
+          }
           if (block.querySelector('.revealText')) {
             revealText = gsap.from(block.querySelector('.revealText'), {
               transform: 'translateX(-50%)',
@@ -545,7 +618,7 @@ const HorizontalSection = ({
             bigTitleBlock = gsap.from(
               block.querySelector(`.${styles.titleAfterHeroAbout}`),
               {
-                transform: 'translateX(50%)',
+                transform: 'translateX(25%)',
                 scrollTrigger: {
                   trigger: block.querySelector(
                     `.${styles.titleAfterHeroAbout}`
@@ -678,6 +751,9 @@ const HorizontalSection = ({
             if (splitText) {
               splitText.kill();
             }
+            if (splitTextB) {
+              splitTextB.kill();
+            }
             if (imgAnimation) {
               imgAnimation.kill();
             }
@@ -734,7 +810,7 @@ const HorizontalSection = ({
             className={`splitText ${impactText}`}
           />
           <div
-            className={`${styles.ctaBlock} ${styles.lastCta} revealText flex `}>
+            className={`${styles.ctaBlock} ${styles.lastCta} splitTextB flex `}>
             <Link
               className={`news ${styles.ctaText}`}
               href={'/'}
@@ -1295,17 +1371,17 @@ const HorizontalSection = ({
                           }
                     }></div>
                   <div
-                    className={`${styles.contentBlock} ${
+                    className={`translateX ${styles.contentBlock} ${
                       type === 'whatWeDo' ? styles.contentWhatWeDo : ''
                     }`}>
                     <h2
-                      className={`news translateX ${styles.titleBlock}`}
+                      className={`news  ${styles.titleBlock}`}
                       style={{ width: block.titleWidth }}
                       dangerouslySetInnerHTML={{ __html: block.title }}
                     />
                     {block.subtitle && (
                       <h3
-                        className={`subtitleParallax ${styles.subtitleBlock}`}
+                        className={` ${styles.subtitleBlock}`}
                         style={{
                           color: block.color,
                         }}>
@@ -1314,13 +1390,13 @@ const HorizontalSection = ({
                     )}
 
                     <p
-                      className={`textParallax ${styles.infoBlock}`}
+                      className={` ${styles.infoBlock}`}
                       dangerouslySetInnerHTML={{ __html: block.text }}
                     />
 
                     {type !== 'whatWeDo' && (
                       <div
-                        className={`${styles.ctaBlock} btnParallax flex j-b a-c`}>
+                        className={`${styles.ctaBlock}  flex j-b a-c`}>
                         <Link
                           className={`news ${styles.ctaText}`}
                           href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>

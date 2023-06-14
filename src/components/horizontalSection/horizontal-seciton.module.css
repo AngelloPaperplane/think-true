@@ -200,7 +200,7 @@
 }
 
 .titleAfterHeroAbout {
-  font-size: clamp(40px, 11vw, 200px);
+  font-size: clamp(40px, 11vw, 110px);
   line-height: 1;
   color: #363233;
   width: 90%;
@@ -230,6 +230,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  z-index: 1;
 }
 
 .embraceBlock:before {
@@ -247,6 +248,8 @@
   width: 100%;
   position: relative;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .titleEmbrace {
@@ -277,7 +280,6 @@
   align-self: flex-end;
   padding-bottom: 5%;
   width: 55%;
-
 }
 
 .bigTitle {
@@ -526,6 +528,7 @@
   margin-top: 20px;
   position: relative;
   justify-content: center;
+  padding-top: 50px;
 }
 
 .lastCta a {
@@ -539,12 +542,23 @@
 }
 
 .lastCta .ballLine {
-  position: absolute;
+  position: absolute !important;
   width: 10vw;
-  left: 85%;
-  top: 50%;
-  width: 30vw;
-  margin-top: -2.5px;
+  left: 50%;
+  top: -35px;
+  width: 5px;
+  height: 70px;
+  margin-left: -2.5px;
+}
+
+.lastCta .ball {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: -15px;
 }
 
 @media only screen and (min-width: 2000px) {
