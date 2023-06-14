@@ -56,7 +56,7 @@
 }
 
 .collaboratorBox {
-  max-width: 250px;
+  /* max-width: 250px; */
   width: 10.1111111%;
   aspect-ratio: 1/1;
 }
