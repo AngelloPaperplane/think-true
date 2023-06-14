@@ -650,8 +650,7 @@ const HorizontalSection = ({
           }
           if (block.querySelector('.translateX')) {
             titleTl = gsap.from(block.querySelector('.translateX'), {
-              transform: `translateX(${
-                i === blocks.length - 1 ? '100' : '100'
+              transform: `translateX(${'70'
               }%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
