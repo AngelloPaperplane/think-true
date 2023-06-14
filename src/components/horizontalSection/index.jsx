@@ -797,6 +797,31 @@ const HorizontalSection = ({
       ) : (
         <></>
       );
+    
+    let buttonHtml = '';
+    if(block.text !== '' && block.button_label !== '' && block.button_link !== ''){
+      buttonHtml = ( <div
+        className={`${styles.ctaBlock} ${styles.lastCta} splitTextB flex `}>
+        <Link
+          className={`news ${styles.ctaText}`}
+          href={block.button_link}
+          style={{ backgroundImage: `url(/icons/${block.button_color_name}.png)` }}
+          target={block.button_target}
+          dangerouslySetInnerHTML={{__html:block.button_label}}>
+        </Link>
+        <div
+          className={styles.ballLine}
+          style={{
+            backgroundColor: block.button_color,
+          }}>
+          <div
+            className={styles.ball}
+            style={{
+              backgroundColor: block.button_color,
+            }}></div>
+        </div>
+      </div>);
+    }
 
     const innerText =
       block.text !== '' ? (
@@ -805,26 +830,7 @@ const HorizontalSection = ({
             dangerouslySetInnerHTML={{ __html: block.text }}
             className={`splitText ${impactText}`}
           />
-          <div
-            className={`${styles.ctaBlock} ${styles.lastCta} splitTextB flex `}>
-            <Link
-              className={`news ${styles.ctaText}`}
-              href={'/'}
-              style={{ backgroundImage: 'url(/icons/cta.png)' }}>
-              ON BOARD <br /> EXPERIENTIAL
-            </Link>
-            <div
-              className={styles.ballLine}
-              style={{
-                backgroundColor: '#D02E2A',
-              }}>
-              <div
-                className={styles.ball}
-                style={{
-                  backgroundColor: '#D02E2A',
-                }}></div>
-            </div>
-          </div>
+          {buttonHtml}
         </div>
       ) : (
         <></>
