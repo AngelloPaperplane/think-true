@@ -372,17 +372,15 @@
   color: #363233;
 }
 
-.titleImpact.title_large{
+.titleImpact.title_large {
   font-size: clamp(50px, 6vw, 120px);
 }
-.titleImpact.title_medium{
+.titleImpact.title_medium {
   font-size: clamp(25px, 4vw, 100px);
 }
-.titleImpact.title_small{
+.titleImpact.title_small {
   font-size: clamp(20px, 3vw, 80px);
 }
-
-
 
 .textImpact {
   font-style: normal;
@@ -942,10 +940,10 @@
   .titleImpact.title_large{
     font-size: clamp(25px, 15vw, 80px);
   }
-  .titleImpact.title_medium{
+  .titleImpact.title_medium {
     font-size: clamp(25px, 3.5vw, 80px);
   }
-  .titleImpact.title_small{
+  .titleImpact.title_small {
     font-size: clamp(25px, 3.5vw, 80px);
   }
 

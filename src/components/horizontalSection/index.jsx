@@ -949,7 +949,13 @@ const HorizontalSection = ({
                     }`,
                   }}></div>
               ) : (
-                <div className={styles.contImgImpact}>
+                <div
+                  className={styles.contImgImpact}
+                  style={{
+                    backgroundColor: `${
+                      block.bgcolor === 'na' ? 'none' : block.bgcolor
+                    }`,
+                  }}>
                   <div className={`imgAnimation ${styles.wrapperImgImpact}`}>
                     <Image
                       fill
