@@ -650,8 +650,7 @@ const HorizontalSection = ({
           }
           if (block.querySelector('.translateX')) {
             titleTl = gsap.from(block.querySelector('.translateX'), {
-              transform: `translateX(${'70'
-              }%)`,
+              transform: `translateX(${'70'}%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
                 start: 'top 80%',
@@ -797,30 +796,37 @@ const HorizontalSection = ({
       ) : (
         <></>
       );
-    
+
     let buttonHtml = '';
-    if(block.text !== '' && block.button_label !== '' && block.button_link !== ''){
-      buttonHtml = ( <div
-        className={`${styles.ctaBlock} ${styles.lastCta} splitTextB flex `}>
-        <Link
-          className={`news ${styles.ctaText}`}
-          href={block.button_link}
-          style={{ backgroundImage: `url(/icons/${block.button_color_name}.png)` }}
-          target={block.button_target}
-          dangerouslySetInnerHTML={{__html:block.button_label}}>
-        </Link>
+    if (
+      block.text !== '' &&
+      block.button_label !== '' &&
+      block.button_link !== ''
+    ) {
+      buttonHtml = (
         <div
-          className={styles.ballLine}
-          style={{
-            backgroundColor: block.button_color,
-          }}>
+          className={`${styles.ctaBlock} ${styles.lastCta} splitTextB flex `}>
+          <Link
+            className={`news ${styles.ctaText}`}
+            href={block.button_link}
+            style={{
+              backgroundImage: `url(/icons/${block.button_color_name}.png)`,
+            }}
+            target={block.button_target}
+            dangerouslySetInnerHTML={{ __html: block.button_label }}></Link>
           <div
-            className={styles.ball}
+            className={styles.ballLine}
             style={{
               backgroundColor: block.button_color,
-            }}></div>
+            }}>
+            <div
+              className={styles.ball}
+              style={{
+                backgroundColor: block.button_color,
+              }}></div>
+          </div>
         </div>
-      </div>);
+      );
     }
 
     const innerText =
