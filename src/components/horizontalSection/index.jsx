@@ -8,7 +8,6 @@ import SplitType from 'split-type';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
-
 gsap.registerPlugin(ScrollTrigger);
 
 const HorizontalSection = ({
@@ -276,9 +275,7 @@ const HorizontalSection = ({
           }
           if (block.querySelector('.translateX')) {
             titleTl = gsap.from(block.querySelector('.translateX'), {
-              transform: `translateX(${
-                i === blocks.length - 1 ? '100' : '100'
-              }%)`,
+              transform: `translateX(${'25'}%)`,
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
                 containerAnimation: to,
@@ -1395,8 +1392,7 @@ const HorizontalSection = ({
                     />
 
                     {type !== 'whatWeDo' && (
-                      <div
-                        className={`${styles.ctaBlock}  flex j-b a-c`}>
+                      <div className={`${styles.ctaBlock}  flex j-b a-c`}>
                         <Link
                           className={`news ${styles.ctaText}`}
                           href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>
