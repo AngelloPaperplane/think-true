@@ -15,7 +15,7 @@ const HorizontalSection = ({
   classParent,
   heroData,
 }) => {
-  const {pathname} = useRouter();
+  const { pathname } = useRouter();
   console.log(pathname);
   const scroller = useRef();
   useEffect(() => {
@@ -37,7 +37,7 @@ const HorizontalSection = ({
             scrub: 3,
             invalidateOnRefresh: true,
             anticipatePin: 1,
-            end: () => `+=${pathname === '/about-us' ? 15000 :5000}`,
+            end: () => `+=${pathname === '/about-us' ? 15000 : 5000}`,
           },
         });
 
@@ -1049,7 +1049,8 @@ const HorizontalSection = ({
           ref={scroller}>
           {type === 'about-1' && (
             <>
-              <div className={`${styles.block} ${styles.firstBlock} itemHorizontal`}>
+              <div
+                className={`${styles.block} ${styles.firstBlock} itemHorizontal`}>
                 <Hero dataHero={heroData} />
               </div>
               {blocksToIterate.map((block, i) => get_blocks(block, i))}
