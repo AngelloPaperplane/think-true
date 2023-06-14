@@ -24,7 +24,12 @@
   height: 100%;
   opacity: 1;
   flex: 0 0 auto;
+  padding-top: 75px;
   transition: opacity 0.5s ease-in-out;
+}
+
+.firstBlock{
+  padding-top: 0;
 }
 
 .block.hide {
@@ -200,7 +205,7 @@
 }
 
 .titleAfterHeroAbout {
-  font-size: clamp(40px, 11vw, 110px);
+  font-size: clamp(30px, 5vw, 110px);
   line-height: 1;
   color: #363233;
   width: 90%;
@@ -254,7 +259,7 @@
 
 .titleEmbrace {
   font-weight: 400;
-  font-size: clamp(40px, 10vw, 180px);
+  font-size: clamp(40px, 9vw, 180px);
   line-height: 1;
   text-align: center;
   color: #363233;
@@ -270,11 +275,12 @@
 .imgCallToAction {
   width: 40%;
   height: 100%;
+  flex: 1 0 auto;
 }
 
 .titleCallToAction {
   font-weight: 400;
-  font-size: clamp(50px, 7vw, 100px);
+  font-size: clamp(50px, 5vw, 100px) !important;
   line-height: 1.05;
   color: #000000;
   align-self: flex-end;
@@ -361,7 +367,7 @@
 
 .titleImpact {
   font-weight: 700;
-  font-size: clamp(70px, 9vw, 120px);
+  font-size: clamp(70px, 6vw, 120px) !important;
   line-height: 1.05;
   color: #363233;
 }
@@ -562,6 +568,10 @@
   margin-left: -15px;
 }
 
+.callToActionBlockContainer .lastWrapperText{
+  width: 100%;
+}
+
 /* @media only screen and (min-width: 2000px) {
   .lastCta .ballLine {
     left: 60%;
@@ -725,7 +735,7 @@
   }
 
   .titleCallToAction {
-    font-size: clamp(50px, 6vw, 100px);
+    font-size: clamp(50px, 5.5vw, 100px) !important;
   }
   .imgTextRight .titleCallToAction {
     font-size: 40px !important;
@@ -909,7 +919,7 @@
   }
 
   .titleImpact {
-    font-size: clamp(60px, 8vw, 120px);
+    font-size: clamp(60px, 7vw, 120px);
   }
 
   .textInnerCircle {

@@ -10,8 +10,8 @@
 }
 
 .siteHeader.lightHeader:not(.activeMenu) {
-  background-color: #ffffff7d;
-  backdrop-filter: blur(10px);
+  background-color: #ffffff;
+  backdrop-filter: blur(0px);
   padding: 5px 0;
   transition: all 0.5s ease-in-out, background-color 0.5s ease-in-out 0.25s;
 }

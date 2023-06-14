@@ -4,7 +4,6 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Hero from '../hero';
 import Image from 'next/image';
-import SplitType from 'split-type';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
@@ -16,7 +15,7 @@ const HorizontalSection = ({
   classParent,
   heroData,
 }) => {
-  const pathname = useRouter();
+  const {pathname} = useRouter();
   console.log(pathname);
   const scroller = useRef();
   useEffect(() => {
@@ -38,7 +37,7 @@ const HorizontalSection = ({
             scrub: 3,
             invalidateOnRefresh: true,
             anticipatePin: 1,
-            end: () => `+=${5000}`,
+            end: () => `+=${pathname === '/about-us' ? 15000 :5000}`,
           },
         });
 
@@ -240,7 +239,7 @@ const HorizontalSection = ({
             bigTitleBlock = gsap.from(
               block.querySelector(`.${styles.titleAfterHeroAbout}`),
               {
-                transform: 'translateX(100%)',
+                transform: 'translateX(70%)',
                 scrollTrigger: {
                   trigger: block.querySelector(
                     `.${styles.titleAfterHeroAbout}`
@@ -1038,7 +1037,7 @@ const HorizontalSection = ({
           ref={scroller}>
           {type === 'about-1' && (
             <>
-              <div className={`${styles.block} itemHorizontal`}>
+              <div className={`${styles.block} ${styles.firstBlock} itemHorizontal`}>
                 <Hero dataHero={heroData} />
               </div>
               {blocksToIterate.map((block, i) => get_blocks(block, i))}
