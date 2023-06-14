@@ -367,7 +367,7 @@
 
 .titleImpact {
   font-weight: 700;
-  font-size: clamp(70px, 6vw, 120px) ;
+  font-size: clamp(25px, 3vw, 80px);
   line-height: 1.05;
   color: #363233;
 }
@@ -919,7 +919,7 @@
   }
 
   .titleImpact {
-    font-size: clamp(60px, 7vw, 120px);
+    font-size: clamp(25px, 3vw, 80px);
   }
 
   .textInnerCircle {
