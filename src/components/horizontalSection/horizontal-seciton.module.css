@@ -527,8 +527,9 @@
   z-index: 1;
   margin-top: 20px;
   position: relative;
-  justify-content: center;
+  justify-content: flex-start;
   padding-top: 50px;
+  width: fit-content;
 }
 
 .lastCta a {
@@ -561,12 +562,12 @@
   margin-left: -15px;
 }
 
-@media only screen and (min-width: 2000px) {
+/* @media only screen and (min-width: 2000px) {
   .lastCta .ballLine {
     left: 60%;
     width: 30vw;
   }
-}
+} */
 
 @media only screen and (max-width: 1300px) {
   .subtitleBlock {
