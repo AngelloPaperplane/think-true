@@ -28,7 +28,7 @@
   transition: opacity 0.5s ease-in-out;
 }
 
-.firstBlock{
+.firstBlock {
   padding-top: 0;
 }
 
@@ -568,7 +568,7 @@
   margin-left: -15px;
 }
 
-.callToActionBlockContainer .lastWrapperText{
+.callToActionBlockContainer .lastWrapperText {
   width: 100%;
 }
 
