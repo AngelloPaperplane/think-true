@@ -13,6 +13,29 @@
   margin: 1.5%;
 }
 
+.innerImgMasonry.square{
+  aspect-ratio: 1/1;
+  width: 30%;
+}
+
+.innerImgMasonry.tall{
+  aspect-ratio: 1/2;
+  width: 30%;
+}
+
+.innerImgMasonry.wide{
+  aspect-ratio: 2/1;
+  width: 60%;
+}
+.innerImgMasonry.ultraWide{
+  aspect-ratio: 2/1;
+  width: 100%;
+}
+.innerImgMasonry.ultraTall{
+  aspect-ratio: 1/3;
+  width: 30%;
+}
+
 .innerImgMasonry.ourWorkLayout:before {
   content: '';
   position: absolute;
@@ -101,6 +124,24 @@
     width: 48% !important;
     aspect-ratio: 1/1;
     margin: 1%;
+  }
+  .innerImgMasonry.square{
+    aspect-ratio: 1/1;
+  }
+  
+  .innerImgMasonry.tall{
+    aspect-ratio: 1/1;
+  }
+  .innerImgMasonry.ultraWide{
+    aspect-ratio: 1/1;
+    width: 48%;
+  }
+  
+  .innerImgMasonry.wide{
+    aspect-ratio: 1/1;
+  }
+  .innerImgMasonry.ultraTall{
+    aspect-ratio: 1/1;
   }
 }
 @media only screen and (max-width: 768px) {

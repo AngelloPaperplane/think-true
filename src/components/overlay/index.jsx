@@ -9,6 +9,7 @@ const Overlay = () => {
   const [show, setShow] = useState(true);
   // const [count, setCount] = useState(0);
   const [isOnline, setIsOnline] = useState(false);
+  const [showText, setShowText] = useState(false);
 
   const textOverlayContainer = useRef(null);
 
@@ -33,6 +34,8 @@ const Overlay = () => {
 
     sessionStorage.setItem('isOnline', true);
 
+    setShowText(true);
+
     setTimeout(() => {
       setIndex(1);
       setTimeout(() => {
@@ -54,7 +57,7 @@ const Overlay = () => {
     <div
       className={`${index % 2 !== 0 ? styles.grayBg : ''} ${
         !show ? styles.hideDiv : ''
-      } ${styles.overlayContainer}`}>
+      } ${styles.overlayContainer} ${!showText ? styles.transparentText : ''}`} >
       <span
         ref={textOverlayContainer}
         className={`news ${styles.textOverlayContainer}`}>

@@ -60,7 +60,7 @@ const Header = ({ mainMenu }) => {
     <>
       <header
         ref={header}
-        className={`${styles.siteHeader} ${
+        className={`${styles.siteHeader}  ${
           !isInHero ? styles.lightHeader : ''
         }  ${menuOpened ? styles.activeMenu : ''} `}>
         <div className={`container flex j-b a-c ${styles.containerHeader}`}>
