@@ -788,7 +788,7 @@ const HorizontalSection = ({
     const innerTitle =
       block.title !== '' ? (
         <h2
-          className={`splitText ${impactTitle} ${titleSize}`}
+          className={`${impactTitle} ${titleSize}`}
           dangerouslySetInnerHTML={{ __html: block.title }}
         />
       ) : (
@@ -833,7 +833,7 @@ const HorizontalSection = ({
         <div className={styles.lastWrapperText}>
           <p
             dangerouslySetInnerHTML={{ __html: block.text }}
-            className={`splitText ${impactText} ${textSize}`}
+            className={`${impactText} ${textSize}`}
           />
           {buttonHtml}
         </div>
@@ -905,7 +905,7 @@ const HorizontalSection = ({
                   )}
                   {block.text !== '' && (
                     <p
-                      className={`revealText ${styles.textAfterHeroAbout}`}
+                      className={`splitTextB ${styles.textAfterHeroAbout}`}
                       dangerouslySetInnerHTML={{ __html: block.text }}
                       style={{ color: block.textcolor }}
                     />
@@ -927,12 +927,12 @@ const HorizontalSection = ({
               {isRight && (
                 <>
                   {impactInner !== '' ? (
-                    <div className={impactInner}>
+                    <div className={`splitText ${impactInner}`}>
                       {innerTitle}
                       {innerText}
                     </div>
                   ) : (
-                    <div className={impactInner}>
+                    <div className={`splitText ${impactInner}`}>
                       {innerTitle}
                       {innerText}
                     </div>
@@ -969,12 +969,12 @@ const HorizontalSection = ({
               {!isRight && (
                 <>
                   {impactInner !== '' ? (
-                    <div className={impactInner}>
+                    <div className={`splitText ${impactInner}`}>
                       {innerTitle}
                       {innerText}
                     </div>
                   ) : (
-                    <div className={impactInner}>
+                    <div className={`splitText ${impactInner}`}>
                       {innerTitle}
                       {innerText}
                     </div>
