@@ -25,7 +25,7 @@ const Overlay = () => {
       }
       localStorage.removeItem('date');
     }
-    
+
     localStorage.setItem('date', Date.now());
 
     if (isOnline) {

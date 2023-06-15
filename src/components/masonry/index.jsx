@@ -32,9 +32,9 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
         {gridPictures.map((img, i) => (
           <div
             key={typeof window !== 'undefined' ? window.crypto.randomUUID() : i}
-            className={`${styles.innerImgMasonry} ${styles[img.sizeClass]} filter-item ${
-              layout === 'ourWork' ? styles.ourWorkLayout : ''
-            }`}
+            className={`${styles.innerImgMasonry} ${
+              styles[img.sizeClass]
+            } filter-item ${layout === 'ourWork' ? styles.ourWorkLayout : ''}`}
             data-aos="fade-up"
             data-aos-duration="900"
             data-aous-delay="0"

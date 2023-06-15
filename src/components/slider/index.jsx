@@ -53,7 +53,7 @@ const SiteSlider = ({ title, projects }) => {
               <div
                 className={`bg-cv ${styles.projectImg}`}
                 style={{
-                  backgroundImage: `url(${project.imgProject.medium})`,
+                  backgroundImage: `url(${project.imgProject.large})`,
                 }}></div>
               <div className={`news ${styles.contentProject}`}>
                 <h2
