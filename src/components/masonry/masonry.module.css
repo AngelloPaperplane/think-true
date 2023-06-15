@@ -88,11 +88,11 @@
 }
 
 @media only screen and (min-width: 1920px) {
-  .titleGridImg{
+  .titleGridImg {
     font-size: 50px;
   }
 
-  .subTitleGridImg{
+  .subTitleGridImg {
     font-size: 25px;
   }
 }
