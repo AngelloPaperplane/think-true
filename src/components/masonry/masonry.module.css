@@ -87,6 +87,15 @@
   object-position: center center;
 }
 
+@media only screen and (min-width: 1920px) {
+  .titleGridImg{
+    font-size: 50px;
+  }
+
+  .subTitleGridImg{
+    font-size: 25px;
+  }
+}
 @media only screen and (max-width: 1024px) {
   .innerImgMasonry {
     width: 48% !important;

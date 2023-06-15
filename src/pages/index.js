@@ -6,8 +6,6 @@ import ImgTextB from '@/components/imgTextB';
 import Agency from '@/components/agency';
 import Clients from '@/components/homeClients';
 import Footer from '@/components/footer';
-// import { useContext, useEffect } from 'react';
-import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 function Home({ data }) {
   const { meta, hero, mediablock, work, whatdo, team, clients, formfooter } =

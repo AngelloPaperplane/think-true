@@ -775,15 +775,14 @@ const HorizontalSection = ({
       block.textboxPosition === 'Bottom'
         ? styles.callToActionBlock
         : styles.impactBlock;
-    const impactInner =
-      block.textboxPosition === 'Bottom' ? '' : styles.textImpactBlock;
+    const impactInner = styles.textImpactBlock;
     const impactTitle =
       block.textboxPosition === 'Bottom'
-        ? styles.titleCallToAction
+        ? styles.titleImpact
         : styles.titleImpact;
     const impactText =
       block.textboxPosition === 'Bottom'
-        ? styles.textBigTitleBlock
+        ? styles.textImpact
         : styles.textImpact;
     const titleSize = styles[block.titleSize];
     const innerTitle =
@@ -932,10 +931,10 @@ const HorizontalSection = ({
                       {innerText}
                     </div>
                   ) : (
-                    <>
+                    <div className={impactInner}>
                       {innerTitle}
                       {innerText}
-                    </>
+                    </div>
                   )}
                 </>
               )}
@@ -974,10 +973,10 @@ const HorizontalSection = ({
                       {innerText}
                     </div>
                   ) : (
-                    <>
+                    <div className={impactInner}>
                       {innerTitle}
                       {innerText}
-                    </>
+                    </div>
                   )}
                 </>
               )}
