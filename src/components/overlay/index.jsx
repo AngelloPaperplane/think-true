@@ -1,3 +1,5 @@
+import useSessionStorage from '@/hooks/useSessionStorage';
+import local from 'next/font/local';
 import React, { useEffect, useRef, useState } from 'react';
 import styles from './overlay.module.css';
 
@@ -5,21 +7,29 @@ const Overlay = () => {
   const words = ['WE', 'SEE', 'THE', 'GAP'];
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(true);
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const [isOnline, setIsOnline] = useState(false);
 
   const textOverlayContainer = useRef(null);
+
   useEffect(() => {
-    let pageView = sessionStorage.getItem('pageView');
-    console.log(sessionStorage);
-    console.log(sessionStorage.pageView);
-    if (pageView === null) {
-      console.log(pageView);
-      pageView = 1;
-    } else {
-      pageView = Number(pageView) + 1;
+    console.log(localStorage);
+
+    if (localStorage.getItem('date')) {
+      const firstDate = localStorage.getItem('date');
+      const now = Date.now();
+      if (now < Number(firstDate) + 24 * 60 * 60 * 1000) {
+        setIsOnline(true);
+        return;
+      }
+      localStorage.removeItem('date');
     }
-    sessionStorage.setItem('pageView', pageView);
-    setCount(pageView);
+    
+    localStorage.setItem('date', Date.now());
+
+    if (isOnline) {
+      return;
+    }
 
     sessionStorage.setItem('isOnline', true);
 
@@ -37,7 +47,7 @@ const Overlay = () => {
     }, 350);
   }, []);
 
-  if (count > 1) {
+  if (isOnline) {
     return <></>;
   }
   return (
