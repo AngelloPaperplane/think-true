@@ -828,12 +828,13 @@ const HorizontalSection = ({
       );
     }
 
+    const textSize = styles[block.textSize];
     const innerText =
       block.text !== '' ? (
         <div className={styles.lastWrapperText}>
           <p
             dangerouslySetInnerHTML={{ __html: block.text }}
-            className={`splitText ${impactText}`}
+            className={`splitText ${impactText} ${textSize}`}
           />
           {buttonHtml}
         </div>
