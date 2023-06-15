@@ -13,17 +13,17 @@
   margin: 1.5%;
 }
 
-.innerImgMasonry.square{
+.innerImgMasonry.square {
   aspect-ratio: 1/1;
   width: 30%;
 }
 
-.innerImgMasonry.tall{
+.innerImgMasonry.tall {
   aspect-ratio: 1/2.22;
   width: 30%;
 }
 
-.innerImgMasonry.wide{
+.innerImgMasonry.wide {
   aspect-ratio: 1.87/1;
   width: 63%;
 }
@@ -125,22 +125,22 @@
     aspect-ratio: 1/1;
     margin: 1%;
   }
-  .innerImgMasonry.square{
+  .innerImgMasonry.square {
     aspect-ratio: 1/1;
   }
-  
-  .innerImgMasonry.tall{
+
+  .innerImgMasonry.tall {
     aspect-ratio: 1/1;
   }
-  .innerImgMasonry.ultraWide{
+  .innerImgMasonry.ultraWide {
     aspect-ratio: 1/1;
     width: 48%;
   }
-  
-  .innerImgMasonry.wide{
+
+  .innerImgMasonry.wide {
     aspect-ratio: 1/1;
   }
-  .innerImgMasonry.ultraTall{
+  .innerImgMasonry.ultraTall {
     aspect-ratio: 1/1;
   }
 }

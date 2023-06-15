@@ -944,8 +944,10 @@ const HorizontalSection = ({
                   className={`${styles.imgCallToAction} imgAnimation bg-cv`}
                   style={{
                     backgroundImage: `url(${block.image.medium_large})`,
-                    backgroundColor: `${ block.bgcolor === 'na' ? 'none' : block.bgcolor}`,
-                    backgroundSize: `${block.imagesize}`
+                    backgroundColor: `${
+                      block.bgcolor === 'na' ? 'none' : block.bgcolor
+                    }`,
+                    backgroundSize: `${block.imagesize}`,
                   }}></div>
               ) : (
                 <div
@@ -961,7 +963,7 @@ const HorizontalSection = ({
                       src={block.image.medium_large}
                       alt={block.image.alt}
                       className={styles.imgImpact}
-                      style={{objectFit:`${block.imagesize}`}}
+                      style={{ objectFit: `${block.imagesize}` }}
                     />
                   </div>
                 </div>

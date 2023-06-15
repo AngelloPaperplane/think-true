@@ -57,7 +57,7 @@ const Overlay = () => {
     <div
       className={`${index % 2 !== 0 ? styles.grayBg : ''} ${
         !show ? styles.hideDiv : ''
-      } ${styles.overlayContainer} ${!showText ? styles.transparentText : ''}`} >
+      } ${styles.overlayContainer} ${!showText ? styles.transparentText : ''}`}>
       <span
         ref={textOverlayContainer}
         className={`news ${styles.textOverlayContainer}`}>
