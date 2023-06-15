@@ -1039,6 +1039,9 @@ const HorizontalSection = ({
       } ${styles.horizontalSection} ${
         type === 'whatWeDo' ? styles.whatWeDoSec : ''
       }`}>
+      {pathname === '/' && (
+        <h2 className={`news ${styles.titleOurWork}`}>OUR WORK</h2>
+      )}
       <div className={styles.horizontalContainer}>
         <div
           id="block"
@@ -1060,275 +1063,6 @@ const HorizontalSection = ({
                 <Hero dataHero={heroData} />
               </div>
               {blocksToIterate.map((block, i) => get_blocks(block, i))}
-
-              {/*
-
-              <div
-                className={`${styles.block} ${styles.blockAfterHero} itemHorizontal`}>
-                <div className={styles.afterHeroAbout}>
-                  <h2
-                    className={`titleAfterHeroAbout ${styles.titleAfterHeroAbout}`}>
-                    What does it mean to Think True?
-                  </h2>
-                  <p className={`revealText ${styles.textAfterHeroAbout}`}>
-                    There’s a gap, a gap in diversity, a gap in culture, and a
-                    gap in inclusion.
-                    <br /> <br />
-                    Think True acknowledges that gap, and commits to
-                    authenticity, understanding cultures and having a community
-                    and people first mentality.
-                  </p>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} ${styles.embraceBlock} itemHorizontal`}>
-                <div className={styles.embraceBlockContainer}>
-                  <h2 className={`splitText ${styles.titleEmbrace}`}>
-                    We embrace our responsibility
-                  </h2>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} ${styles.callToActionBlock} itemHorizontal`}>
-                <div
-                  className={`${styles.callToActionBlockContainer} flex j-c`}>
-                  <div
-                    className={`${styles.imgCallToAction} imgAnimation bg-cv`}
-                    style={{
-                      backgroundImage: 'url(/images/02-about.jpg)',
-                    }}></div>
-                  <h2 className={`splitText ${styles.titleCallToAction}`}>
-                    We are a paradigm shift and clarion call to action.
-                  </h2>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} ${styles.callToActionBlock} itemHorizontal`}>
-                <div
-                  className={`${styles.callToActionBlockContainer} flex j-c`}>
-                  <div
-                    className={`${styles.bigTitle} imgAnimation bg-ct`}
-                    style={{
-                      backgroundImage: 'url(/icons/logo-white.png)',
-                      backgroundColor: '#00B099',
-                    }}></div>
-                  <h2 className={`${styles.textBigTitleBlock} splitText`}>
-                    Makes a social and cultural impact by starting conversations
-                    and finding common ground while also celebrating our
-                    differences...
-                  </h2>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} ${styles.callToActionBlock} itemHorizontal`}>
-                <div
-                  className={`${styles.callToActionBlockContainer} ${styles.imgTextRight} flex j-c`}>
-                  <h2 className={`splitText ${styles.titleCallToAction}`}>
-                    And we keep the industry and partners honest to understand
-                    that multiculturalism is the norm, not the exception.
-                  </h2>
-                  <div
-                    className={`${styles.imgBlockImgText} imgAnimation bg-cv`}
-                    style={{
-                      backgroundImage: 'url(/images/about-03.jpg)',
-                    }}></div>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} ${styles.videoBlock} itemHorizontal`}>
-                <div className={`imgAnimation ${styles.videoContainerBlock}`}>
-                  {/* <div className={`${styles.iconPlay} bg-ct`}></div> }
-                  <iframe
-                    src="https://player.vimeo.com/video/816732114?h=c558db96ab&title=0&byline=0&portrait=0"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    className={`iframeVideo ${styles.iframeVideo}`}></iframe>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} itemHorizontal ${styles.impactBlock} flex j-c a-c`}>
-                <div className={styles.textImpactBlock}>
-                  <h2 className={`revealText ${styles.titleImpact}`}>
-                    Impact is our North Star
-                  </h2>
-                  <p className={`splitText ${styles.textImpact}`}>
-                    We reverence cultural movements with a community and people
-                    first focus. <br /> <br /> This way of living and seeing
-                    multicultural marketing help us to set the tone and close
-                    gaps between our partners, communities, and leaders.
-                  </p>
-                </div>
-                <div className={styles.contImgImpact}>
-                  <div className={`imgAnimation ${styles.wrapperImgImpact}`}>
-                    <Image
-                      fill
-                      src="/images/06-about.jpg"
-                      alt=""
-                      className={styles.imgImpact}
-                    />
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} ${styles.embraceBlock} ${styles.committed} itemHorizontal`}>
-                <div className={styles.embraceBlockContainer}>
-                  <h3 className={`revealText ${styles.committedSubtitle}`}>
-                    THINK TRUE ALSO MEANS
-                  </h3>
-                  <h2 className={`splitText ${styles.titleEmbrace}`}>
-                    COMMITTED
-                  </h2>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} ${styles.circlesBlock} itemHorizontal`}>
-                <div
-                  className={`${styles.circleContainer} ${styles.partnersCircle} partnersCircle`}>
-                  <h3 className={`splitText ${styles.textInnerCircle}`}>
-                    Partners{' '}
-                  </h3>
-                  <div
-                    className={`${styles.circleContainer} ${styles.thinkCircle} `}>
-                    <h3 className={`splitText ${styles.textInnerCircle}`}>
-                      Think True{' '}
-                    </h3>
-                    <div
-                      className={`${styles.circleContainer} ${styles.communitiesCircle}`}>
-                      <h3 className={`splitText ${styles.textInnerCircle}`}>
-                        Communities
-                      </h3>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
-                <div
-                  className={`bg-ct ${styles.bgPatternAbout}`}
-                  style={{ backgroundImage: 'url(/icons/arrows.png)' }}></div>
-                <div
-                  className={styles.titleBlockWrapper}
-                  style={{ backgroundColor: '#D02E2A' }}>
-                  <h2 className={`splitText ${styles.textTitleBlock}`}>
-                    PHILANTHROPY
-                  </h2>
-                </div>
-              </div>
-              <div
-                className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
-                <div className={`${styles.smallBlockTextImg} flex j-c a-c`}>
-                  <p className={`splitText ${styles.smallTextBlockImgText}`}>
-                    Whenever possible we will seek out opportunities to share
-                    its expertise as an in-kind offering as well as provide pro
-                    bono services to elevate our communities.
-                  </p>
-                  <div
-                    className={`imgAnimation ${styles.wrapperImgBlockImgText}`}>
-                    <Image
-                      src="/images/06-about.jpg"
-                      alt=""
-                      fill
-                      className={styles.innerImgBlockImgtext}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
-                <div
-                  className={`bg-ct ${styles.bgPatternAbout}`}
-                  style={{ backgroundImage: 'url(/icons/plus.png)' }}></div>
-                <div
-                  className={styles.titleBlockWrapper}
-                  style={{ backgroundColor: '#00B099' }}>
-                  <h2 className={`splitText ${styles.textTitleBlock}`}>
-                    PEOPLE
-                  </h2>
-                </div>
-              </div>
-              <div
-                className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
-                <div className={`${styles.smallBlockTextImg} flex j-c a-c`}>
-                  <p className={`splitText ${styles.smallTextBlockImgText}`}>
-                    Think True has its roots firmly planted in ensuring all
-                    businesses not only expand their consumer base, but also
-                    create opportunities for a wider range of talented
-                    professionals and service providers.
-                  </p>
-                  <div
-                    className={`imgAnimation ${styles.wrapperImgBlockImgText}`}>
-                    <Image
-                      src="/images/08-team.jpg"
-                      alt=""
-                      fill
-                      className={styles.innerImgBlockImgtext}
-                    />
-                  </div>
-                </div>
-              </div>
-              <div
-                className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
-                <div
-                  className={`bg-ct ${styles.bgPatternAbout}`}
-                  style={{ backgroundImage: 'url(/icons/circles.png)' }}></div>
-                <div
-                  className={styles.titleBlockWrapper}
-                  style={{ backgroundColor: '#FAA300' }}>
-                  <h2 className={`splitText ${styles.textTitleBlock}`}>
-                    PARTNERS
-                  </h2>
-                </div>
-              </div>
-              <div
-                className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
-                <div className={`${styles.smallBlockTextImg} flex j-c a-c`}>
-                  <div className={styles.lastWrapperText}>
-                    <p className={`splitText ${styles.smallTextBlockImgText}`}>
-                      Think TRUE commits to partnering with diverse suppliers
-                      who reflect the community of the consumer.
-                    </p>
-                    <div
-                      className={`${styles.ctaBlock} ${styles.lastCta} revealText flex `}>
-                      <Link
-                        className={`news ${styles.ctaText}`}
-                        href={'/'}
-                        style={{ backgroundImage: 'url(/icons/cta.png)' }}>
-                        ON BOARD <br /> EXPERIENTIAL
-                      </Link>
-                      <div
-                        className={styles.ballLine}
-                        style={{
-                          backgroundColor: '#D02E2A',
-                        }}>
-                        <div
-                          className={styles.ball}
-                          style={{
-                            backgroundColor: '#D02E2A',
-                          }}></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    className={`imgAnimation ${styles.wrapperImgBlockImgText}`}>
-                    <Image
-                      src="/images/03-about.jpg"
-                      alt=""
-                      fill
-                      className={styles.innerImgBlockImgtext}
-                    />
-                  </div>
-                </div>
-              </div>
-          */}
             </>
           )}
           {type !== 'about-1' &&
@@ -1337,9 +1071,7 @@ const HorizontalSection = ({
             blocksToIterate &&
             blocksToIterate.map((block, i) => (
               <div
-                key={
-                  typeof window !== 'undefined' ? window.crypto.randomUUID() : i
-                }
+                key={i}
                 className={`${styles.block} itemHorizontal itemHorizontal-${i}`}>
                 <div
                   className={`${styles.wrapperBlock} ${
@@ -1395,7 +1127,7 @@ const HorizontalSection = ({
                     />
                     {block.subtitle && (
                       <h3
-                        className={` ${styles.subtitleBlock}`}
+                        className={` ${styles.subtitleBlock} newsR`}
                         style={{
                           color: block.color,
                         }}>

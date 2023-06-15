@@ -6,6 +6,10 @@
   font-family: 'NewsCycke';
   src: url('../styles/fonts/NewsCycle-Bold.ttf');
 }
+@font-face {
+  font-family: 'NewsCycle';
+  src: url('../styles/fonts/NewsCycle-Regular.ttf');
+}
 
 .aleo {
   font-family: 'Aleo';
@@ -13,6 +17,10 @@
 
 .news {
   font-family: 'NewsCycke';
+}
+
+.newsR{
+  font-family: 'NewsCycle';
 }
 
 :root {
