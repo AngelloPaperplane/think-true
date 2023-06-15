@@ -600,6 +600,15 @@
   }
 } */
 
+@media only screen and (max-width: 1650px) {
+  .contentBlock{
+    width: 70%;
+  }
+  .titleBlock{
+    font-size: 5vw;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .subtitleBlock {
     font-size: 24px;
