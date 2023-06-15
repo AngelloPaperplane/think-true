@@ -1111,7 +1111,7 @@ const HorizontalSection = ({
                           }
                         : {
                             backgroundImage: `${`url(${
-                              block.img.large ? block.img.large : ''
+                              block.img.large ? block.img['super-large'] : ''
                             })`}`,
                           }
                     }></div>

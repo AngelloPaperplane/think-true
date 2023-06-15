@@ -612,10 +612,10 @@
 } */
 
 @media only screen and (max-width: 1650px) {
-  .contentBlock{
+  .contentBlock {
     width: 70%;
   }
-  .titleBlock{
+  .titleBlock {
     font-size: 5vw;
   }
 }
@@ -635,7 +635,7 @@
     margin: 0;
   }
 
-  .titleOurWork{
+  .titleOurWork {
     font-size: 12vw;
   }
 
@@ -815,7 +815,7 @@
     height: calc(100% - 75px);
   }
 
-  .block{
+  .block {
     padding-top: 0;
   }
 }

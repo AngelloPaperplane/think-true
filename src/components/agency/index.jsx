@@ -21,7 +21,7 @@ const Agency = ({ image, dataContent }) => {
     return (
       <section
         className={`siteSection bg-cv ${styles.agencySection}`}
-        style={{ backgroundImage: `url(${image.large})` }}>
+        style={{ backgroundImage: `url(${image['super-large']})` }}>
         <div className={`${styles.agencyContainer} container`}>
           <h2
             data-aos="fade-up"
