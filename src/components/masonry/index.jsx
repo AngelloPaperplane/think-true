@@ -8,6 +8,7 @@ const loadIsotope = () => require('isotope-layout');
 let Isotope;
 const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
   const isotope = useRef(null);
+  console.log(gridPictures);
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;

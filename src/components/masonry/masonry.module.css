@@ -19,22 +19,22 @@
 }
 
 .innerImgMasonry.tall{
-  aspect-ratio: 1/2;
+  aspect-ratio: 1/2.22;
   width: 30%;
 }
 
 .innerImgMasonry.wide{
-  aspect-ratio: 2/1;
-  width: 60%;
+  aspect-ratio: 1.87/1;
+  width: 63%;
 }
-.innerImgMasonry.ultraWide{
+/* .innerImgMasonry.ultraWide{
   aspect-ratio: 2/1;
   width: 100%;
 }
 .innerImgMasonry.ultraTall{
   aspect-ratio: 1/3;
-  width: 30%;
-}
+  width: 30vw;
+} */
 
 .innerImgMasonry.ourWorkLayout:before {
   content: '';
