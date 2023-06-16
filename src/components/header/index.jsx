@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 const Header = ({ mainMenu, headerClass }) => {
-  console.log(mainMenu);
+  // console.log(mainMenu);
   const { setPageLoaded } = useContext(ThinkTrue);
   const [menuOpened, setMenuOpened] = useState(false);
   const [hideMenu, setHideMenu] = useState(true);
@@ -79,7 +79,7 @@ const Header = ({ mainMenu, headerClass }) => {
         <Menu
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
-          menuData={mainMenu}
+          menuitems={mainMenu}
         />
       )}
     </>
