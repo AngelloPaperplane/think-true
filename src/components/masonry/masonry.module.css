@@ -19,12 +19,12 @@
 }
 
 .innerImgMasonry.tall {
-  aspect-ratio: 1/2.22;
+  aspect-ratio: 1/2.1;
   width: 30%;
 }
 
 .innerImgMasonry.wide {
-  aspect-ratio: 1.87/1;
+  aspect-ratio: 2.1/1;
   width: 63%;
 }
 /* .innerImgMasonry.ultraWide{
