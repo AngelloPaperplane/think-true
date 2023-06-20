@@ -15,6 +15,8 @@ const Hero = ({
   bgColor,
   dataHero, // es el ultimo que va a quedar...
 }) => {
+  console.log(dataHero);
+
   useEffect(() => {
     AOS.init();
     if (document) {
@@ -46,6 +48,7 @@ const Hero = ({
       line_position,
       line_color,
       image,
+      image_mobile,
       layout,
       align,
       bg_color,
@@ -62,6 +65,11 @@ const Hero = ({
             layout !== 'poster' ? `url(${image['super-large']})` : '',
           backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
         }}>
+        <div
+          className={`${styles.mobileImageHero} bg-cv`}
+          style={{
+            backgroundImage: `url(${image_mobile['super-large']})`,
+          }}></div>
         <div
           className={`container ${styles.heroContainer} flex j-c a-e bg-cv`}
           style={{

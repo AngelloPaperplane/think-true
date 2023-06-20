@@ -12,12 +12,22 @@
 .heroContainer {
   height: 100%;
   padding-bottom: 7vh;
+  z-index: 2;
+  position: relative;
 }
 
 .posterHero .heroContainer {
   height: 130vh;
   width: 80%;
   position: relative;
+}
+
+.posterHero .mobileImageHero{
+  position: absolute;
+  top: 115px;
+  left: 10%;
+  height: 130vh;
+  width: 80%;
 }
 
 .titleHero {
@@ -83,12 +93,25 @@
   width: 70%;
 }
 
+.mobileImageHero{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+}
+
 @media only screen and (max-width: 1300px) {
   .titleHero {
     font-size: clamp(40px, 11vw, 150px);
   }
 }
 @media only screen and (max-width: 768px) {
+  .mobileImageHero{
+    display: block;
+  }
   .titleHero {
     font-size: clamp(40px, 20vw, 150px);
   }
@@ -104,5 +127,12 @@
   .posterHero .heroContainer {
     height: 100vh;
     width: 100%;
+  }
+
+  .posterHero .mobileImageHero{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
   }
 }
