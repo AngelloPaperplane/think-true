@@ -40,7 +40,8 @@ const Jobs = ({ data }) => {
           databtn={linkBtn}
         />
       ))}
-      <ImgText content={sendusemail} />
+      {sendusemail.length > 0 && <ImgText content={sendusemail} />}
+
       <Footer dataContent={formfooter} />
     </>
   );
