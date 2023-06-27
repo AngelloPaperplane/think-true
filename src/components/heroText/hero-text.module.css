@@ -23,3 +23,8 @@
     padding: 15vh 0;
   }
 }
+@media only screen and (max-width: 768px) {
+  .heroText {
+    padding: 15vh 0 5vh;
+  }
+}

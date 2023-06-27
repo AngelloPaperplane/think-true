@@ -3,16 +3,32 @@
   src: url('../styles/fonts/Aleo-Regular.ttf');
 }
 @font-face {
+  font-family: 'AleoBold';
+  src: url('../styles/fonts/Aleo-Bold.ttf');
+}
+@font-face {
   font-family: 'NewsCycke';
   src: url('../styles/fonts/NewsCycle-Bold.ttf');
+}
+@font-face {
+  font-family: 'NewsCycle';
+  src: url('../styles/fonts/NewsCycle-Regular.ttf');
 }
 
 .aleo {
   font-family: 'Aleo';
 }
 
+.aleoBold {
+  font-family: 'AleoBold';
+}
+
 .news {
   font-family: 'NewsCycke';
+}
+
+.newsR {
+  font-family: 'NewsCycle';
 }
 
 :root {

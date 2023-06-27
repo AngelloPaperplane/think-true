@@ -5,8 +5,8 @@ import styles from './header.module.css';
 import { useRouter } from 'next/router';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
 
-const Header = ({ mainMenu }) => {
-  console.log(mainMenu);
+const Header = ({ mainMenu, headerClass }) => {
+  // console.log(mainMenu);
   const { setPageLoaded } = useContext(ThinkTrue);
   const [menuOpened, setMenuOpened] = useState(false);
   const [hideMenu, setHideMenu] = useState(true);
@@ -60,12 +60,14 @@ const Header = ({ mainMenu }) => {
     <>
       <header
         ref={header}
-        className={`${styles.siteHeader} ${
+        className={`${styles.siteHeader} ${styles[headerClass]}  ${
           !isInHero ? styles.lightHeader : ''
         }  ${menuOpened ? styles.activeMenu : ''} `}>
         <div className={`container flex j-b a-c ${styles.containerHeader}`}>
           <div
-            className={`${styles.siteLogo} bg-ct`}
+            className={`${styles.siteLogo} ${
+              pathname === '/' ? styles.hideLogo : ''
+            } bg-ct`}
             onClick={() => changePath()}>
             {pathname !== '/' && <Link href="/"></Link>}
           </div>
@@ -79,7 +81,7 @@ const Header = ({ mainMenu }) => {
         <Menu
           menuOpened={menuOpened}
           setMenuOpened={setMenuOpened}
-          menuData={mainMenu}
+          menuitems={mainMenu}
         />
       )}
     </>

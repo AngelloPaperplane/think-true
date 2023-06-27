@@ -10,8 +10,8 @@
 }
 
 .siteHeader.lightHeader:not(.activeMenu) {
-  background-color: #ffffff7d;
-  backdrop-filter: blur(10px);
+  background-color: #ffffff;
+  backdrop-filter: blur(0px);
   padding: 5px 0;
   transition: all 0.5s ease-in-out, background-color 0.5s ease-in-out 0.25s;
 }
@@ -25,6 +25,14 @@
   transition: all 0.5s ease-in-out;
 }
 
+.hideLogo.siteLogo {
+  opacity: 0;
+}
+
+.siteHeader.lightHeader .siteLogo {
+  opacity: 1;
+}
+
 .lightHeader.siteHeader:not(.activeMenu) .siteLogo {
   width: 80px;
   height: 65px;
@@ -32,6 +40,14 @@
 
 .activeMenu .siteLogo {
   background-image: url(/icons/logo-white.png);
+}
+
+.whiteIcons .siteLogo {
+  background-image: url(/icons/logo-white.png);
+}
+
+.lightHeader.siteHeader:not(.activeMenu).whiteIcons .siteLogo {
+  background-image: url(/icons/logo-dark.png);
 }
 
 .siteLogo a {
@@ -47,10 +63,22 @@
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
+.whiteIcons .burger {
+  width: 40px;
+  height: 40px;
+  background-image: url(/icons/menu-white.png);
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
 
 .lightHeader.siteHeader:not(.activeMenu) .burger {
   width: 35px;
   height: 35px;
+}
+.lightHeader.siteHeader:not(.activeMenu).whiteIcons .burger {
+  width: 35px;
+  height: 35px;
+  background-image: url(/icons/menu-dark.png);
 }
 
 .activeMenu .burger {

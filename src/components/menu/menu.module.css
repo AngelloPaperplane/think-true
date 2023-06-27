@@ -55,7 +55,7 @@
   padding-left: 2.5vw;
   transition: all 0.5s ease-in-out;
 }
-
+/*
 .itemMenu:nth-of-type(1):hover .itemName {
   background-color: #faa300;
 }
@@ -64,6 +64,35 @@
 }
 .itemMenu:nth-of-type(4):hover .itemName {
   background-color: #cdb74e;
+}
+#00B099 : Lawn
+#D02E2A : Brick
+#FAA300 : Gold
+#4FB5C7 : Aqua
+#D4A39C : Mauve
+#CDB74E : Khaki
+#F54D4F : Coral
+*/
+.itemMenu.lawn:hover .itemName {
+  background-color: #00b099;
+}
+.itemMenu.brick:hover .itemName {
+  background-color: #d02e2a;
+}
+.itemMenu.gold:hover .itemName {
+  background-color: #faa300;
+}
+.itemMenu.aqua:hover .itemName {
+  background-color: #4fb5c7;
+}
+.itemMenu.mauve:hover .itemName {
+  background-color: #d4a39c;
+}
+.itemMenu.khaki:hover .itemName {
+  background-color: #cdb74e;
+}
+.itemMenu.coral:hover .itemName {
+  background-color: #f54d4f;
 }
 
 .itemName {

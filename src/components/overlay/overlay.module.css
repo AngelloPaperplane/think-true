@@ -31,3 +31,11 @@
 .grayBg .textOverlayContainer {
   color: #fff;
 }
+
+.transparentText .textOverlayContainer {
+  color: transparent;
+}
+
+.transparentText.grayBg .textOverlayContainer {
+  color: transparent;
+}

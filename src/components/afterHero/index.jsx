@@ -64,7 +64,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                       </Link>
                     </p>
                   )}
-                {mediaBlockContent.image && mediaBlockContent.image.medium && (
+                {/* {mediaBlockContent.image && mediaBlockContent.image.medium && (
                   <div
                     className={`${styles.videoContainer} bg-cv`}
                     data-aos="zoom-out"
@@ -81,7 +81,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                         className={`iframeVideo ${styles.iframeVideo}`}></iframe>
                     )}
                   </div>
-                )}
+                )} */}
               </div>
             </>
           )}

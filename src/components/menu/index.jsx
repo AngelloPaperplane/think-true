@@ -5,10 +5,13 @@ import { useRouter } from 'next/router';
 import { gsap } from 'gsap';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
 
-const Menu = ({ menuOpened, setMenuOpened }) => {
+const Menu = ({ menuOpened, setMenuOpened, menuitems }) => {
+  // console.log(menuitems);
   const [isOpened, setIsOpened] = useState(false);
   const router = useRouter();
   const { pathname } = router;
+  console.log(pathname);
+  console.log(menuitems);
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setIsOpened(menuOpened);
@@ -34,63 +37,41 @@ const Menu = ({ menuOpened, setMenuOpened }) => {
       <div className={`${styles.wrapperMenu} ${isOpened ? styles.active : ''}`}>
         <div className={`container ${styles.containerMenu}`}>
           <ul className={styles.ulMenu}>
-            <li className={styles.itemMenu}>
-              <p className={`news bold uppercase ${styles.itemName}`}>Agency</p>
-              <ul className={styles.innerUlItemMenu}>
-                <li
-                  className={`${styles.innerItemMenu} news`}
-                  onClick={() => changePath()}>
-                  {pathname !== '/about-us' && (
-                    <Link href={'/about-us'}>ABOUT</Link>
-                  )}
-                  {pathname === '/about-us' && 'ABOUT'}
-                </li>
-                {/* <li
-                className={`${styles.innerItemMenu} news`}
-                onClick={() => changePath()}>
-                PHILOSOPHY
-              </li> */}
-                <li
-                  className={`${styles.innerItemMenu} news`}
-                  onClick={() => changePath()}>
-                  <Link href={'/our-team'}>TEAM</Link>
-                </li>
-                <li
-                  className={`${styles.innerItemMenu} news`}
-                  onClick={() => changePath()}>
-                  {pathname !== '/what-we-do' && (
-                    <Link href={'/what-we-do'}>SERVICES</Link>
-                  )}
-                  {pathname === '/what-we-do' && 'SERVICES'}
-                </li>
-                <li
-                  className={`${styles.innerItemMenu} news`}
-                  onClick={() => changePath()}>
-                  <Link href={'/jobs'}>JOBS</Link>
-                </li>
-              </ul>
-            </li>
-            <li className={styles.itemMenu}>
-              <p
-                className={`news bold uppercase ${styles.itemName}`}
-                onClick={() => changePath()}>
-                <Link href={'/our-work'}>OUR WORK</Link>
-              </p>
-            </li>
-            {/* <li className={styles.itemMenu}>
-              <p
-                className={`news bold uppercase ${styles.itemName}`}
-                onClick={() => setMenuOpened(false)}>
-                NEWS
-              </p>
-            </li> */}
-            <li className={styles.itemMenu}>
-              <p
-                className={`news bold uppercase ${styles.itemName}`}
-                onClick={() => changePath()}>
-                <Link href={'/contact'}>CONTACT</Link>
-              </p>
-            </li>
+            {menuitems.map((item, i) => (
+              <li
+                className={`${styles.itemMenu} ${styles[item.color]}`}
+                key={`itemmenu${i}`}>
+                {item.subitems && item.subitems.length > 0 ? (
+                  <>
+                    <p className={`news bold uppercase ${styles.itemName}`}>
+                      {item.label}
+                    </p>
+                    <ul className={styles.innerUlItemMenu}>
+                      {item.subitems.map((subitem, j) => (
+                        <li
+                          key={`subitemmenu${j}`}
+                          className={`${styles.innerItemMenu} news`}
+                          onClick={() => changePath()}>
+                          {pathname !== `/${subitem.link}` && (
+                            <Link href={subitem.link}>{subitem.label}</Link>
+                          )}
+                          {pathname === `/${subitem.link}` && subitem.label}
+                        </li>
+                      ))}
+                    </ul>
+                  </>
+                ) : (
+                  <p
+                    className={`news bold uppercase ${styles.itemName}`}
+                    onClick={() => changePath()}>
+                    {pathname !== `/${item.link}` && (
+                      <Link href={item.link}>{item.label}</Link>
+                    )}
+                    {pathname === `/${item.link}` && item.label}
+                  </p>
+                )}
+              </li>
+            ))}
           </ul>
         </div>
       </div>
