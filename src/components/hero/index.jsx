@@ -36,13 +36,15 @@ const Hero = ({
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(loadImage, options);
-    if (heroSection.current) {
-      observer.observe(heroSection.current);
+    if (pathname !== '/') {
+      const observer = new IntersectionObserver(loadImage, options);
+      if (heroSection.current) {
+        observer.observe(heroSection.current);
+      }
+      return () => {
+        observer.unobserve(heroSection.current);
+      };
     }
-    return () => {
-      observer.unobserve(heroSection.current);
-    };
   }, []);
 
   useEffect(() => {
@@ -100,7 +102,9 @@ const Hero = ({
           data-image={image['super-large']}
           className={`${styles.heroSection} bg-cv ${
             align === 'right' ? styles.alignRight : ''
-          } ${layout === 'poster' ? styles.posterHero : ''}`}
+          } ${layout === 'poster' ? styles.posterHero : ''} ${
+            pathname === '/' ? styles.videoHeroSection : ''
+          }`}
           style={{
             backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
           }}>
@@ -126,11 +130,14 @@ const Hero = ({
               </video>
             </div>
           )}
-          <div
-            className={`${styles.mobileImageHero} bg-cv`}
-            style={{
-              backgroundImage: `url(${image_mobile['super-large']})`,
-            }}></div>
+          {pathname !== '/' && (
+            <div
+              className={`${styles.mobileImageHero} bg-cv`}
+              style={{
+                backgroundImage: `url(${image_mobile['super-large']})`,
+              }}></div>
+          )}
+
           <div
             className={`container ${styles.heroContainer} flex j-c a-e bg-cv`}
             style={{
@@ -149,13 +156,13 @@ const Hero = ({
                 }}
               />
             )}
-            {logoShow && (
+            {/* {logoShow && (
               <img
                 className={styles.imgLogo}
                 alt=""
                 src={'/icons/logo-hero.png'}
               />
-            )}
+            )} */}
             {line_color && (
               <div
                 className={`${styles.lineHero} bg-complete`}
