@@ -122,7 +122,7 @@ const Hero = ({
                 preload=""
                 autoPlay
                 controls={isActiveSound}>
-                <source src="/images/homevideomini.mp4" />
+                <source src="https://paperplane.com.co/dev/assets/homevideomini.mp4" />
               </video>
             </div>
           )}
