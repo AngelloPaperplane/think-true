@@ -1147,7 +1147,7 @@ const HorizontalSection = ({
                         <Link
                           className={`news ${styles.ctaText}`}
                           href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>
-                          {block.label}
+                          READ MORE
                         </Link>
                         <div
                           className={styles.ballLine}
