@@ -14,6 +14,7 @@ const Agency = ({ image, dataContent }) => {
       subtitle,
       text,
       image,
+      image_mobile,
       buttonlink,
       buttoncolor,
       buttonlabel,
@@ -25,7 +26,7 @@ const Agency = ({ image, dataContent }) => {
         <div
           className={`${styles.mobileImageHero} bg-cv`}
           style={{
-            backgroundImage: `url(${image['super-large']})`,
+            backgroundImage: `url(${image_mobile['super-large']})`,
           }}></div>
         <div className={`${styles.agencyContainer} container`}>
           <h2
