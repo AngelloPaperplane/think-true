@@ -9,7 +9,7 @@
   padding-top: 115px;
 }
 
-.videoHeroSection{
+.videoHeroSection {
   height: auto;
 }
 
@@ -162,11 +162,11 @@
   background-image: url('/icons/active-sound.png');
 }
 
-.videoHeroSection .heroContainer{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
+.videoHeroSection .heroContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 @media only screen and (max-width: 1300px) {
