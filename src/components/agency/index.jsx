@@ -3,8 +3,11 @@ import styles from './agency.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const Agency = ({ image, dataContent }) => {
+  const router = useRouter();
+  const { pathname } = router;
   useEffect(() => {
     AOS.init();
   }, []);
@@ -29,20 +32,27 @@ const Agency = ({ image, dataContent }) => {
             backgroundImage: `url(${image_mobile['super-large']})`,
           }}></div>
         <div className={`${styles.agencyContainer} container`}>
-          <h2
-            data-aos="fade-up"
-            data-aos-duration="900"
-            data-aous-delay="0"
-            className={`${styles.titleAgency} news`}
-            dangerouslySetInnerHTML={{ __html: title }}
-          />
-          <h3
-            data-aos="fade-up"
-            data-aos-duration="900"
-            data-aous-delay="0"
-            className={`news ${styles.subtitleAgency}`}
-            dangerouslySetInnerHTML={{ __html: subtitle }}
-          />
+          {title && (
+            <h2
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aous-delay="0"
+              className={`${styles.titleAgency} news ${
+                pathname === '/about-us' ? styles.aboutTitle : ''
+              }`}
+              dangerouslySetInnerHTML={{ __html: title }}
+            />
+          )}
+
+          {subtitle && pathname !== '/about-us' && (
+            <h3
+              data-aos="fade-up"
+              data-aos-duration="900"
+              data-aous-delay="0"
+              className={`news ${styles.subtitleAgency}`}
+              dangerouslySetInnerHTML={{ __html: subtitle }}
+            />
+          )}
 
           <div className={styles.floatInfoAgency}>
             {buttonlabel !== '' && buttonlink !== '' && (
@@ -76,23 +86,31 @@ const Agency = ({ image, dataContent }) => {
   }
   return (
     <section
-      className={`siteSection bg-cv ${styles.agencySection}`}
+      className={`siteSection bg-cv ${styles.agencySection} ${
+        pathname === '/about-us' ? styles.agencySectAbout : ''
+      }`}
       style={{ backgroundImage: `url(${image})` }}>
       <div className={`${styles.agencyContainer} container`}>
         <h2
           data-aos="fade-up"
           data-aos-duration="900"
           data-aous-delay="0"
-          className={`${styles.titleAgency} news`}>
-          AGENCY{' '}
+          className={`${styles.titleAgency} news ${
+            pathname === '/about-us' ? styles.aboutTitle : ''
+          }`}>
+          Impact is our bottom line
         </h2>
-        <h3
-          data-aos="fade-up"
-          data-aos-duration="900"
-          data-aous-delay="0"
-          className={`news ${styles.subtitleAgency}`}>
-          OUR TEAM
-        </h3>
+
+        {pathname !== '/about-us' && (
+          <h3
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={`news ${styles.subtitleAgency}`}>
+            {' '}
+            OUR TEAM
+          </h3>
+        )}
 
         <div className={styles.floatInfoAgency}>
           <p

@@ -21,9 +21,25 @@
   z-index: -1;
 }
 
+.agencySectAbout{
+  height: 100vh;
+  align-items: center;
+  margin-bottom: 40vh;
+}
+
 .agencyContainer {
   padding-bottom: 10vh;
   z-index: 1;
+}
+
+.agencySectAbout .agencyContainer{
+  padding-bottom: 0;
+  position: relative;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .titleAgency {
@@ -31,6 +47,12 @@
   color: #f2f0eb;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   text-align: center;
+}
+
+.agencySectAbout .titleAgency{
+  color: #F2F0EB;
+  font-size: 130px;
+  max-width: 50%;
 }
 
 .subtitleAgency {
@@ -51,6 +73,13 @@
   line-height: 34px;
   margin: 5vh 0 -30vh;
   position: relative;
+}
+
+.agencySectAbout .floatInfoAgency{
+  position: absolute;
+  top: 85%;
+  left: 0;
+  margin: 0;
 }
 
 .infoAgency:first-of-type {

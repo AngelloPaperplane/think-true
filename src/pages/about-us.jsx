@@ -4,9 +4,14 @@ import Footer from '@/components/footer';
 import HorizontalSection from '@/components/horizontalSection';
 import React, { useContext, useEffect } from 'react';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
+import Hero from '@/components/hero';
+import AfterHero from '@/components/afterHero';
+import ImgTextB from '@/components/imgTextB';
+import Agency from '@/components/agency';
 
 const AboutUs = ({ data }) => {
   const { meta, hero, formfooter, blocks } = data;
+  console.log(hero);
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setTimeout(() => {
@@ -192,9 +197,13 @@ const AboutUs = ({ data }) => {
   return (
     <>
       <Metas metadata={meta} />
+      <Hero dataHero={hero} />
+      <AfterHero />
+      <ImgTextB />
+      <Agency />
       {
         <HorizontalSection
-          heroData={hero}
+          dataHero={hero}
           blocksToIterate={blocks[0]}
           classParent="01"
           type="about-1"

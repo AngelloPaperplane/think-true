@@ -36,7 +36,7 @@ const Hero = ({
   };
 
   useEffect(() => {
-    if (pathname !== '/') {
+    if (pathname !== '/' && pathname !== '/about-us') {
       const observer = new IntersectionObserver(loadImage, options);
       if (heroSection.current) {
         observer.observe(heroSection.current);
@@ -68,6 +68,7 @@ const Hero = ({
     // });
   }, []);
   if (dataHero) {
+    console.log(dataHero);
     // es el que va a quedar...
     const {
       title,
@@ -87,7 +88,7 @@ const Hero = ({
     const logoShow = layout === 'principal';
     return (
       <>
-        {logoShow && pathname === '/' && (
+        {logoShow && (pathname === '/' || pathname === '/about-us') && (
           <div
             className={`container ${styles.heroContainer} ${styles.heroContainerBefore} flex j-s a-e bg-cv`}>
             <img
@@ -103,12 +104,14 @@ const Hero = ({
           className={`${styles.heroSection} bg-cv ${
             align === 'right' ? styles.alignRight : ''
           } ${layout === 'poster' ? styles.posterHero : ''} ${
-            pathname === '/' ? styles.videoHeroSection : ''
+            pathname === '/' || pathname === '/about-us'
+              ? styles.videoHeroSection
+              : ''
           }`}
           style={{
             backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
           }}>
-          {pathname === '/' && (
+          {(pathname === '/' || pathname === '/about-us') && (
             <div className={styles.videoContainer}>
               <button
                 className={`${styles.activeSound} ${

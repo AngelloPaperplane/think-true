@@ -16,7 +16,6 @@ const HorizontalSection = ({
   heroData,
 }) => {
   const { pathname } = useRouter();
-  console.log(pathname);
   const scroller = useRef();
   useEffect(() => {
     const blocks = gsap.utils.toArray(
@@ -37,7 +36,7 @@ const HorizontalSection = ({
             scrub: 3,
             invalidateOnRefresh: true,
             anticipatePin: 1,
-            end: () => `+=${pathname === '/about-us' ? 15000 : 5000}`,
+            end: () => `+=${5000}`,
           },
         });
 
@@ -855,27 +854,49 @@ const HorizontalSection = ({
                 <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: block.bgcolor }}>
-                  {block.subtitle !== '' && (
+                  <div className={styles.infoBlockWrapper}>
+                    {/* {block.subtitle !== '' && (
+                      <h3
+                        className={`revealText ${styles.committedSubtitle}`}
+                        dangerouslySetInnerHTML={{ __html: block.subtitle }}
+                        style={{ color: block.subtitlecolor }}
+                      />
+                    )} */}
                     <h3
                       className={`revealText ${styles.committedSubtitle}`}
-                      dangerouslySetInnerHTML={{ __html: block.subtitle }}
-                      style={{ color: block.subtitlecolor }}
-                    />
-                  )}
-                  {block.title !== '' && (
-                    <h2
-                      className={`splitText ${styles.textTitleBlock}`}
-                      dangerouslySetInnerHTML={{ __html: block.title }}
-                      style={{ color: block.titlecolor }}
-                    />
-                  )}
-                  {block.text !== '' && (
+                      style={{ color: block.subtitlecolor }}>
+                      PHILANTHROPY
+                    </h3>
+                    {/* {block.title !== '' && (
+                      <h2
+                        className={`splitText ${styles.textTitleBlock}`}
+                        dangerouslySetInnerHTML={{ __html: block.title }}
+                        style={{ color: block.titlecolor }}
+                      />
+                    )}
+                    {block.text !== '' && (
+                      <p
+                        className={`revealText ${styles.textAfterHeroAbout}`}
+                        dangerouslySetInnerHTML={{ __html: block.text }}
+                        style={{ color: block.textcolor }}
+                      />
+                    )} */}
                     <p
-                      className={`revealText ${styles.textAfterHeroAbout}`}
-                      dangerouslySetInnerHTML={{ __html: block.text }}
-                      style={{ color: block.textcolor }}
+                      className={`splitText ${styles.textAfterHeroAbout}`}
+                      style={{ color: block.textcolor }}>
+                      We actively seek opportunities to contribute our expertise
+                      through in-kind offerings and provide pro bono services,
+                      dedicated to supporting and uplifting our communities.
+                    </p>
+                  </div>
+                  <div className={styles.imgBlockWrapper}>
+                    {/* La segunda Clase es para colocar la imagen contain o cover */}
+                    <img
+                      className={`imgAnimation ${styles.innerImgTitleBlockWrapper} ${styles.innerIgmContain}`}
+                      src="/images/06-about.jpg"
+                      alt=""
                     />
-                  )}
+                  </div>
                 </div>
               </div>
             ) : (
