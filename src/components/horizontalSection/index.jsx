@@ -854,7 +854,7 @@ const HorizontalSection = ({
                 <div
                   className={styles.titleBlockWrapper}
                   style={{ backgroundColor: block.bgcolor }}>
-                  <div className={styles.infoBlockWrapper}>
+                  <div className={`splitText ${styles.infoBlockWrapper}`}>
                     {/* {block.subtitle !== '' && (
                       <h3
                         className={`revealText ${styles.committedSubtitle}`}
@@ -863,7 +863,7 @@ const HorizontalSection = ({
                       />
                     )} */}
                     <h3
-                      className={`revealText ${styles.committedSubtitle}`}
+                      className={` ${styles.committedSubtitle}`}
                       style={{ color: block.subtitlecolor }}>
                       PHILANTHROPY
                     </h3>
@@ -882,7 +882,7 @@ const HorizontalSection = ({
                       />
                     )} */}
                     <p
-                      className={`splitText ${styles.textAfterHeroAbout}`}
+                      className={`${styles.textNewSection} ${styles.textAfterHeroAbout}`}
                       style={{ color: block.textcolor }}>
                       We actively seek opportunities to contribute our expertise
                       through in-kind offerings and provide pro bono services,
@@ -912,7 +912,7 @@ const HorizontalSection = ({
                   }}>
                   {block.subtitle !== '' && (
                     <h3
-                      className={`revealText ${styles.committedSubtitle}`}
+                      className={`splitText ${styles.committedSubtitle}`}
                       dangerouslySetInnerHTML={{ __html: block.subtitle }}
                       style={{ color: block.subtitlecolor }}
                     />

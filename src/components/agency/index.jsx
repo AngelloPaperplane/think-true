@@ -24,7 +24,9 @@ const Agency = ({ image, dataContent }) => {
     } = dataContent;
     return (
       <section
-        className={`siteSection bg-cv ${styles.agencySection}`}
+        className={`siteSection bg-cv ${styles.agencySection} ${
+          pathname === '/about-us' ? styles.agencyAbout : ''
+        }`}
         style={{ backgroundImage: `url(${image['super-large']})` }}>
         <div
           className={`${styles.mobileImageHero} bg-cv`}

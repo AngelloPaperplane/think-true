@@ -3,6 +3,7 @@ import styles from './what-we-do.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const ImgTextB = ({
   title,
@@ -14,6 +15,8 @@ const ImgTextB = ({
   sideText,
   contentData, // Quitar los otros, este es el que va a quedar....
 }) => {
+  const router = useRouter();
+  const { pathname } = router;
   useEffect(() => {
     AOS.init();
   }, []);
@@ -128,22 +131,27 @@ const ImgTextB = ({
                 data-aous-delay="0"></div>
             )}
           </div>
-          {buttonlabel && link !== '' && buttonlabel !== '' && (
-            <div
-              className={`${styles.redLine} ${styles.mobileLine}`}
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0">
-              <div className={styles.ballRedLine}>
-                <Link
-                  href={`/${link}`}
-                  style={{ backgroundImage: `url(/icons/${buttoncolor}.png)` }}
-                  className={`news ${styles.linkBallRedLine}`}>
-                  {buttonlabel}
-                </Link>
+          {buttonlabel &&
+            link !== '' &&
+            buttonlabel !== '' &&
+            pathname !== '/about-us' && (
+              <div
+                className={`${styles.redLine} ${styles.mobileLine}`}
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0">
+                <div className={styles.ballRedLine}>
+                  <Link
+                    href={`/${link}`}
+                    style={{
+                      backgroundImage: `url(/icons/${buttoncolor}.png)`,
+                    }}
+                    className={`news ${styles.linkBallRedLine}`}>
+                    {buttonlabel}
+                  </Link>
+                </div>
               </div>
-            </div>
-          )}
+            )}
         </div>
       </section>
     );
