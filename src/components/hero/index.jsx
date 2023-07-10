@@ -35,8 +35,13 @@ const Hero = ({
     threshold: 1.0,
   };
 
+
   useEffect(() => {
-    if (pathname !== '/' && pathname !== '/about-us') {
+    if (
+      pathname !== '/' &&
+      pathname !== '/about-us' &&
+      pathname !== '/work/[id]'
+    ) {
       const observer = new IntersectionObserver(loadImage, options);
       if (heroSection.current) {
         observer.observe(heroSection.current);

@@ -3,8 +3,11 @@ import styles from './after-hero.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 
 const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
+  const router = useRouter();
+  const { pathname } = router;
   useEffect(() => {
     AOS.init();
   }, []);
@@ -21,7 +24,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
           {(mediaBlockContent.layout === 'home' ||
             mediaBlockContent.layout === 'team') && (
             <>
-              {mediaBlockContent.image && (
+              {mediaBlockContent.image && pathname !== '/about-us' && (
                 <div
                   className={`${styles.bigCircle}`}
                   data-aos="zoom-in"
@@ -32,9 +35,12 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
               <div className={styles.wrapperAfterHeroHome}>
                 {mediaBlockContent.title && mediaBlockContent.title.text && (
                   <h2
+                    data-aos="fade-up"
+                    data-aos-duration="1900"
+                    data-aous-delay="0"
                     className={`${styles.titleAfterHero} ${
-                      styles[mediaBlockContent.title.position]
-                    }`}>
+                      pathname === '/about-us' ? 'news' : ''
+                    } ${styles[mediaBlockContent.title.position]}`}>
                     {mediaBlockContent.title.text}
                   </h2>
                 )}

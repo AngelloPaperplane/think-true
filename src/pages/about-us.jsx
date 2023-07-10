@@ -28,7 +28,6 @@ const AboutUs = ({ data }) => {
       <Agency dataContent={team} />
       {
         <HorizontalSection
-          // dataHero={hero}
           blocksToIterate={blocks[0]}
           classParent="01"
           type="about-1"
