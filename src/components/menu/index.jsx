@@ -52,10 +52,10 @@ const Menu = ({ menuOpened, setMenuOpened, menuitems }) => {
                           key={`subitemmenu${j}`}
                           className={`${styles.innerItemMenu} news`}
                           onClick={() => changePath()}>
-                          {pathname !== `/${subitem.link}` && (
+                          {pathname !== `${subitem.link}` && (
                             <Link href={subitem.link}>{subitem.label}</Link>
                           )}
-                          {pathname === `/${subitem.link}` && subitem.label}
+                          {pathname === `${subitem.link}` && subitem.label}
                         </li>
                       ))}
                     </ul>
@@ -64,10 +64,10 @@ const Menu = ({ menuOpened, setMenuOpened, menuitems }) => {
                   <p
                     className={`news bold uppercase ${styles.itemName}`}
                     onClick={() => changePath()}>
-                    {pathname !== `/${item.link}` && (
+                    {pathname !== `${item.link}` && (
                       <Link href={item.link}>{item.label}</Link>
                     )}
-                    {pathname === `/${item.link}` && item.label}
+                    {pathname === `${item.link}` && item.label}
                   </p>
                 )}
               </li>
