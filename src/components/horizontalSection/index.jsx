@@ -803,6 +803,7 @@ const HorizontalSection = ({
     ) {
       buttonHtml = (
         <div
+
           className={`${styles.ctaBlock} ${styles.lastCta} splitTextB flex `}>
           <Link
             className={`news ${styles.ctaText}`}
@@ -847,6 +848,7 @@ const HorizontalSection = ({
           <>
             {block.pattern !== '' ? (
               <div
+                key={`text_block${i}`}
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
                   className={`bg-ct ${styles.bgPatternAbout}`}
@@ -1032,6 +1034,7 @@ const HorizontalSection = ({
       case 'key_words_block':
         return (
           <div
+            key={`key_words_block${i}`}
             className={`${styles.block} ${styles.circlesBlock} itemHorizontal`}>
             <div
               className={`${styles.circleContainer} ${styles.partnersCircle} partnersCircle`}>
@@ -1078,8 +1081,8 @@ const HorizontalSection = ({
               typeof window !== 'undefined'
                 ? window.innerWidth > 1024
                   ? `${blocksToIterate.length * 100}vw`
-                  : '100%'
-                : '100%'
+                  : `${blocksToIterate.length * 100}vw`
+                : `${blocksToIterate.length * 100}vw`
             }`,
           }}
           ref={scroller}>
@@ -1100,7 +1103,7 @@ const HorizontalSection = ({
             blocksToIterate &&
             blocksToIterate.map((block, i) => (
               <div
-                key={i}
+                key={`theBlock${i}`}
                 className={`${styles.block} itemHorizontal itemHorizontal-${i}`}>
                 <div
                   className={`${styles.wrapperBlock} ${
