@@ -35,6 +35,7 @@
   height: 100%;
   opacity: 1;
   flex: 0 0 auto;
+  position: relative;
   padding-top: 75px;
   transition: opacity 0.5s ease-in-out;
 }
@@ -292,8 +293,6 @@
 
 .imgCallToAction {
   width: 40%;
-  height: 100%;
-  flex: 1 0 auto;
 }
 
 .titleCallToAction {
@@ -376,7 +375,6 @@
 .textImpactBlock {
   width: 50%;
   padding: 0 2.5% 0 5%;
-  height: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -534,7 +532,6 @@
   height: 100%;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
   padding: 5% 3% 5% 7%;
 }
 
@@ -550,6 +547,7 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  align-self: flex-end;
 }
 
 .innerImgTitleBlockWrapper {
@@ -582,8 +580,8 @@
 }
 
 .lastWrapperText {
-  width: 45%;
-  align-self: flex-end;
+  width: 85%;
+  /* align-self: flex-end; */
 }
 
 .wrapperImgBlockImgText {
@@ -733,6 +731,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .textImpact.text_large {
+    font-size: 22px;
+  }
   .wrapperScroller {
     height: auto;
     display: block;
@@ -1015,6 +1016,7 @@
 
   .imgBlockWrapper {
     width: 60%;
+    margin-top: 50px;
   }
 }
 

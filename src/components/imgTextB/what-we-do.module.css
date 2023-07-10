@@ -7,6 +7,10 @@
   padding: 20vh 0;
 }
 
+.agencyAbout .whatWeDoCo{
+   padding-top: 5vh;
+}
+
 .titleSection {
   font-weight: 700;
   font-size: 220px;
@@ -166,6 +170,18 @@
   .sideText p {
     margin-bottom: 3vh;
   }
+
+  .agencyAbout .titleSection{
+    width: 80%;
+  }
+
+  .lastWrapperText{
+    width: 100%;
+  }
+
+  .textImpact.text_large{
+    font-size: 22px;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -229,9 +245,25 @@
     transform: none;
     font-size: 20px;
   }
+
+  .agencyAbout .titleSection{
+    width: 90%;
+    font-size: 90px;
+  }
+
+  .agencyAbout .floatInfoAgency{
+    position: relative;
+    top: 0;
+    left: 0;
+  }
 }
 
 @media only screen and (max-width: 520px) {
+
+  .agencyAbout .titleSection{
+    font-size: 55px;
+  }
+
   .subtitleSection {
     font-size: 35px;
     line-height: 1;

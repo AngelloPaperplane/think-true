@@ -158,9 +158,23 @@
   .agencyAbout .titleAgency {
     max-width: 70%;
   }
+
+  .agencyAbout.agencySection {
+    margin-bottom: 45vh;
+  }
 }
 
 @media only screen and (max-width: 768px) {
+  .agencyAbout.agencySection {
+    margin-bottom: 0;
+    padding-top: 45vh;
+    height: auto;
+  }
+
+  .agencyAbout .titleAgency{
+    margin-bottom: 35px;
+  }
+
   .mobileImageHero {
     display: block;
   }
@@ -175,6 +189,12 @@
 
   .redLine {
     right: 70%;
+  }
+
+  .agencyAbout .floatInfoAgency {
+    position: relative;
+    top: 0;
+    left: 0;
   }
 }
 @media only screen and (max-width: 520px) {

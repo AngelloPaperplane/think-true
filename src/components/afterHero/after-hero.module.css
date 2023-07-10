@@ -12,6 +12,10 @@
   padding-bottom: 15vh;
 }
 
+.afterHeroAbout .afterHeroContainer{
+  padding-bottom: 7vh;
+}
+
 .titleAfterHero {
   font-style: normal;
   font-weight: 700;

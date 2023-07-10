@@ -16,7 +16,10 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
   // };
   if (mediaBlockContent) {
     return (
-      <section className={`siteSection ${styles.afterHeroSection}`}>
+      <section
+        className={`siteSection ${styles.afterHeroSection} ${
+          pathname === '/about-us' && styles.afterHeroAbout
+        }`}>
         <div
           className={`container ${styles.afterHeroContainer} ${
             afterhero ? styles.noPadding : ''

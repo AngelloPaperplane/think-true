@@ -854,7 +854,13 @@ const HorizontalSection = ({
                     backgroundImage: `url(/icons/${pattern_curr}.png)`,
                   }}></div>
                 <div
-                  className={styles.titleBlockWrapper}
+                  className={`${
+                    block.textboxPosition === 'Top'
+                      ? 'a-s'
+                      : block.textboxPosition === 'Middle'
+                      ? 'a-c'
+                      : 'a-e'
+                  } ${styles.titleBlockWrapper}`}
                   style={{ backgroundColor: block.bgcolor }}>
                   <div className={`splitText ${styles.infoBlockWrapper}`}>
                     {/* {block.subtitle !== '' && (
@@ -938,6 +944,7 @@ const HorizontalSection = ({
             )}
           </>
         );
+
       case 'split_block':
         return (
           <div
@@ -952,8 +959,12 @@ const HorizontalSection = ({
             <div
               style={{ backgroundColor: block.bgcolor }}
               className={`${styles.titleBlockWrapper} ${
-                isRight ? styles.imgTextRight : ''
-              }`}>
+                block.textboxPosition === 'Top'
+                  ? 'a-s'
+                  : block.textboxPosition === 'Middle'
+                  ? 'a-c'
+                  : 'a-e'
+              } ${isRight ? styles.imgTextRight : ''}`}>
               {isRight && (
                 <>
                   {impactInner !== '' ? (
