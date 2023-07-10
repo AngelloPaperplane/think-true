@@ -944,9 +944,15 @@ const HorizontalSection = ({
             className={`${styles.block} ${isImpactClass} itemHorizontal`}
             style={{ backgroundColor: block.bgcolor_content }}>
             <div
-              className={`${styles.callToActionBlockContainer} ${
+              className={`bg-ct ${styles.bgPatternAbout}`}
+              style={{
+                backgroundImage: `url(/icons/${pattern_curr}.png)`,
+              }}></div>
+            <div
+              style={{ backgroundColor: block.bgcolor }}
+              className={`${styles.titleBlockWrapper} ${
                 isRight ? styles.imgTextRight : ''
-              } flex j-c`}>
+              }`}>
               {isRight && (
                 <>
                   {impactInner !== '' ? (
@@ -962,35 +968,19 @@ const HorizontalSection = ({
                   )}
                 </>
               )}
-              {block.imagelayout === 'full' ? (
-                <div
-                  className={`${styles.imgCallToAction} imgAnimation bg-cv`}
-                  style={{
-                    backgroundImage: `url(${block.image.medium_large})`,
-                    backgroundColor: `${
-                      block.bgcolor === 'na' ? 'none' : block.bgcolor
-                    }`,
-                    backgroundSize: `${block.imagesize}`,
-                  }}></div>
-              ) : (
-                <div
-                  className={styles.contImgImpact}
-                  style={{
-                    backgroundColor: `${
-                      block.bgcolor === 'na' ? 'none' : block.bgcolor
-                    }`,
-                  }}>
-                  <div className={`imgAnimation ${styles.wrapperImgImpact}`}>
-                    <Image
-                      fill
-                      src={block.image.medium_large}
-                      alt={block.image.alt}
-                      className={styles.imgImpact}
-                      style={{ objectFit: `${block.imagesize}` }}
-                    />
-                  </div>
-                </div>
-              )}
+              <div className={styles.imgBlockWrapper}>
+                <img
+                  className={`imgAnimation ${
+                    styles.innerImgTitleBlockWrapper
+                  } ${
+                    block.imagesize === 'cover'
+                      ? styles.innerIgmCover
+                      : styles.innerIgmContain
+                  }`}
+                  src={block.image.large ? block.image.large : ''}
+                  alt={innerTitle}
+                />
+              </div>
               {!isRight && (
                 <>
                   {impactInner !== '' ? (
