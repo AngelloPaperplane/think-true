@@ -48,7 +48,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                   </h2>
                 )}
                 {mediaBlockContent.text && (
-                  <p
+                  <div
                     className={styles.textAfterHero}
                     dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
                     data-aos="fade-up"
