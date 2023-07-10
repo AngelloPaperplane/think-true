@@ -35,13 +35,16 @@ const ImgTextB = ({
       sideText,
     } = contentData;
     return (
-      <section className={`siteSection ${styles.whatWeDoSection}`}>
+      <section
+        className={`siteSection ${styles.whatWeDoSection} ${
+          pathname === '/about-us' ? styles.agencyAbout : ''
+        }`}>
         <div className={`container ${styles.whatWeDoCo}`}>
           <div
             data-aos="fade-up"
             data-aos-duration="900"
             data-aous-delay="0"
-            className={`bg-cv ${styles.imgSection} ${styles.imgSectionMobile}`}
+            className={`bg-ct ${styles.imgSection} ${styles.imgSectionMobile}`}
             style={{
               backgroundImage: `url(${image.large ? image.large : ''})`,
             }}></div>

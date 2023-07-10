@@ -254,7 +254,7 @@
   position: relative;
   z-index: 1;
 }
-
+/* 
 .embraceBlock:before {
   content: '';
   position: absolute;
@@ -264,7 +264,7 @@
   height: 120vw;
   border-radius: 50%;
   border: 1px solid #000;
-}
+} */
 
 .embraceBlockContainer {
   width: 100%;
