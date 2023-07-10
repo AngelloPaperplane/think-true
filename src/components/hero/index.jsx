@@ -35,7 +35,6 @@ const Hero = ({
     threshold: 1.0,
   };
 
-
   useEffect(() => {
     if (
       pathname !== '/' &&
