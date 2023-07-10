@@ -93,7 +93,7 @@ const Hero = ({
     const logoShow = layout === 'principal';
     return (
       <>
-        {image['super-large'] && (
+        {image['super-large'] && videoUrl && videoUrl !== '' && (
           <div
             className={`container ${styles.heroContainer} ${styles.heroContainerBefore} flex j-s a-e bg-cv`}>
             <img
