@@ -917,6 +917,7 @@
 
   .titleAfterHeroAbout {
     margin-bottom: 5vh;
+    transform: none !important;
   }
 
   .callToActionBlockContainer {
@@ -992,6 +993,7 @@
 
   .lastCta {
     margin-bottom: 20px;
+    transform: none !important;
   }
 
   .smallTextBlockImgText {
