@@ -89,17 +89,18 @@ const Hero = ({
       align,
       bg_color,
       data_info,
+      videoUrl,
     } = dataHero;
     const logoShow = layout === 'principal';
     return (
       <>
-        {logoShow && (pathname === '/' || pathname === '/about-us') && (
+        {logoShow && videoUrl && videoUrl !== '' && (
           <div
             className={`container ${styles.heroContainer} ${styles.heroContainerBefore} flex j-s a-e bg-cv`}>
             <img
               className={`${styles.imgLogo} `}
-              alt=""
-              src={'/icons/logo-hero-black.png'}
+              alt="Logo ThinkTrue"
+              src={image['super-large']}
             />
           </div>
         )}
@@ -116,7 +117,8 @@ const Hero = ({
           style={{
             backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
           }}>
-          {(pathname === '/' || pathname === '/about-us') && (
+          {/* (pathname === '/' || pathname === '/about-us') && (*/}
+          {videoUrl && videoUrl !== '' && (
             <div className={styles.videoContainer}>
               <button
                 className={`${styles.activeSound} ${
@@ -134,7 +136,7 @@ const Hero = ({
                 preload=""
                 autoPlay
                 controls={isActiveSound}>
-                <source src="https://paperplane.com.co/dev/assets/homevideomini.mp4" />
+                <source src={videoUrl} />
               </video>
             </div>
           )}
