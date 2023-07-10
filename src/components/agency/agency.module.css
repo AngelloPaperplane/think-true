@@ -21,11 +21,11 @@
   z-index: -1;
 }
 
-.agencyAbout::before{
+.agencyAbout::before {
   display: none;
 }
 
-.agencySectAbout{
+.agencySectAbout {
   height: 100vh;
   align-items: center;
   margin-bottom: 40vh;
@@ -36,7 +36,7 @@
   z-index: 1;
 }
 
-.agencySectAbout .agencyContainer{
+.agencySectAbout .agencyContainer {
   padding-bottom: 0;
   position: relative;
   height: 100%;
@@ -53,8 +53,8 @@
   text-align: center;
 }
 
-.agencySectAbout .titleAgency{
-  color: #F2F0EB;
+.agencySectAbout .titleAgency {
+  color: #f2f0eb;
   font-size: 130px;
   max-width: 50%;
 }
@@ -79,7 +79,7 @@
   position: relative;
 }
 
-.agencySectAbout .floatInfoAgency{
+.agencySectAbout .floatInfoAgency {
   position: absolute;
   top: 85%;
   left: 0;
@@ -149,13 +149,13 @@
     font-size: 22px;
   }
 
-  .agencySectAbout .titleAgency{
+  .agencySectAbout .titleAgency {
     font-size: 90px;
   }
 }
 
-@media only screen and (max-width: 1024px){
-  .agencySectAbout .titleAgency{
+@media only screen and (max-width: 1024px) {
+  .agencySectAbout .titleAgency {
     max-width: 70%;
   }
 }
@@ -187,12 +187,12 @@
     margin-bottom: -80vh;
   }
 
-  .agencySectAbout .titleAgency{
+  .agencySectAbout .titleAgency {
     max-width: 90%;
     font-size: 60px;
   }
 
-  .floatInfoAgency{
+  .floatInfoAgency {
     padding: 35px 25px;
   }
 }

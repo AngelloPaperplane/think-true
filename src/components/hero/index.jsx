@@ -84,7 +84,7 @@ const Hero = ({
       align,
       bg_color,
       data_info,
-      videoUrl
+      videoUrl,
     } = dataHero;
     const logoShow = layout === 'principal';
     return (
@@ -112,7 +112,7 @@ const Hero = ({
           style={{
             backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
           }}>
-          {/*(pathname === '/' || pathname === '/about-us') && (*/}
+          {/* (pathname === '/' || pathname === '/about-us') && (*/}
           {videoUrl && videoUrl !== '' && (
             <div className={styles.videoContainer}>
               <button
