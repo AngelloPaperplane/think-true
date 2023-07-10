@@ -18,17 +18,17 @@ const AboutUs = ({ data }) => {
       setPageLoaded(true);
     }, 1600);
   }, []);
-  
+
   return (
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
-      <AfterHero mediaBlockContent={mediablock}/>
+      <AfterHero mediaBlockContent={mediablock} />
       <ImgTextB contentData={whatdo} />
-      <Agency dataContent={team}/>
+      <Agency dataContent={team} />
       {
         <HorizontalSection
-          //dataHero={hero}
+          // dataHero={hero}
           blocksToIterate={blocks[0]}
           classParent="01"
           type="about-1"
