@@ -21,6 +21,10 @@
   z-index: -1;
 }
 
+.agencyAbout{
+    margin-top: 10vh;
+}
+
 .agencyAbout::before {
   display: none;
 }
@@ -167,12 +171,12 @@
 @media only screen and (max-width: 768px) {
   .agencyAbout.agencySection {
     margin-bottom: 0;
-    padding-top: 45vh;
+    padding-top: 22.5vh;
     height: auto;
   }
 
-  .agencyAbout .titleAgency{
-    margin-bottom: 35px;
+  .agencyAbout .titleAgency {
+    margin-bottom: 22.5vh;
   }
 
   .mobileImageHero {

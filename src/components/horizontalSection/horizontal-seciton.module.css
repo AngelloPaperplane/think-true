@@ -380,6 +380,8 @@
   align-items: flex-start;
   flex-direction: column;
   gap: 10px;
+  position: relative;
+  z-index: 1;
 }
 
 .titleImpact {
@@ -581,6 +583,8 @@
 
 .lastWrapperText {
   width: 85%;
+  z-index: 1;
+  position: relative;
   /* align-self: flex-end; */
 }
 
@@ -602,6 +606,7 @@
   justify-content: flex-start;
   padding-top: 50px;
   width: fit-content;
+  margin-top: 10px;
 }
 
 .lastCta a {

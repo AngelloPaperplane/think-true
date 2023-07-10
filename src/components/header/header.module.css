@@ -32,6 +32,7 @@
 
 .siteHeader.lightHeader .siteLogo {
   opacity: 1;
+  pointer-events: all;
 }
 
 .lightHeader.siteHeader:not(.activeMenu) .siteLogo {

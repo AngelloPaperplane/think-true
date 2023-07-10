@@ -39,9 +39,9 @@ const Agency = ({ image, dataContent }) => {
               data-aos="fade-up"
               data-aos-duration="900"
               data-aous-delay="0"
-              className={`${styles.titleAgency} news ${
-                pathname === '/about-us' ? styles.aboutTitle : ''
-              }`}
+              className={`${styles.titleAgency} ${
+                pathname === '/about-us' ? 'aleo' : 'news'
+              } ${pathname === '/about-us' ? styles.aboutTitle : ''}`}
               dangerouslySetInnerHTML={{ __html: title }}
             />
           )}

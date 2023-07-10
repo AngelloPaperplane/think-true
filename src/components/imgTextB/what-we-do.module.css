@@ -7,8 +7,9 @@
   padding: 20vh 0;
 }
 
-.agencyAbout .whatWeDoCo{
-   padding-top: 5vh;
+.agencyAbout .whatWeDoCo {
+  padding-top: 5vh;
+  padding-bottom: 0;
 }
 
 .titleSection {
@@ -23,6 +24,7 @@
   font-size: 110px;
   width: 50%;
   margin: 0 auto;
+  text-transform: uppercase;
 }
 
 .subtitleSection {
@@ -151,6 +153,13 @@
   display: none;
 }
 
+.sideText strong {
+  font-weight: bold;
+}
+.sideText b {
+  font-weight: bold;
+}
+
 @media only screen and (max-width: 1300px) {
   .titleSection {
     font-size: 12vw;
@@ -169,17 +178,18 @@
   }
   .sideText p {
     margin-bottom: 3vh;
+    line-height: 1.4;
   }
 
-  .agencyAbout .titleSection{
+  .agencyAbout .titleSection {
     width: 80%;
   }
 
-  .lastWrapperText{
+  .lastWrapperText {
     width: 100%;
   }
 
-  .textImpact.text_large{
+  .textImpact.text_large {
     font-size: 22px;
   }
 }
@@ -187,6 +197,12 @@
 @media only screen and (max-width: 768px) {
   .whatWeDoCo {
     padding: 10vh 0 0;
+  }
+
+  
+
+  .sideText p{
+    font-size: 16px;
   }
 
   .infoSection {
@@ -246,22 +262,24 @@
     font-size: 20px;
   }
 
-  .agencyAbout .titleSection{
+  .agencyAbout .titleSection {
     width: 90%;
     font-size: 90px;
   }
 
-  .agencyAbout .floatInfoAgency{
+  .agencyAbout .floatInfoAgency {
     position: relative;
     top: 0;
     left: 0;
   }
+  .sideText{
+    padding-top: 0;
+  }
 }
 
 @media only screen and (max-width: 520px) {
-
-  .agencyAbout .titleSection{
-    font-size: 55px;
+  .agencyAbout .titleSection {
+    font-size: 40px;
   }
 
   .subtitleSection {
