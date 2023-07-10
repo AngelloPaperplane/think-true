@@ -20,7 +20,7 @@
 }
 
 .aleoBold, strong, b {
-  font-family: 'AleoBold';
+  font-family: 'AleoBold' !important;
 }
 
 
