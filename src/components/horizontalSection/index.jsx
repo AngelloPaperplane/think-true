@@ -788,6 +788,7 @@ const HorizontalSection = ({
       block.title !== '' ? (
         <h2
           className={`${impactTitle} ${titleSize}`}
+          style={{color:block.titlecolor}}
           dangerouslySetInnerHTML={{ __html: block.title }}
         />
       ) : (
@@ -940,7 +941,8 @@ const HorizontalSection = ({
         return (
           <div
             key={`splitblock${i}`}
-            className={`${styles.block} ${isImpactClass} itemHorizontal`}>
+            className={`${styles.block} ${isImpactClass} itemHorizontal`}
+            style={{backgroundColor:block.bgcolor_content}}>
             <div
               className={`${styles.callToActionBlockContainer} ${
                 isRight ? styles.imgTextRight : ''
@@ -1081,10 +1083,12 @@ const HorizontalSection = ({
           ref={scroller}>
           {type === 'about-1' && (
             <>
+            {/*
               <div
                 className={`${styles.block} ${styles.firstBlock} itemHorizontal`}>
                 <Hero dataHero={heroData} />
               </div>
+              */}
               {blocksToIterate.map((block, i) => get_blocks(block, i))}
             </>
           )}
