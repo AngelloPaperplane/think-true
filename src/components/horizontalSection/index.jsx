@@ -788,7 +788,7 @@ const HorizontalSection = ({
       block.title !== '' ? (
         <h2
           className={`${impactTitle} ${titleSize}`}
-          style={{ color: block.titlecolor }}
+          style={{ color: block.titleColor }}
           dangerouslySetInnerHTML={{ __html: block.title }}
         />
       ) : (
@@ -833,6 +833,7 @@ const HorizontalSection = ({
         <div className={styles.lastWrapperText}>
           <p
             dangerouslySetInnerHTML={{ __html: block.text }}
+            style={{ color: block.textColor }}
             className={`${impactText} ${textSize}`}
           />
           {buttonHtml}
