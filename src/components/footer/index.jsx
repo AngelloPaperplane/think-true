@@ -357,14 +357,14 @@ const Footer = ({ dataContent, isContact }) => {
                 className={`bg-ct ${styles.socialIcon} ${styles.in}`}></a>
             </div>
             <ul className={styles.footerMenu}>
-              <li key={`footer_${1}`} className={styles.itemFooterMenu}>
+              <li key="AgencyFooter-1" className={styles.itemFooterMenu}>
                 Agency
               </li>
-              <li key={`footer_${2}`} className={styles.itemFooterMenu}>
+              <li key="AgencyFooter-2" className={styles.itemFooterMenu}>
                 Our Work
               </li>
-              {/* <li key={`footer_${3}`} className={styles.itemFooterMenu}>News</li> */}
-              <li key={`footer_${4}`} className={styles.itemFooterMenu}>
+              {/* <li className={styles.itemFooterMenu}>News</li> */}
+              <li key="AgencyFooter-3" className={styles.itemFooterMenu}>
                 Contact
               </li>
             </ul>

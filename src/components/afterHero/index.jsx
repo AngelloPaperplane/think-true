@@ -22,8 +22,8 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
         }`}>
         <div
           className={`container ${styles.afterHeroContainer} ${
-            afterhero ? styles.noPadding : ''
-          }`}>
+            pathname === '/work/[id]' ? styles.noPaddingMobile : ''
+          } ${afterhero ? styles.noPadding : ''}`}>
           {(mediaBlockContent.layout === 'home' ||
             mediaBlockContent.layout === 'team') && (
             <>
@@ -73,24 +73,26 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                       </Link>
                     </p>
                   )}
-                {/* {mediaBlockContent.image && mediaBlockContent.image.medium && (
-                  <div
-                    className={`${styles.videoContainer} bg-cv`}
-                    data-aos="zoom-out"
-                    data-aos-duration="1500"
-                    data-aous-delay="0"
-                    style={{
-                      backgroundImage: `url(${mediaBlockContent.image.medium})`,
-                    }}>
-                    {mediaBlockContent.video && (
-                      <iframe
-                        src={mediaBlockContent.video}
-                        frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
-                        className={`iframeVideo ${styles.iframeVideo}`}></iframe>
-                    )}
-                  </div>
-                )} */}
+                {mediaBlockContent.image &&
+                  mediaBlockContent.image.medium &&
+                  pathname !== '/' && (
+                    <div
+                      className={`${styles.videoContainer} bg-cv`}
+                      data-aos="zoom-out"
+                      data-aos-duration="1500"
+                      data-aous-delay="0"
+                      style={{
+                        backgroundImage: `url(${mediaBlockContent.image.medium})`,
+                      }}>
+                      {mediaBlockContent.video && (
+                        <iframe
+                          src={mediaBlockContent.video}
+                          frameBorder="0"
+                          allow="autoplay; fullscreen; picture-in-picture"
+                          className={`iframeVideo ${styles.iframeVideo}`}></iframe>
+                      )}
+                    </div>
+                  )}
               </div>
             </>
           )}

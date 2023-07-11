@@ -760,6 +760,7 @@ const HorizontalSection = ({
   }, []);
 
   function get_blocks(block, i) {
+    console.log(i);
     console.log(block);
     const bgColorClass =
       block.bgcolor === 'na'
@@ -847,7 +848,7 @@ const HorizontalSection = ({
           <>
             {block.pattern !== '' ? (
               <div
-                key={`text_block${i}`}
+                key={`text_block${i}-${block.subtitlecolor}`}
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
                   className={`bg-ct ${styles.bgPatternAbout}`}
@@ -1033,7 +1034,7 @@ const HorizontalSection = ({
       case 'key_words_block':
         return (
           <div
-            key={`key_words_block${i}`}
+            key={`key_words_block${i}${block.word1}`}
             className={`${styles.block} ${styles.circlesBlock} itemHorizontal`}>
             <div
               className={`${styles.circleContainer} ${styles.partnersCircle} partnersCircle`}>

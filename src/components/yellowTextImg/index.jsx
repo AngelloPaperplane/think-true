@@ -8,6 +8,7 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
   useEffect(() => {
     AOS.init();
   }, []);
+  console.log(contentData);
   if (contentData) {
     const { text, yellowText, image } = contentData;
     return (
@@ -31,6 +32,7 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
             <p
               className={styles.sideYellowText}
               dangerouslySetInnerHTML={{ __html: yellowText }}
+              style={{ backgroundColor: contentData.color ?? '#faa300' }}
             />
             <div
               className={styles.wrapperSideImg}
