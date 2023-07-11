@@ -847,6 +847,7 @@ const HorizontalSection = ({
           <>
             {block.pattern !== '' ? (
               <div
+                key={`text_block${i}`}
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
                   className={`bg-ct ${styles.bgPatternAbout}`}
@@ -909,7 +910,7 @@ const HorizontalSection = ({
               </div>
             ) : (
               <div
-                key={`textblock${i}`}
+                key={`text_block${i}`}
                 className={`${styles.block} ${classParent} itemHorizontal`}>
                 <div
                   className={bgColorClass}
@@ -948,7 +949,7 @@ const HorizontalSection = ({
       case 'split_block':
         return (
           <div
-            key={`splitblock${i}`}
+            key={`split_block${i}`}
             className={`${styles.block} ${isImpactClass} itemHorizontal`}
             style={{ backgroundColor: block.bgcolor_content }}>
             <div
@@ -1016,7 +1017,7 @@ const HorizontalSection = ({
           <>
             {block.videotype === 'vm' && block.videourl !== '' && (
               <div
-                key={`videoblock${i}`}
+                key={`video_block${i}`}
                 className={`${styles.block} ${styles.videoBlock} itemHorizontal`}>
                 <div className={`imgAnimation ${styles.videoContainerBlock}`}>
                   <iframe
@@ -1032,6 +1033,7 @@ const HorizontalSection = ({
       case 'key_words_block':
         return (
           <div
+          key={`key_words_block${i}`}
             className={`${styles.block} ${styles.circlesBlock} itemHorizontal`}>
             <div
               className={`${styles.circleContainer} ${styles.partnersCircle} partnersCircle`}>
@@ -1100,7 +1102,7 @@ const HorizontalSection = ({
             blocksToIterate &&
             blocksToIterate.map((block, i) => (
               <div
-                key={i}
+                key={`homeblock${i}`}
                 className={`${styles.block} itemHorizontal itemHorizontal-${i}`}>
                 <div
                   className={`${styles.wrapperBlock} ${

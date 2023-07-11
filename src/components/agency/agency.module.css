@@ -21,8 +21,8 @@
   z-index: -1;
 }
 
-.agencyAbout{
-    margin-top: 10vh;
+.agencyAbout {
+  margin-top: 10vh;
 }
 
 .agencyAbout::before {

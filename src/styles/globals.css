@@ -19,11 +19,11 @@
   font-family: 'Aleo';
 }
 
-.aleoBold, strong, b {
+.aleoBold,
+strong,
+b {
   font-family: 'AleoBold' !important;
 }
-
-
 
 .news {
   font-family: 'NewsCycke';

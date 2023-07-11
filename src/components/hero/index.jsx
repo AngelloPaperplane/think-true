@@ -42,11 +42,12 @@ const Hero = ({
       pathname !== '/work/[id]'
     ) {
       const observer = new IntersectionObserver(loadImage, options);
-      if (heroSection.current) {
-        observer.observe(heroSection.current);
+      const currentSect = heroSection.current;
+      if (currentSect) {
+        observer.observe(currentSect);
       }
       return () => {
-        observer.unobserve(heroSection.current);
+        observer.unobserve(currentSect);
       };
     }
   }, []);
