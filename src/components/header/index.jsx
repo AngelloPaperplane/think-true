@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 const Header = ({ mainMenu, headerClass }) => {
-  // console.log(mainMenu);
   const { setPageLoaded } = useContext(ThinkTrue);
   const [menuOpened, setMenuOpened] = useState(false);
   const [hideMenu, setHideMenu] = useState(true);
@@ -66,9 +65,7 @@ const Header = ({ mainMenu, headerClass }) => {
         <div className={`container flex j-b a-c ${styles.containerHeader}`}>
           <div
             className={`${styles.siteLogo} ${
-              pathname === '/' 
-                ? styles.hideLogo
-                : ''
+              pathname === '/' ? styles.hideLogo : ''
             } bg-ct`}
             onClick={() => changePath()}>
             {pathname !== '/' && <Link href="/"></Link>}
