@@ -36,13 +36,13 @@ const AboutUs = ({ data }) => {
       <ImgTextB contentData={whatdo} />
       <ImgTextB contentData={whatdo_new} />
       {
-        /*<Agency dataContent={team} /> */
+        // <Agency dataContent={team} />
       }
       <HorizontalSection
-          blocksToIterate={blocks[0]}
-          classParent="01"
-          type="about-1"
-        />
+        blocksToIterate={blocks[0]}
+        classParent="01"
+        type="about-1"
+      />
       <Footer dataContent={formfooter} />
     </>
   );
