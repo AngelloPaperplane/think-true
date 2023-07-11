@@ -66,7 +66,7 @@ const Header = ({ mainMenu, headerClass }) => {
         <div className={`container flex j-b a-c ${styles.containerHeader}`}>
           <div
             className={`${styles.siteLogo} ${
-              pathname === '/' || pathname === '/about-us'
+              pathname === '/' 
                 ? styles.hideLogo
                 : ''
             } bg-ct`}

@@ -1,5 +1,5 @@
 .yellowTextImgSection {
-  padding: 20vh 0 10vh;
+  padding: 15vh 0 10vh;
 }
 
 .topText {
@@ -35,7 +35,7 @@
 
 .wrapperSideImg {
   width: 50%;
-  aspect-ratio: 1/1.1;
+  aspect-ratio: 6/5;
   position: relative;
 }
 
