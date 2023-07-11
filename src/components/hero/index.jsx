@@ -140,7 +140,7 @@ const Hero = ({
               </video>
             </div>
           )}
-          {pathname !== '/' && (
+          {pathname !== '/' && image_mobile['super-large'] && (
             <div
               className={`${styles.mobileImageHero} bg-cv`}
               style={{
@@ -152,7 +152,7 @@ const Hero = ({
             className={`container ${styles.heroContainer} flex j-c a-e bg-cv`}
             style={{
               backgroundImage:
-                layout === 'poster' ? `url(${image['super-large']})` : '',
+                layout === 'poster' ? `url(${image['super-large']})` : 'none',
             }}>
             {title && !logoShow && layout !== 'poster' && (
               <h1

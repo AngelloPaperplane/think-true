@@ -742,6 +742,7 @@
   .wrapperScroller {
     height: auto;
     display: block;
+    width: 100% !important;
   }
 
   .wrapperBlock {
