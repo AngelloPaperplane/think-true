@@ -357,10 +357,16 @@ const Footer = ({ dataContent, isContact }) => {
                 className={`bg-ct ${styles.socialIcon} ${styles.in}`}></a>
             </div>
             <ul className={styles.footerMenu}>
-              <li className={styles.itemFooterMenu}>Agency</li>
-              <li className={styles.itemFooterMenu}>Our Work</li>
+              <li key="AgencyFooter-1" className={styles.itemFooterMenu}>
+                Agency
+              </li>
+              <li key="AgencyFooter-2" className={styles.itemFooterMenu}>
+                Our Work
+              </li>
               {/* <li className={styles.itemFooterMenu}>News</li> */}
-              <li className={styles.itemFooterMenu}>Contact</li>
+              <li key="AgencyFooter-3" className={styles.itemFooterMenu}>
+                Contact
+              </li>
             </ul>
           </div>
           <p className={`flex j-c a-c ${styles.legacyText}`}>

@@ -760,6 +760,7 @@ const HorizontalSection = ({
   }, []);
 
   function get_blocks(block, i) {
+    console.log(i);
     console.log(block);
     const bgColorClass =
       block.bgcolor === 'na'
@@ -803,7 +804,6 @@ const HorizontalSection = ({
     ) {
       buttonHtml = (
         <div
-
           className={`${styles.ctaBlock} ${styles.lastCta} splitTextB flex `}>
           <Link
             className={`news ${styles.ctaText}`}
@@ -848,7 +848,7 @@ const HorizontalSection = ({
           <>
             {block.pattern !== '' ? (
               <div
-                key={`text_block${i}`}
+                key={`text_block${i}-${block.subtitlecolor}`}
                 className={`${styles.block} ${styles.titleBlock} itemHorizontal flex j-c a-c`}>
                 <div
                   className={`bg-ct ${styles.bgPatternAbout}`}
@@ -911,7 +911,9 @@ const HorizontalSection = ({
               </div>
             ) : (
               <div
-                key={`textblock${i}`}
+                key={`textblock${i}${
+                  block.title ? block.title : block.subtitle
+                }`}
                 className={`${styles.block} ${classParent} itemHorizontal`}>
                 <div
                   className={bgColorClass}
@@ -950,7 +952,7 @@ const HorizontalSection = ({
       case 'split_block':
         return (
           <div
-            key={`splitblock${i}`}
+            key={`splitblock${i}-${block.innerTitle ?? block.innerText}`}
             className={`${styles.block} ${isImpactClass} itemHorizontal`}
             style={{ backgroundColor: block.bgcolor_content }}>
             <div
@@ -1018,7 +1020,7 @@ const HorizontalSection = ({
           <>
             {block.videotype === 'vm' && block.videourl !== '' && (
               <div
-                key={`videoblock${i}`}
+                key={`videoblock${i}${block.videourl}`}
                 className={`${styles.block} ${styles.videoBlock} itemHorizontal`}>
                 <div className={`imgAnimation ${styles.videoContainerBlock}`}>
                   <iframe
@@ -1034,7 +1036,7 @@ const HorizontalSection = ({
       case 'key_words_block':
         return (
           <div
-            key={`key_words_block${i}`}
+            key={`key_words_block${i}${block.word1}`}
             className={`${styles.block} ${styles.circlesBlock} itemHorizontal`}>
             <div
               className={`${styles.circleContainer} ${styles.partnersCircle} partnersCircle`}>
