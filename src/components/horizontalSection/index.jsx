@@ -911,9 +911,7 @@ const HorizontalSection = ({
               </div>
             ) : (
               <div
-                key={`textblock${i}${
-                  block.title ? block.title : block.subtitle
-                }`}
+                key={`text_block${i}`}
                 className={`${styles.block} ${classParent} itemHorizontal`}>
                 <div
                   className={bgColorClass}
@@ -952,7 +950,7 @@ const HorizontalSection = ({
       case 'split_block':
         return (
           <div
-            key={`splitblock${i}-${block.innerTitle ?? block.innerText}`}
+            key={`split_block${i}`}
             className={`${styles.block} ${isImpactClass} itemHorizontal`}
             style={{ backgroundColor: block.bgcolor_content }}>
             <div
@@ -1020,7 +1018,7 @@ const HorizontalSection = ({
           <>
             {block.videotype === 'vm' && block.videourl !== '' && (
               <div
-                key={`videoblock${i}${block.videourl}`}
+                key={`video_block${i}`}
                 className={`${styles.block} ${styles.videoBlock} itemHorizontal`}>
                 <div className={`imgAnimation ${styles.videoContainerBlock}`}>
                   <iframe

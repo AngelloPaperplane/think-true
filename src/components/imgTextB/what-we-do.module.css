@@ -199,9 +199,7 @@
     padding: 10vh 0 0;
   }
 
-  
-
-  .sideText p{
+  .sideText p {
     font-size: 16px;
   }
 
@@ -272,7 +270,7 @@
     top: 0;
     left: 0;
   }
-  .sideText{
+  .sideText {
     padding-top: 0;
   }
 }
