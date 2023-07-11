@@ -33,6 +33,7 @@ const ImgTextB = ({
       buttoncolor,
       buttonlabel,
       sideText,
+      position_image,
     } = contentData;
     return (
       <section

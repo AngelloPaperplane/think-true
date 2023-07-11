@@ -803,7 +803,6 @@ const HorizontalSection = ({
     ) {
       buttonHtml = (
         <div
-
           className={`${styles.ctaBlock} ${styles.lastCta} splitTextB flex `}>
           <Link
             className={`news ${styles.ctaText}`}

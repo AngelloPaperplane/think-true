@@ -10,7 +10,16 @@ import ImgTextB from '@/components/imgTextB';
 import Agency from '@/components/agency';
 
 const AboutUs = ({ data }) => {
-  const { meta, hero, formfooter, blocks, mediablock, whatdo, team } = data;
+  const {
+    meta,
+    hero,
+    formfooter,
+    blocks,
+    mediablock,
+    whatdo,
+    team,
+    whatdo_new,
+  } = data;
   console.log(hero);
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
@@ -25,6 +34,7 @@ const AboutUs = ({ data }) => {
       <Hero dataHero={hero} />
       <AfterHero mediaBlockContent={mediablock} />
       <ImgTextB contentData={whatdo} />
+      <ImgTextB contentData={whatdo_new} />
       <Agency dataContent={team} />
       {
         <HorizontalSection
