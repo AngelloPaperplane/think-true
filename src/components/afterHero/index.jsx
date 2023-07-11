@@ -22,8 +22,8 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
         }`}>
         <div
           className={`container ${styles.afterHeroContainer} ${
-            afterhero ? styles.noPadding : ''
-          }`}>
+            pathname === '/work/[id]' ? styles.noPaddingMobile : ''
+          } ${afterhero ? styles.noPadding : ''}`}>
           {(mediaBlockContent.layout === 'home' ||
             mediaBlockContent.layout === 'team') && (
             <>
