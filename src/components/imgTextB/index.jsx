@@ -80,7 +80,10 @@ const ImgTextB = ({
             />
           )}
 
-          <div className={`flex j-b  ${styles.detailsSec}`}>
+          <div
+            className={`flex j-b ${
+              position_image === 'right' && styles.reverseImage
+            }  ${styles.detailsSec}`}>
             <div
               data-aos="fade-up"
               data-aos-duration="900"
