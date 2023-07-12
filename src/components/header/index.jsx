@@ -66,9 +66,7 @@ const Header = ({ mainMenu, headerClass }) => {
         <div className={`container flex j-b a-c ${styles.containerHeader}`}>
           <div
             className={`${styles.siteLogo} ${
-              pathname === '/' 
-                ? styles.hideLogo
-                : ''
+              pathname === '/' ? styles.hideLogo : ''
             } bg-ct`}
             onClick={() => changePath()}>
             {pathname !== '/' && <Link href="/"></Link>}

@@ -110,9 +110,7 @@ const Hero = ({
           className={`${styles.heroSection} bg-cv ${
             align === 'right' ? styles.alignRight : ''
           } ${layout === 'poster' ? styles.posterHero : ''} ${
-            pathname === '/' || pathname === '/about-us'
-              ? styles.videoHeroSection
-              : ''
+            videoUrl && videoUrl !== '' ? styles.videoHeroSection : ''
           }`}
           style={{
             backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
