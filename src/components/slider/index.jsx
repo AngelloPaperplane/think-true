@@ -40,6 +40,16 @@ const SiteSlider = ({ title, projects }) => {
             {title}
           </h2>
         )}
+        {1 < 2 && (
+          <h3
+            className={`news ${styles.subtitleSlider}`}
+            style={{ color: '#00B099' }}
+            data-aos="fade-up"
+            data-aos-duration="1900"
+            data-aous-delay="0">
+            CHECK OUT WHAT ELSE WE HELPED BRING TO LIFE
+          </h3>
+        )}
         <Slider {...settings}>
           {projects.map((project, i) => (
             <div

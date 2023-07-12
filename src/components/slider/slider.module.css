@@ -11,8 +11,15 @@
   font-weight: 700;
   font-size: clamp(50px, 9vw, 150px);
   line-height: 1;
+  margin-bottom: 15px;
   color: #363233;
+  text-align: center;
+}
+
+.subtitleSlider {
+  font-size: clamp(20px, 5vw, 40px);
   margin-bottom: 5vh;
+  text-align: center;
 }
 
 .project {
@@ -72,4 +79,11 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+
+@media only screen and (max-width: 768px){
+  .subtitleSlider{
+    font-size: clamp(20px, 4vw, 40px);
+  }
 }
