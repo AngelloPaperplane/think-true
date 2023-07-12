@@ -6,7 +6,7 @@ import styles from './our-numbers.module.css';
 
 const OurNumbers = ({ data }) => {
   const { title, numbers } = data;
-  
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -32,8 +32,10 @@ const OurNumbers = ({ data }) => {
               data-aos="fade-up"
               data-aos-duration="900"
               data-aos-delay={i * 200}>
-              {number.title!=='' && (
-                <p className={`news ${styles.textBeforeNumber}`}>{number.title}</p>
+              {number.title !== '' && (
+                <p className={`news ${styles.textBeforeNumber}`}>
+                  {number.title}
+                </p>
               )}
               <p className={`news ${styles.bigNumber}`}>
                 {number.prepend}
