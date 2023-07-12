@@ -12,13 +12,13 @@ const MeetUs = ({ setPopUpMember, membersData }) => {
   return (
     <section className={`siteSection ${styles.meetUsSection}`}>
       <div className={`container ${styles.meetUsContainer}`}>
-        <h2
+        {/* <h2
           className={`news uppercase bold ${styles.meetUsTitle}`}
           data-aos="fade-up"
           data-aos-duration="900"
           data-aous-delay="0">
           Meet us
-        </h2>
+        </h2> */}
 
         <div className={`${styles.wrapperTeam} flex j-s a-c`}>
           {membersData.map((member, i) => (
