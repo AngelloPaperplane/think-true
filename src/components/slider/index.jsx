@@ -5,7 +5,7 @@ import styles from './slider.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const SiteSlider = ({ title, projects }) => {
+const SiteSlider = ({ title, text, projects }) => {
   const settings = {
     dots: false,
     arrows: true,
@@ -31,14 +31,22 @@ const SiteSlider = ({ title, projects }) => {
     <section className={`siteSection ${styles.sliderSection}`}>
       <div
         className={`container ohterProjectsSlider ${styles.sliderContainer}`}>
-        {title && (
+        {title && title!==''&&(
           <h2
             className={`news ${styles.titleSlider}`}
             data-aos="fade-up"
             data-aos-duration="1900"
-            data-aous-delay="0">
-            {title}
-          </h2>
+            data-aous-delay="0"
+            style={{marginBottom:`${text!==''?'1vh':'5vh'}`}}
+            dangerouslySetInnerHTML={{__html:title}} />
+        )}
+        {text && text!=='' &&(
+          <h4
+            className={`news ${styles.textSlider}`}
+            data-aos="fade-up"
+            data-aos-duration="1900"
+            data-aous-delay="0"
+            dangerouslySetInnerHTML={{__html:text}} />
         )}
         <Slider {...settings}>
           {projects.map((project, i) => (
