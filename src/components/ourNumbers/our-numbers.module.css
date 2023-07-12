@@ -26,6 +26,16 @@
   text-align: center;
 }
 
+.textBeforeNumber {
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #363233;
+  font-size: 20px;
+}
+
 .bigNumber {
   font-size: clamp(50px, 8vw, 150px);
   margin-bottom: 30px;

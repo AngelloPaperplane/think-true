@@ -184,6 +184,10 @@
     font-size: clamp(40px, 20vw, 150px);
   }
 
+  .videoHeroSection .titleHero {
+    font-size: clamp(40px, 20vw, 90px);
+  }
+
   .titleHero span {
     font-size: 5vw;
   }
@@ -214,5 +218,9 @@
     width: 90%;
     right: 5%;
     bottom: 20px;
+  }
+
+  .videoHeroSection .titleHero {
+    font-size: clamp(40px, 16vw, 70px);
   }
 }

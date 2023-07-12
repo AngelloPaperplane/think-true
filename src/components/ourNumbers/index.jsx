@@ -89,6 +89,9 @@ const OurNumbers = ({ data }) => {
               data-aos="fade-up"
               data-aos-duration="900"
               data-aos-delay={i * 200}>
+              {1 < 2 && (
+                <p className={`news ${styles.textBeforeNumber}`}>Nearly</p>
+              )}
               <p className={`news ${styles.bigNumber}`}>
                 {number.prepend}
                 {/* <IncrementNumber n={parseFloat(number.number)} />*/}
