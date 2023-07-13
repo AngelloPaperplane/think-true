@@ -2,19 +2,12 @@ import React, { useEffect, useRef } from 'react';
 import styles from './horizontal-seciton.module.css';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
-import Hero from '../hero';
-import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HorizontalSection = ({
-  blocksToIterate,
-  type,
-  classParent,
-  heroData,
-}) => {
+const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
   const { pathname } = useRouter();
   const scroller = useRef();
   useEffect(() => {
@@ -1087,15 +1080,7 @@ const HorizontalSection = ({
           }}
           ref={scroller}>
           {type === 'about-1' && (
-            <>
-              {/*
-              <div
-                className={`${styles.block} ${styles.firstBlock} itemHorizontal`}>
-                <Hero dataHero={heroData} />
-              </div>
-              */}
-              {blocksToIterate.map((block, i) => get_blocks(block, i))}
-            </>
+            <>{blocksToIterate.map((block, i) => get_blocks(block, i))}</>
           )}
           {type !== 'about-1' &&
             type !== 'about-2' &&
