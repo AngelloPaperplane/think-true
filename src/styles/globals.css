@@ -413,4 +413,8 @@ a {
     height: 40px;
     margin-top: -20px;
   }
+
+  .withTextSlider{
+    top: 70%;
+  }
 }

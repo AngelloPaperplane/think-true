@@ -28,27 +28,32 @@ const SiteSlider = ({ title, text, projects }) => {
     AOS.init();
   }, []);
   return (
-    <section className={`siteSection ${styles.sliderSection}`}>
+    <section
+      className={`siteSection ${styles.sliderSection} ${
+        text && text !== '' ? 'withTextSlider' : ''
+      }`}>
       <div
         className={`container ohterProjectsSlider ${styles.sliderContainer}`}>
-        {title && title!==''&&(
+        {title && title !== '' && (
           <h2
             className={`news ${styles.titleSlider}`}
             data-aos="fade-up"
             data-aos-duration="1900"
             data-aous-delay="0"
-            style={{marginBottom:`${text!==''?'1vh':'5vh'}`}}
-            dangerouslySetInnerHTML={{__html:title}} />
+            style={{ marginBottom: `${text !== '' ? '1vh' : '5vh'}` }}
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
         )}
-        {text && text!=='' &&(
+        {text && text !== '' && (
           <h4
             className={`news ${styles.textSlider}`}
             data-aos="fade-up"
             data-aos-duration="1900"
             data-aous-delay="0"
-            dangerouslySetInnerHTML={{__html:text}} />
+            dangerouslySetInnerHTML={{ __html: text }}
+          />
         )}
-        
+
         <Slider {...settings}>
           {projects.map((project, i) => (
             <div
