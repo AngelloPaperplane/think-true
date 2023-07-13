@@ -11,45 +11,7 @@ import OurNumbers from '@/components/ourNumbers';
 
 const DetailWork = ({ data }) => {
   const { meta, hero, blocks, moreprojects, formfooter } = data;
-  /*
-  const contentAfterHero = {
-    text: [
-      'RISE is a national nonprofit that educates and empowers the sports community to end racism, champion social justice and improve race relations.',
-    ],
-    title: {
-      text: 'RISE Develops Champions of Change Amongst Sports Fans',
-      position: 'left',
-    },
-    layout: 'team',
-  };
-
-  const otherProjects = {
-    title: 'MORE PROJECTS',
-    projects: [
-      {
-        title: 'VISA',
-        subtitle: 'NFL',
-        color: '#D02E2A',
-        text: 'Brand Consulting',
-        imgProject: '/images/nike-1.jpg',
-      },
-      {
-        title: 'SED UT',
-        subtitle: 'PERSPICIATIS',
-        color: '#FAA300',
-        text: 'Brand Consulting',
-        imgProject: '/images/jpmc-1.jpg',
-      },
-      {
-        title: 'VISA',
-        subtitle: 'NFL',
-        color: '#D02E2A',
-        text: 'Brand Consulting',
-        imgProject: '/images/nike-1.jpg',
-      },
-    ],
-  };
-  */
+  
   function get_block_content(block, index) {
     switch (block.block_name) {
       case 'text_block':
