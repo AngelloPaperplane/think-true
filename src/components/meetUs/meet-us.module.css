@@ -116,6 +116,10 @@
     width: 48%;
     margin-bottom: 5vh;
   }
+
+  .wrapperTeam{
+    align-items: flex-start;
+  }
 }
 @media only screen and (max-width: 520px) {
   .memberName {

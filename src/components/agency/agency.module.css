@@ -192,13 +192,18 @@
   }
 
   .redLine {
-    right: 70%;
+    right: 60%;
   }
 
   .agencyAbout .floatInfoAgency {
     position: relative;
     top: 0;
     left: 0;
+  }
+
+  .linkBallRedLine {
+    font-size: 20px;
+    padding: 20px 35px 15px;
   }
 }
 @media only screen and (max-width: 520px) {

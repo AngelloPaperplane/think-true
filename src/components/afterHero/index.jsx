@@ -77,7 +77,11 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                   mediaBlockContent.image.medium &&
                   pathname !== '/' && (
                     <div
-                      className={`${styles.videoContainer} bg-cv`}
+                      className={`${styles.videoContainer} ${
+                        pathname === '/work/[id]'
+                          ? styles.videoContainerDetail
+                          : ''
+                      } bg-cv`}
                       data-aos="zoom-out"
                       data-aos-duration="1500"
                       data-aous-delay="0"

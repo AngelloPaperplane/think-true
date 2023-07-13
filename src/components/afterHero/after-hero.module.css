@@ -66,6 +66,10 @@
   position: relative;
 }
 
+.videoContainerDetail{
+  margin-top: 5vh;
+}
+
 .bigCircle {
   position: absolute;
   width: 200vh;
