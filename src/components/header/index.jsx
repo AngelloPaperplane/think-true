@@ -40,12 +40,12 @@ const Header = ({ mainMenu, headerClass }) => {
     const switchHeader = () => {
       if (!header.current.classList.contains(styles.lightHeader)) {
         if (window.scrollY >= 50) {
-          setIsInHero((prev) => (prev = false));
+          setIsInHero(false);
         }
       }
       if (header.current.classList.contains(styles.lightHeader)) {
         if (window.scrollY <= 50) {
-          setIsInHero((prev) => (prev = true));
+          setIsInHero(true);
         }
       }
     };

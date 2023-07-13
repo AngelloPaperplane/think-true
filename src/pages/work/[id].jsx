@@ -11,7 +11,7 @@ import OurNumbers from '@/components/ourNumbers';
 
 const DetailWork = ({ data }) => {
   const { meta, hero, blocks, moreprojects, formfooter } = data;
-  
+
   function get_block_content(block, index) {
     switch (block.block_name) {
       case 'text_block':
