@@ -1,0 +1,148 @@
+@font-face {
+  font-family: 'NewsCycke';
+  src: url('../../styles/fonts/NewsCycle-Bold.ttf');
+}
+
+.afterHeroSection {
+  width: 100%;
+}
+
+.afterHeroContainer {
+  padding-top: 37vh;
+  padding-bottom: 15vh;
+}
+
+.afterHeroAbout .afterHeroContainer {
+  padding-bottom: 7vh;
+}
+
+.titleAfterHero {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5vw;
+  line-height: 0.9;
+  width: 65%;
+  color: #363233;
+  margin-bottom: 50px;
+}
+
+.textAfterHero {
+  font-size: 31px;
+  line-height: 34px;
+  color: #363233;
+  max-width: 50%;
+  margin-bottom: 40px;
+}
+
+.textAfterHero a {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  width: fit-content;
+  padding: 25px 35px 20px;
+  background-image: url(/icons/cta.png);
+  background-size: 100% 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: 'NewsCycke';
+}
+
+.wrapperAfterHeroTeam .textAfterHero {
+  max-width: 70%;
+}
+
+.alignRight.wrapperAfterHeroTeam .textAfterHero {
+  margin-left: auto;
+}
+
+.videoContainer {
+  margin: 0 auto;
+  margin-top: 15vh;
+  width: 80%;
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+.videoContainerDetail {
+  margin-top: 5vh;
+}
+
+.bigCircle {
+  position: absolute;
+  width: 200vh;
+  height: 200vh;
+  border: 1px solid #000;
+  border-radius: 50%;
+  top: 50%;
+  left: -50%;
+}
+
+.playVideo {
+  background-image: url(/icons/play.png);
+  cursor: pointer;
+  height: 100px;
+  left: 50%;
+  margin: -50px 0 0 -50px;
+  position: absolute;
+  top: 50%;
+  width: 100px;
+}
+
+.iframeVideo {
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1300px) {
+  .textAfterHero {
+    font-size: 25px;
+  }
+
+  .titleAfterHero {
+    font-size: 4.5vw;
+    line-height: 1;
+  }
+
+  .afterHeroContainer {
+    padding-top: 40vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .textAfterHero {
+    font-size: 22px;
+    max-width: 80%;
+  }
+
+  .videoContainer {
+    width: 100%;
+  }
+  .titleAfterHero {
+    font-size: 7vw;
+    width: 100%;
+  }
+  .noPaddingMobile {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .textAfterHero {
+    max-width: 90%;
+    line-height: 1.5;
+  }
+  .wrapperAfterHeroTeam .textAfterHero {
+    max-width: 100%;
+    font-size: 18px;
+  }
+  .afterHeroContainer {
+    padding-bottom: 5vh;
+  }
+}
+
+.noPadding {
+  padding-top: 5vh;
+}

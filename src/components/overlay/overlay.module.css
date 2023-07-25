@@ -1,0 +1,41 @@
+.overlayContainer {
+  position: fixed;
+  z-index: 50;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.7s linear, visibility 0.7s linear;
+}
+
+.hideDiv.overlayContainer {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.overlayContainer.grayBg {
+  background-color: #363233;
+}
+
+.textOverlayContainer {
+  font-size: clamp(70px, 20vw, 300px);
+  color: #363233;
+}
+
+.grayBg .textOverlayContainer {
+  color: #fff;
+}
+
+.transparentText .textOverlayContainer {
+  color: transparent;
+}
+
+.transparentText.grayBg .textOverlayContainer {
+  color: transparent;
+}

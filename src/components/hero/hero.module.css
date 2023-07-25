@@ -1,0 +1,226 @@
+.heroSection {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.posterHero {
+  margin-bottom: 30vh;
+  padding-top: 115px;
+}
+
+.videoHeroSection {
+  height: auto;
+}
+
+.heroContainer {
+  height: 100%;
+  padding-bottom: 7vh;
+  z-index: 2;
+  position: relative;
+}
+
+.heroContainerBefore {
+  margin-top: 100px;
+}
+
+.posterHero .heroContainer {
+  height: 130vh;
+  width: 80%;
+  position: relative;
+}
+
+.posterHero .mobileImageHero {
+  position: absolute;
+  top: 115px;
+  left: 10%;
+  height: 130vh;
+  width: 80%;
+}
+
+.titleHero {
+  font-size: clamp(40px, 13vw, 200px);
+  position: relative;
+  text-align: center;
+}
+
+.titleHero span {
+  display: block !important;
+  text-align: left;
+  font-size: 3vw;
+  margin-bottom: -2vw;
+  color: #fff;
+}
+
+.lineHero {
+  position: absolute !important;
+  top: calc(93%);
+  height: 40vh;
+  width: 5px;
+}
+
+.posterHero .lineHero {
+  top: 85%;
+}
+
+.ballLine {
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 50%;
+  margin-left: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.weAreText {
+  display: block;
+  text-align: left;
+  font-size: 3vw;
+  margin-bottom: -2vw;
+  color: #fff;
+}
+
+.infoClientContainer {
+  margin-left: auto;
+  text-align: right;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 34px;
+  text-align: right;
+  color: #363233;
+  margin-top: 5vh;
+}
+
+.infoClientContainer span {
+  font-weight: normal;
+}
+
+.imgLogo {
+  width: 70%;
+}
+
+.mobileImageHero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  z-index: 1;
+}
+
+.videoContainer {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.homeVideo {
+  width: 100%;
+  position: relative;
+}
+
+.activeSound {
+  position: absolute;
+  bottom: 35px;
+  right: 35px;
+  padding: 10px 25px;
+  border-radius: 50px;
+  background-color: #faa300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  z-index: 1;
+  opacity: 1;
+  visibility: visible;
+  transition: all 0.5s ease-in-out;
+}
+
+.hideButton {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.textActiveSound {
+  color: #363233;
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: 3.36px;
+}
+
+.iconPlaySound {
+  width: 25px;
+  height: 25px;
+  margin-right: 15px;
+  background-image: url('/icons/active-sound.png');
+}
+
+.videoHeroSection .heroContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: 11;
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 1300px) {
+  .titleHero {
+    font-size: clamp(40px, 11vw, 150px);
+  }
+}
+@media only screen and (max-width: 768px) {
+  .mobileImageHero {
+    display: block;
+  }
+  .titleHero {
+    font-size: clamp(40px, 20vw, 150px);
+  }
+
+  .videoHeroSection .titleHero {
+    font-size: clamp(40px, 20vw, 90px);
+  }
+
+  .titleHero span {
+    font-size: 5vw;
+  }
+
+  .posterHero {
+    padding-top: 0;
+    margin-bottom: 0vh;
+  }
+  .posterHero .heroContainer {
+    height: 100vh;
+    width: 100%;
+  }
+
+  .posterHero .mobileImageHero {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .heroContainerBefore {
+    margin-top: 70px;
+  }
+
+  .activeSound {
+    width: 90%;
+    right: 5%;
+    bottom: 20px;
+  }
+
+  .videoHeroSection .titleHero {
+    font-size: clamp(40px, 16vw, 70px);
+  }
+}

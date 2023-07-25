@@ -1,0 +1,1105 @@
+.horizontalSection {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.horizontalSection.whatWeDoSec {
+  margin-top: 50vh;
+}
+
+.titleOurWork {
+  font-weight: 700;
+  font-size: 13vw;
+  line-height: 1;
+  color: #363233;
+  text-align: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.containerHorizontal {
+  overflow: hidden;
+}
+
+.wrapperScroller {
+  width: auto;
+  display: flex;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.block {
+  width: 100vw;
+  height: 100%;
+  opacity: 1;
+  flex: 0 0 auto;
+  position: relative;
+  padding-top: 75px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.firstBlock {
+  padding-top: 0;
+}
+
+.block.hide {
+  opacity: 0;
+}
+
+.wrapperBlock {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.solidColod {
+  width: 35%;
+  height: 100%;
+  background-color: #363233;
+  position: relative;
+  mix-blend-mode: multiply;
+  z-index: 1;
+}
+
+.whatWeDoSec .solidColod {
+  background-color: #fff;
+}
+
+.patternBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 7.5vh;
+}
+
+.whatWeDoSec .patternBg {
+  width: 10vw;
+  left: initial;
+  right: 0;
+  transform: translateX(50%);
+  top: 5%;
+  mix-blend-mode: multiply;
+}
+
+.innerPatternBg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-repeat: repeat;
+  background-position: center center;
+  mix-blend-mode: multiply;
+}
+
+.whatWeDoSec .innerPatternBg {
+  background-repeat: repeat-x;
+}
+
+.imgBlock {
+  width: 65%;
+  height: 100%;
+  clip-path: circle(0% at 0% 0%);
+}
+
+.contentBlock {
+  width: 60%;
+  bottom: 10vh;
+  left: 5vw;
+  position: absolute;
+  z-index: 2;
+}
+
+.whatWeDoSec .contentBlock {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleBlock {
+  font-weight: 700;
+  font-size: 6.5vw;
+  margin-bottom: 3.5vh;
+  color: #f2f0eb;
+  /* text-shadow: 0px 4px 10px rgba(54, 50, 51, 0.5); */
+  position: relative;
+}
+
+.bgPatternAbout {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 10%;
+  height: 100%;
+  background-repeat: repeat-y;
+  mix-blend-mode: multiply;
+}
+
+.whatWeDoSec .titleBlock {
+  color: #363233;
+}
+
+.indexBlock {
+  font-size: 21vw;
+  line-height: 198px;
+  color: #363233;
+  align-self: center;
+}
+
+/* .whatWeDoSec .block:nth-child(odd) .indexBlock {
+  transform: translateX(-62.5%);
+} */
+
+.subtitleBlock {
+  font-size: 34px;
+  line-height: 36px;
+  color: #4eb4c8;
+  text-shadow: 0px 2px 1px rgba(54, 50, 51, 0.36);
+  width: 50%;
+}
+
+.infoBlock {
+  font-size: 33px;
+  line-height: 39px;
+  color: #f2f0eb;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 3.5vh 0;
+}
+
+.whatWeDoSec .infoBlock {
+  width: 50%;
+  padding-right: 5vw;
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 34px;
+  color: #f2f0eb;
+  margin: 5vh 0;
+}
+
+.ctaBlock {
+  cursor: pointer;
+}
+
+.ctaText {
+  font-size: 28px;
+  line-height: 25px;
+  letter-spacing: 0.12em;
+  color: #f2f0eb;
+}
+
+.ballLine {
+  width: calc(100% - 300px);
+  height: 5px;
+  position: relative;
+}
+
+.ball {
+  position: absolute;
+  top: 50%;
+  left: -15px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-top: -15px;
+}
+
+.afterHeroAbout {
+  width: 100vw;
+  height: 100vh;
+  background-color: #faa300;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.titleAfterHeroAbout {
+  font-size: clamp(30px, 5vw, 110px);
+  line-height: 1;
+  color: #363233;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.textAfterHeroAbout {
+  width: 50%;
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.2;
+  color: #000000;
+  padding-right: 5%;
+  opacity: 1;
+  transition: opacity 0.7s ease-in-out;
+  position: relative;
+  overflow: hidden;
+}
+
+.textNewSection {
+  width: 80%;
+  font-size: 35px;
+  line-height: 1.1;
+}
+
+.textAfterHeroAbout.active {
+  opacity: 1;
+}
+
+.embraceBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+/* 
+.embraceBlock:before {
+  content: '';
+  position: absolute;
+  bottom: 5%;
+  left: 0%;
+  width: 120vw;
+  height: 120vw;
+  border-radius: 50%;
+  border: 1px solid #000;
+} */
+
+.embraceBlockContainer {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.titleEmbrace {
+  font-weight: 400;
+  font-size: clamp(40px, 9vw, 180px);
+  line-height: 1;
+  text-align: center;
+  color: #363233;
+}
+
+.callToActionBlockContainer {
+  width: 100%;
+  height: 100%;
+  padding: 0 5% 30px 0;
+  gap: 5%;
+}
+
+.imgCallToAction {
+  width: 40%;
+}
+
+.titleCallToAction {
+  font-weight: 400;
+  font-size: clamp(50px, 5vw, 100px) !important;
+  line-height: 1.05;
+  color: #000000;
+  align-self: flex-end;
+  padding-bottom: 5%;
+  width: 55%;
+}
+
+.bigTitle {
+  width: 50%;
+  background-size: 90%;
+}
+
+.textBigTitleBlock {
+  width: 100%;
+  align-self: flex-end;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 49px;
+  color: #363233;
+  margin-bottom: 2.5%;
+}
+
+.imgTextRight {
+  padding-left: 5%;
+  padding-right: 0;
+}
+
+.imgTextRight .titleCallToAction {
+  font-weight: 400;
+  font-size: 52px !important;
+  line-height: 64px;
+  color: #000000;
+}
+
+.imgBlockImgText {
+  width: 50%;
+}
+
+.videoBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.videoContainerBlock {
+  width: 80%;
+  aspect-ratio: 16/9;
+  background-color: #8c8c8c;
+  position: relative;
+}
+
+.iframeVideo {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.iconPlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+  margin-top: -60px;
+  margin-left: -60px;
+  background-image: url(/icons/play.png);
+}
+
+.impactBlock {
+  z-index: 1;
+}
+
+.textImpactBlock {
+  width: 50%;
+  padding: 0 2.5% 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 10px;
+  position: relative;
+  z-index: 1;
+}
+
+.titleImpact {
+  font-weight: 700;
+  font-size: clamp(25px, 3vw, 80px);
+  line-height: 1.05;
+  color: #363233;
+}
+
+.titleImpact.title_large {
+  font-size: clamp(50px, 6vw, 120px);
+}
+.titleImpact.title_medium {
+  font-size: clamp(25px, 4vw, 100px);
+}
+.titleImpact.title_small {
+  font-size: clamp(20px, 3vw, 80px);
+}
+
+.textImpact {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 19px;
+  line-height: 1.3;
+  color: #000000;
+  width: 100%;
+  margin-top: 10px;
+  align-self: flex-end;
+}
+
+.textImpact.text_large {
+  font-size: 25px;
+}
+.textImpact.text_medium {
+  font-size: 19px;
+}
+.textImpact.text_small {
+  font-size: 16px;
+}
+
+.contImgImpact {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /*background: #4eb4c8;*/
+}
+
+.wrapperImgImpact {
+  width: 80%;
+  aspect-ratio: 4/5;
+  margin-left: -5%;
+  position: relative;
+}
+
+.imgImpact {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.committedSubtitle {
+  font-weight: 700;
+  font-size: 110px;
+  color: #363233;
+  margin-bottom: 15px;
+  text-align: left;
+  width: 100%;
+}
+
+.committed.embraceBlock:before {
+  left: -60%;
+  width: 150vw;
+  height: 150vw;
+}
+
+.circlesBlock {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.circleContainer {
+  border-radius: 50%;
+  border: 1px solid #000;
+  text-align: center;
+  width: 80%;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.partnersCircle {
+  margin-bottom: -40%;
+}
+
+.thinkCircle {
+  width: 70%;
+}
+
+.communitiesCircle {
+  width: 60%;
+}
+
+.thinkCircle .textInnerCircle {
+  top: 10%;
+}
+.communitiesCircle .textInnerCircle {
+  top: 30%;
+}
+
+.textInnerCircle {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 34px;
+  text-align: center;
+  color: #363233;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 7%;
+}
+
+.titleBlock {
+  position: relative;
+}
+
+.textTitleBlock::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1%;
+  height: 100%;
+}
+
+.textTitleBlock {
+  font-weight: 700;
+  font-size: 10vw;
+  line-height: 1.1;
+  color: #f2f0eb;
+  /* text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); */
+}
+
+.titleBlockWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5% 3% 5% 7%;
+}
+
+.infoBlockWrapper {
+  width: 55%;
+  height: 100%;
+  align-items: flex-start;
+}
+
+.imgBlockWrapper {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  align-self: flex-end;
+}
+
+.innerImgTitleBlockWrapper {
+  width: 100%;
+  position: relative;
+  display: block;
+  max-height: 100%;
+}
+
+.innerIgmContain {
+  object-fit: contain;
+}
+.innerIgmCover {
+  object-fit: cover;
+}
+
+.smallBlockTextImg {
+  width: 100%;
+  height: 100%;
+  padding: 5% 5%;
+  gap: 5%;
+}
+
+.smallTextBlockImgText {
+  font-weight: 400;
+  font-size: 42px;
+  line-height: 1;
+  color: #363233;
+  width: 100%;
+}
+
+.lastWrapperText {
+  width: 85%;
+  z-index: 1;
+  position: relative;
+  /* align-self: flex-end; */
+}
+
+.wrapperImgBlockImgText {
+  width: 45%;
+  height: 100%;
+  position: relative;
+}
+
+.innerImgBlockImgtext {
+  object-fit: cover;
+  object-position: center center;
+}
+
+.lastCta {
+  z-index: 1;
+  margin-top: 35px;
+  position: relative;
+  justify-content: flex-start;
+  padding-top: 50px;
+  width: fit-content;
+  margin-top: 35px;
+}
+
+.lastCta a {
+  /* background-image: url(/icons/cta.png); */
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 25px 40px 25px;
+  text-align: center;
+  color: #363233;
+}
+
+.lastCta .ballLine {
+  position: absolute !important;
+  width: 10vw;
+  left: 50%;
+  top: -25px;
+  width: 5px;
+  height: 70px;
+  margin-left: -2.5px;
+}
+
+.lastCta .ball {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin-left: -10px;
+}
+
+.callToActionBlockContainer .lastWrapperText {
+  width: 100%;
+}
+
+/* @media only screen and (min-width: 2000px) {
+  .lastCta .ballLine {
+    left: 60%;
+    width: 30vw;
+  }
+} */
+
+@media only screen and (max-width: 1650px) {
+  .contentBlock {
+    width: 70%;
+  }
+  .titleBlock {
+    font-size: 4.5vw;
+  }
+
+  .indexBlock {
+    font-size: 13vw;
+  }
+
+  .committedSubtitle {
+    font-size: 70px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .committedSubtitle {
+    font-size: 60px;
+  }
+  .subtitleBlock {
+    font-size: 24px;
+    width: 75%;
+  }
+  .infoBlock {
+    font-size: 20px;
+    line-height: 1;
+  }
+
+  .titleBlock {
+    font-size: 4.5vw;
+    margin: 0;
+  }
+
+  .titleOurWork {
+    font-size: 12vw;
+  }
+
+  .ctaText {
+    font-size: 20px;
+  }
+
+  .contentBlock {
+    bottom: 5vh;
+  }
+
+  .whatWeDoSec .infoBlock {
+    width: 65%;
+    font-size: 22px;
+    line-height: 1.2;
+    margin: 2.5vh 0 0;
+  }
+
+  .indexBlock {
+    font-size: 15vw;
+    line-height: 1;
+  }
+
+  .titleAfterHeroAbout {
+    width: 95%;
+  }
+
+  .textAfterHeroAbout {
+    width: 60%;
+    line-height: 1.2;
+  }
+
+  .textBigTitleBlock {
+    font-size: 35px;
+    line-height: 1.2;
+  }
+
+  .imgTextRight .titleCallToAction {
+    font-size: 45px !important;
+    line-height: 1.2;
+  }
+
+  .smallTextBlockImgText {
+    font-size: 38px;
+    line-height: 1.1;
+  }
+
+  .textNewSection {
+    width: 80%;
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .textImpact.text_large {
+    font-size: 22px;
+  }
+  .wrapperScroller {
+    height: auto;
+    display: block;
+    width: 100% !important;
+  }
+
+  .wrapperBlock {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    height: auto;
+    padding-top: 45vh;
+  }
+
+  .wrapperBlock.wrapperBlockWhatWeDo {
+    padding-top: 0;
+  }
+
+  .block {
+    height: auto;
+  }
+
+  .imgBlock {
+    width: 100%;
+    position: absolute;
+    height: 45vh;
+    top: 0;
+    left: 0;
+  }
+
+  .solidColod {
+    width: 100%;
+    height: 70vh;
+    width: 100%;
+    position: absolute;
+    top: 45vh;
+    left: 0;
+    height: calc(100% - 45vh);
+  }
+
+  .solidColod.solidColorWhatWeDo {
+    display: none;
+    width: 100%;
+  }
+
+  .contentBlock {
+    width: 90%;
+    position: relative;
+    bottom: initial;
+    padding: 10vh 0 5vh;
+  }
+
+  .colorWhatWeDo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .wrapperBlockWhatWeDo .colorWhatWeDo {
+    position: absolute;
+    height: 100%;
+  }
+
+  .contentWhatWeDo {
+    position: relative;
+    bottom: initial;
+    left: initial;
+    padding: 10vh 0;
+    max-height: initial;
+  }
+
+  .whatWeDoSec .titleBlock {
+    font-size: 7vw;
+  }
+
+  .indexBlock {
+    font-size: 30vw;
+  }
+
+  .embraceBlock {
+    padding: 30vh 0;
+  }
+
+  .titleBlockWrapper {
+    padding: 10vh 5vh;
+  }
+
+  .callToActionBlockContainer {
+    padding: 0;
+    /* flex-direction: row-reverse; */
+  }
+
+  .imgCallToAction {
+    height: 80vh;
+  }
+
+  .callToActionBlock {
+    padding: 10vh 0;
+  }
+
+  .titleCallToAction {
+    font-size: clamp(50px, 5.5vw, 100px) !important;
+  }
+  .imgTextRight .titleCallToAction {
+    font-size: 40px !important;
+    line-height: 1.1;
+    padding-left: 2vw;
+  }
+  .embraceBlock:before {
+    display: none;
+  }
+
+  .impactBlock {
+    padding: 10vh 0;
+  }
+  .textImpact {
+    width: 100%;
+  }
+
+  .contImgImpact {
+    padding: 10vh 0;
+  }
+
+  .wrapperImgBlockImgText {
+    height: 70vh;
+  }
+
+  .bgPatternAbout {
+    top: 0;
+    height: 100%;
+  }
+
+  .block {
+    padding-top: 0;
+  }
+
+  .embraceBlock {
+    padding: 15vh 0;
+  }
+
+  .videoContainerBlock {
+    margin: 5vh 0;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .titleBlock {
+    font-size: 10vw;
+    margin-bottom: 2vh;
+  }
+
+  .subtitleBlock {
+    font-size: 23px;
+    width: 85%;
+    line-height: 1.2;
+  }
+
+  .infoBlock {
+    font-size: 18px;
+    line-height: 1.2;
+    margin-top: 10px;
+  }
+
+  .ctaText {
+    font-size: 18px;
+  }
+
+  .ballLine {
+    width: calc(100% - 200px);
+  }
+
+  .ball {
+    width: 25px;
+    height: 25px;
+    left: -12.5px;
+    margin-top: -12.5px;
+  }
+
+  .titleAfterHeroAbout {
+    margin-bottom: 5vh;
+    transform: none !important;
+  }
+
+  .callToActionBlockContainer {
+    flex-wrap: wrap;
+  }
+
+  .imgCallToAction,
+  .bigTitle,
+  .imgBlockImgText {
+    width: 100%;
+    height: 50vh;
+  }
+
+  .titleCallToAction,
+  .textBigTitleBlock {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .callToActionBlock {
+    padding: 0;
+  }
+
+  .imgTextRight {
+    flex-direction: column-reverse;
+  }
+
+  .impactBlock {
+    flex-wrap: wrap;
+    padding: 0;
+  }
+
+  .textImpactBlock {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .contImgImpact {
+    width: 100%;
+    margin-top: 20px;
+  }
+
+  .wrapperImgImpact {
+    margin: 0 auto;
+  }
+
+  .circleContainer {
+    width: 100%;
+    margin-bottom: -45%;
+  }
+
+  .thinkCircle {
+    width: 70%;
+    margin-bottom: 0%;
+  }
+
+  .communitiesCircle {
+    width: 60%;
+    margin-bottom: 0%;
+  }
+
+  .textInnerCircle {
+    font-size: 35px;
+  }
+  .smallBlockTextImg {
+    flex-wrap: wrap;
+    padding: 15% 5%;
+  }
+
+  .lastWrapperText {
+    width: 100%;
+  }
+
+  .lastCta {
+    margin-bottom: 20px;
+    transform: none !important;
+  }
+
+  .smallTextBlockImgText {
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 50px;
+  }
+
+  .wrapperImgBlockImgText {
+    width: 100%;
+  }
+
+  .textAfterHeroAbout {
+    opacity: 1;
+    padding: 0;
+    width: 90%;
+  }
+
+  .titleBlockWrapper {
+    flex-direction: column;
+  }
+
+  .infoBlockWrapper {
+    width: 85%;
+    margin-bottom: 20px;
+  }
+
+  .imgBlockWrapper {
+    width: 60%;
+    margin-top: 50px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .titleBlockWrapper {
+    padding: 7vh 2.5vh;
+  }
+
+  .imgBlockWrapper {
+    width: 80%;
+  }
+
+  .infoBlockWrapper {
+    width: 100%;
+  }
+
+  .committedSubtitle {
+    font-size: 35px;
+  }
+  .textAfterHeroAbout {
+    font-size: 20px;
+  }
+
+  .titleCallToAction,
+  .textBigTitleBlock {
+    font-size: 27px !important;
+    align-self: flex-start;
+    padding: 15vh 0;
+  }
+
+  .callToActionBlockContainer {
+    align-items: center;
+  }
+  .imgTextRight .titleCallToAction {
+    font-size: 27px;
+    padding-left: 5vw;
+  }
+
+  .iconPlay {
+    width: 80px;
+    height: 80px;
+    margin-top: -40px;
+    margin-left: -40px;
+  }
+
+  .titleImpact {
+    font-size: clamp(25px, 3.5vw, 80px);
+  }
+
+  .titleImpact.title_large {
+    font-size: clamp(25px, 15vw, 80px);
+  }
+  .titleImpact.title_medium {
+    font-size: clamp(25px, 3.5vw, 80px);
+  }
+  .titleImpact.title_small {
+    font-size: clamp(25px, 3.5vw, 80px);
+  }
+
+  .textInnerCircle {
+    font-size: 20px;
+    top: 5%;
+  }
+  .thinkCircle .textInnerCircle {
+    top: 5%;
+  }
+  .communitiesCircle .textInnerCircle {
+    top: 25%;
+  }
+
+  .smallTextBlockImgText {
+    font-size: 28px;
+  }
+}

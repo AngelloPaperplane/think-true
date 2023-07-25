@@ -1,0 +1,145 @@
+.contentFeature {
+  width: 100%;
+  position: relative;
+  gap: 5%;
+  margin-bottom: 35vh;
+}
+
+.titleFeatureJobIndex {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 320px;
+  line-height: 296px;
+  color: #363233;
+}
+
+.contentTextFeature {
+  max-width: 40%;
+  position: relative;
+  margin-bottom: -15%;
+}
+
+.titleFeatureJob {
+  font-weight: 700;
+  font-size: 105px;
+  line-height: 85px;
+  color: #363233;
+}
+
+.featuresJob {
+  margin-top: 10vh;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 26px;
+  letter-spacing: 0.06em;
+  color: #363233;
+  margin-left: 3vw;
+}
+
+.growWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin-top: -10vh;
+}
+
+.line {
+  width: 5px;
+  height: 25vh;
+  position: relative;
+  background-color: #faa300;
+}
+
+.ball {
+  width: 20px;
+  height: 20px;
+  background-color: #faa300;
+  border-radius: 50%;
+  position: absolute;
+  top: calc(100% - 10px);
+  left: 50%;
+  margin-left: -10px;
+}
+
+.growText {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 25px;
+  letter-spacing: 0.12em;
+  color: #363233;
+  white-space: nowrap;
+  margin-top: 5vh;
+  margin-bottom: 20vh;
+  background-image: url(/icons/cta.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 25px 35px 20px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 1300px) {
+  .titleFeatureJobIndex {
+    font-size: 17vw;
+    line-height: 1;
+  }
+
+  .titleFeatureJob {
+    font-size: 7vw;
+    line-height: 1;
+  }
+
+  .featuresJob {
+    font-size: 27px;
+    line-height: 1;
+  }
+
+  .growText {
+    font-size: 25px;
+    margin-top: 2.5vh;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .contentFeature {
+    flex-direction: column;
+    margin-bottom: 25vh;
+    text-align: left;
+    align-items: flex-start;
+  }
+  .featureBlock:nth-child(odd) .contentFeature {
+    text-align: right;
+    align-items: flex-end;
+  }
+
+  .contentTextFeature {
+    max-width: 80%;
+  }
+
+  .titleFeatureJobIndex {
+    font-size: 40vw;
+  }
+
+  .titleFeatureJob {
+    font-size: 12vw;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .contentTextFeature {
+    max-width: 100%;
+  }
+
+  .featuresJob {
+    font-size: 23px;
+    margin-top: 5vh;
+  }
+
+  .growText {
+    margin-bottom: 5vh;
+    font-size: 20px;
+  }
+}

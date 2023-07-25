@@ -1,0 +1,53 @@
+@font-face {
+  font-family: 'AleoBold';
+  src: url('../styles/fonts/Aleo-Bold.ttf');
+}
+.legalContent {
+  padding: 10vh 0;
+  font-size: 25px;
+  line-height: 1.6;
+  color: #363233;
+}
+
+.legalContent p {
+  margin-bottom: 15px;
+}
+
+.legalContent h2 {
+  font-weight: bold;
+  font-family: 'AleoBold';
+  margin: 25px 0;
+}
+
+.legalContent ul {
+  margin-bottom: 15px;
+  padding-left: 30px;
+}
+.legalContent li {
+  margin-bottom: 10px;
+  list-style-type: disc;
+}
+.legalContent ol li {
+  margin-bottom: 10px;
+  list-style-type: decimal;
+}
+.legalContent strong {
+  font-weight: bold;
+  font-family: 'AleoBold';
+  margin: 15px 0;
+}
+.legalContent b {
+  font-weight: bold;
+  font-family: 'AleoBold';
+  margin: 15px 0;
+}
+.legalContent i {
+  font-style: italic;
+}
+
+@media only screen and (max-width: 768px) {
+  .legalContent {
+    padding-left: 10px;
+    width: 85%;
+  }
+}
