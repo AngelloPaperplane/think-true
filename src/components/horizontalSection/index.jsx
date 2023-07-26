@@ -1161,7 +1161,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
                       <div className={`${styles.ctaBlock}  flex j-b a-c`}>
                         <Link
                           className={`news ${styles.ctaText}`}
-                          href={`${process.env.NEXT_PUBLIC_HOST_NAME}work/${block.link}`}>
+                          href={`${process.env.NEXT_PUBLIC_HOST_NAME}/work/${block.link}`}>
                           READ MORE
                         </Link>
                         <div
