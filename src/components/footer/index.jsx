@@ -73,6 +73,7 @@ const Footer = ({ dataContent, isContact }) => {
 
       // alert(result.status);
       console.log('Success:', result.status);
+      return false;
     };
 
     return (
