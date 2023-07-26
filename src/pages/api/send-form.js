@@ -11,10 +11,7 @@ export default function handler(req, res) {
       method: 'POST',
       body: formData,
     };
-    fetch(
-      `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}contact-footer`,
-      options
-    )
+    fetch(`${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}contact-footer`, options)
       .then((response) => response.json())
       .then((data) => res.status(200).json(data));
   }
