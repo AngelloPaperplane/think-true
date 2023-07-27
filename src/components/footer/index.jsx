@@ -229,6 +229,7 @@ const Footer = ({ dataContent, isContact }) => {
       </>
     );
   }
+  
   return (
     <>
       <section className={`siteSection ${styles.formSection}`}>
