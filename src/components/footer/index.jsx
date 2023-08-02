@@ -23,7 +23,6 @@ const Footer = ({ dataContent, isContact }) => {
       terms_link,
     } = dataContent;
 
-    
     const sendDataForm = async (event) => {
       event.preventDefault();
       const name = event.target.querySelector('#f_name').value;
@@ -100,7 +99,9 @@ const Footer = ({ dataContent, isContact }) => {
               </>
             )}
             <div className={`${styles.wrapperForm} flex j-b a-s`}>
-              <form onSubmit={sendDataForm} className={`${styles.siteForm} flex j-b a-c`}>
+              <form
+                onSubmit={sendDataForm}
+                className={`${styles.siteForm} flex j-b a-c`}>
                 <input
                   data-aos="fade-up"
                   data-aos-duration="900"
@@ -129,7 +130,7 @@ const Footer = ({ dataContent, isContact }) => {
                   name=""
                   id="f_message"
                   placeholder="Message"></textarea>
-                  <p id="messageForm"></p>
+                <p id="messageForm"></p>
                 <div
                   className={styles.redLine}
                   data-aos="fade-up"
@@ -229,7 +230,7 @@ const Footer = ({ dataContent, isContact }) => {
       </>
     );
   }
-  
+
   return (
     <>
       <section className={`siteSection ${styles.formSection}`}>
