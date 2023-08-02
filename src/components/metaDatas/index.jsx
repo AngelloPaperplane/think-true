@@ -2,6 +2,7 @@ import Head from 'next/head';
 
 const Metas = ({ metadata }) => {
   return (
+    <>
     <Head>
       <title>{metadata.title}</title>
       <meta name="description" content={metadata.description} />
@@ -18,6 +19,8 @@ const Metas = ({ metadata }) => {
       <meta property="og:site_name" content={metadata.sitename} />
       <link rel="icon" href="/images/favicon.jpg" />
     </Head>
+    <div id="custom-scripts" dangerouslySetInnerHTML={{__html:metadata.custom_scripts}}></div>
+    </>
   );
 };
 
