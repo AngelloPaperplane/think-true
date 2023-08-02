@@ -10,7 +10,10 @@ const Hero = ({ dataHero }) => {
   const router = useRouter();
   const { pathname } = router;
   const heroSection = useRef(null);
+  const videoHero = useRef(null);
   const [isActiveSound, setIsActiveSound] = useState(false);
+
+  let buttonSoundActivated = false;
 
   const loadImage = (entries, observer) => {
     const [entry] = entries;
@@ -19,11 +22,28 @@ const Hero = ({ dataHero }) => {
       observer.unobserve(entry.target);
     }
   };
+  const toggleSoundVideo = (entries) => {
+    const [entry] = entries;
+    if (entry.isIntersecting) {
+      // entry.target.setAttribute('muted', false);
+      if (buttonSoundActivated) {
+        setIsActiveSound(true);
+      }
+    } else {
+      // entry.target.setAttribute('muted', true);
+      setIsActiveSound(false);
+    }
+  };
 
   const options = {
     root: null,
     rootMargin: '0px',
     threshold: 1.0,
+  };
+  const optionsVideo = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0,
   };
 
   useEffect(() => {
@@ -39,6 +59,22 @@ const Hero = ({ dataHero }) => {
       }
       return () => {
         observer.unobserve(currentSect);
+      };
+    }
+
+    if (pathname === '/' || pathname === '/about-us') {
+      console.log('entro');
+      const currentVideo = videoHero.current;
+      console.log(currentVideo);
+      const observerVideo = new IntersectionObserver(
+        toggleSoundVideo,
+        optionsVideo
+      );
+      if (currentVideo) {
+        observerVideo.observe(currentVideo);
+      }
+      return () => {
+        observerVideo.unobserve(currentVideo);
       };
     }
   }, []);
@@ -108,7 +144,10 @@ const Hero = ({ dataHero }) => {
                 className={`${styles.activeSound} ${
                   isActiveSound ? styles.hideButton : ''
                 }`}
-                onClick={() => setIsActiveSound(true)}>
+                onClick={() => {
+                  setIsActiveSound(true);
+                  buttonSoundActivated = true;
+                }}>
                 <span className={`bg-ct ${styles.iconPlaySound}`}></span>
                 <span className={styles.textActiveSound}>PLAY WITH SOUND</span>
               </button>
@@ -116,6 +155,7 @@ const Hero = ({ dataHero }) => {
                 className={styles.homeVideo}
                 playsInline
                 loop
+                ref={videoHero}
                 muted={!isActiveSound}
                 preload=""
                 autoPlay
