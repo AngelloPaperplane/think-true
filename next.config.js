@@ -4,7 +4,8 @@ const nextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: 'paperplane.com.co',
+        // hostname: 'paperplane.com.co',
+        hostname: 'thinktrue-bkt.s3.amazonaws.com',
       },
     ],
   },

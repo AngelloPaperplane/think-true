@@ -47,7 +47,7 @@ const Clients = ({ dataContent }) => {
               data-aous-delay="0"
               className={`bg-ct ${styles.collaboratorBox}`}
               style={{
-                backgroundImage: `url(${logo.medium}})`,
+                backgroundImage: `url(${logo.medium})`,
                 width: `${100 / clients.length}%`,
               }}
             />
@@ -67,7 +67,7 @@ const Clients = ({ dataContent }) => {
               data-aous-delay="0"
               className={`bg-ct ${styles.collaboratorBox}`}
               style={{
-                backgroundImage: `url(${logo.medium}})`,
+                backgroundImage: `url(${logo.medium})`,
                 width: `${100 / clients.length}%`,
               }}
             />

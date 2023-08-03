@@ -22,6 +22,8 @@ const Footer = ({ dataContent, isContact }) => {
       terms_label,
       terms_link,
     } = dataContent;
+    console.log('Footer');
+    console.log(dataContent);
     return (
       <>
         <section className={`siteSection ${styles.formSection}`}>
