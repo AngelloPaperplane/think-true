@@ -73,30 +73,25 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                       </Link>
                     </p>
                   )}
-                {mediaBlockContent.image &&
-                  mediaBlockContent.image.medium &&
-                  pathname !== '/' && (
-                    <div
-                      className={`${styles.videoContainer} ${
-                        pathname === '/work/[id]'
-                          ? styles.videoContainerDetail
-                          : ''
-                      } bg-cv`}
-                      data-aos="zoom-out"
-                      data-aos-duration="1500"
-                      data-aous-delay="0"
-                      style={{
-                        backgroundImage: `url(${mediaBlockContent.image.medium})`,
-                      }}>
-                      {mediaBlockContent.video && (
-                        <iframe
-                          src={mediaBlockContent.video}
-                          frameBorder="0"
-                          allow="autoplay; fullscreen; picture-in-picture"
-                          className={`iframeVideo ${styles.iframeVideo}`}></iframe>
-                      )}
-                    </div>
-                  )}
+                {mediaBlockContent.video && pathname !== '/' && (
+                  <div
+                    className={`${styles.videoContainer} ${
+                      pathname === '/work/[id]'
+                        ? styles.videoContainerDetail
+                        : ''
+                    } bg-cv`}
+                    data-aos="zoom-out"
+                    data-aos-duration="1500"
+                    data-aous-delay="0">
+                    {mediaBlockContent.video && (
+                      <iframe
+                        src={mediaBlockContent.video}
+                        frameBorder="0"
+                        allow="autoplay; fullscreen; picture-in-picture"
+                        className={`iframeVideo ${styles.iframeVideo}`}></iframe>
+                    )}
+                  </div>
+                )}
               </div>
             </>
           )}

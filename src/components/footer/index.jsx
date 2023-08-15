@@ -22,6 +22,59 @@ const Footer = ({ dataContent, isContact }) => {
       terms_label,
       terms_link,
     } = dataContent;
+
+    const sendDataForm = async (event) => {
+      event.preventDefault();
+      const name = event.target.querySelector('#f_name').value;
+      const email = event.target.querySelector('#f_email').value;
+      const message = event.target.querySelector('#f_message').value;
+
+      if (!name) {
+        alert('Please enter your name.');
+        return false;
+      }
+
+      if (!email) {
+        alert('Please enter your Email.');
+        return false;
+      }
+
+      if (!message) {
+        alert('Please enter your Message.');
+        return false;
+      }
+
+      const formData = {
+        'fname': name,
+        'femail': email,
+        'fmessage': message,
+      };
+
+      // const endpoint = `${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}colombian-app/v2/contact-footer-full`;
+      const endpoint = '/api/send-form';
+
+      const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      };
+
+      const response = await fetch(endpoint, options);
+
+      const result = await response.json();
+
+      const errorDiv = event.target.querySelector('#messageForm');
+      errorDiv.innerHTML = result.status;
+      event.target.reset();
+      setTimeout(() => {
+        errorDiv.innerHTML = '';
+      }, 3000);
+
+      // alert(result.status);
+      console.log('Success:', result.status);
+      return false;
+    };
+
     return (
       <>
         <section className={`siteSection ${styles.formSection}`}>
@@ -46,13 +99,17 @@ const Footer = ({ dataContent, isContact }) => {
               </>
             )}
             <div className={`${styles.wrapperForm} flex j-b a-s`}>
-              <form className={`${styles.siteForm} flex j-b a-c`}>
+              <form
+                onSubmit={sendDataForm}
+                className={`${styles.siteForm} flex j-b a-c`}>
                 <input
                   data-aos="fade-up"
                   data-aos-duration="900"
                   data-aous-delay="0"
                   type="text"
                   placeholder="Full name"
+                  name=""
+                  id="f_name"
                   className={styles.inputForm}
                 />
                 <input
@@ -61,6 +118,8 @@ const Footer = ({ dataContent, isContact }) => {
                   data-aous-delay="0"
                   type="email"
                   placeholder="Email"
+                  name=""
+                  id="f_email"
                   className={styles.inputForm}
                 />
                 <textarea
@@ -68,7 +127,10 @@ const Footer = ({ dataContent, isContact }) => {
                   data-aos-duration="900"
                   data-aous-delay="0"
                   className={styles.inputForm}
+                  name=""
+                  id="f_message"
                   placeholder="Message"></textarea>
+                <p id="messageForm"></p>
                 <div
                   className={styles.redLine}
                   data-aos="fade-up"
@@ -168,6 +230,7 @@ const Footer = ({ dataContent, isContact }) => {
       </>
     );
   }
+
   return (
     <>
       <section className={`siteSection ${styles.formSection}`}>
