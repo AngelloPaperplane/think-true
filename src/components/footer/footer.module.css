@@ -224,6 +224,10 @@ textarea.inputForm {
   text-align: center;
 }
 
+.wrapperSendBtnForm {
+  width: 100%;
+}
+
 .sendBtnForm {
   background-color: transparent;
   border: none;

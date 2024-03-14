@@ -138,13 +138,15 @@ const Footer = ({ dataContent, isContact }) => {
                   data-aous-delay="0">
                   <div className={styles.ballRedLine}></div>
                 </div>
-                <button
-                  data-aos="fade-up"
-                  data-aos-duration="900"
-                  data-aous-delay="0"
-                  className={`news ${styles.sendBtnForm}`}>
-                  SEND
-                </button>
+                <div className={styles.wrapperSendBtnForm}>
+                  <button
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aous-delay="0"
+                    className={`news ${styles.sendBtnForm}`}>
+                    SEND
+                  </button>
+                </div>
               </form>
               <div className={`flex j-s a-s ${styles.contactBlock}`}>
                 {locations.map((location, i) => (
