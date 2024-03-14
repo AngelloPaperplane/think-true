@@ -285,7 +285,9 @@ const Footer = ({ dataContent, isContact }) => {
                 data-aous-delay="0">
                 <div className={styles.ballRedLine}></div>
               </div>
-              <button className={styles.sendBtnForm}>SEND</button>
+              <div className={styles.wrapperSendBtnForm}>
+                <button className={styles.sendBtnForm}>SEND</button>
+              </div>
             </form>
             <div className={`flex j-s a-s ${styles.contactBlock}`}>
               <div className={styles.directionGroup}>

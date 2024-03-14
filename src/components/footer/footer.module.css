@@ -255,9 +255,8 @@ textarea.inputForm {
   background-color: #d02e2a;
   z-index: 1;
   cursor: default;
-  /* margin-left: 70px;
-  margin-right: calc(80% - 5px); */
   margin-left: 75.5px;
+  
 }
 
 .ballRedLine {
