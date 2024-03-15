@@ -1,5 +1,5 @@
 .meetUsContainer {
-  padding-bottom: 20vh;
+  padding-bottom: 5vh;
 }
 
 .meetUsTitle {
@@ -11,9 +11,9 @@
 
 .wrapperTeam {
   width: 100%;
-  margin-top: 15vh;
+  margin-top: 0vh;
   flex-wrap: wrap;
-  gap: 3%;
+  gap: 0 4%;
 }
 
 .wrapperMember {
@@ -109,6 +109,9 @@
 
   .wrapperMember {
     width: 31.333333%;
+  }
+  .wrapperTeam {
+    gap: 0 3%;
   }
 }
 @media only screen and (max-width: 768px) {

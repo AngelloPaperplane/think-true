@@ -14,7 +14,7 @@
 
 .titleSection {
   font-weight: 700;
-  font-size: 220px;
+  font-size: clamp(50px, 13vw, 200px);
   line-height: 1;
   color: #363233;
   text-align: center;
@@ -40,10 +40,10 @@
 .infoSection {
   font-weight: 400;
   font-size: 25px;
-  line-height: 34px;
+  line-height: 1.4;
   text-align: center;
   color: #363233;
-  margin: 50px auto 150px;
+  margin: 40px auto 150px;
   width: 60%;
 }
 
@@ -74,14 +74,14 @@
 }
 
 .itemWhatWeDo {
-  padding: 40px 0;
+  padding: 30px 0;
   gap: 20px;
 }
 
 .textFeature {
   color: #363233;
   font-weight: 400;
-  font-size: 26px;
+  font-size: 20px;
   line-height: 29px;
   width: calc(100% - 50px);
 }
@@ -166,21 +166,35 @@
   font-weight: bold;
 }
 
-@media only screen and (max-width: 1300px) {
-  .titleSection {
-    font-size: 12vw;
+@media (width < 1600px){
+  .infoSection{
+    margin-bottom: 100px;
+    font-size: 23px;
   }
+
+  .itemWhatWeDo{
+    padding: 25px 0;
+  }
+  .textFeature{
+    font-size: 18px;
+  }
+  .sideText {
+    font-size: 23px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  /* .titleSection {
+    font-size: 12vw;
+  } */
 
   .itemWhatWeDo {
     padding: 30px 0;
   }
 
-  .textFeature {
-    font-size: 22px;
-  }
 
   .sideText {
-    font-size: 22px;
+    font-size: 20px;
   }
   .sideText p {
     margin-bottom: 3vh;
@@ -197,6 +211,10 @@
 
   .textImpact.text_large {
     font-size: 22px;
+  }
+
+  .infoSection{
+    font-size: 20px;
   }
 }
 
@@ -269,7 +287,6 @@
 
   .agencyAbout .titleSection {
     width: 90%;
-    font-size: 90px;
   }
 
   .agencyAbout .floatInfoAgency {
@@ -283,9 +300,9 @@
 }
 
 @media only screen and (max-width: 520px) {
-  .agencyAbout .titleSection {
+  /* .agencyAbout .titleSection {
     font-size: 40px;
-  }
+  } */
 
   .subtitleSection {
     font-size: 35px;

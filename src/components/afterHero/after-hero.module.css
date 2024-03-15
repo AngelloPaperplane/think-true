@@ -27,7 +27,7 @@
 }
 
 .textAfterHero {
-  font-size: 31px;
+  font-size: 25px;
   line-height: 34px;
   color: #363233;
   max-width: 50%;
@@ -96,9 +96,14 @@
   height: 100%;
 }
 
+@media (width <= 1600px) {
+  .textAfterHero {
+    font-size: 23px;
+  }
+}
 @media only screen and (max-width: 1300px) {
   .textAfterHero {
-    font-size: 25px;
+    font-size: 20px;
   }
 
   .titleAfterHero {

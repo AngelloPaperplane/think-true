@@ -33,7 +33,7 @@
 
 .formTitle {
   font-weight: 700;
-  font-size: 260px;
+  font-size: clamp(75px, 15vw, 260px);
   text-align: center;
   color: #00b099;
   margin-bottom: 15vh;
@@ -113,8 +113,8 @@ textarea.inputForm {
 }
 
 .infoUbication {
-  font-size: 19px;
-  line-height: 21px;
+  font-size: 18px;
+  line-height: 1.2;
   letter-spacing: 0.08em;
 }
 
@@ -293,9 +293,14 @@ textarea.inputForm {
   /* } */
 }
 
+@media (width <= 1600px) {
+  .infoForm {
+    font-size: 23px;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
   .formTitle {
-    font-size: 20vw;
     margin-bottom: 10vh;
   }
 }

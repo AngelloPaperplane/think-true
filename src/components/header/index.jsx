@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import React, { useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect, useId, useRef, useState } from 'react';
 import Menu from '../menu';
 import styles from './header.module.css';
 import { useRouter } from 'next/router';
@@ -13,6 +13,7 @@ const Header = ({ mainMenu, headerClass }) => {
   const router = useRouter();
   const { pathname } = router;
   const header = useRef(null);
+  const burgerId = useId();
 
   const changePath = () => {
     setPageLoaded(false);
@@ -55,6 +56,14 @@ const Header = ({ mainMenu, headerClass }) => {
     };
   }, []);
 
+  const classesBurger = [styles.active, styles['not-active']];
+
+  const openMenu = () => {
+    const burgerIdElement = document.getElementById(burgerId);
+    classesBurger.map((v) => burgerIdElement.classList.toggle(v));
+    setMenuOpened(!menuOpened);
+  };
+
   return (
     <>
       <header
@@ -73,7 +82,17 @@ const Header = ({ mainMenu, headerClass }) => {
 
           <div
             className={`${styles.burger} bg-ct `}
-            onClick={() => setMenuOpened(!menuOpened)}></div>
+            onClick={() => {
+              openMenu();
+            }}>
+            <div
+              id={burgerId}
+              className={`${styles.btnBurger} ${styles['not-active']}`}>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
         </div>
       </header>
       {!hideMenu && (

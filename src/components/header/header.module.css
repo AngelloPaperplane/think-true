@@ -6,14 +6,14 @@
   z-index: 13;
   padding: 30px 0;
   background-color: #ffffff00;
-  transition: all 0.5s ease-in-out, background-color 0.5s ease-in-out 0.25s;
+  transition: all 0.5s ease-in-out;
 }
 
 .siteHeader.lightHeader:not(.activeMenu) {
   background-color: #ffffff;
   backdrop-filter: blur(0px);
   padding: 5px 0;
-  transition: all 0.5s ease-in-out, background-color 0.5s ease-in-out 0.25s;
+  transition: all 0.5s ease-in-out;
 }
 
 .siteLogo {
@@ -61,14 +61,14 @@
 .burger {
   width: 40px;
   height: 40px;
-  background-image: url(/icons/menu-dark.png);
+  /* background-image: url(/icons/menu-dark.png); */
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 .whiteIcons .burger {
   width: 40px;
   height: 40px;
-  background-image: url(/icons/menu-white.png);
+  /* background-image: url(/icons/menu-white.png); */
   cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
@@ -80,11 +80,145 @@
 .lightHeader.siteHeader:not(.activeMenu).whiteIcons .burger {
   width: 35px;
   height: 35px;
-  background-image: url(/icons/menu-dark.png);
+  /* background-image: url(/icons/menu-dark.png); */
 }
 
 .activeMenu .burger {
-  background-image: url(/icons/close-white.png);
+  /* background-image: url(/icons/close-white.png); */
+}
+
+.btnBurger {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.btnBurger span {
+  display: block;
+  width: 100%;
+  border-radius: 3px;
+  height: 4px;
+  background: #363233;
+  transition: all 0.3s;
+  position: relative;
+}
+
+.btnBurger span:nth-of-type(2){
+  margin: 10px 0;
+}
+
+.active span{
+  background-color: #fff;
+}
+
+.active span:nth-child(1) {
+  animation: ease 0.7s top forwards;
+}
+
+.not-active span:nth-child(1) {
+  animation: ease 0.7s top-2 forwards;
+}
+
+.active span:nth-child(2) {
+  animation: ease 0.7s scaled forwards;
+}
+
+.not-active span:nth-child(2) {
+  animation: ease 0.7s scaled-2 forwards;
+}
+
+.active span:nth-child(3) {
+  animation: ease 0.7s bottom forwards;
+}
+
+.not-active span:nth-child(3) {
+  animation: ease 0.7s bottom-2 forwards;
+}
+
+@keyframes top {
+  0% {
+    top: 0;
+    transform: rotate(0);
+  }
+  50% {
+    top: 15px;
+    transform: rotate(0);
+  }
+  100% {
+    top: 15px;
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes top-2 {
+  0% {
+    top: 22px;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 22px;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes bottom {
+  0% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+  50% {
+    bottom: 15px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 15px;
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes bottom-2 {
+  0% {
+    bottom: 22px;
+    transform: rotate(135deg);
+  }
+  50% {
+    bottom: 22px;
+    transform: rotate(0);
+  }
+  100% {
+    bottom: 0;
+    transform: rotate(0);
+  }
+}
+
+@keyframes scaled {
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes scaled-2 {
+  0% {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 @media only screen and (max-width: 520px) {
