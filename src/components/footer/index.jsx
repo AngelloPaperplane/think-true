@@ -130,13 +130,15 @@ const Footer = ({ dataContent, isContact }) => {
                   name=""
                   id="f_message"
                   placeholder="Message"></textarea>
-                {/* <p id="messageForm"></p> */}
-                <div
-                  className={styles.redLine}
-                  data-aos="fade-up"
-                  data-aos-duration="900"
-                  data-aous-delay="0">
-                  <div className={styles.ballRedLine}></div>
+                <div className={styles.wrapperLineText}>
+                  <div
+                    className={styles.redLine}
+                    data-aos="fade-up"
+                    data-aos-duration="900"
+                    data-aous-delay="0">
+                    <div className={styles.ballRedLine}></div>
+                  </div>
+                  <p id="messageForm" className={styles.textFormSent}></p>
                 </div>
                 <div className={styles.wrapperSendBtnForm}>
                   <button

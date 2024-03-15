@@ -256,7 +256,6 @@ textarea.inputForm {
   z-index: 1;
   cursor: default;
   margin-left: 75.5px;
-  
 }
 
 .ballRedLine {
@@ -269,6 +268,18 @@ textarea.inputForm {
   margin-top: -12.5px;
   border-radius: 50%;
   background-color: #d02e2a;
+}
+
+.wrapperLineText {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.textFormSent {
+  width: calc(100% - 90px);
+  margin-left: 4.5px;
 }
 
 @media only screen and (min-width: 1920px) {
@@ -386,5 +397,9 @@ textarea.inputForm {
     margin-top: -7.5px;
     left: 50%;
     margin-left: -7.5px;
+  }
+
+  .textFormSent {
+    font-size: 13px;
   }
 }
