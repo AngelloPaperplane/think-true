@@ -21,7 +21,7 @@
 }
 
 .agencyAbout .titleSection {
-  font-size: 110px;
+  font-size: clamp(40px, 6vw, 110px);
   width: 50%;
   margin: 0 auto;
   text-transform: uppercase;
@@ -166,16 +166,16 @@
   font-weight: bold;
 }
 
-@media (width < 1600px){
-  .infoSection{
+@media (width < 1600px) {
+  .infoSection {
     margin-bottom: 100px;
     font-size: 23px;
   }
 
-  .itemWhatWeDo{
+  .itemWhatWeDo {
     padding: 25px 0;
   }
-  .textFeature{
+  .textFeature {
     font-size: 18px;
   }
   .sideText {
@@ -191,7 +191,6 @@
   .itemWhatWeDo {
     padding: 30px 0;
   }
-
 
   .sideText {
     font-size: 20px;
@@ -213,7 +212,7 @@
     font-size: 22px;
   }
 
-  .infoSection{
+  .infoSection {
     font-size: 20px;
   }
 }

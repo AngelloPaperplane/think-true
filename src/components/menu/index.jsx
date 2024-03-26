@@ -53,7 +53,9 @@ const Menu = ({ menuOpened, setMenuOpened, menuitems }) => {
                           className={`${styles.innerItemMenu} news`}
                           onClick={() => changePath()}>
                           {pathname !== `${subitem.link}` && (
-                            <Link href={subitem.link}>{subitem.label}</Link>
+                            <Link href={`/${subitem.link.split('/')[3]}`}>
+                              {subitem.label}
+                            </Link>
                           )}
                           {pathname === `${subitem.link}` && subitem.label}
                         </li>

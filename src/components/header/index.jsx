@@ -58,11 +58,22 @@ const Header = ({ mainMenu, headerClass }) => {
 
   const classesBurger = [styles.active, styles['not-active']];
 
-  const openMenu = () => {
+  const openMenu = (close = false) => {
+    console.log(close);
     const burgerIdElement = document.getElementById(burgerId);
+    if (close) {
+      burgerIdElement.classList.remove(styles.active);
+      burgerIdElement.classList.add(styles['not-active']);
+      setMenuOpened(false);
+      return;
+    }
     classesBurger.map((v) => burgerIdElement.classList.toggle(v));
     setMenuOpened(!menuOpened);
   };
+
+  useEffect(() => {
+    openMenu(true);
+  }, [pathname]);
 
   return (
     <>

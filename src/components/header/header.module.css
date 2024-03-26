@@ -112,6 +112,13 @@
   margin: 10px 0;
 }
 
+.lightHeader .btnBurger span:nth-of-type(2){
+  margin: 7px 0;
+}
+.lightHeader.activeMenu .btnBurger span:nth-of-type(2){
+  margin: 10px 0;
+}
+
 .active span{
   background-color: #fff;
 }
@@ -227,8 +234,8 @@
     height: 45px;
   }
 
-  .burger {
+  /* .burger {
     width: 30px;
     height: 30px;
-  }
+  } */
 }
