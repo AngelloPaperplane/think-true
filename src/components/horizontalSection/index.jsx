@@ -703,7 +703,7 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
               scrollTrigger: {
                 trigger: block.querySelector('.wrapperBlock'),
                 start: 'top 80%',
-                end: 'end -50%',
+                end: 'end 20%',
                 scrub: 3,
               },
             });

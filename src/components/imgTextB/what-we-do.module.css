@@ -274,10 +274,12 @@
 
   .mobileLine .ballRedLine {
     left: -12.5px;
+    top: 50%;
+    margin-top: -12.5px;
   }
 
   .mobileLine .linkBallRedLine {
-    top: 0%;
+    top: calc(-100% + 5px);
     left: initial;
     right: 120%;
     transform: none;
