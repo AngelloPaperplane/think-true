@@ -153,11 +153,11 @@
     transform: rotate(0);
   }
   50% {
-    top: 15px;
+    top: 14px;
     transform: rotate(0);
   }
   100% {
-    top: 15px;
+    top: 14px;
     transform: rotate(45deg);
   }
 }
@@ -183,11 +183,11 @@
     transform: rotate(0);
   }
   50% {
-    bottom: 15px;
+    bottom: 14px;
     transform: rotate(0);
   }
   100% {
-    bottom: 15px;
+    bottom: 14px;
     transform: rotate(135deg);
   }
 }
