@@ -59,7 +59,7 @@ const Header = ({ mainMenu, headerClass }) => {
   const classesBurger = [styles.active, styles['not-active']];
 
   const openMenu = (close = false) => {
-    console.log(close);
+    // console.log(close);
     const burgerIdElement = document.getElementById(burgerId);
     if (close) {
       burgerIdElement.classList.remove(styles.active);

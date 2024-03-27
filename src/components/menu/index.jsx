@@ -10,8 +10,8 @@ const Menu = ({ menuOpened, setMenuOpened, menuitems }) => {
   const [isOpened, setIsOpened] = useState(false);
   const router = useRouter();
   const { pathname } = router;
-  console.log(pathname);
-  console.log(menuitems);
+  // console.log(pathname);
+  // console.log(menuitems);
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setIsOpened(menuOpened);

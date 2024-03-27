@@ -20,7 +20,7 @@ const AboutUs = ({ data }) => {
     team,
     whatdo_new,
   } = data;
-  console.log(hero);
+  // console.log(hero);
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setTimeout(() => {

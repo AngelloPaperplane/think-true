@@ -63,9 +63,9 @@ const Hero = ({ dataHero }) => {
     }
 
     if (pathname === '/' || pathname === '/about-us') {
-      console.log('entro');
+      // console.log('entro');
       const currentVideo = videoHero.current;
-      console.log(currentVideo);
+      // console.log(currentVideo);
       const observerVideo = new IntersectionObserver(
         toggleSoundVideo,
         optionsVideo

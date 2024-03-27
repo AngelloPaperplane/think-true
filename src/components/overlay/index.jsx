@@ -14,7 +14,7 @@ const Overlay = () => {
   const textOverlayContainer = useRef(null);
 
   useEffect(() => {
-    console.log(localStorage);
+    // console.log(localStorage);
 
     if (localStorage.getItem('date')) {
       const firstDate = localStorage.getItem('date');

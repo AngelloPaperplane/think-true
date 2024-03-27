@@ -8,7 +8,7 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
   useEffect(() => {
     AOS.init();
   }, []);
-  console.log(contentData);
+  // console.log(contentData);
   if (contentData) {
     const { text, yellowText, image } = contentData;
     return (

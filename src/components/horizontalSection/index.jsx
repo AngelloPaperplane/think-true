@@ -753,8 +753,8 @@ const HorizontalSection = ({ blocksToIterate, type, classParent }) => {
   }, []);
 
   function get_blocks(block, i) {
-    console.log(i);
-    console.log(block);
+    // console.log(i);
+    // console.log(block);
     const bgColorClass =
       block.bgcolor === 'na'
         ? styles.embraceBlockContainer

@@ -71,7 +71,7 @@ const Footer = ({ dataContent, isContact }) => {
       }, 3000);
 
       // alert(result.status);
-      console.log('Success:', result.status);
+      // console.log('Success:', result.status);
       return false;
     };
 
