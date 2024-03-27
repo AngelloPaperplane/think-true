@@ -58,13 +58,13 @@
   width: 50%;
   flex-wrap: wrap;
   position: relative;
-  gap: 2%;
+  
   width: 48%;
 }
 
 .inputForm {
   padding: 15px 15px;
-  width: 48%;
+  width: calc(50% - 10px);
   border: 1px solid #363233;
   color: #363233;
   font-size: 22px;
