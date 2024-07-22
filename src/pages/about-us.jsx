@@ -33,8 +33,8 @@ const AboutUs = ({ data }) => {
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
       <AfterHero mediaBlockContent={mediablock} />
-      <ImgTextB contentData={whatdo} />
-      <ImgTextB contentData={whatdo_new} />
+      {/* <ImgTextB contentData={whatdo} /> */}
+      {/* <ImgTextB contentData={whatdo_new} /> */}
       {
         // <Agency dataContent={team} />
       }
