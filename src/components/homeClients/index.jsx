@@ -78,5 +78,4 @@ const Clients = ({ dataContent }) => {
   );
 };
 
-
 export default Clients;

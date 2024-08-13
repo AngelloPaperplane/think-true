@@ -1,0 +1,80 @@
+.servicesContainer {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-top: 40vh;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 2vh;
+  column-gap: 2vw;
+}
+
+.cardContainer {
+  display: flex;
+  margin: 0;
+  flex-direction: column;
+  width: calc(50% - 1vw);
+  height: 40vw;
+  padding: 2vw 3vw 2vw 3.5vw;
+  position: relative;
+
+  justify-content: flex-end;
+}
+
+.titleCard {
+  width: 90%;
+  font-size: 4.5vw;
+  color: #363233;
+  margin: 0;
+  position: relative;
+  font-weight: 700;
+  margin-bottom: 3.5vw;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.descriptionCard {
+  width: 100%;
+  align-self: flex-end;
+  font-weight: 400;
+  font-size: 1.4vw;
+  line-height: 1.4;
+}
+
+.indexBlock {
+  color: #363233;
+  align-self: flex-end;
+  font-size: 10vw;
+}
+
+@media only screen and (max-width: 1300px) {
+}
+
+@media only screen and (max-width: 768px) {
+  .servicesContainer {
+    justify-content: center;
+  }
+  .cardContainer {
+    width: 90%;
+    height: 65vw;
+  }
+
+  .titleCard {
+    width: 85%%;
+    font-size: 7vw;
+    margin-bottom: 5vw;
+  }
+
+  .descriptionCard {
+    width: 80%;
+    align-self: flex-end;
+    font-weight: 400;
+    font-size: 3vw;
+    line-height: 1.4;
+  }
+
+  .indexBlock {
+    color: #363233;
+    align-self: flex-end;
+    font-size: 12vw;
+  }
+}

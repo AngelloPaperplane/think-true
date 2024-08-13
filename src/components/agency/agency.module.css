@@ -142,8 +142,8 @@
   z-index: 1;
 }
 
-@media  (width <= 1600px) {
-  .floatInfoAgency{
+@media (width <= 1600px) {
+  .floatInfoAgency {
     font-size: 23px;
   }
 }
@@ -169,13 +169,12 @@
 }
 
 @media only screen and (max-width: 768px) {
-
-  .agencySection{
+  .agencySection {
     padding-top: 120vh;
     height: auto;
   }
 
-  .mobileImageHero{
+  .mobileImageHero {
     height: 120vh;
   }
 
@@ -231,7 +230,7 @@
     margin-top: calc(-140px - 5vh);
   }
 
-  .mobileImageHero{
+  .mobileImageHero {
     height: 70vh;
   }
   .titleAgency {

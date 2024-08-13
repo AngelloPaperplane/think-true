@@ -6,6 +6,9 @@ const nextConfig = {
       {
         hostname: 'thinktrue-bkt.s3.amazonaws.com',
       },
+      {
+        hostname: 'paperplane.com.co',
+      },
     ],
   },
 };

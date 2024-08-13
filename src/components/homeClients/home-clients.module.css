@@ -82,8 +82,8 @@
   }
 }
 
-@media  (width <= 1600px) {
-  .infoClients{
+@media (width <= 1600px) {
+  .infoClients {
     font-size: 23px;
   }
 }
@@ -91,7 +91,7 @@
   /* .clientsTitle {
     font-size: 24vw;
   } */
-  .infoClients{
+  .infoClients {
     font-size: 20px;
   }
 }
