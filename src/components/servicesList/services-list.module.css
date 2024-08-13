@@ -46,6 +46,35 @@
   font-size: 10vw;
 }
 
+@media only screen and (min-width: 2000px) {
+
+  .cardContainer {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    width: calc(50% - 1vw);
+    height: 40vh;
+    padding: 2vw 3vw 2vw 3.5vw;
+    position: relative;
+  
+    justify-content: flex-end;
+  }
+  .titleCard {
+    font-size: 4.5vh;
+  margin-bottom: 3.5vh;
+  }
+  
+  .descriptionCard {
+    font-size: 1.4vh;
+  }
+  
+  .indexBlock {
+    color: #363233;
+    align-self: flex-end;
+    font-size: 8vh;
+  }
+}
+
 @media only screen and (max-width: 1300px) {
 }
 
@@ -59,7 +88,6 @@
   }
 
   .titleCard {
-    width: 85%%;
     font-size: 7vw;
     margin-bottom: 5vw;
   }
