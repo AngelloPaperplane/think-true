@@ -149,6 +149,13 @@ const Footer = ({ dataContent, isContact }) => {
                     SEND
                   </button>
                 </div>
+                <div
+                data-aos="fade"
+                data-aos-duration="900"
+                data-aous-delay="0"
+                className={`${styles.imgCertfFooter}`}>
+                <Image src={'/images/NMSDC_CERIFIED.png'} fill alt="" />
+              </div>
               </form>
               <div className={`flex j-s a-s ${styles.contactBlock}`}>
                 {locations.map((location, i) => (

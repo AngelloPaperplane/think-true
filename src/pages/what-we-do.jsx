@@ -7,9 +7,7 @@ import React from 'react';
 
 const WhatWeDo = ({ data }) => {
   const { meta, hero, horizontalcontent, formfooter } = data;
-
-  console.log('horizontalcontent: ', horizontalcontent);
-
+  
   return (
     <>
       <Metas metadata={meta} />

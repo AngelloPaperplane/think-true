@@ -9,10 +9,10 @@
 
 .patternForm {
   width: 2vw;
-  height: 100%;
+  height: calc(100% - 35vh) ;
   position: absolute;
   left: 0%;
-  top: -10vh;
+  top: -vh;
   background-color: #faa300;
   z-index: 3;
 }
@@ -40,7 +40,7 @@
 }
 
 .infoForm {
-  font-weight: 400;
+  font-weight: 700;
   font-size: 25px;
   line-height: 34px;
   color: #363233;
@@ -51,7 +51,7 @@
   width: 100%;
   gap: 2%;
   margin-top: 7vh;
-  margin-bottom: -10vh;
+  margin-bottom: -35vh;
 }
 
 .siteForm {
@@ -63,6 +63,7 @@
 }
 
 .inputForm {
+  font-weight: 700;
   padding: 15px 15px;
   width: calc(50% - 10px);
   border: 1px solid #363233;
@@ -75,10 +76,11 @@
 }
 
 textarea.inputForm {
+  font-weight: 700;
   width: 100%;
   margin-top: 20px;
   resize: none;
-  aspect-ratio: 16/4;
+  aspect-ratio: 9/4;
 }
 
 .contactBlock {
@@ -118,6 +120,10 @@ textarea.inputForm {
   letter-spacing: 0.08em;
 }
 
+.infoUbication::first-letter {
+  font-weight: 700;
+}
+
 .infoUbication span {
   font-weight: 700;
 }
@@ -131,6 +137,18 @@ textarea.inputForm {
 }
 
 .imgSiteFooter img {
+  position: relative !important;
+  height: auto !important;
+}
+
+.imgCertfFooter {
+  width: 22%;
+  aspect-ratio: 5/7;
+  position: relative;
+  margin-top: 5vh;
+}
+
+.imgCertfFooter img {
   position: relative !important;
   height: auto !important;
 }
@@ -210,7 +228,7 @@ textarea.inputForm {
   font-size: 20px;
   line-height: 24px;
   color: #ffffff;
-  margin-top: 30px;
+  margin-top: 90px;
   gap: 5px;
 }
 
