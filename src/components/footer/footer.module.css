@@ -12,7 +12,6 @@
   height: calc(100% - 35vh) ;
   position: absolute;
   left: 0%;
-  top: -vh;
   background-color: #faa300;
   z-index: 3;
 }
@@ -33,7 +32,7 @@
 
 .formTitle {
   font-weight: 700;
-  font-size: clamp(75px, 15vw, 260px);
+  font-size: clamp(60px, 15vw, 260px);
   text-align: center;
   color: #00b099;
   margin-bottom: 15vh;
@@ -330,6 +329,10 @@ textarea.inputForm {
     line-height: 27px;
   }
 
+  .patternForm {
+    height: 100%;
+  }
+
   .wrapperForm {
     flex-direction: column-reverse;
     margin-bottom: 0;
@@ -384,6 +387,12 @@ textarea.inputForm {
 
   .infoUbication {
     font-size: 16px;
+  }
+
+  .imgCertfFooter {
+    aspect-ratio: 1/1;
+    margin-top: 2vh;
+    margin-bottom: -15vh;
   }
 }
 

@@ -23,7 +23,7 @@
 
 .titleCard {
   width: 90%;
-  font-size: 4.5vw;
+  font-size: 4vw;
   color: #363233;
   margin: 0;
   position: relative;
@@ -54,7 +54,7 @@
     flex-direction: column;
     width: calc(50% - 1vw);
     height: 40vh;
-    padding: 2vw 3vw 2vw 3.5vw;
+    padding: 2vh 3vh 2vh 3.5vh;
     position: relative;
   
     justify-content: flex-end;
@@ -85,6 +85,7 @@
   .cardContainer {
     width: 90%;
     height: 65vw;
+    padding: 2vh 3vh 2vh 3.5vh;
   }
 
   .titleCard {
