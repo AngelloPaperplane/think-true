@@ -47,7 +47,6 @@
 }
 
 @media only screen and (min-width: 2000px) {
-
   .cardContainer {
     display: flex;
     margin: 0;
@@ -56,18 +55,18 @@
     height: 40vh;
     padding: 2vh 3vh 2vh 3.5vh;
     position: relative;
-  
+
     justify-content: flex-end;
   }
   .titleCard {
     font-size: 4.5vh;
-  margin-bottom: 3.5vh;
+    margin-bottom: 3.5vh;
   }
-  
+
   .descriptionCard {
     font-size: 1.4vh;
   }
-  
+
   .indexBlock {
     color: #363233;
     align-self: flex-end;

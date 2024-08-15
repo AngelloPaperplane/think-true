@@ -9,7 +9,7 @@
 
 .patternForm {
   width: 2vw;
-  height: calc(100% - 35vh) ;
+  height: calc(100% - 35vh);
   position: absolute;
   left: 0%;
   background-color: #faa300;

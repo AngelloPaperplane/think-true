@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 import styles from './footer.module.css';
+import Panels from '@/components/homePanels';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
@@ -150,12 +151,12 @@ const Footer = ({ dataContent, isContact }) => {
                   </button>
                 </div>
                 <div
-                data-aos="fade"
-                data-aos-duration="900"
-                data-aous-delay="0"
-                className={`${styles.imgCertfFooter}`}>
-                <Image src={'/images/NMSDC_CERIFIED.png'} fill alt="" />
-              </div>
+                  data-aos="fade"
+                  data-aos-duration="900"
+                  data-aous-delay="0"
+                  className={`${styles.imgCertfFooter}`}>
+                  <Image src={'/images/NMSDC_CERIFIED.png'} fill alt="" />
+                </div>
               </form>
               <div className={`flex j-s a-s ${styles.contactBlock}`}>
                 {locations.map((location, i) => (
