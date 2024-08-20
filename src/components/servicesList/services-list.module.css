@@ -5,8 +5,9 @@
   margin-top: 40vh;
   flex-wrap: wrap;
   justify-content: flex-start;
-  row-gap: 2vh;
+  row-gap: 2.5vh;
   column-gap: 2vw;
+  margin-bottom: 10vh;
 }
 
 .cardContainer {
@@ -17,7 +18,6 @@
   height: 40vw;
   padding: 2vw 3vw 2vw 3.5vw;
   position: relative;
-
   justify-content: flex-end;
 }
 

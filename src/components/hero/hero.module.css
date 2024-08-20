@@ -55,8 +55,8 @@
 .lineHero {
   position: absolute !important;
   top: calc(93%);
-  height: 40vh;
-  width: 5px;
+  height: 18vh;
+  width: 3px;
 }
 
 .posterHero .lineHero {

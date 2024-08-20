@@ -6,6 +6,15 @@
   align-items: center;
 }
 
+.titlePanelSection {
+  font-weight: 700;
+  font-size: clamp(50px, 13vw, 200px);
+  line-height: 1;
+  color: #363233;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
 .panelsIteratorContainer {
   display: flex;
   flex-direction: row;

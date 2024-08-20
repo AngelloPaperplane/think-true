@@ -12,6 +12,13 @@ const FeaturesJobs = ({ dataContent }) => {
   console.log('dataContent', dataContent);
   return (
     <div className={`container ${styles.panelsContainer}`}>
+      <h3
+        className={`news ${styles.titlePanelSection}`}
+        data-aos="fade-up"
+        data-aos-duration="900"
+        data-aous>
+        OUR WORK
+      </h3>
       <div className={`${styles.panelsIteratorContainer}`}>
         {dataContent.map((content, i) => (
           <div

@@ -1,5 +1,5 @@
 .clientsSection {
-  padding: 40vh 0 10vh;
+  padding: 40vh 0 3vh;
   text-align: center;
 }
 
@@ -40,7 +40,7 @@
 
 .collaboratorsContainer {
   width: 100%;
-  margin: 100px 0 50px;
+  margin: 50px 0 50px;
   gap: 1%;
   display: flex;
   justify-content: center;

@@ -15,12 +15,27 @@ const NewsCycle = localFont({
     },
   ],
 });
+/* const ProximaNova = localFont({
+  src: [
+    {
+      path: '../styles/fonts/Proximanova-Regular.otf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../styles/fonts/Proximanova-Bold.otf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+});*/
 export const ThinkTrue = React.createContext({});
 
 const ThinkTrueProvider = ({ children }) => {
   const [pageLoaded, setPageLoaded] = useState(true);
   return (
-    <ThinkTrue.Provider value={{ Aleo, NewsCycle, pageLoaded, setPageLoaded }}>
+    <ThinkTrue.Provider
+      value={{ Aleo, NewsCycle, pageLoaded /* , ProximaNova*/, setPageLoaded }}>
       {children}
     </ThinkTrue.Provider>
   );

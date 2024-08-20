@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'NewsCycke';
-  src: url('../../styles/fonts/NewsCycle-Bold.ttf');
+  font-family: 'ProximaNovaBold';
+  src: url('https://use.typekit.net/qoq7ghf.css');
 }
 
 .afterHeroSection {
@@ -8,8 +8,7 @@
 }
 
 .afterHeroContainer {
-  padding-top: 37vh;
-  padding-bottom: 15vh;
+  padding-top: 17vh;
 }
 
 .afterHeroAbout .afterHeroContainer {
@@ -47,7 +46,7 @@
   text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
-  font-family: 'NewsCycke';
+  font-family: 'ProximaNovaBold';
 }
 
 .wrapperAfterHeroTeam .textAfterHero {

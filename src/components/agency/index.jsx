@@ -23,67 +23,68 @@ const Agency = ({ image, dataContent }) => {
       buttonlabel,
     } = dataContent;
     return (
-      <section
-        className={`siteSection bg-cv ${styles.agencySection} ${
-          pathname === '/about-us' ? styles.agencyAbout : ''
-        }`}
-        style={{ backgroundImage: `url(${image['super-large']})` }}>
-        <div
-          className={`${styles.mobileImageHero} bg-cv`}
-          style={{
-            backgroundImage: `url(${image_mobile['super-large']})`,
-          }}></div>
-        <div className={`${styles.agencyContainer} container`}>
-          {title && (
-            <h2
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0"
-              className={`${styles.titleAgency} ${
-                pathname === '/about-us' ? 'aleo' : 'news'
-              } ${pathname === '/about-us' ? styles.aboutTitle : ''}`}
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
-          )}
-
-          {subtitle && pathname !== '/about-us' && (
-            <h3
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0"
-              className={`news ${styles.subtitleAgency}`}
-              dangerouslySetInnerHTML={{ __html: subtitle }}
-            />
-          )}
-
-          <div className={styles.floatInfoAgency}>
-            {buttonlabel !== '' && buttonlink !== '' && (
-              <div
-                className={styles.redLine}
+      <>
+        <section
+          className={`siteSection bg-cv ${styles.agencySection} ${
+            pathname === '/about-us' ? styles.agencyAbout : ''
+          }`}
+          style={{ backgroundImage: `url(${image['super-large']})` }}>
+          <div
+            className={`${styles.mobileImageHero} bg-cv`}
+            style={{
+              backgroundImage: `url(${image_mobile['super-large']})`,
+            }}></div>
+          <div className={`${styles.agencyContainer} container`}>
+            {title && (
+              <h2
                 data-aos="fade-up"
                 data-aos-duration="900"
-                data-aous-delay="0">
-                <div className={styles.ballRedLine}>
-                  <Link
-                    href={buttonlink}
-                    style={{
-                      backgroundImage: `url(/icons/${buttoncolor}.png)`,
-                    }}
-                    className={`news ${styles.linkBallRedLine}`}>
-                    {buttonlabel}
-                  </Link>
-                </div>
-              </div>
+                data-aous-delay="0"
+                className={`${styles.titleAgency} ${
+                  pathname === '/about-us' ? 'aleo' : 'news'
+                } ${pathname === '/about-us' ? styles.aboutTitle : ''}`}
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
             )}
-            <p
+
+            {subtitle && pathname !== '/about-us' && (
+              <h3
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0"
+                className={`news ${styles.subtitleAgency}`}
+                dangerouslySetInnerHTML={{ __html: subtitle }}
+              />
+            )}
+          </div>
+        </section>
+        <div className={styles.floatInfoAgency}>
+          {buttonlabel !== '' && buttonlink !== '' && (
+            <div
+              className={styles.redLine}
               data-aos="fade-up"
               data-aos-duration="900"
-              data-aous-delay="0"
-              className={styles.infoAgency}
-              dangerouslySetInnerHTML={{ __html: text }}></p>
-          </div>
+              data-aous-delay="0">
+              <div className={styles.ballRedLine}>
+                <Link
+                  href={buttonlink}
+                  style={{
+                    backgroundImage: 'url(/icons/brick.png)',
+                  }}
+                  className={`news ${styles.linkBallRedLine}`}>
+                  {buttonlabel}
+                </Link>
+              </div>
+            </div>
+          )}
+          <p
+            data-aos="fade-up"
+            data-aos-duration="900"
+            data-aous-delay="0"
+            className={styles.infoAgency}
+            dangerouslySetInnerHTML={{ __html: text }}></p>
         </div>
-      </section>
+      </>
     );
   }
   return (

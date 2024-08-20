@@ -4,7 +4,7 @@
 }
 
 .whatWeDoCo {
-  padding: 20vh 0;
+  padding: 10vh 0;
 }
 
 .agencyAbout .whatWeDoCo {
@@ -43,7 +43,7 @@
   line-height: 1.4;
   text-align: center;
   color: #363233;
-  margin: 40px auto 150px;
+  margin: 40px auto 40px;
   width: 60%;
 }
 
@@ -119,8 +119,8 @@
 
 .redLine {
   position: absolute;
-  width: 5px;
-  height: 40vh;
+  width: 3px;
+  height: 25vh;
   background-color: #d02e2a;
   top: 80%;
   right: 10%;
