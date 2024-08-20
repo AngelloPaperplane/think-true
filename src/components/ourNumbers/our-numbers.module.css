@@ -72,6 +72,9 @@
 }
 
 @media only screen and (max-width: 520px) {
+  .ourNumbersSection{
+    padding: 25px 0;
+  }
   .itemNumber {
     width: 100%;
   }

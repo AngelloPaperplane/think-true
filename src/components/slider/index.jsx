@@ -41,7 +41,6 @@ const SiteSlider = ({ title, text, projects, settings, onlyImg }) => {
             data-aos="fade-up"
             data-aos-duration="1900"
             data-aous-delay="0"
-            style={{ marginBottom: `${text !== '' ? '1vh' : '5vh'}` }}
             dangerouslySetInnerHTML={{ __html: title }}
           />
         )}

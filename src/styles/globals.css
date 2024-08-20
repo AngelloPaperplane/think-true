@@ -358,7 +358,7 @@ a {
   max-width: 1600px;
 }
 
-.overflow-hidden{
+.overflow-hidden {
   overflow: hidden;
 }
 
@@ -403,7 +403,7 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
-.onlyImageSection .slick-arrow{
+.onlyImageSection .slick-arrow {
   top: 50%;
 }
 
@@ -421,14 +421,13 @@ a {
   display: flex;
 }
 
-.slick-track > div{
+.slick-track > div {
   margin: 0 20px;
 }
 
-.onlyImageSection .slick-track > div{
+.onlyImageSection .slick-track > div {
   margin: 0 0px;
 }
-
 
 .imgAnimation {
   clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);

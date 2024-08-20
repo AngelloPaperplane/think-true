@@ -24,6 +24,11 @@ const ContentItemSlider = ({
           }`,
         }}>
         {title}
+        <span className={styles.line} style={{ backgroundColor: color }}>
+          <span
+            className={styles.ball}
+            style={{ backgroundColor: color }}></span>
+        </span>
       </h2>
       <h3
         className={`news ${styles.subtitleProject}`}

@@ -1,13 +1,13 @@
 .sliderSection {
   position: relative;
-  padding: 50px 0 50px;
+  padding: 50px 0;
 }
 
 .sliderContainer {
   position: relative;
 }
 
-.onlyImageSliderSec .sliderContainer{
+.onlyImageSliderSec .sliderContainer {
   overflow: hidden;
 }
 
@@ -16,9 +16,8 @@
   font-size: clamp(50px, 9vw, 120px);
   text-align: center;
   line-height: 1;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
   color: #363233;
-  margin-bottom: 5vh;
 }
 
 .textSlider {
@@ -29,4 +28,8 @@
   margin-bottom: 5vh;
 }
 
-
+@media only screen and (max-width: 520px){
+  .sliderSection {
+    padding: 25px 0;
+  }
+}

@@ -47,10 +47,7 @@ const Hero = ({ dataHero }) => {
   };
 
   useEffect(() => {
-    if (
-      pathname !== '/' &&
-      pathname !== '/about-us'
-    ) {
+    if (pathname !== '/' && pathname !== '/about-us') {
       const observer = new IntersectionObserver(loadImage, options);
       const currentSect = heroSection.current;
       if (currentSect) {

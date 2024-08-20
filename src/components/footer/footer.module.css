@@ -32,7 +32,7 @@
 
 .formTitle {
   font-weight: 700;
-  font-size: clamp(60px, 15vw, 170px);
+  font-size: clamp(60px, 10vw, 170px);
   text-align: center;
   color: #00b099;
   margin-bottom: 15vh;
@@ -397,6 +397,9 @@ textarea.inputForm {
 }
 
 @media only screen and (max-width: 520px) {
+  .formSection{
+    margin-top: 50px;
+  }
   .legacyText {
     font-size: 12px;
     white-space: nowrap;

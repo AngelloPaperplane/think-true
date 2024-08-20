@@ -21,9 +21,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
           pathname === '/about-us' && styles.afterHeroAbout
         }`}>
         <div
-          className={`container ${styles.afterHeroContainer} ${
-            pathname === '/work/[id]' ? styles.noPaddingMobile : ''
-          } ${afterhero ? styles.noPadding : ''}`}>
+          className={`container ${styles.afterHeroContainer}  ${afterhero ? styles.noPadding : ''}`}>
           {(mediaBlockContent.layout === 'home' ||
             mediaBlockContent.layout === 'team') && (
             <>
@@ -47,17 +45,18 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     {mediaBlockContent.title.text}
                   </h2>
                 )}
-                {mediaBlockContent.subtitle && mediaBlockContent.subtitle.text && (
-                  <h3
-                    data-aos="fade-up"
-                    data-aos-duration="1900"
-                    data-aous-delay="0"
-                    className={`${styles.subTitleAfterHero} ${
-                      pathname === '/about-us' ? 'news' : ''
-                    } ${styles[mediaBlockContent.title.position]}`}>
-                    {mediaBlockContent.title.text}
-                  </h3>
-                 )}
+                {mediaBlockContent.subtitle &&
+                  mediaBlockContent.subtitle.text && (
+                    <h3
+                      data-aos="fade-up"
+                      data-aos-duration="1900"
+                      data-aous-delay="0"
+                      className={`${styles.subTitleAfterHero} ${
+                        pathname === '/about-us' ? 'news' : ''
+                      } ${styles[mediaBlockContent.title.position]}`}>
+                      {mediaBlockContent.title.text}
+                    </h3>
+                  )}
                 {mediaBlockContent.text && (
                   <div
                     className={styles.textAfterHero}

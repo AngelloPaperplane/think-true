@@ -54,6 +54,9 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .yellowTextImgSection {
+    padding: 5vh 0;
+  }
   .topText {
     width: 70%;
   }
