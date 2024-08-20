@@ -12,6 +12,27 @@ import OurNumbers from '@/components/ourNumbers';
 const DetailWork = ({ data }) => {
   const { meta, hero, blocks, moreprojects, formfooter } = data;
 
+  console.log(blocks);
+
+  const settings = {
+    dots: false,
+    arrows: true,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 769,
+        settings: {
+          speed: 500,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
   function get_block_content(block, index) {
     switch (block.block_name) {
       case 'text_block':
@@ -24,6 +45,33 @@ const DetailWork = ({ data }) => {
         );
       case 'image_block':
         return <BigImage key={index} dataImage={block} />;
+      case 'gallery': {
+        const settingsGallery = {
+          dots: false,
+          arrows: true,
+          infinite: false,
+          speed: 500,
+          slidesToShow: parseInt(block.settings.slidesToShow),
+          slidesToScroll: 1,
+          responsive: [
+            {
+              breakpoint: 769,
+              settings: {
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ],
+        };
+        return (
+          <SiteSlider
+            projects={block.gallery}
+            settings={settingsGallery}
+            onlyImg={true}
+          />
+        );
+      }
       case 'analytics_block':
         return <OurNumbers key={index} data={block} />;
       case 'split_block':
@@ -40,7 +88,7 @@ const DetailWork = ({ data }) => {
       <Hero dataHero={hero} />
 
       {blocks.map((block, i) => get_block_content(block, i))}
-      <SiteSlider {...moreprojects} />
+      <SiteSlider {...moreprojects} settings={settings} />
       <Footer dataContent={formfooter} />
     </>
   );

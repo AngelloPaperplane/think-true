@@ -1,0 +1,44 @@
+.project {
+  width: 100%;
+  /* margin: 0 1%; */
+  aspect-ratio: 1/1;
+  position: relative;
+}
+
+.projectOnlyImg{
+  aspect-ratio: 16/9;
+}
+
+.projectImg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+.projectImg:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000057;
+}
+
+
+.linkOtherProject {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .textSlider {
+    font-size: clamp(20px, 1vw, 150px);
+  }
+}

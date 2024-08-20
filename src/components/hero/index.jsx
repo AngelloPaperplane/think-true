@@ -49,8 +49,7 @@ const Hero = ({ dataHero }) => {
   useEffect(() => {
     if (
       pathname !== '/' &&
-      pathname !== '/about-us' &&
-      pathname !== '/work/[id]'
+      pathname !== '/about-us'
     ) {
       const observer = new IntersectionObserver(loadImage, options);
       const currentSect = heroSection.current;
@@ -178,7 +177,7 @@ const Hero = ({ dataHero }) => {
               backgroundImage:
                 layout === 'poster' ? `url(${image['super-large']})` : 'none',
             }}>
-            {title && !logoShow && layout !== 'poster' && (
+            {title && !logoShow && pathname !== '/work/[id]' && (
               <h1
                 className={`news splitText ${styles.titleHero}`}
                 style={{ color: title_color ?? '#fff' }}

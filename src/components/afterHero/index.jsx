@@ -27,13 +27,13 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
           {(mediaBlockContent.layout === 'home' ||
             mediaBlockContent.layout === 'team') && (
             <>
-              {mediaBlockContent.image && pathname !== '/about-us' && (
+              {/* {mediaBlockContent.image && pathname !== '/about-us' && (
                 <div
                   className={`${styles.bigCircle}`}
                   data-aos="zoom-in"
                   data-aos-duration="1900"
                   data-aous-delay="0"></div>
-              )}
+              )} */}
 
               <div className={styles.wrapperAfterHeroHome}>
                 {mediaBlockContent.title && mediaBlockContent.title.text && (
@@ -47,6 +47,17 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     {mediaBlockContent.title.text}
                   </h2>
                 )}
+                {mediaBlockContent.subtitle && mediaBlockContent.subtitle.text && (
+                  <h3
+                    data-aos="fade-up"
+                    data-aos-duration="1900"
+                    data-aous-delay="0"
+                    className={`${styles.subTitleAfterHero} ${
+                      pathname === '/about-us' ? 'news' : ''
+                    } ${styles[mediaBlockContent.title.position]}`}>
+                    {mediaBlockContent.title.text}
+                  </h3>
+                 )}
                 {mediaBlockContent.text && (
                   <div
                     className={styles.textAfterHero}

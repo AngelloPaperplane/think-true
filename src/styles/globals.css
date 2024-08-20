@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @font-face {
   font-family: 'Aleo';
   src: url('../styles/fonts/Aleo-Regular.ttf');
@@ -354,6 +358,10 @@ a {
   max-width: 1600px;
 }
 
+.overflow-hidden{
+  overflow: hidden;
+}
+
 .newsCycle {
   font-family: serif;
 }
@@ -377,7 +385,7 @@ a {
 .slick-arrow {
   position: absolute;
   top: 60%;
-  left: 2%;
+  left: 3%;
   margin-top: -25px;
   width: 50px;
   height: 50px;
@@ -395,10 +403,14 @@ a {
   transition: all 0.3s ease-in-out;
 }
 
+.onlyImageSection .slick-arrow{
+  top: 50%;
+}
+
 .slick-next {
   background-image: url(/icons/next.png);
   left: initial;
-  right: 4%;
+  right: 3%;
 }
 
 .slick-arrow.slick-disabled {
@@ -407,8 +419,16 @@ a {
 
 .slick-track {
   display: flex;
-  gap: 1%;
 }
+
+.slick-track > div{
+  margin: 0 20px;
+}
+
+.onlyImageSection .slick-track > div{
+  margin: 0 0px;
+}
+
 
 .imgAnimation {
   clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
