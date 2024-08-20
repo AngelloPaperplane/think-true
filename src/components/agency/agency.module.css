@@ -170,12 +170,12 @@
 
 @media only screen and (max-width: 768px) {
   .agencySection {
-    padding-top: 120vh;
+    padding-top: 20vh;
     height: auto;
   }
 
   .mobileImageHero {
-    height: 120vh;
+    height: 60vh;
   }
 
   .agencyAbout.agencySection {
@@ -196,12 +196,13 @@
   }
   .agencyContainer {
     width: 100%;
-    margin-top: calc(-200px - 5vh);
+   /* margin-top: calc(-500px - 5vh);*/
   }
 
   .floatInfoAgency {
     width: 100%;
     /* margin-bottom: -38vh; */
+    margin-top: 15vh;
   }
 
   .redLine {
@@ -220,19 +221,6 @@
   }
 }
 @media only screen and (max-width: 520px) {
-  .agencySection {
-    height: auto;
-    margin-bottom: 30vh;
-    margin-top: 5vh;
-    padding-top: 70vh;
-  }
-  .agencyContainer {
-    margin-top: calc(-140px - 5vh);
-  }
-
-  .mobileImageHero {
-    height: 70vh;
-  }
   .titleAgency {
     font-size: 90px;
   }

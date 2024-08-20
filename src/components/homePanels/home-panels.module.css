@@ -52,7 +52,6 @@
   margin: 0;
   position: relative;
   font-weight: 700;
-  margin-bottom: 0.5vw;
   margin-top: 3vh;
 }
 
@@ -160,11 +159,10 @@
     margin: 0;
     flex-direction: column;
     width: calc(50% - 1vw);
-    height: 40vh;
-    padding: 2vh 3vh 2vh 3.5vh;
+    padding: 1vh 1.5vh 1vh 2vh;
     position: relative;
-
-    justify-content: flex-end;
+    justify-content: flex-start;
+    min-height: 40vh;
   }
   .titleCard {
     font-size: 4.5vh;
@@ -180,6 +178,9 @@
     align-self: flex-end;
     font-size: 8vh;
   }
+  .imgPanel {
+    height: 25vh;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
@@ -191,9 +192,15 @@
   }
   .cardContainer {
     width: 100%;
-    height: 65vw;
-    padding: 0 0 3vh 0;
+    padding: 0 0 3vh 0; 
+    min-height: 15vh;
+    height: auto;
   }
+
+  .imgPanel {
+    height: 25vh;
+  }
+
 
   .titleCard {
     font-size: 7vw;
@@ -224,4 +231,6 @@
     line-height: 1;
     margin-left: 0.5vw;
   }
+
+  
 }

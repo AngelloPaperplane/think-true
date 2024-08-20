@@ -26,10 +26,10 @@
 }
 
 .textAfterHero {
-  font-size: 25px;
+  font-size: 31px;
   line-height: 34px;
   color: #363233;
-  max-width: 50%;
+  max-width: 55%;
   margin-bottom: 40px;
 }
 
@@ -111,7 +111,7 @@
   }
 
   .afterHeroContainer {
-    padding-top: 40vh;
+    padding-top: 20vh;
   }
 }
 
