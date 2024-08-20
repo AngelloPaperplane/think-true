@@ -22,7 +22,7 @@ const OurNumbers = ({ data }) => {
           dangerouslySetInnerHTML={{ __html: title }}
         />
 
-        <div className={`flex j-b a-s ${styles.wrapperOurNumbers}`}>
+        <div className={`flex j-c a-s ${styles.wrapperOurNumbers}`}>
           {numbers.map((number, i) => (
             <div
               key={

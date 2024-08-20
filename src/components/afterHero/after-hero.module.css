@@ -5,6 +5,7 @@
 
 .afterHeroSection {
   width: 100%;
+  padding-bottom: 50px;
 }
 
 .afterHeroContainer {
@@ -18,11 +19,20 @@
 .titleAfterHero {
   font-style: normal;
   font-weight: 700;
-  font-size: 5vw;
+  font-size: 60px;
   line-height: 0.9;
   width: 65%;
   color: #363233;
-  margin-bottom: 50px;
+  margin-bottom: 10px;
+}
+
+.subTitleAfterHero {
+  font-style: normal;
+  font-size: 40px;
+  line-height: 0.9;
+  width: 65%;
+  color: #363233;
+  margin-bottom: 10px;
 }
 
 .textAfterHero {
@@ -59,14 +69,12 @@
 
 .videoContainer {
   margin: 0 auto;
-  margin-top: 15vh;
-  width: 80%;
+  width: 100%;
   aspect-ratio: 16/9;
   position: relative;
 }
 
 .videoContainerDetail {
-  margin-top: 5vh;
 }
 
 .bigCircle {
@@ -109,7 +117,7 @@
     font-size: 4.5vw;
     line-height: 1;
   }
-
+/* 
   .afterHeroContainer {
     padding-top: 20vh;
   }
@@ -134,6 +142,9 @@
   }
 }
 @media only screen and (max-width: 520px) {
+  .afterHeroSection{
+    padding-bottom: 25px;
+  }
   .textAfterHero {
     max-width: 90%;
     line-height: 1.5;
@@ -148,5 +159,5 @@
 }
 
 .noPadding {
-  padding-top: 5vh;
+  padding-top: 50px;
 }
