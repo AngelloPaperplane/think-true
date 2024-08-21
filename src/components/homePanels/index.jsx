@@ -39,11 +39,12 @@ const FeaturesJobs = ({ dataContent }) => {
               className={`news ${styles.titleCard}`}
               style={{
                 width: `${content.titleWidth}`,
-              }}>
-              {content.title}
-            </h2>
+              }}
+              dangerouslySetInnerHTML={{ __html: content.title}}/>
 
-            <h3 className={` ${styles.subtitleCard}`}>{content.subtitle}</h3>
+            <h3 className={` ${styles.subtitleCard}`}
+            dangerouslySetInnerHTML={{ __html: content.subtitle}}
+            />
 
             <p className={`${styles.descriptionCard}`}>{content.text}</p>
 

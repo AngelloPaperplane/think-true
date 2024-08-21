@@ -232,13 +232,14 @@
   }
 
   .imgSection {
+    min-height: 40vh;
     display: none;
   }
 
   .imgSectionMobile {
     display: block;
     width: 100%;
-    height: 70vh;
+    height: 40vh;
     margin-bottom: 5vh;
     background-size: cover;
   }

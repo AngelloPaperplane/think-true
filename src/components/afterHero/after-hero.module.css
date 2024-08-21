@@ -36,11 +36,10 @@
 }
 
 .textAfterHero {
-  font-size: 25px;
+  font-size: 31px;
   line-height: 34px;
   color: #363233;
-  max-width: 50%;
-  margin-top: 30px;
+  max-width: 55%;
   margin-bottom: 40px;
 }
 
@@ -120,8 +119,8 @@
   }
 /* 
   .afterHeroContainer {
-    padding-top: 40vh;
-  } */
+    padding-top: 20vh;
+  }
 }
 
 @media only screen and (max-width: 768px) {
