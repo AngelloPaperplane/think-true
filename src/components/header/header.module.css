@@ -123,6 +123,14 @@
   background-color: #fff;
 }
 
+.whiteIcons .btnBurger span{
+  background-color: #fff;
+}
+.lightHeader.siteHeader:not(.activeMenu).whiteIcons .burger span{
+  background-color: #363233;
+}
+  
+
 .active span:nth-child(1) {
   animation: ease 0.7s top forwards;
 }
