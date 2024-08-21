@@ -8,6 +8,7 @@ import Hero from '@/components/hero';
 import AfterHero from '@/components/afterHero';
 import ImgTextB from '@/components/imgTextB';
 import Agency from '@/components/agency';
+import AboutUsContent from '@/components/aboutUsContent';
 
 const AboutUs = ({ data }) => {
   const {
@@ -38,11 +39,7 @@ const AboutUs = ({ data }) => {
       {
         // <Agency dataContent={team} />
       }
-      <HorizontalSection
-        blocksToIterate={blocks[0]}
-        classParent="01"
-        type="about-1"
-      />
+      <AboutUsContent/>
       <Footer dataContent={formfooter} />
     </>
   );

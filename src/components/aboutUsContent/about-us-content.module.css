@@ -1,0 +1,86 @@
+.aboutContainer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  row-gap: 2.5vh;
+  column-gap: 2vw;
+  margin-bottom: 8vh;
+}
+
+.contentContainer {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 5vh 2vh 0;
+}
+
+.titleSection {
+  font-weight: 700;
+  font-size: clamp(50px, 13vw, 200px);
+  line-height: 1;
+  color: #363233;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+.aboutSection {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: 10vh 0;
+  min-height: 20vh;
+}
+
+.imgPanel {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: auto;
+  padding: 0 5vw;
+  gap: 5vh;
+}
+
+.blockContainer {
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.textTitle {
+  font-size: 30px;
+  color: #363233;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.textDescription {
+    color: #363233;
+    font-weight: 400;
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+@media only screen and (min-width: 2000px) {
+}
+
+@media only screen and (max-width: 1300px) {
+  .textTitle {
+    font-size: 25px;
+  }
+  .textDescription {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+}
