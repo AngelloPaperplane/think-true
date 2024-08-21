@@ -13,7 +13,7 @@ const FeaturesJobs = ({ dataContent }) => {
   return (
     <div className={`container ${styles.panelsContainer}`}>
       <h3
-        className={`news ${styles.titlePanelSection}`}
+        className={`news ${styles.titlePanelSection} titleSection`}
         data-aos="fade-up"
         data-aos-duration="900"
         data-aous>

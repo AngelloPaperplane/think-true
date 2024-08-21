@@ -58,31 +58,34 @@ const Agency = ({ image, dataContent }) => {
             )}
           </div>
         </section>
-        <div className={styles.floatInfoAgency}>
-          {buttonlabel !== '' && buttonlink !== '' && (
-            <div
-              className={styles.redLine}
+
+        <div className="container">
+          <div className={styles.floatInfoAgency}>
+            <p
               data-aos="fade-up"
               data-aos-duration="900"
-              data-aous-delay="0">
-              <div className={styles.ballRedLine}>
-                <Link
-                  href={buttonlink}
-                  style={{
-                    backgroundImage: 'url(/icons/brick.png)',
-                  }}
-                  className={`news ${styles.linkBallRedLine}`}>
-                  {buttonlabel}
-                </Link>
+              data-aous-delay="0"
+              className={styles.infoAgency}
+              dangerouslySetInnerHTML={{ __html: text }}></p>
+            {buttonlabel !== '' && buttonlink !== '' && (
+              <div
+                className={styles.redLine}
+                data-aos="fade-up"
+                data-aos-duration="900"
+                data-aous-delay="0">
+                <div className={styles.ballRedLine}>
+                  <Link
+                    href={buttonlink}
+                    style={{
+                      backgroundImage: 'url(/icons/brick.png)',
+                    }}
+                    className={`news ${styles.linkBallRedLine}`}>
+                    {buttonlabel}
+                  </Link>
+                </div>
               </div>
-            </div>
-          )}
-          <p
-            data-aos="fade-up"
-            data-aos-duration="900"
-            data-aous-delay="0"
-            className={styles.infoAgency}
-            dangerouslySetInnerHTML={{ __html: text }}></p>
+            )}
+          </div>
         </div>
       </>
     );

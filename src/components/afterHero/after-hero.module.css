@@ -9,7 +9,7 @@
 }
 
 .afterHeroContainer {
-  padding-top: 17vh;
+  padding-top: 150px;
 }
 
 .afterHeroAbout .afterHeroContainer {
@@ -36,8 +36,8 @@
 }
 
 .textAfterHero {
-  font-size: 31px;
-  line-height: 34px;
+  font-size: 20px;
+  line-height: 1.3;
   color: #363233;
   max-width: 55%;
   margin-bottom: 40px;
@@ -54,9 +54,8 @@
   background-position: center center;
   background-repeat: no-repeat;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
-  font-family: 'ProximaNovaBold';
 }
 
 .wrapperAfterHeroTeam .textAfterHero {
@@ -118,14 +117,13 @@
     line-height: 1;
   }
 
-  .afterHeroContainer {
+  /* .afterHeroContainer {
     padding-top: 20vh;
-  }
+  } */
 }
 
 @media only screen and (max-width: 768px) {
   .textAfterHero {
-    font-size: 18px;
     max-width: 80%;
   }
 
@@ -144,6 +142,9 @@
 @media only screen and (max-width: 520px) {
   .afterHeroSection{
     padding-bottom: 25px;
+  }
+  .afterHeroContainer {
+    padding-top: 120px;
   }
   .textAfterHero {
     max-width: 90%;

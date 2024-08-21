@@ -4,7 +4,7 @@
 }
 
 .whatWeDoCo {
-  padding: 10vh 0;
+  padding: 50px 0;
 }
 
 .agencyAbout .whatWeDoCo {
@@ -14,7 +14,7 @@
 
 .titleSection {
   font-weight: 700;
-  font-size: clamp(50px, 13vw, 200px);
+  font-size: 120px;
   line-height: 1;
   color: #363233;
   text-align: center;
@@ -29,21 +29,21 @@
 
 .subtitleSection {
   text-transform: uppercase;
-  font-size: 50px;
-  line-height: 43px;
+  font-size: 24px;
+  line-height: 1;
   text-transform: uppercase;
   color: #faa300;
   text-align: center;
-  margin-top: 40px;
+  margin-top: 10px;
 }
 
 .infoSection {
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.4;
   text-align: center;
   color: #363233;
-  margin: 40px auto 40px;
+  margin: 10px auto 0px;
   width: 60%;
 }
 
@@ -51,7 +51,7 @@
   width: 100%;
   align-items: stretch;
   gap: 2%;
-  margin: 10vh 0;
+  margin: 100px 0;
 }
 
 .reverseImage {
@@ -59,7 +59,6 @@
 }
 
 .imgSection {
-  min-height: 70vh;
   width: 48%;
   background-image: url(/images/04-home.jpg);
 }
@@ -70,7 +69,7 @@
 
 .detailsWhatWeDo {
   width: 48%;
-  padding: 10vh 0;
+  padding: 70px 0;
 }
 
 .itemWhatWeDo {
@@ -80,9 +79,9 @@
 
 .textFeature {
   color: #363233;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 29px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
   width: calc(100% - 50px);
 }
 
@@ -120,7 +119,7 @@
 .redLine {
   position: absolute;
   width: 3px;
-  height: 25vh;
+  height: 30%;
   background-color: #d02e2a;
   top: 80%;
   right: 10%;
@@ -145,7 +144,7 @@
   transform: translateX(-50%);
   white-space: nowrap;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
   letter-spacing: 0.12em;
   color: #363233;
   background-image: url(/icons/cta.png);
@@ -167,10 +166,6 @@
 }
 
 @media (width < 1600px) {
-  .infoSection {
-    margin-bottom: 100px;
-    font-size: 23px;
-  }
 
   .itemWhatWeDo {
     padding: 25px 0;
@@ -218,9 +213,9 @@
 }
 
 @media only screen and (max-width: 768px) {
-  .whatWeDoCo {
+  /* .whatWeDoCo {
     padding: 10vh 0 0;
-  }
+  } */
 
   .sideText p {
     font-size: 16px;
@@ -228,7 +223,6 @@
 
   .infoSection {
     width: 80%;
-    margin: 35px auto 70px;
   }
 
   .imgSection {
@@ -245,7 +239,7 @@
   }
 
   .detailsSec {
-    margin-top: 5vh;
+    margin: 50px 0;
   }
 
   .detailsWhatWeDo {
@@ -287,6 +281,10 @@
     font-size: 20px;
   }
 
+  .titleSection{
+    font-size: 80px;
+  }
+
   .agencyAbout .titleSection {
     width: 90%;
   }
@@ -306,6 +304,10 @@
     font-size: 40px;
   } */
 
+  .titleSection{
+    font-size: 50px;
+  }
+
   .subtitleSection {
     font-size: 35px;
     line-height: 1;
@@ -314,7 +316,6 @@
 
   .infoSection {
     width: 100%;
-    margin: 20px auto 40px;
   }
 
   .itemWhatWeDo {

@@ -15,7 +15,7 @@
 
 .heroContainer {
   height: 100%;
-  padding-bottom: 7vh;
+  padding-bottom: 50px;
   z-index: 2;
   position: relative;
 }
@@ -54,8 +54,8 @@
 
 .lineHero {
   position: absolute !important;
-  top: calc(93%);
-  height: 18vh;
+  bottom: -85px;
+  height: 170px;
   width: 3px;
 }
 
@@ -98,7 +98,7 @@
 }
 
 .imgLogo {
-  width: 70%;
+  width: 40%;
 }
 
 .mobileImageHero {
@@ -187,6 +187,9 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .imgLogo {
+    width: 70%;
+  }
   .mobileImageHero {
     display: block;
   }
@@ -220,6 +223,13 @@
 }
 
 @media only screen and (max-width: 520px) {
+  .lineHero {
+    bottom: -100px;
+    height: 100px;
+  }
+  .imgLogo {
+    width: 100%;
+  }
   .heroContainerBefore {
     margin-top: 70px;
   }

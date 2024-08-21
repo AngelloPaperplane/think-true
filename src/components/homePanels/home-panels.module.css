@@ -8,7 +8,7 @@
 
 .titlePanelSection {
   font-weight: 700;
-  font-size: clamp(50px, 13vw, 200px);
+  font-size: 120px;
   line-height: 1;
   color: #363233;
   text-align: center;
@@ -17,20 +17,19 @@
 
 .panelsIteratorContainer {
   display: flex;
-  flex-direction: row;
   position: relative;
   flex-wrap: wrap;
   justify-content: flex-start;
-  row-gap: 2vh;
-  column-gap: 2vw;
+  row-gap: 50px;
+  column-gap: 50px;
 }
 
 .cardContainer {
   display: flex;
   margin: 0;
   flex-direction: column;
-  width: calc(50% - 1vw);
-  min-height: 40vh;
+  width: calc(50% - 25px);
+  /* min-height: 40vh; */
   position: relative;
   justify-content: flex-start;
   align-items: flex-start;
@@ -47,31 +46,32 @@
 
 .titleCard {
   width: 100%;
-  font-size: 2.5vw;
+  font-size: 24px;
   color: #363233;
   margin: 0;
   position: relative;
   font-weight: 700;
-  margin-top: 3vh;
+  margin-top: 20px;
 }
 
 .subtitleCard {
   width: 100%;
-  font-size: 1.5vw;
+  font-size: 22px;
   color: #363233;
   margin: 0;
   position: relative;
   font-weight: 400;
-  margin-bottom: 1.5vw;
+  margin-top: 5px;
+  margin-bottom: 40px;
 }
 
 .descriptionCard {
   width: 90%;
   color: #363233;
   font-weight: 400;
-  font-size: 1.4vw;
+  font-size: 20px;
   line-height: 1.4;
-  margin-bottom: 2vh;
+  margin-bottom: 20px;
 }
 
 .imgCertfFooter {
@@ -104,9 +104,9 @@
   background-color: #d02e2a;
 }
 
-.ballLineLeft {
+/* .ballLineLeft {
   margin-left: -12%;
-}
+} */
 
 .ball {
   position: absolute;
@@ -120,7 +120,7 @@
 }
 
 .readMore {
-  font-size: 1.5vw;
+  font-size: 20px;
   color: #363233;
   margin: 0;
   position: relative;
@@ -131,7 +131,7 @@
 
 .textReadMore {
   font-size: 25px;
-  line-height: 34px;
+  line-height: 1;
   color: #363233;
   max-width: 50%;
   margin-bottom: 40px;
@@ -158,20 +158,19 @@
     display: flex;
     margin: 0;
     flex-direction: column;
-    width: calc(50% - 1vw);
-    padding: 1vh 1.5vh 1vh 2vh;
+    /* width: calc(50% - 1vw); */
+    /* padding: 1vh 1.5vh 1vh 2vh; */
     position: relative;
     justify-content: flex-start;
-    min-height: 40vh;
+    /* min-height: 40vh; */
   }
-  .titleCard {
-    font-size: 4.5vh;
-    margin-bottom: 3.5vh;
-  }
+  /* .titleCard {
+    font-size: ;
+  } */
 
-  .descriptionCard {
+  /* .descriptionCard {
     font-size: 1.4vh;
-  }
+  } */
 
   .indexBlock {
     color: #363233;
@@ -185,7 +184,7 @@
 
 @media only screen and (max-width: 1300px) {
   .cardContainer {
-    margin-bottom: 2vh;
+    margin-bottom: 20px;
   }
 
   .imgPanel {
@@ -195,43 +194,44 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .titlePanelSection{
+    font-size: 80px;
+  }
   .servicesContainer {
     justify-content: center;
   }
   .cardContainer {
     width: 100%;
-    padding: 0 0 3vh 0; 
-    min-height: 15vh;
+    /* padding: 0 0 3vh 0;  */
+    /* min-height: 15vh; */
     height: auto;
   }
 
-  .imgPanel {
+  /* .imgPanel {
     height: 25vh;
-  }
+  } */
 
 
-  .titleCard {
+  /* .titleCard {
     font-size: 7vw;
-  }
+  } */
 
   .subtitleCard {
-    font-size: 4vw;
-    margin-bottom: 3vh;
+    margin-bottom: 20px;
   }
 
-  .descriptionCard {
+  /* .descriptionCard {
     width: 80%;
     align-self: flex-end;
     font-weight: 400;
     font-size: 3vw;
     line-height: 1.2;
-  }
+  } */
 
-  .ballLineLeft {
+  /* .ballLineLeft {
     margin-left: -7%;
-  }
+  } */
   .readMore {
-    font-size: 2.5vw;
     color: #363233;
     margin: 0;
     position: relative;
@@ -240,5 +240,17 @@
     margin-left: 0.5vw;
   }
 
-  
+  .lineContainer{
+    width: 100%;
+  }
+
+  .textReadMore{
+    max-width: 100%;
+  }
+}
+
+@media only screen and (max-width: 520px){
+  .titlePanelSection{
+    font-size: 50px;
+  }
 }
