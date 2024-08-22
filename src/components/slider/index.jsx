@@ -39,7 +39,7 @@ const SiteSlider = ({ title, text, projects, settings, onlyImg }) => {
           <h2
             className={`news ${styles.titleSlider}`}
             data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos-duration="600"
             data-aous-delay="0"
             dangerouslySetInnerHTML={{ __html: title }}
           />
@@ -48,7 +48,7 @@ const SiteSlider = ({ title, text, projects, settings, onlyImg }) => {
           <h4
             className={`news ${styles.textSlider}`}
             data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos-duration="600"
             data-aous-delay="0"
             dangerouslySetInnerHTML={{ __html: text }}
           />

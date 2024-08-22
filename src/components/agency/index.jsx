@@ -38,7 +38,7 @@ const Agency = ({ image, dataContent }) => {
             {title && (
               <h2
                 data-aos="fade-up"
-                data-aos-duration="800"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 className={`${styles.titleAgency} ${
                   pathname === '/about-us' ? 'aleo' : 'news'
@@ -50,7 +50,7 @@ const Agency = ({ image, dataContent }) => {
             {subtitle && pathname !== '/about-us' && (
               <h3
                 data-aos="fade-up"
-                data-aos-duration="800"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 className={`news ${styles.subtitleAgency}`}
                 dangerouslySetInnerHTML={{ __html: subtitle }}
@@ -63,7 +63,7 @@ const Agency = ({ image, dataContent }) => {
           <div className={styles.floatInfoAgency}>
             <p
               data-aos="fade-up"
-              data-aos-duration="800"
+              data-aos-duration="600"
               data-aous-delay="0"
               className={styles.infoAgency}
               dangerouslySetInnerHTML={{ __html: text }}></p>
@@ -71,7 +71,7 @@ const Agency = ({ image, dataContent }) => {
               <div
                 className={styles.redLine}
                 data-aos="fade-up"
-                data-aos-duration="800"
+                data-aos-duration="600"
                 data-aous-delay="0">
                 <div className={styles.ballRedLine}>
                   <Link
@@ -99,7 +99,7 @@ const Agency = ({ image, dataContent }) => {
       <div className={`${styles.agencyContainer} container`}>
         <h2
           data-aos="fade-up"
-          data-aos-duration="800"
+          data-aos-duration="600"
           data-aous-delay="0"
           className={`${styles.titleAgency} news ${
             pathname === '/about-us' ? styles.aboutTitle : ''
@@ -110,7 +110,7 @@ const Agency = ({ image, dataContent }) => {
         {pathname !== '/about-us' && (
           <h3
             data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={`news ${styles.subtitleAgency}`}>
             {' '}
@@ -121,7 +121,7 @@ const Agency = ({ image, dataContent }) => {
         <div className={styles.floatInfoAgency}>
           <p
             data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={styles.infoAgency}>
             We pride ourselves on having a mighty, nimble, and fierce team
@@ -129,7 +129,7 @@ const Agency = ({ image, dataContent }) => {
           </p>
           <p
             data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={styles.infoAgency}>
             Our team is passionate about delivering results and exceeding our

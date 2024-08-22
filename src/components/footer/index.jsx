@@ -110,14 +110,14 @@ const Footer = ({ dataContent, isContact }) => {
               <>
                 <h2
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`titleSec news ${styles.formTitle}`}
                   dangerouslySetInnerHTML={{ __html: title }}
                 />
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoForm}
                   dangerouslySetInnerHTML={{ __html: text }}
@@ -130,7 +130,7 @@ const Footer = ({ dataContent, isContact }) => {
                 className={`${styles.siteForm} flex j-b a-c`}>
                 <input
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   type="text"
                   placeholder="Full name"
@@ -140,7 +140,7 @@ const Footer = ({ dataContent, isContact }) => {
                 />
                 <input
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   type="email"
                   placeholder="Email"
@@ -150,7 +150,7 @@ const Footer = ({ dataContent, isContact }) => {
                 />
                 <textarea
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.inputForm}
                   name=""
@@ -160,7 +160,7 @@ const Footer = ({ dataContent, isContact }) => {
                   <div
                     className={styles.redLine}
                     data-aos="fade-up"
-                    data-aos-duration="800"
+                    data-aos-duration="600"
                     data-aous-delay="0">
                     <div className={styles.ballRedLine}></div>
                   </div>
@@ -169,7 +169,7 @@ const Footer = ({ dataContent, isContact }) => {
                 <div className={styles.wrapperSendBtnForm}>
                   <button
                     data-aos="fade-up"
-                    data-aos-duration="800"
+                    data-aos-duration="600"
                     data-aous-delay="0"
                     className={`news ${styles.sendBtnForm}`}>
                     SEND
@@ -177,7 +177,7 @@ const Footer = ({ dataContent, isContact }) => {
                 </div>
                 <div
                   data-aos="fade"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.imgCertfFooter}`}>
                   <Image src={'/images/NMSDC_CERIFIED.png'} fill alt="" />
@@ -188,19 +188,19 @@ const Footer = ({ dataContent, isContact }) => {
                   <div key={i} className={styles.directionGroup}>
                     <div
                       data-aos="fade-up"
-                      data-aos-duration="800"
+                      data-aos-duration="600"
                       data-aous-delay="0"
                       className={`${styles.pinIcon} bg-ct`}></div>
                     <h3
                       data-aos="fade-up"
-                      data-aos-duration="800"
+                      data-aos-duration="600"
                       data-aous-delay="0"
                       className={`bold ${styles.cityName}`}
                       dangerouslySetInnerHTML={{ __html: location.name }}
                     />
                     <p
                       data-aos="fade-up"
-                      data-aos-duration="800"
+                      data-aos-duration="600"
                       data-aous-delay="0"
                       className={styles.infoUbication}
                       dangerouslySetInnerHTML={{ __html: location.info }}
@@ -209,7 +209,7 @@ const Footer = ({ dataContent, isContact }) => {
                 ))}
                 <div
                   data-aos="fade"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.imgSiteFooter}`}>
                   <Image src={image.large} fill alt={image.alt} />
@@ -275,14 +275,14 @@ const Footer = ({ dataContent, isContact }) => {
         <div className={`container ${styles.formContainer}`}>
           <h2
             data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={`titleSec news ${styles.formTitle}`}>
             LET’S MEET
           </h2>
           <p
             data-aos="fade-up"
-            data-aos-duration="800"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={styles.infoForm}>
             We are more than this website and REAL people. Let’s meet to create
@@ -293,7 +293,7 @@ const Footer = ({ dataContent, isContact }) => {
             <form className={`${styles.siteForm} flex j-b a-c`}>
               <input
                 data-aos="fade-up"
-                data-aos-duration="800"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 type="text"
                 placeholder="Full name"
@@ -301,7 +301,7 @@ const Footer = ({ dataContent, isContact }) => {
               />
               <input
                 data-aos="fade-up"
-                data-aos-duration="800"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 type="email"
                 placeholder="Email"
@@ -309,14 +309,14 @@ const Footer = ({ dataContent, isContact }) => {
               />
               <textarea
                 data-aos="fade-up"
-                data-aos-duration="800"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 className={styles.inputForm}
                 placeholder="Message"></textarea>
               <div
                 className={styles.redLine}
                 data-aos="fade-up"
-                data-aos-duration="800"
+                data-aos-duration="600"
                 data-aous-delay="0">
                 <div className={styles.ballRedLine}></div>
               </div>
@@ -328,33 +328,33 @@ const Footer = ({ dataContent, isContact }) => {
               <div className={styles.directionGroup}>
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.pinIcon} bg-ct`}></div>
                 <h3
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`bold ${styles.cityName}`}>
                   Los Angeles
                 </h3>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>A.</span> 5220 Pacific Concourse{' '}
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   Dr. #190 - 90045
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>P.</span> 310.558.0425{' '}
@@ -363,33 +363,33 @@ const Footer = ({ dataContent, isContact }) => {
               <div className={styles.directionGroup}>
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.pinIcon} bg-ct`}></div>
                 <h3
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`bold ${styles.cityName}`}>
                   New York <br /> (Partner hub)
                 </h3>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>A.</span> 18 W. 27th St 2nd{' '}
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   Floor - 10001 CA
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>P.</span> 917.342.0010{' '}
@@ -398,33 +398,33 @@ const Footer = ({ dataContent, isContact }) => {
               <div className={styles.directionGroup}>
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.pinIcon} bg-ct`}></div>
                 <h3
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`bold ${styles.cityName}`}>
                   Francisco <br /> (Partner hub)
                 </h3>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>A.</span> 100 Shoreline Hwy Suite
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   295B, Mill Valley - 94941
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="800"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>P.</span> 415.331.4789{' '}
@@ -432,7 +432,7 @@ const Footer = ({ dataContent, isContact }) => {
               </div>
               <div
                 data-aos="fade"
-                data-aos-duration="800"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 className={`${styles.imgSiteFooter}`}>
                 <Image src={'/images/footer.jpg'} fill alt="" />

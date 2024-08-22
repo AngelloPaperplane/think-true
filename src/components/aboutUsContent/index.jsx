@@ -49,7 +49,7 @@ const AboutUsContent = () => {
     <div className={`container ${styles.aboutContainer}`}>
       <h2
               data-aos="fade-up"
-              data-aos-duration="800"
+              data-aos-duration="600"
               data-aos-delay="0"
               className={` ${styles.titleSection}`}
               dangerouslySetInnerHTML={{ __html: dataContent.title }}
