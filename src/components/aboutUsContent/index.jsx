@@ -18,7 +18,32 @@ const AboutUsContent = () => {
       'Everything we do, we do to better our communities and beyond. Our experiences and every decision we make along the way are to create an impact we can reflect on with pride.'
     ],
     image : '/images/02-home.jpg',
-    layout : 'home'
+    layout : 'home' ,
+
+    blocks: [
+      {
+        imgSize:'35%',
+        height: '45vh',
+        text : [
+        'We don’t want our employees to fit in, we want to grow with our people. We ask everyone to bring 100% of their true selves to work, because authenticity is never a compromise.',
+        'Everything we do, we do to better our communities and beyond. Our experiences and every decision we make along the way are to create an impact we can reflect on with pride.'
+      ],
+      image : '/images/02-home.jpg',
+      layout : 'home' 
+      },
+      {
+        imgSize:'35%',
+        imgHeight: '45vh',
+        textWidth: '60%',
+        flexDirection: 'row',
+        text : [
+        'We don’t want our employees to fit in, we want to grow with our people. We ask everyone to bring 100% of their true selves to work, because authenticity is never a compromise.',
+        'Everything we do, we do to better our communities and beyond. Our experiences and every decision we make along the way are to create an impact we can reflect on with pride.'
+      ],
+      image : '/images/02-home.jpg',
+      layout : 'home' 
+      },
+    ],
   };
   return (
     <div className={`container ${styles.aboutContainer}`}>
@@ -40,8 +65,7 @@ const AboutUsContent = () => {
                   backgroundImage: `${`url(${
                     dataContent.image ? dataContent.image: ''
                   })`}`,
-                  height: '45vh',
-                  width: '35%',
+                  width: '30%',
                 }}
               />
         <div 
@@ -93,7 +117,7 @@ const AboutUsContent = () => {
                 }}
               />
         <div 
-        className={`${styles.textContainer}`}
+        className={`${styles.textContainerLeft}`}
         style={{
           width: 'calc(55%)',
         }}
