@@ -97,7 +97,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                       <iframe
                         src={mediaBlockContent.video}
                         frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
+                        allow=" fullscreen; picture-in-picture"
                         className={`iframeVideo ${styles.iframeVideo}`}></iframe>
                     )}
                   </div>
