@@ -19,7 +19,7 @@ const ImgText = ({ content }) => {
         <div className={styles.textBlock}>
           <div
             data-aos="fade-right"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0"
             className={styles.wrapperTextBlock}
             dangerouslySetInnerHTML={{
@@ -29,7 +29,7 @@ const ImgText = ({ content }) => {
             <div
               className={styles.line}
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="800"
               data-aous-delay="0">
               <div className={styles.ball}></div>
               <Link
@@ -43,7 +43,7 @@ const ImgText = ({ content }) => {
         <div
           className={styles.imgBlock}
           data-aos="fade-left"
-          data-aos-duration="900"
+          data-aos-duration="800"
           data-aous-delay="0">
           <Image
             src={content.img.large}

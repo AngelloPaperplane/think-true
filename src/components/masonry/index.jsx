@@ -36,7 +36,7 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
               styles[img.sizeClass]
             } filter-item ${layout === 'ourWork' ? styles.ourWorkLayout : ''}`}
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0"
             data-aos-offset="-100">
             {img.content && (

@@ -15,7 +15,7 @@ const TitleLine = ({ width, align, left, colorLine, title, featuredText }) => {
           className={`${styles.titleLine}`}
           style={{ width: `${width}%`, textAlign: align }}
           data-aos="fade-down"
-          data-aos-duration="900"
+          data-aos-duration="800"
           data-aous-delay="0">
           {title}
           <span
@@ -35,7 +35,7 @@ const TitleLine = ({ width, align, left, colorLine, title, featuredText }) => {
         className={`${styles.titleLine}`}
         style={{ width: `${width}%`, textAlign: align }}
         data-aos="fade-down"
-        data-aos-duration="900"
+        data-aos-duration="800"
         data-aous-delay="0">
         {title}
         <span

@@ -43,7 +43,7 @@ const ImgTextB = ({
         <div className={`container ${styles.whatWeDoCo}`}>
           <div
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0"
             className={`bg-ct ${styles.imgSection} ${styles.imgSectionMobile}`}
             style={{
@@ -52,7 +52,7 @@ const ImgTextB = ({
           {title && (
             <h2
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="800"
               data-aos-delay="0"
               className={`titleSec ${styles.titleSection} news`}
               dangerouslySetInnerHTML={{ __html: title }}
@@ -62,7 +62,7 @@ const ImgTextB = ({
           {subtitle && (
             <h3
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="800"
               data-aous-delay="0"
               className={`news ${styles.subtitleSection}`}
               style={{ color }}
@@ -73,7 +73,7 @@ const ImgTextB = ({
           {topText && (
             <p
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="800"
               data-aous-delay="0"
               className={`${styles.infoSection}`}
               dangerouslySetInnerHTML={{ __html: topText }}
@@ -86,7 +86,7 @@ const ImgTextB = ({
             }  ${styles.detailsSec}`}>
             <div
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="800"
               data-aous-delay="0"
               className={`bg-cv ${styles.imgSection}`}
               style={{
@@ -96,7 +96,7 @@ const ImgTextB = ({
                 <div
                   className={styles.redLine}
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="800"
                   data-aous-delay="0">
                   <div className={styles.ballRedLine}>
                     <Link
@@ -118,7 +118,7 @@ const ImgTextB = ({
                     key={i}
                     className={`flex j-s a-c ${styles.itemWhatWeDo}`}
                     data-aos="fade-up"
-                    data-aos-duration="900"
+                    data-aos-duration="800"
                     data-aous-delay="0">
                     <div className={`bg-ct ${styles.line}`}>
                       <div className={`bg-ct ${styles.ballLine}`}></div>
@@ -134,7 +134,7 @@ const ImgTextB = ({
                 className={styles.sideText}
                 dangerouslySetInnerHTML={{ __html: sideText }}
                 data-aos="fade-left"
-                data-aos-duration="1900"
+                data-aos-duration="800"
                 data-aous-delay="0"></div>
             )}
           </div>
@@ -145,7 +145,7 @@ const ImgTextB = ({
               <div
                 className={`${styles.redLine} ${styles.mobileLine}`}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0">
                 <div className={styles.ballRedLine}>
                   <Link
@@ -169,14 +169,14 @@ const ImgTextB = ({
       <div className={`container ${styles.whatWeDoCo}`}>
         <div
           data-aos="fade-up"
-          data-aos-duration="900"
+          data-aos-duration="800"
           data-aous-delay="0"
           className={`bg-cv ${styles.imgSection} ${styles.imgSectionMobile}`}
           style={{ backgroundImage: `url(${image})` }}></div>
         {title && (
           <h2
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0"
             className={`titleSec ${styles.titleSection} news`}>
             {title}
@@ -186,7 +186,7 @@ const ImgTextB = ({
         {subtitle && (
           <h3
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0"
             className={`news ${styles.subtitleSection}`}
             style={{ color }}>
@@ -197,7 +197,7 @@ const ImgTextB = ({
         {topText && (
           <p
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0"
             className={`${styles.infoSection}`}>
             {topText}
@@ -207,14 +207,14 @@ const ImgTextB = ({
         <div className={`flex j-b  ${styles.detailsSec}`}>
           <div
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0"
             className={`bg-cv ${styles.imgSection} `}
             style={{ backgroundImage: `url(${image})` }}>
             <div
               className={styles.redLine}
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="800"
               data-aous-delay="0">
               <div className={styles.ballRedLine}></div>
             </div>
@@ -224,7 +224,7 @@ const ImgTextB = ({
               <li
                 className={`flex j-s a-c ${styles.itemWhatWeDo}`}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0">
                 <div className={`bg-ct ${styles.line}`}>
                   <div className={`bg-ct ${styles.ballLine}`}></div>
@@ -234,7 +234,7 @@ const ImgTextB = ({
               <li
                 className={`flex j-s a-c ${styles.itemWhatWeDo}`}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0">
                 <div className={`bg-ct ${styles.line}`}>
                   <div className={`bg-ct ${styles.ballLine}`}></div>
@@ -244,7 +244,7 @@ const ImgTextB = ({
               <li
                 className={`flex j-s a-c ${styles.itemWhatWeDo}`}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0">
                 <div className={`bg-ct ${styles.line}`}>
                   <div className={`bg-ct ${styles.ballLine}`}></div>
@@ -254,7 +254,7 @@ const ImgTextB = ({
               <li
                 className={`flex j-s a-c ${styles.itemWhatWeDo}`}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0">
                 <div className={`bg-ct line ${styles.line}`}>
                   <div className={`bg-ct ballLine ${styles.ballLine}`}></div>
@@ -266,7 +266,7 @@ const ImgTextB = ({
               <li
                 className={`flex j-s a-c ${styles.itemWhatWeDo}`}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0">
                 <div className={`bg-ct ${styles.line}`}>
                   <div className={`bg-ct ${styles.ballLine}`}></div>
@@ -278,7 +278,7 @@ const ImgTextB = ({
               <li
                 className={`flex j-s a-c ${styles.itemWhatWeDo}`}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0">
                 <div className={`bg-ct ${styles.line}`}>
                   <div className={`bg-ct ${styles.ballLine}`}></div>
@@ -288,7 +288,7 @@ const ImgTextB = ({
               <li
                 className={`flex j-s a-c ${styles.itemWhatWeDo}`}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0">
                 <div className={`bg-ct ${styles.line}`}>
                   <div className={`bg-ct ${styles.ballLine}`}></div>
@@ -304,7 +304,7 @@ const ImgTextB = ({
               className={styles.sideText}
               dangerouslySetInnerHTML={{ __html: sideText }}
               data-aos="fade-left"
-              data-aos-duration="1900"
+              data-aos-duration="800"
               data-aous-delay="0"></div>
           )}
         </div>

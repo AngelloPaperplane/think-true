@@ -14,7 +14,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
         <h3
           className={styles.titleFeatureJobIndex}
           data-aos="fade-right"
-          data-aos-duration="900"
+          data-aos-duration="800"
           data-aous-delay="0">
           {contentFeaturesJobs.index}
         </h3>
@@ -22,7 +22,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
           <h2
             className={`news ${styles.titleFeatureJob}`}
             data-aos="fade-down"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0">
             {contentFeaturesJobs.title}
           </h2>
@@ -32,7 +32,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
               __html: contentFeaturesJobs.features,
             }}
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0"></div> */}
         </div>
       </div>
@@ -42,7 +42,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
             style={{ backgroundColor: `${databtn.color}` }}
             className={styles.line}
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0">
             <div
               className={styles.ball}
@@ -54,7 +54,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
             target={databtn.target}
             className={styles.growText}
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0">
             {databtn.label}
           </Link>

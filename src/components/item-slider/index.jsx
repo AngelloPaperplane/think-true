@@ -8,7 +8,7 @@ const ItemSlider = ({ project, onlyImg }) => {
     <div
       className={`${styles.project} ${onlyImg ? styles.projectOnlyImg : ''}`}
       data-aos="fade-up"
-      data-aos-duration="1900"
+      data-aos-duration="800"
       data-aous-delay="0">
       <div
         className={`${

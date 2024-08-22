@@ -15,7 +15,7 @@ const FeaturesJobs = ({ dataContent }) => {
       <h3
         className={`news ${styles.titlePanelSection} titleSection`}
         data-aos="fade-up"
-        data-aos-duration="900"
+        data-aos-duration="800"
         data-aous>
         OUR WORK
       </h3>
@@ -25,7 +25,7 @@ const FeaturesJobs = ({ dataContent }) => {
             key={i}
             className={`${styles.cardContainer} `}
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="800"
             data-aous-delay="0">
             <div
               className={`${styles.imgPanel}`}
@@ -65,7 +65,7 @@ const FeaturesJobs = ({ dataContent }) => {
       <p
         className={styles.textReadMore}
         data-aos="fade-up"
-        data-aos-duration="1900"
+        data-aos-duration="800"
         data-aous-delay="0">
         <Link
           href={'/our-work'}

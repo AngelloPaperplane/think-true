@@ -18,7 +18,7 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
             <p
               className={styles.topText}
               data-aos="fade-down"
-              data-aos-duration="1900"
+              data-aos-duration="800"
               data-aous-delay="0"
               dangerouslySetInnerHTML={{ __html: text }}
             />
@@ -27,7 +27,7 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
           <div
             className={`flex j-c a-e ${styles.wrapperItems}`}
             data-aos="fade-right"
-            data-aos-duration="1900"
+            data-aos-duration="800"
             data-aous-delay="0">
             <p
               className={styles.sideYellowText}
@@ -37,7 +37,7 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
             <div
               className={styles.wrapperSideImg}
               data-aos="fade-left"
-              data-aos-duration="1900"
+              data-aos-duration="800"
               data-aous-delay="0">
               <Image
                 className={styles.innerImg}
@@ -58,7 +58,7 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
           <p
             className={styles.topText}
             data-aos="fade-down"
-            data-aos-duration="1900"
+            data-aos-duration="800"
             data-aous-delay="0">
             {text}
           </p>
@@ -67,14 +67,14 @@ const YellowTextImg = ({ text, yellowText, image, contentData }) => {
         <div
           className={`flex j-c a-e ${styles.wrapperItems}`}
           data-aos="fade-right"
-          data-aos-duration="1900"
+          data-aos-duration="800"
           data-aous-delay="0">
           <p className={styles.sideYellowText}>{yellowText}</p>
 
           <div
             className={styles.wrapperSideImg}
             data-aos="fade-left"
-            data-aos-duration="1900"
+            data-aos-duration="800"
             data-aous-delay="0">
             <Image src={image} alt="" fill />
           </div>

@@ -18,7 +18,7 @@ const FeaturesJobs = ({ dataContent }) => {
             backgroundColor: `${content.color}`,
           }}
           data-aos="fade-up"
-          data-aos-duration="900"
+          data-aos-duration="800"
           data-aous-delay="0">
           <h2
             className={`news ${styles.titleCard}`}

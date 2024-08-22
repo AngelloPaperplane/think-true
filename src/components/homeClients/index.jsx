@@ -13,21 +13,21 @@ const Clients = ({ dataContent }) => {
       <div className={`container ${styles.clientsContainer}`}>
         <h2
           data-aos="fade-up"
-          data-aos-duration="900"
+          data-aos-duration="800"
           data-aous-delay="0"
           className={`${styles.clientsTitle} bold uppercase news`}
           dangerouslySetInnerHTML={{ __html: title }}
         />
         <h3
           data-aos="fade-up"
-          data-aos-duration="900"
+          data-aos-duration="800"
           data-aous-delay="0"
           className={`${styles.subtitleClients} news`}
           dangerouslySetInnerHTML={{ __html: subtitle }}
         />
         <p
           data-aos="fade-up"
-          data-aos-duration="900"
+          data-aos-duration="800"
           data-aous-delay="0"
           className={styles.infoClients}
           dangerouslySetInnerHTML={{ __html: text }}
@@ -43,7 +43,7 @@ const Clients = ({ dataContent }) => {
             <div
               key={i}
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="800"
               data-aous-delay="0"
               className={`bg-ct ${styles.collaboratorBox}`}
               style={{
@@ -63,7 +63,7 @@ const Clients = ({ dataContent }) => {
             <div
               key={100 + i}
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="800"
               data-aous-delay="0"
               className={`bg-ct ${styles.collaboratorBox}`}
               style={{

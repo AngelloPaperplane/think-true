@@ -29,7 +29,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                 <div
                   className={`${styles.bigCircle}`}
                   data-aos="zoom-in"
-                  data-aos-duration="1900"
+                  data-aos-duration="800"
                   data-aous-delay="0"></div>
               )} */}
 
@@ -37,7 +37,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                 {mediaBlockContent.title && mediaBlockContent.title.text && (
                   <h2
                     data-aos="fade-up"
-                    data-aos-duration="1900"
+                    data-aos-duration="800"
                     data-aous-delay="0"
                     className={`${styles.titleAfterHero} ${
                       pathname === '/about-us' ? 'news' : ''
@@ -49,7 +49,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                   mediaBlockContent.subtitle.text && (
                     <h3
                       data-aos="fade-up"
-                      data-aos-duration="1900"
+                      data-aos-duration="800"
                       data-aous-delay="0"
                       className={`${styles.subTitleAfterHero} ${
                         pathname === '/about-us' ? 'news' : ''
@@ -62,7 +62,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     className={styles.textAfterHero}
                     dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
                     data-aos="fade-up"
-                    data-aos-duration="1900"
+                    data-aos-duration="800"
                     data-aous-delay="0"
                   />
                 )}
@@ -72,7 +72,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     <p
                       className={styles.textAfterHero}
                       data-aos="fade-up"
-                      data-aos-duration="1900"
+                      data-aos-duration="800"
                       data-aous-delay="0">
                       <Link
                         href={mediaBlockContent.buttonlink}
@@ -91,7 +91,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                         : ''
                     } bg-cv`}
                     data-aos="zoom-out"
-                    data-aos-duration="1500"
+                    data-aos-duration="800"
                     data-aous-delay="0">
                     {mediaBlockContent.video && (
                       <iframe
@@ -118,7 +118,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
             {content.posterVideo && content.video && (
               <div
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="800"
                 data-aous-delay="0"
                 className={`${styles.bigCircle}`}></div>
             )}
@@ -128,7 +128,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                 content.text.map((text, i) => (
                   <p
                     data-aos="fade-up"
-                    data-aos-duration="900"
+                    data-aos-duration="800"
                     data-aous-delay="0"
                     key={
                       typeof window !== 'undefined'
@@ -142,7 +142,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
               {content.posterVideo && content.video && (
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="800"
                   data-aous-delay="0"
                   className={`${styles.videoContainer} bg-cv`}
                   style={{ backgroundImage: `url(${content.posterVideo})` }}>
@@ -161,7 +161,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
               {content.title && content.title.text && (
                 <h2
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="800"
                   data-aous-delay="0"
                   className={`${styles.titleAfterHero} ${
                     styles[content.title.position]
@@ -173,7 +173,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                 content.text.map((text, i) => (
                   <p
                     data-aos="fade-up"
-                    data-aos-duration="900"
+                    data-aos-duration="800"
                     data-aous-delay="0"
                     key={
                       typeof window !== 'undefined'

@@ -18,7 +18,7 @@ const BigImage = ({ image, text, dataImage }) => {
             <h2
               className={styles.textBigImg}
               data-aos="fade-up"
-              data-aos-duration="1900"
+              data-aos-duration="800"
               data-aous-delay="0"
               dangerouslySetInnerHTML={{ __html: text }}
             />
@@ -39,7 +39,7 @@ const BigImage = ({ image, text, dataImage }) => {
           <h2
             className={styles.textBigImg}
             data-aos="fade-up"
-            data-aos-duration="1900"
+            data-aos-duration="800"
             data-aous-delay="0">
             {text}
           </h2>
