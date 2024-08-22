@@ -21,7 +21,7 @@ const AboutUs = ({ data }) => {
     team,
     whatdo_new,
   } = data;
-  // console.log(hero);
+  console.log('blocks',blocks);
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setTimeout(() => {
@@ -39,7 +39,7 @@ const AboutUs = ({ data }) => {
       {
         // <Agency dataContent={team} />
       }
-      <AboutUsContent/>
+      <AboutUsContent blocksToIterate={blocks[0]} />
       <Footer dataContent={formfooter} />
     </>
   );
