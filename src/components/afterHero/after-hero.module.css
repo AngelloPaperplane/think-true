@@ -39,12 +39,11 @@
   line-height: 1.3;
   color: #363233;
   max-width: 55%;
-  margin-bottom: 40px;
 }
 
 .textAfterHero a {
   text-align: center;
-  margin: 0 auto;
+  margin: 20px auto 0;
   display: block;
   width: fit-content;
   padding: 25px 35px 20px;

@@ -25,6 +25,10 @@
   background-color: #00000057;
 }
 
+.projectOnlyImg .projectImg:before{
+  background-color: #00000000;
+}
+
 .linkOtherProject {
   position: absolute;
   z-index: 2;
