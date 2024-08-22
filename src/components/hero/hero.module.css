@@ -39,7 +39,7 @@
 }
 
 .titleHero {
-  font-size: clamp(40px, 13vw, 200px);
+  font-size: 120px;
   position: relative;
   text-align: center;
 }
@@ -54,7 +54,7 @@
 
 .lineHero {
   position: absolute !important;
-  bottom: -85px;
+  bottom: -120px;
   height: 170px;
   width: 3px;
 }
@@ -183,7 +183,7 @@
 
 @media only screen and (max-width: 1300px) {
   .titleHero {
-    font-size: clamp(40px, 11vw, 150px);
+    font-size: 100px;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -194,11 +194,11 @@
     display: block;
   }
   .titleHero {
-    font-size: clamp(40px, 20vw, 150px);
+    font-size: 80px;
   }
 
   .videoHeroSection .titleHero {
-    font-size: clamp(40px, 20vw, 90px);
+    font-size: clamp(40px, 20vw, 80px);
   }
 
   .titleHero span {
@@ -241,6 +241,6 @@
   }
 
   .videoHeroSection .titleHero {
-    font-size: clamp(40px, 16vw, 70px);
+    font-size: 50px;
   }
 }
