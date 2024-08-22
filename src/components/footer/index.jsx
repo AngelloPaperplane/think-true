@@ -11,6 +11,31 @@ const Footer = ({ dataContent, isContact }) => {
     AOS.init();
   }, []);
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  useEffect(() => {
+    if (dataContent && dataContent.locations) {
+      document.querySelectorAll(`.${styles.infoUbication}`).forEach(container => {
+        container.querySelectorAll('br').forEach((br) => {
+          const nextSibling = br.nextSibling;
+          if (nextSibling && nextSibling.nodeType === 3) {
+            const text = nextSibling.nodeValue.trim();
+            const match = text.match(/^([A-Z]\.)/); 
+            if (match) {
+              const span = document.createElement('span');
+              span.textContent = match[0]; 
+              span.style.fontWeight = '700'; 
+              nextSibling.nodeValue = text.slice(match[0].length); 
+              br.parentNode.insertBefore(span, nextSibling);
+            }
+          }
+        });
+      });
+    }
+  }, [dataContent]);
+
   if (dataContent) {
     const {
       title,
