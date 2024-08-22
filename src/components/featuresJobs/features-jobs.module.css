@@ -2,31 +2,35 @@
   width: 100%;
   position: relative;
   gap: 5%;
-  margin-bottom: 35vh;
+  margin-bottom: 150px;
 }
 
 .titleFeatureJobIndex {
   font-style: normal;
   font-weight: 400;
-  font-size: 320px;
-  line-height: 296px;
+  font-size: 250px;
+  line-height: 1;
   color: #363233;
 }
 
 .contentTextFeature {
   max-width: 40%;
   position: relative;
-  margin-bottom: -15%;
+  margin-bottom: -50px;
+}
+
+.featureBlock:last-of-type .contentFeature{
+  margin-bottom: 100px;
 }
 
 .titleFeatureJob {
   font-weight: 700;
-  font-size: 105px;
-  line-height: 85px;
+  font-size: 80px;
+  line-height: 1;
   color: #363233;
 }
 
-.featuresJob {
+/* .featuresJob {
   margin-top: 10vh;
   font-weight: 400;
   font-size: 30px;
@@ -34,7 +38,7 @@
   letter-spacing: 0.06em;
   color: #363233;
   margin-left: 3vw;
-}
+} */
 
 .growWrapper {
   width: 100%;
@@ -43,12 +47,11 @@
   align-items: center;
   position: relative;
   flex-direction: column;
-  margin-top: -10vh;
 }
 
 .line {
   width: 5px;
-  height: 25vh;
+  height: 150px;
   position: relative;
   background-color: #faa300;
 }
@@ -66,47 +69,40 @@
 
 .growText {
   font-weight: 700;
-  font-size: 28px;
+  font-size: 20px;
   line-height: 25px;
   letter-spacing: 0.12em;
   color: #363233;
   white-space: nowrap;
-  margin-top: 5vh;
-  margin-bottom: 20vh;
+  margin-top: 20px;
+  margin-bottom: 50px;
   background-image: url(/icons/cta.png);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center center;
-  padding: 25px 35px 20px;
+  padding: 35px 50px 25px;
   cursor: pointer;
 }
 
-@media only screen and (max-width: 1300px) {
+@media (width <= 1500px){
   .titleFeatureJobIndex {
-    font-size: 17vw;
-    line-height: 1;
+    font-size: 200px;
   }
 
-  .titleFeatureJob {
-    font-size: 7vw;
-    line-height: 1;
+  .titleFeatureJob{
+    font-size: 60px;
   }
 
-  .featuresJob {
-    font-size: 27px;
-    line-height: 1;
-  }
-
-  .growText {
-    font-size: 25px;
-    margin-top: 2.5vh;
+  .contentFeature{
+    margin-bottom: 100px;
   }
 }
+
 
 @media only screen and (max-width: 768px) {
   .contentFeature {
     flex-direction: column;
-    margin-bottom: 25vh;
+    /* margin-bottom: 25vh; */
     text-align: left;
     align-items: flex-start;
   }
@@ -120,11 +116,24 @@
   }
 
   .titleFeatureJobIndex {
+    font-size: 180px;
+  }
+
+  
+
+  /* .titleFeatureJobIndex {
     font-size: 40vw;
   }
 
   .titleFeatureJob {
     font-size: 12vw;
+  } */
+
+  .growText{
+    margin-bottom: 0;
+    white-space: normal;
+    text-align: center;
+    width: 100%;
   }
 }
 
@@ -133,7 +142,15 @@
     max-width: 100%;
   }
 
-  .featuresJob {
+  .titleFeatureJobIndex {
+    font-size: 150px;
+  }
+
+  .titleFeatureJob{
+    font-size: 50px;
+  }
+
+  /* .featuresJob {
     font-size: 23px;
     margin-top: 5vh;
   }
@@ -141,5 +158,5 @@
   .growText {
     margin-bottom: 5vh;
     font-size: 20px;
-  }
+  } */
 }

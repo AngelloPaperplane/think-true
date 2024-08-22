@@ -1,6 +1,6 @@
-.meetUsContainer {
+/* .meetUsContainer {
   padding-bottom: 5vh;
-}
+} */
 
 .meetUsTitle {
   font-weight: 700;
@@ -19,7 +19,7 @@
 .wrapperMember {
   width: 22%;
   position: relative;
-  margin-bottom: 10vh;
+  margin-bottom: 50px;
   cursor: pointer;
 }
 

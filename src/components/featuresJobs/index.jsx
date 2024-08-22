@@ -26,14 +26,14 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
             data-aous-delay="0">
             {contentFeaturesJobs.title}
           </h2>
-          <div
+          {/* <div
             className={styles.featuresJob}
             dangerouslySetInnerHTML={{
               __html: contentFeaturesJobs.features,
             }}
             data-aos="fade-up"
             data-aos-duration="900"
-            data-aous-delay="0"></div>
+            data-aous-delay="0"></div> */}
         </div>
       </div>
       {last && databtn.label && databtn.link && (

@@ -1,15 +1,16 @@
 .heroText {
-  padding: 15vh 0 20vh;
+  padding: 150px 0 100px;
 }
 .heroTextContainer {
   text-align: center;
 }
 
 .titleHeroText {
-  font-weight: 700;
-  font-size: clamp(60px, 12vw, 220px);
+  font-size: 215px;
   color: #363233;
-  margin-bottom: 1vh;
+}
+.titleHeroText *{
+  font-weight: 700;
 }
 
 .subtitleHeroText {
@@ -20,11 +21,17 @@
 
 @media only screen and (max-width: 1024px) {
   .heroText {
-    padding: 15vh 0;
+    padding: 100px 0 50px;
+  }
+
+  .titleHeroText {
+    font-size: 150px;
   }
 }
 @media only screen and (max-width: 768px) {
-  .heroText {
-    padding: 15vh 0 5vh;
+  
+
+  .titleHeroText {
+    font-size: 120px;
   }
 }

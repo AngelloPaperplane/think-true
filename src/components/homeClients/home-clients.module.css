@@ -42,16 +42,18 @@
   width: 100%;
   gap: 1%;
   display: flex;
+  position: relative;
+  left: 100%;
   justify-content: center;
   align-items: center;
-  animation: translateMembers 25s infinite linear 0s forwards;
+  animation: translateMembers 50s infinite linear 0s forwards;
 }
 
 .collaboratorsContainer:last-of-type {
   position: absolute;
   top: 0;
   left: 100%;
-  animation: translateMembersB 25s infinite linear 12.5s forwards;
+  animation: translateMembersB 50s infinite linear 10s forwards;
 }
 
 .collaboratorBox {
@@ -67,10 +69,10 @@
 
 @keyframes translateMembers {
   0% {
-    transform: translateX(100%);
+    transform: translateX(0%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
 @keyframes translateMembersB {

@@ -5,7 +5,6 @@
 
 .afterHeroSection {
   width: 100%;
-  padding-bottom: 50px;
 }
 
 .afterHeroContainer {
@@ -148,15 +147,16 @@
   }
   .textAfterHero {
     max-width: 90%;
-    line-height: 1.5;
+    line-height: 1.2;
+    margin-bottom: 20px;
   }
   .wrapperAfterHeroTeam .textAfterHero {
     max-width: 100%;
     font-size: 18px;
   }
-  .afterHeroContainer {
+  /* .afterHeroContainer {
     padding-bottom: 5vh;
-  }
+  } */
 }
 
 .noPadding {

@@ -43,7 +43,7 @@ const Menu = ({ menuOpened, setMenuOpened, menuitems }) => {
                 key={`itemmenu${i}`}>
                 {item.subitems && item.subitems.length > 0 ? (
                   <>
-                    <p className={`news bold uppercase ${styles.itemName}`}>
+                    <p className={`news uppercase ${styles.itemName}`}>
                       {item.label}
                     </p>
                     <ul className={styles.innerUlItemMenu}>
@@ -64,7 +64,7 @@ const Menu = ({ menuOpened, setMenuOpened, menuitems }) => {
                   </>
                 ) : (
                   <p
-                    className={`news bold uppercase ${styles.itemName}`}
+                    className={`news  uppercase ${styles.itemName}`}
                     onClick={() => changePath()}>
                     {pathname !== `${item.link}` && (
                       <Link href={item.link}>{item.label}</Link>
