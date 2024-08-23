@@ -3,6 +3,7 @@ import styles from './features-jobs.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
+import Button from '../button';
 
 const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
   useEffect(() => {
@@ -48,7 +49,15 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
               className={styles.ball}
               style={{ backgroundColor: `${databtn.color}` }}></div>
           </div>
-          <Link
+          <Button
+            label={databtn.label}
+            color={'#faa300'}
+            link={true}
+            href={databtn.link}
+            className={styles.growText}
+            target={databtn.target}
+          />
+          {/* <Link
             style={{ backgroundImage: `url(/icons/${databtn.colorname}.png)` }}
             href={databtn.link}
             target={databtn.target}
@@ -57,7 +66,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
             data-aos-duration="600"
             data-aous-delay="0">
             {databtn.label}
-          </Link>
+          </Link> */}
         </div>
       )}
     </div>
