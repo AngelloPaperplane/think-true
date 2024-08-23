@@ -21,8 +21,9 @@ const FeaturesJobs = ({ dataContent }) => {
       </h3>
       <div className={`${styles.panelsIteratorContainer}`}>
         {dataContent.map((content, i) => (
-          <div
+          <Link
             key={i}
+            href={'/our-work'}
             className={`${styles.cardContainer} `}
             data-aos="fade-up"
             data-aos-duration="600"
@@ -55,11 +56,11 @@ const FeaturesJobs = ({ dataContent }) => {
               <div className={styles.ballLine}>
                 <div className={styles.ball}></div>
               </div>
-              <Link href={'/our-work'} className={`${styles.readMore}`}>
+              <div className={`${styles.readMore}`}>
                 READ MORE
-              </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
       <p

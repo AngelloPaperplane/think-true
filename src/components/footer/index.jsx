@@ -22,7 +22,7 @@ const Footer = ({ dataContent, isContact }) => {
           const nextSibling = br.nextSibling;
           if (nextSibling && nextSibling.nodeType === 3) {
             const text = nextSibling.nodeValue.trim();
-            const match = text.match(/^([A-Z]\.)/); 
+            const match = text.match(/^([A-Z]+\.)\s?/); 
             if (match) {
               const span = document.createElement('span');
               span.textContent = match[0]; 
