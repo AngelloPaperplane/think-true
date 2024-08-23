@@ -49,14 +49,14 @@
 }
 
 @media only screen and (max-width: 1024px) {
-
-  .titleProject{
+  .titleProject {
     font-size: 50px !important;
   }
-  .subtitleProject{
+  .subtitleProject {
     font-size: 30px !important;
   }
 }
+<<<<<<< HEAD
 @media only screen and (max-width: 768px) {
 
   .titleProject{
@@ -78,3 +78,5 @@
     font-size: 22px !important;
   }
 }
+=======
+>>>>>>> 554dfaa3b1e3ec3aa1b19dee3a0432f7b5255ae7

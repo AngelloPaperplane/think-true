@@ -437,7 +437,7 @@ a {
 .imgAnimation.active {
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
 }
-.word{
+.word {
   white-space: nowrap;
 }
 @media only screen and (max-width: 768px) {

@@ -12,6 +12,16 @@
 .contentContainer {
   display: flex;
   justify-content: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 0;
+}
+
+.contentContainerLeft {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row-reverse;
   flex-wrap: wrap;
   width: 100%;
   margin: 0;
@@ -39,7 +49,17 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+  width: 30%;
+  height: 45vh;
+}
 
+.imgPanelLeft {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 45%;
+  height: 30vh;
 }
 
 .textContainer {
@@ -48,7 +68,7 @@
   justify-content: center;
   width: auto;
   padding: 3.5vh 5vw;
-  gap: 5vh;
+  width: 60%;
 }
 
 .textContainerLeft {
@@ -56,41 +76,109 @@
   flex-direction: column;
   justify-content: center;
   width: auto;
-  padding: 0  5vw 0 0;
-  gap: 5vh;
+  padding: 0 5vw 0 0;
+  width: 55%;
 }
 
-.blockContainer {
-  flex-direction: column;
-  justify-content: flex-start;
-  flex-wrap: nowrap;
-}
-
-.textTitle {
+.textContainer h3,
+.textContainerLeft h3 {
   font-size: 30px;
   color: #363233;
   font-weight: 700;
   line-height: 1.4;
 }
 
-.textDescription {
-    color: #363233;
-    font-weight: 400;
-    font-size: 25px;
-    line-height: 1.4;
+.textContainer p,
+.textContainerLeft p {
+  color: #363233;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 1.4;
+  margin-bottom: 5vh;
+}
+
+.textContainerLeft p {
+  margin-bottom: 0vh;
 }
 
 @media only screen and (min-width: 2000px) {
+  .imgPanel {
+    max-height: 42vh;
+  }
 }
 
 @media only screen and (max-width: 1300px) {
-  .textTitle {
+  .textContainer h3,
+  .textContainerLeft h3 {
     font-size: 25px;
   }
-  .textDescription {
+  .textContainer p,
+  .textContainerLeft p {
     font-size: 20px;
+  }
+
+  .imgPanel {
+    width: 35%;
+  }
+
+  .imgPanelLeft {
+    width: 50%;
+    height: unset;
+    min-height: 25vh;
+  }
+
+  .textContainer {
+    width: 65%;
+  }
+
+  .textContainerLeft {
+    width: 50%;
   }
 }
 
 @media only screen and (max-width: 768px) {
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    position: relative;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    row-gap: 2vh;
+    margin-bottom: 0;
+  }
+
+  .contentContainerLeft,
+  .contentContainer {
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
+  .contentContainer {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0;
+    justify-self: center;
+  }
+
+  .imgPanel {
+    width: 70%;
+    height: 35vh;
+  }
+
+  .imgPanelLeft {
+    width: 90%;
+    height: 25vh;
+  }
+
+  .textContainer,
+  .textContainerLeft {
+    width: 85%;
+    padding: 2vh 0 3vh;
+    margin-left: auto;
+  }
 }

@@ -75,7 +75,12 @@ const Agency = ({ image, dataContent }) => {
                 data-aos-duration="600"
                 data-aous-delay="0">
                 <div className={styles.ballRedLine}>
-                <Button className={styles.linkBallRedLine} href={'/our-work'} link={true} label={buttonlabel}color='#d02e2a'></Button>
+                  <Button
+                    className={styles.linkBallRedLine}
+                    href={'/our-work'}
+                    link={true}
+                    label={buttonlabel}
+                    color="#d02e2a"></Button>
                 </div>
               </div>
             )}

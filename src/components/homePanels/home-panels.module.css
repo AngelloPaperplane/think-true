@@ -189,11 +189,10 @@
   .imgPanel {
     height: 30vh;
   }
-
 }
 
 @media only screen and (max-width: 768px) {
-  .titlePanelSection{
+  .titlePanelSection {
     font-size: 80px;
   }
   .servicesContainer {
@@ -210,11 +209,9 @@
     height: 25vh;
   } */
 
-
   /* .titleCard {
     font-size: 7vw;
   } */
-
 
   /* .descriptionCard {
     width: 80%;
@@ -236,11 +233,11 @@
     margin-left: 0.5vw;
   }
 
-  .lineContainer{
+  .lineContainer {
     width: 100%;
   }
 
-  .textReadMore{
+  .textReadMore {
     max-width: 100%;
   }
 }
