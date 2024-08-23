@@ -133,6 +133,8 @@
     white-space: normal;
     text-align: center;
     width: 100%;
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 

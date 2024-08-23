@@ -442,12 +442,16 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .slick-arrow {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     margin-top: -20px;
   }
 
   .withTextSlider {
     top: 70%;
+  }
+
+  .slick-track > div {
+    margin: 0 5px;
   }
 }

@@ -32,4 +32,8 @@
   .sliderSection {
     padding: 25px 0;
   }
+
+  .titleSlider {
+    margin-bottom: 25px;
+  }
 }
