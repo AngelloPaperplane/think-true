@@ -5,8 +5,7 @@ import 'aos/dist/aos.css';
 import Link from 'next/link';
 import ImgTextB from '@/components/imgTextB';
 
-const AboutUsContent = ({ block }) => {
-  console.log(block);
+const AboutUsContent = ({whatdo,whatdo_new}) => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -50,82 +49,48 @@ const AboutUsContent = ({ block }) => {
   return (
     <div className={`container ${styles.aboutContainer}`}>
       <h2
-        data-aos="fade-up"
-        data-aos-duration="600"
-        data-aos-delay="0"
-        className={` ${styles.titleSection}`}
-        dangerouslySetInnerHTML={{ __html: dataContent.title }}
-      />
-      <div
-        className={`container ${styles.contentContainer}`}
-        style={{ flexDirection: 'row' }}>
-        <div
-          className={`${styles.imgPanel}`}
-          style={{
-            backgroundImage: `${`url(${
-              dataContent.image ? dataContent.image : ''
-            })`}`,
-            width: '30%',
-          }}
-        />
-        <div
-          className={`${styles.textContainer}`}
-          style={{
-            width: 'calc(60%)',
-          }}>
-          <div className={`${styles.blockContainer}`}>
-            <h3
-              className={`${styles.textTitle}`}
-              dangerouslySetInnerHTML={{ __html: dataContent.title }}
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aos-delay="0"
+              className={` ${styles.titleSection}`}
+              dangerouslySetInnerHTML={{ __html: whatdo .title }}
             />
-            <p
-              className={`${styles.textDescription}`}
-              dangerouslySetInnerHTML={{ __html: dataContent.text[0] }}
-            />
-          </div>
+      <div 
+        className={`${styles.contentContainer}`}
+      >
 
-          <div className={`${styles.blockContainer}`}>
-            <h3
-              className={`${styles.textTitle}`}
-              dangerouslySetInnerHTML={{ __html: dataContent.title }}
-            />
-            <p
-              className={`${styles.textDescription}`}
-              dangerouslySetInnerHTML={{ __html: dataContent.text[1] }}
-            />
-          </div>
-        </div>
+          <div
+                className={`${styles.imgPanel}`}
+                style={{
+                  backgroundImage: `${`url(${
+                    whatdo.image ? whatdo.image['super-large']: ''
+                  })`}`,
+                }}
+              />
+
+
+<div className={`${styles.textContainer}`}
+          dangerouslySetInnerHTML={{ __html: whatdo.sideText }}
+        />
       </div>
 
-      <div
-        className={`container ${styles.contentContainer}`}
-        style={{ flexDirection: 'row-reverse' }}>
-        <div
-          className={`${styles.imgPanel}`}
-          style={{
-            backgroundImage: `${`url(${
-              dataContent.image ? dataContent.image : ''
-            })`}`,
-            height: '30vh',
-            width: '45%',
-          }}
+      <div 
+        className={`${styles.contentContainerLeft}`}
+      >
+
+          <div
+                className={`${styles.imgPanelLeft}`}
+                style={{
+                  backgroundImage: `${`url(${
+                    whatdo.image ? whatdo_new.image['super-large']: ''
+                  })`}`,
+                }}
+              />
+
+        <div className={`${styles.textContainerLeft}`}
+          dangerouslySetInnerHTML={{ __html: whatdo_new.sideText }}
         />
-        <div
-          className={`${styles.textContainerLeft}`}
-          style={{
-            width: 'calc(55%)',
-          }}>
-          <div className={`${styles.blockContainer}`}>
-            <h3
-              className={`${styles.textTitle}`}
-              dangerouslySetInnerHTML={{ __html: dataContent.title }}
-            />
-            <p
-              className={`${styles.textDescription}`}
-              dangerouslySetInnerHTML={{ __html: dataContent.text[0] }}
-            />
-          </div>
-        </div>
+        
       </div>
 
       <p className={`${styles.textDescription}`}></p>
