@@ -26,12 +26,11 @@
   transition: 0.3s;
   opacity: 1;
   stroke-dasharray: 1500 1500;
-  
   animation-iteration-count: infinite;
 }
 
 .wrapperText:hover path{
-  animation: hide-highlight 1s forwards;
+  animation: hide-highlight 1s alternate;
 } 
 
 @keyframes hide-highlight {
