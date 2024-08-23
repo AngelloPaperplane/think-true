@@ -5,6 +5,7 @@ import styles from './footer.module.css';
 import Panels from '@/components/homePanels';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Button from '../button';
 
 const Footer = ({ dataContent, isContact }) => {
   useEffect(() => {
@@ -167,13 +168,7 @@ const Footer = ({ dataContent, isContact }) => {
                   <p id="messageForm" className={styles.textFormSent}></p>
                 </div>
                 <div className={styles.wrapperSendBtnForm}>
-                  <button
-                    data-aos="fade-up"
-                    data-aos-duration="600"
-                    data-aous-delay="0"
-                    className={`news ${styles.sendBtnForm}`}>
-                    SEND
-                  </button>
+                  <Button color='#faa300' label='SEND' className={`news ${styles.sendBtnForm}`}  />
                 </div>
                 <div
                   data-aos="fade"
@@ -321,7 +316,7 @@ const Footer = ({ dataContent, isContact }) => {
                 <div className={styles.ballRedLine}></div>
               </div>
               <div className={styles.wrapperSendBtnForm}>
-                <button className={styles.sendBtnForm}>SEND</button>
+                <Button color='' label='SEND'  />
               </div>
             </form>
             <div className={`flex j-s a-s ${styles.contactBlock}`}>

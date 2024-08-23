@@ -83,8 +83,8 @@ const Hero = ({ dataHero }) => {
         gsap.from(text.chars, {
           opacity: 0,
           y: 50,
-          duration: 1.5,
-          stagger: { amount: 1 },
+          duration: .8,
+          stagger: { amount: .3 },
         });
       });
     }

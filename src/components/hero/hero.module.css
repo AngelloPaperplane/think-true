@@ -42,6 +42,7 @@
   font-size: 120px;
   position: relative;
   text-align: center;
+  font-weight: 700;
 }
 
 .titleHero span {
@@ -50,6 +51,11 @@
   font-size: 3vw;
   margin-bottom: -2vw;
   color: #fff;
+  font-weight: 700;
+}
+
+.titleHero * {
+  font-weight: 700;
 }
 
 .lineHero {

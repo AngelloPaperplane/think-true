@@ -21,7 +21,8 @@ const AboutUs = ({ data }) => {
     team,
     whatdo_new,
   } = data;
-  console.log('blocks',blocks);
+  console.log('blocks', blocks);
+  console.log(data);
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setTimeout(() => {

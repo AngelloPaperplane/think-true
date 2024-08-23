@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Button from '../button';
 
 const Agency = ({ image, dataContent }) => {
   const router = useRouter();
@@ -74,14 +75,7 @@ const Agency = ({ image, dataContent }) => {
                 data-aos-duration="600"
                 data-aous-delay="0">
                 <div className={styles.ballRedLine}>
-                  <Link
-                    href={buttonlink}
-                    style={{
-                      backgroundImage: 'url(/icons/brick.png)',
-                    }}
-                    className={`news ${styles.linkBallRedLine}`}>
-                    {buttonlabel}
-                  </Link>
+                <Button className={styles.linkBallRedLine} href={'/our-work'} link={true} label={buttonlabel}color='#d02e2a'></Button>
                 </div>
               </div>
             )}

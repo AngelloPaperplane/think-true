@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Button from '../button';
 
 const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
   const router = useRouter();
@@ -21,7 +22,9 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
           pathname === '/about-us' && styles.afterHeroAbout
         }`}>
         <div
-          className={`container ${styles.afterHeroContainer}  ${afterhero ? styles.noPadding : ''}`}>
+          className={`container ${styles.afterHeroContainer}  ${
+            afterhero ? styles.noPadding : ''
+          }`}>
           {(mediaBlockContent.layout === 'home' ||
             mediaBlockContent.layout === 'team') && (
             <>
@@ -74,13 +77,11 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                       data-aos="fade-up"
                       data-aos-duration="600"
                       data-aous-delay="0">
-                      <Link
-                        href={mediaBlockContent.buttonlink}
-                        style={{
-                          backgroundImage: `url(/icons/${mediaBlockContent.buttoncolor}.png)`,
-                        }}>
-                        {mediaBlockContent.buttonlabel}
-                      </Link>
+                      <Button
+                        href={'/our-work'}
+                        link={true}
+                        label={mediaBlockContent.buttonlabel}
+                        color="#d02e2a"></Button>
                     </p>
                   )}
                 {mediaBlockContent.video && pathname !== '/' && (

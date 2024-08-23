@@ -26,6 +26,7 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
     });
     return () => isotope.current.destroy();
   }, []);
+  console.log(gridPictures);
   return (
     <section className={`siteSection ${styles.masonrySection}`}>
       <div className={`container filter-container ${styles.masonryContainer}`}>
@@ -46,7 +47,7 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
                   className={styles.linkDetailWork}></Link>
                 <div className={styles.contentImgGrid}>
                   <h2 className={`news ${styles.titleGridImg}`}>
-                    {img.content.title}{' '}
+                    {img.content.title}
                     <span
                       className={styles.line}
                       style={{ backgroundColor: img.content.color }}>

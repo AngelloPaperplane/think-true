@@ -4,6 +4,7 @@ import styles from './home-panels.module.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
+import Button from '../button';
 
 const FeaturesJobs = ({ dataContent }) => {
   useEffect(() => {
@@ -40,10 +41,12 @@ const FeaturesJobs = ({ dataContent }) => {
               style={{
                 width: `${content.titleWidth}`,
               }}
-              dangerouslySetInnerHTML={{ __html: content.title}}/>
+              dangerouslySetInnerHTML={{ __html: content.title }}
+            />
 
-            <h3 className={` ${styles.subtitleCard}`}
-            dangerouslySetInnerHTML={{ __html: content.subtitle}}
+            <h3
+              className={` ${styles.subtitleCard}`}
+              dangerouslySetInnerHTML={{ __html: content.subtitle }}
             />
 
             <p className={`${styles.descriptionCard}`}>{content.text}</p>
@@ -67,13 +70,7 @@ const FeaturesJobs = ({ dataContent }) => {
         data-aos="fade-up"
         data-aos-duration="600"
         data-aous-delay="0">
-        <Link
-          href={'/our-work'}
-          style={{
-            backgroundImage: 'url(/icons/brick.png)',
-          }}>
-          READ MORE
-        </Link>
+        <Button href={'/our-work'} link={true} label="READ MORE" color='#d02e2a'></Button>
       </p>
     </div>
   );

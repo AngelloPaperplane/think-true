@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Button from '../button';
 
 const ImgTextB = ({
   title,
@@ -99,14 +100,7 @@ const ImgTextB = ({
                   data-aos-duration="600"
                   data-aous-delay="0">
                   <div className={styles.ballRedLine}>
-                    <Link
-                      href={`/${link}`}
-                      style={{
-                        backgroundImage: `url(/icons/${buttoncolor}.png)`,
-                      }}
-                      className={`news ${styles.linkBallRedLine}`}>
-                      {buttonlabel}
-                    </Link>
+                    <Button className={styles.linkBallRedLine} href={'/our-work'} link={true} label={buttonlabel}color='#faa300'></Button>
                   </div>
                 </div>
               )}
