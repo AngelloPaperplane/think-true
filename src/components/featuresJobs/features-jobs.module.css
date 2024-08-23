@@ -19,7 +19,7 @@
   margin-bottom: -50px;
 }
 
-.featureBlock:last-of-type .contentFeature{
+.featureBlock:last-of-type .contentFeature {
   margin-bottom: 100px;
 }
 
@@ -83,20 +83,19 @@
   cursor: pointer;
 }
 
-@media (width <= 1500px){
+@media (width <= 1500px) {
   .titleFeatureJobIndex {
     font-size: 200px;
   }
 
-  .titleFeatureJob{
+  .titleFeatureJob {
     font-size: 60px;
   }
 
-  .contentFeature{
+  .contentFeature {
     margin-bottom: 100px;
   }
 }
-
 
 @media only screen and (max-width: 768px) {
   .contentFeature {
@@ -118,8 +117,6 @@
     font-size: 180px;
   }
 
-  
-
   /* .titleFeatureJobIndex {
     font-size: 40vw;
   }
@@ -128,7 +125,7 @@
     font-size: 12vw;
   } */
 
-  .growText{
+  .growText {
     margin-bottom: 0;
     white-space: normal;
     text-align: center;
@@ -145,7 +142,7 @@
     font-size: 150px;
   }
 
-  .titleFeatureJob{
+  .titleFeatureJob {
     font-size: 50px;
   }
 

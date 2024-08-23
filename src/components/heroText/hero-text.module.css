@@ -9,7 +9,7 @@
   font-size: 215px;
   color: #363233;
 }
-.titleHeroText *{
+.titleHeroText * {
   font-weight: 700;
 }
 
@@ -29,8 +29,6 @@
   }
 }
 @media only screen and (max-width: 768px) {
-  
-
   .titleHeroText {
     font-size: 120px;
   }

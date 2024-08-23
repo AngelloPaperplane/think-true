@@ -18,22 +18,24 @@ const Footer = ({ dataContent, isContact }) => {
 
   useEffect(() => {
     if (dataContent && dataContent.locations) {
-      document.querySelectorAll(`.${styles.infoUbication}`).forEach(container => {
-        container.querySelectorAll('br').forEach((br) => {
-          const nextSibling = br.nextSibling;
-          if (nextSibling && nextSibling.nodeType === 3) {
-            const text = nextSibling.nodeValue.trim();
-            const match = text.match(/^([A-Z]+\.)\s?/); 
-            if (match) {
-              const span = document.createElement('span');
-              span.textContent = match[0]; 
-              span.style.fontWeight = '700'; 
-              nextSibling.nodeValue = text.slice(match[0].length); 
-              br.parentNode.insertBefore(span, nextSibling);
+      document
+        .querySelectorAll(`.${styles.infoUbication}`)
+        .forEach((container) => {
+          container.querySelectorAll('br').forEach((br) => {
+            const nextSibling = br.nextSibling;
+            if (nextSibling && nextSibling.nodeType === 3) {
+              const text = nextSibling.nodeValue.trim();
+              const match = text.match(/^([A-Z]+\.)\s?/);
+              if (match) {
+                const span = document.createElement('span');
+                span.textContent = match[0];
+                span.style.fontWeight = '700';
+                nextSibling.nodeValue = text.slice(match[0].length);
+                br.parentNode.insertBefore(span, nextSibling);
+              }
             }
-          }
+          });
         });
-      });
     }
   }, [dataContent]);
 
@@ -168,7 +170,11 @@ const Footer = ({ dataContent, isContact }) => {
                   <p id="messageForm" className={styles.textFormSent}></p>
                 </div>
                 <div className={styles.wrapperSendBtnForm}>
-                  <Button color='#faa300' label='SEND' className={`news ${styles.sendBtnForm}`}  />
+                  <Button
+                    color="#faa300"
+                    label="SEND"
+                    className={`news ${styles.sendBtnForm}`}
+                  />
                 </div>
                 <div
                   data-aos="fade"
@@ -316,7 +322,7 @@ const Footer = ({ dataContent, isContact }) => {
                 <div className={styles.ballRedLine}></div>
               </div>
               <div className={styles.wrapperSendBtnForm}>
-                <Button color='' label='SEND'  />
+                <Button color="" label="SEND" />
               </div>
             </form>
             <div className={`flex j-s a-s ${styles.contactBlock}`}>

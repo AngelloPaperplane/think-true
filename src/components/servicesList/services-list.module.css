@@ -52,24 +52,22 @@
   font-weight: 700;
 }
 
-
-
 @media only screen and (max-width: 1300px) {
   .cardContainer {
     padding: 50px 40px;
   }
 
-  .titleCard{
+  .titleCard {
     font-size: 45px;
     min-height: 90px;
     margin-bottom: 20px;
   }
 
-  .descriptionCard{
+  .descriptionCard {
     font-size: 22px;
   }
 
-  .indexBlock{
+  .indexBlock {
     font-size: 120px;
   }
 }
@@ -80,7 +78,7 @@
     margin-top: 150px;
   }
 
-  .servicesContainer{
+  .servicesContainer {
     gap: 20px;
   }
 
@@ -88,28 +86,28 @@
     padding: 30px;
   }
 
-  .titleCard{
+  .titleCard {
     width: 100% !important;
     font-size: 24px;
     min-height: 48px;
     margin-bottom: 10px;
   }
 
-  .descriptionCard{
+  .descriptionCard {
     font-size: 20px;
     line-height: 1.2;
   }
 
-  .indexBlock{
+  .indexBlock {
     font-size: 80px;
   }
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 600px) {
   .cardContainer {
     width: 100%;
   }
-  .titleCard{
+  .titleCard {
     min-height: initial;
   }
 }

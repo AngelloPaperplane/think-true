@@ -28,17 +28,16 @@
   stroke-dasharray: 1500 1500;
 }
 
-.wrapperText:hover path{
+.wrapperText:hover path {
   animation: hide-highlight 1s forwards ease-in-out;
-} 
+}
 
 @keyframes hide-highlight {
-  
   0% {
     stroke-dasharray: 0 1500;
     opacity: 1;
   }
-  100%{
+  100% {
     stroke-dasharray: 1500 1500;
     opacity: 1;
   }

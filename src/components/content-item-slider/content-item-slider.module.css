@@ -49,11 +49,10 @@
 }
 
 @media only screen and (max-width: 1024px) {
-
-  .titleProject{
+  .titleProject {
     font-size: 50px !important;
   }
-  .subtitleProject{
+  .subtitleProject {
     font-size: 30px !important;
   }
 }

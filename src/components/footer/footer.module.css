@@ -70,7 +70,7 @@
   font-size: 20px;
 }
 
-.inputForm::placeholder{
+.inputForm::placeholder {
   font-size: 20px;
 }
 
@@ -321,12 +321,9 @@ textarea.inputForm {
 }
 
 @media only screen and (max-width: 1300px) {
-
-
   .patternForm {
     height: calc(100% - 15vh);
   }
-  
 
   .wrapperForm {
     margin-bottom: -15vh;
@@ -414,7 +411,7 @@ textarea.inputForm {
   .formTitle {
     font-size: 50px;
   }
-  .formSection{
+  .formSection {
     margin-top: 50px;
   }
   .legacyText {

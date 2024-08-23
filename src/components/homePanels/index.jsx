@@ -59,9 +59,7 @@ const FeaturesJobs = ({ dataContent }) => {
               <div className={styles.ballLine}>
                 <div className={styles.ball}></div>
               </div>
-              <div className={`${styles.readMore}`}>
-                READ MORE
-              </div>
+              <div className={`${styles.readMore}`}>READ MORE</div>
             </div>
           </Link>
         ))}
@@ -71,7 +69,11 @@ const FeaturesJobs = ({ dataContent }) => {
         data-aos="fade-up"
         data-aos-duration="600"
         data-aous-delay="0">
-        <Button href={'/our-work'} link={true} label="READ MORE" color='#d02e2a'></Button>
+        <Button
+          href={'/our-work'}
+          link={true}
+          label="READ MORE"
+          color="#d02e2a"></Button>
       </p>
     </div>
   );

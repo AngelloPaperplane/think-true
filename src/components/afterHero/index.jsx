@@ -9,7 +9,9 @@ import Button from '../button';
 const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
   const router = useRouter();
   const { pathname } = router;
-  const isMp4 = mediaBlockContent.video ? mediaBlockContent.video.split('.').pop() === 'mp4' : false;
+  const isMp4 = mediaBlockContent.video
+    ? mediaBlockContent.video.split('.').pop() === 'mp4'
+    : false;
   useEffect(() => {
     AOS.init();
   }, []);
@@ -103,7 +105,13 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                         className={`iframeVideo ${styles.iframeVideo}`}></iframe>
                     )}
                     {mediaBlockContent.video && isMp4 && (
-                      <video loop playsInline controls preload='true' src={mediaBlockContent.video} style={{width: '100%', height: '100%' }}></video>
+                      <video
+                        loop
+                        playsInline
+                        controls
+                        preload="true"
+                        src={mediaBlockContent.video}
+                        style={{ width: '100%', height: '100%' }}></video>
                     )}
                   </div>
                 )}

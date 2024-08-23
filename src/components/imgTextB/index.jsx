@@ -100,7 +100,12 @@ const ImgTextB = ({
                   data-aos-duration="600"
                   data-aous-delay="0">
                   <div className={styles.ballRedLine}>
-                    <Button className={styles.linkBallRedLine} href={'/our-work'} link={true} label={buttonlabel}color='#faa300'></Button>
+                    <Button
+                      className={styles.linkBallRedLine}
+                      href={'/our-work'}
+                      link={true}
+                      label={buttonlabel}
+                      color="#faa300"></Button>
                   </div>
                 </div>
               )}
