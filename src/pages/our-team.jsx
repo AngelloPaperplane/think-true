@@ -17,9 +17,9 @@ const OurTeam = ({ data }) => {
       <Hero dataHero={hero} />
       <AfterHero mediaBlockContent={description} />
       <MeetUs membersData={members} />
-      <TitleLine featuredText={featuredtext} />
+      {/* <TitleLine featuredText={featuredtext} /> */}
       {/* {Object.entries(popUpMember).length === 0 && ( */}
-      <Masonry columns={3} gridPictures={grid} />
+      {/* <Masonry columns={3} gridPictures={grid} /> */}
       {/* )} */}
 
       <Footer dataContent={formfooter} />

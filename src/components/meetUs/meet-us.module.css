@@ -20,7 +20,7 @@
   width: 22%;
   position: relative;
   margin-bottom: 50px;
-  cursor: pointer;
+  /* cursor: pointer; */
 }
 
 .imgMember {
