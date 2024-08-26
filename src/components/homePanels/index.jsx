@@ -24,7 +24,7 @@ const FeaturesJobs = ({ dataContent }) => {
         {dataContent.map((content, i) => (
           <Link
             key={i}
-            href={'/our-work'}
+            href={`/work/${content.link}`}
             className={`${styles.cardContainer} `}
             data-aos="fade-up"
             data-aos-duration="600"

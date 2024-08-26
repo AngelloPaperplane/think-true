@@ -21,12 +21,12 @@ const HeroText = ({ content }) => {
     tl.from(`.${styles.titleHeroText}`, {
       opacity: 0,
       duration: 1,
-    });
+    }); 
   }, []);
   return (
     <section className={`siteSection ${styles.heroText}`}>
       <div className={`container ${styles.heroTextContainer}`}>
-        <h2 className={`news splitText ${styles.titleHeroText}`}>
+        <h2 className={`news ${styles.titleHeroText}`}>
           {content.title}
         </h2>
         <h3 className={`news splitText ${styles.subtitleHeroText}`}>

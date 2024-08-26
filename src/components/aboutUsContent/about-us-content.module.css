@@ -102,9 +102,6 @@
 }
 
 @media only screen and (min-width: 2000px) {
-  .imgPanel {
-    max-height: 42vh;
-  }
 }
 
 @media only screen and (max-width: 1300px) {
