@@ -57,23 +57,21 @@
   }
 }
 @media only screen and (max-width: 768px) {
-
-  .titleProject{
+  .titleProject {
     font-size: 40px !important;
   }
-  .subtitleProject{
+  .subtitleProject {
     font-size: 25px !important;
   }
-  .contentProject{
+  .contentProject {
     padding-left: 10px;
   }
 }
 @media only screen and (max-width: 520px) {
-
-  .titleProject{
+  .titleProject {
     font-size: 24px !important;
   }
-  .subtitleProject{
+  .subtitleProject {
     font-size: 22px !important;
   }
 }

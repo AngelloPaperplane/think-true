@@ -158,3 +158,10 @@
     font-size: 20px;
   } */
 }
+
+@media only screen and (max-width: 378px) {
+  .growText {
+    font-size: 15px;
+    text-align: center;
+  }
+}

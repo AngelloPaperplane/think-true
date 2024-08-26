@@ -49,8 +49,8 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
-  width: 30%;
-  height: 45vh;
+  width: 35%;
+  /*height: 45vh;*/
 }
 
 .imgPanelLeft {
@@ -167,18 +167,25 @@
 
   .imgPanel {
     width: 70%;
-    height: 35vh;
+    aspect-ratio: 4/5;
+    margin: auto;
+    height: unset;
   }
 
   .imgPanelLeft {
     width: 90%;
     height: 25vh;
+    margin: auto;
   }
 
   .textContainer,
   .textContainerLeft {
-    width: 85%;
-    padding: 2vh 0 3vh;
-    margin-left: auto;
+    width: 90%;
+    padding: 3vh 0 3vh;
+  }
+  .textContainer p,
+  .textContainerLeft p {
+    font-size: 20px;
+    margin-bottom: 3vh;
   }
 }
