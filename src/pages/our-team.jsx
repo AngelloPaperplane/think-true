@@ -11,11 +11,15 @@ import React, { useState } from 'react';
 const OurTeam = ({ data }) => {
   const { meta, hero, description, members, featuredtext, grid, formfooter } =
     data;
+
+  console.log(description);
   return (
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
-      <AfterHero mediaBlockContent={description} />
+
+      {description.text && <AfterHero mediaBlockContent={description} />}
+
       <MeetUs membersData={members} />
       {/* <TitleLine featuredText={featuredtext} /> */}
       {/* {Object.entries(popUpMember).length === 0 && ( */}

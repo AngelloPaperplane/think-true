@@ -178,7 +178,9 @@
     font-size: 8vh;
   }
   .imgPanel {
-    height: 25vh;
+    height: auto;
+    aspect-ratio: 1/1;
+    max-height: 500px;
   }
 }
 
