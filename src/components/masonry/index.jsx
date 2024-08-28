@@ -8,7 +8,7 @@ const loadIsotope = () => require('isotope-layout');
 let Isotope;
 const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
   const isotope = useRef(null);
-  // console.log(gridPictures);
+  console.log('gridPictures',gridPictures);
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -33,9 +33,8 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
         {gridPictures.map((img, i) => (
           <div
             key={typeof window !== 'undefined' ? window.crypto.randomUUID() : i}
-            className={`${styles.innerImgMasonry} ${
-              styles[img.sizeClass]
-            } filter-item ${layout === 'ourWork' ? styles.ourWorkLayout : ''}`}
+            className={`${styles.innerImgMasonry} ${styles.square} 
+            filter-item ${layout === 'ourWork' ? styles.ourWorkLayout : ''}`}
             data-aos="fade-up"
             data-aos-duration="600"
             data-aous-delay="0"
