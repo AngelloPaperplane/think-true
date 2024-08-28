@@ -113,14 +113,12 @@ textarea.inputForm {
   font-weight: 700;
   font-size: 22px;
   line-height: 1.2;
-  letter-spacing: 0.06em;
   margin-bottom: 2.5px;
 }
 
 .infoUbication {
   font-size: 20px;
   line-height: 1.2;
-  letter-spacing: 0.08em;
 }
 
 .infoUbication::first-letter {

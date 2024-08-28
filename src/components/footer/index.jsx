@@ -6,8 +6,10 @@ import Panels from '@/components/homePanels';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Button from '../button';
+import { act } from 'react';
 
 const Footer = ({ dataContent, isContact }) => {
+  const actualYear = new Date().getFullYear().toString();
   useEffect(() => {
     AOS.init();
   }, []);
@@ -245,7 +247,7 @@ const Footer = ({ dataContent, isContact }) => {
               </ul>
             </div>
             <p className={`flex j-c a-c ${styles.legacyText}`}>
-              © 2023 Think-True /{' '}
+              {`© ${actualYear} Think-True / `}
               {privacy_link && privacy_link !== '' && (
                 <Link href={privacy_link}>{privacy_label}</Link>
               )}
@@ -472,8 +474,7 @@ const Footer = ({ dataContent, isContact }) => {
               </li>
             </ul>
           </div>
-          <p className={`flex j-c a-c ${styles.legacyText}`}>
-            © 2023 Think-True / All Rights Reserved /{' '}
+          <p className={`flex j-c a-c ${styles.legacyText}`}>{`© ${actualYear} Think-True / All Rights Reserved / `}
             <Link href="/privacy-policy">Terms & Conditions</Link>
           </p>
           <p className={styles.paperplaneText}>
