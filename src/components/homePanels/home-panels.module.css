@@ -102,6 +102,7 @@
   margin-top: 1vh;
   justify-content: flex-start;
   align-items: center;
+  transition: all 0.6s ease-in-out; 
 }
 
 .ballLine {
@@ -109,16 +110,16 @@
   height: 4px;
   position: relative;
   background-color: #d02e2a;
-  transition: all 0.3s ease; 
+  transition: all 0.6s ease-in-out; 
   transform-origin: left; 
 }
 
 .cardContainer:hover .lineContainer {
-  width: 60%;
+  width: 100%;
 }
 
 .cardContainer:hover .ballLine {
-  width: 60%;
+  width: 40%;
 }
 
 /* .ballLineLeft {
@@ -204,6 +205,14 @@
   .cardContainer {
     margin-bottom: 20px;
   }
+
+  .lineContainer {
+    width: 70%;
+  }
+
+  .ballLine {
+    width: 25%;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -252,6 +261,10 @@
     width: 100%;
   }
 
+  .ballLine {
+    width: 10%;
+  }
+
   .textReadMore {
     max-width: 100%;
   }
@@ -266,5 +279,8 @@
   }
   .titlePanelSection {
     font-size: 50px;
+  }
+  .cardContainer:hover .ballLine {
+    width: 35%;
   }
 }

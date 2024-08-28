@@ -5,11 +5,12 @@
 
 .formContainer {
   position: relative;
+  padding-bottom: 200px;
 }
 
 .patternForm {
   width: 2vw;
-  height: calc(100% - 260px);
+  height: 100%;
   position: absolute;
   left: 0%;
   background-color: #faa300;
@@ -49,7 +50,7 @@
   width: 100%;
   gap: 2%;
   margin-top: 30px;
-  margin-bottom: -260px;
+ /* margin-bottom: -260px;*/
 }
 
 .siteForm {
@@ -139,9 +140,10 @@ textarea.inputForm {
 }
 
 .imgSiteFooter img {
-  position: relative !important;
+  /*position: relative !important;*/
   object-fit: cover;
-  min-height: 1000px;
+  min-height: 900px;
+
 }
 
 .imgCertfFooter {
@@ -339,6 +341,12 @@ textarea.inputForm {
     min-height: 600px;
   }
 }
+
+@media only screen and (max-width: 896px) {
+  .imgSiteFooter img {
+    min-height: 550px;
+  }
+}
 @media only screen and (max-width: 768px) {
   .imgSiteFooter img {
     min-height: 300px;
@@ -359,7 +367,7 @@ textarea.inputForm {
   .wrapperForm {
     flex-direction: column-reverse;
     margin-bottom: 0;
-    padding-bottom: 70%;
+    /*padding-bottom: 70%;*/
   }
 
   .contactBlock {
