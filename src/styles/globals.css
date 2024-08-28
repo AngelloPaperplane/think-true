@@ -385,7 +385,7 @@ a {
 .slick-arrow {
   position: absolute;
   top: 60%;
-  left: 3%;
+  left: -9%;
   margin-top: -25px;
   width: 50px;
   height: 50px;
@@ -410,7 +410,7 @@ a {
 .slick-next {
   background-image: url(/icons/next.png);
   left: initial;
-  right: 3%;
+  right: -9%;
 }
 
 .slick-arrow.slick-disabled {
@@ -444,6 +444,15 @@ a {
   .container {
     width: 90%;
   }
+
+  .slick-arrow {
+    left: -3%;
+  }
+
+  .slick-next {
+    left: initial;
+    right: -3%;
+}
 }
 @media only screen and (max-width: 768px) {
   .slick-arrow {
