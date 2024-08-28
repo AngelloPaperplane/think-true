@@ -38,9 +38,14 @@
   margin-bottom: 3vh;
 }
 
-.imgPanel {
+.imgPanelContainer {
   width: 100%;
   aspect-ratio: 16/9;
+}
+
+.imgPanel {
+  width: 100%;
+  height: 100%;
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -104,6 +109,16 @@
   height: 4px;
   position: relative;
   background-color: #d02e2a;
+  transition: all 0.3s ease; 
+  transform-origin: left; 
+}
+
+.cardContainer:hover .lineContainer {
+  width: 60%;
+}
+
+.cardContainer:hover .ballLine {
+  width: 60%;
 }
 
 /* .ballLineLeft {
@@ -177,11 +192,12 @@
     align-self: flex-end;
     font-size: 8vh;
   }
-  .imgPanel {
+  .imgPanelContainer {
     height: auto;
     aspect-ratio: 1/1;
     max-height: 500px;
   }
+  
 }
 
 @media only screen and (max-width: 1300px) {

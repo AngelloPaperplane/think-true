@@ -29,14 +29,20 @@ const FeaturesJobs = ({ dataContent }) => {
             data-aos="fade-up"
             data-aos-duration="600"
             data-aous-delay="0">
-            <div
-              className={`${styles.imgPanel}`}
-              style={{
-                backgroundImage: `${`url(${
-                  content.img.large ? content.img['super-large'] : ''
-                })`}`,
-              }}
-            />
+
+            <div className={`${styles.imgPanelContainer}`}>
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="600"
+                data-aous-delay="0"
+                className={`${styles.imgPanel}`}
+                style={{
+                  backgroundImage: `${`url(${
+                    content.img.large ? content.img['super-large'] : ''
+                  })`}`,
+                }}
+              />
+            </div>
             <h2
               className={`news ${styles.titleCard}`}
               style={{
