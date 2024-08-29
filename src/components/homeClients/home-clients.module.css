@@ -53,7 +53,7 @@
   position: absolute;
   top: 0;
   left: 100%;
-  animation: translateMembersB 50s infinite linear 11s forwards;
+  animation: translateMembersB 50s infinite linear 11.4s forwards;
 }
 
 .collaboratorBox {
