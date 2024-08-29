@@ -8,6 +8,8 @@ const Clients = ({ dataContent }) => {
   useEffect(() => {
     AOS.init();
   }, []);
+
+  console.log('clients', clients);  
   return (
     <section className={`siteSection ${styles.clientsSection}`}>
       <div className={`container ${styles.clientsContainer}`}>
@@ -37,14 +39,11 @@ const Clients = ({ dataContent }) => {
         <div
           className={`${styles.collaboratorsContainer} flex j-c a-c`}
           style={{
-            width: `${clients.length * 16 > 100 ? clients.length * 16 : 100}vw`,
+            width: `${clients.length * 17 > 100 ? clients.length * 17 : 100}vw`,
           }}>
           {clients.map((logo, i) => (
             <div
               key={i}
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aous-delay="0"
               className={`bg-ct ${styles.collaboratorBox}`}
               style={{
                 backgroundImage: `url(${logo.medium})`,
@@ -56,15 +55,12 @@ const Clients = ({ dataContent }) => {
         <div
           className={`${styles.collaboratorsContainer} flex j-c a-c`}
           style={{
-            width: `${clients.length * 16 > 100 ? clients.length * 16 : 100}vw`,
-            left: `${clients.length * 16 > 100 ? clients.length * 16 : 100}vw`,
+            width: `${clients.length * 17 > 100 ? clients.length * 17 : 100}vw`,
+            left: `${clients.length * 17 > 100 ? clients.length * 17 : 100}vw`,
           }}>
           {clients.map((logo, i) => (
             <div
               key={100 + i}
-              data-aos="fade-up"
-              data-aos-duration="600"
-              data-aous-delay="0"
               className={`bg-ct ${styles.collaboratorBox}`}
               style={{
                 backgroundImage: `url(${logo.medium})`,

@@ -663,7 +663,7 @@
   }
 
   .infoBlock {
-    font-size: 23px;
+    font-size: 20px;
     line-height: 1.3;
   }
 
@@ -676,10 +676,10 @@
   }
 
   .textImpact.text_large {
-    font-size: 23px;
+    font-size: 20px;
   }
   .whatWeDoSec .infoBlock {
-    font-size: 23px;
+    font-size: 20px;
   }
 }
 

@@ -53,7 +53,7 @@
   position: absolute;
   top: 0;
   left: 100%;
-  animation: translateMembersB 50s infinite linear 11.4s forwards;
+  animation: translateMembersB 50s infinite linear 12s forwards;
 }
 
 .collaboratorBox {
@@ -85,9 +85,6 @@
 }
 
 @media (width <= 1600px) {
-  .infoClients {
-    font-size: 23px;
-  }
 }
 @media only screen and (max-width: 1300px) {
   /* .clientsTitle {

@@ -16,14 +16,14 @@
   flex-direction: column;
   width: calc(50% - 20px);
   aspect-ratio: 1/1;
-  padding: 85px 60px 50px;
+  padding: 85px 50px 50px;
   position: relative;
   justify-content: flex-end;
 }
 
 .titleCard {
   width: 90%;
-  font-size: 65px;
+  font-size: 50px;
   color: #363233;
   margin: 0;
   position: relative;
@@ -40,7 +40,7 @@
   width: 100%;
   align-self: flex-end;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   flex-grow: 1;
   line-height: 1.4;
 }
@@ -58,17 +58,13 @@
   }
 
   .titleCard {
-    font-size: 45px;
+    font-size: 40px;
     min-height: 90px;
     margin-bottom: 20px;
   }
 
-  .descriptionCard {
-    font-size: 22px;
-  }
-
   .indexBlock {
-    font-size: 120px;
+    font-size: 100px;
   }
 }
 
@@ -78,23 +74,28 @@
     margin-top: 150px;
   }
 
+  .titleCard {
+    font-size: 32px;
+  }
+
   .servicesContainer {
     gap: 20px;
   }
 
   .cardContainer {
     padding: 30px;
+    aspect-ratio: unset;
+    min-height: 350px;
   }
 
   .titleCard {
     width: 100% !important;
-    font-size: 24px;
+    font-size: 32px;
     min-height: 48px;
     margin-bottom: 10px;
   }
 
   .descriptionCard {
-    font-size: 20px;
     line-height: 1.2;
   }
 

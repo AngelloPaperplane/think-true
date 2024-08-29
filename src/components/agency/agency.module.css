@@ -151,9 +151,6 @@
 }
 
 @media (width <= 1600px) {
-  .floatInfoAgency {
-    font-size: 23px;
-  }
 }
 @media only screen and (max-width: 1300px) {
   .floatInfoAgency {
