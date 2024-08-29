@@ -18,6 +18,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
   // const playVideo = () => {
   //   document.querySelector('.iframeVideo').src += '&autoplay=1';
   // };
+  console.log('mediaBlockContent', mediaBlockContent);
   if (mediaBlockContent) {
     return (
       <section
@@ -65,7 +66,9 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                   )}
                 {mediaBlockContent.text && (
                   <div
-                    className={styles.textAfterHero}
+                    className={`${styles.textAfterHero} ${
+                      pathname === '/about-us' ? styles.aboutText : ''
+                    }`}
                     dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
                     data-aos="fade-up"
                     data-aos-duration="600"

@@ -41,6 +41,10 @@
   max-width: 55%;
 }
 
+.textAfterHero.aboutText {
+  max-width: 100%;
+}
+
 .textAfterHero a {
   text-align: center;
   margin: 20px auto 0;
@@ -103,10 +107,19 @@
   .textAfterHero {
     font-size: 23px;
   }
+  .textAfterHero.aboutText {
+    font-size: 20px;
+  }
+  
+  
 }
 @media only screen and (max-width: 1300px) {
   .textAfterHero {
     font-size: 20px;
+  }
+
+  .textAfterHero.aboutText {
+    font-size: 18px;
   }
 
   .titleAfterHero {
