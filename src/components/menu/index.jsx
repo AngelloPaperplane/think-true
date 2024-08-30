@@ -32,6 +32,7 @@ const Menu = ({ menuOpened, setMenuOpened, menuitems }) => {
       setMenuOpened(false);
     }, 3000);
   };
+  
   return (
     <>
       <div className={`${styles.wrapperMenu} ${isOpened ? styles.active : ''}`}>
