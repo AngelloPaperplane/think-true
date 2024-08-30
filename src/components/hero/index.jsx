@@ -95,7 +95,6 @@ const Hero = ({ dataHero }) => {
   }, []);
 
   if (dataHero) {
-    console.log(dataHero);
     const {
       title,
       title_color,
