@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 import Button from '../button';
 
 const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
+  console.log('mediaBlockContent', mediaBlockContent);
   const router = useRouter();
   const { pathname } = router;
   const isMp4 = mediaBlockContent.video
@@ -113,7 +114,8 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                         controls
                         preload="true"
                         src={mediaBlockContent.video}
-                        style={{ width: '100%', height: '100%' }}></video>
+                        style={{ width: '100%', height: '100%' }}
+                        poster={mediaBlockContent.image ? mediaBlockContent.image['super-large'] : ''}></video>
                     )}
                   </div>
                 )}

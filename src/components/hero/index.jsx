@@ -25,12 +25,10 @@ const Hero = ({ dataHero }) => {
   const toggleSoundVideo = (entries) => {
     const [entry] = entries;
     if (entry.isIntersecting) {
-      // entry.target.setAttribute('muted', false);
       if (buttonSoundActivated) {
         setIsActiveSound(true);
       }
     } else {
-      // entry.target.setAttribute('muted', true);
       setIsActiveSound(false);
     }
   };
@@ -46,7 +44,7 @@ const Hero = ({ dataHero }) => {
     threshold: 0,
   };
 
-  useEffect(() => {
+  const handleRouteChange = () => {
     if (pathname !== '/' && pathname !== '/about-us') {
       const observer = new IntersectionObserver(loadImage, options);
       const currentSect = heroSection.current;
@@ -59,9 +57,7 @@ const Hero = ({ dataHero }) => {
     }
 
     if (pathname === '/' || pathname === '/about-us') {
-      // console.log('entro');
       const currentVideo = videoHero.current;
-      // console.log(currentVideo);
       const observerVideo = new IntersectionObserver(
         toggleSoundVideo,
         optionsVideo
@@ -73,7 +69,15 @@ const Hero = ({ dataHero }) => {
         observerVideo.unobserve(currentVideo);
       };
     }
-  }, []);
+  };
+
+  useEffect(() => {
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [pathname]);
 
   useEffect(() => {
     AOS.init();
@@ -89,9 +93,9 @@ const Hero = ({ dataHero }) => {
       });
     }
   }, []);
+
   if (dataHero) {
     console.log(dataHero);
-    // es el que va a quedar...
     const {
       title,
       title_color,
@@ -110,6 +114,7 @@ const Hero = ({ dataHero }) => {
       have_sound,
     } = dataHero;
     const logoShow = layout === 'principal';
+
     return (
       <>
         {image['super-large'] && videoUrl && videoUrl !== '' && (
