@@ -40,47 +40,34 @@
 
 .collaboratorsContainer {
   width: 100%;
-  gap: 1%;
-  display: flex;
   position: relative;
-  left: 100%;
-  justify-content: center;
-  align-items: center;
-  animation: translateMembers 50s infinite linear 0s forwards;
+  display: inline-block;
+  left: 0%;
 }
 
-.collaboratorsContainer:last-of-type {
-  position: absolute;
-  top: 0;
-  left: 100%;
-  animation: translateMembersB 50s infinite linear 12s forwards;
-}
 
 .collaboratorBox {
-  /* max-width: 250px; */
   width: 10.1111111%;
   aspect-ratio: 1/1;
+  float: left;
+  animation: translateMembers 25s infinite linear 0s forwards;
+  background-size: 70%;
 }
 
 .wrapperCollaborators {
   position: relative;
   margin: 50px 0;
+  white-space: nowrap;
 }
 
 @keyframes translateMembers {
-  0% {
-    transform: translateX(0%);
-  }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(calc(-100% * var(--totalClients)));
   }
 }
 @keyframes translateMembersB {
-  0% {
-    transform: translateX(0%);
-  }
   100% {
-    transform: translateX(-200%);
+    transform: translateX(-100%);
   }
 }
 
