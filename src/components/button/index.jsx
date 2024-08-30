@@ -2,11 +2,14 @@ import Link from 'next/link';
 import React from 'react';
 import styles from './button.module.css';
 
-const Button = ({ label, link, href, onClick, color, className }) => {
+const Button = ({ label, link, href, onClick, color, className , target }) => {
   return (
     <>
       {link && (
-        <Link href={href} className={className}>
+        <Link 
+        href={href} className={className}
+        target={target ? target : '_self'}
+        >
           <span className={styles.wrapperText}>
             <span className={styles.textButton}>{label}</span>
             <svg

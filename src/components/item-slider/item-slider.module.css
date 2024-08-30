@@ -3,17 +3,30 @@
   /* margin: 0 1%; */
   aspect-ratio: 1/1;
   position: relative;
+  overflow: hidden;
 }
 
 .projectOnlyImg {
   aspect-ratio: 16/9;
+  transform: scale(1);
 }
 
 .projectImg {
   position: relative;
   width: 100%;
   height: 100%;
+  transform: scale(1);
+  transition: all 0.3s ease-in-out;
 }
+
+.project:hover .projectImg {
+  transform: scale(1.2);
+}
+
+.projectOnlyImg:hover .projectImg {
+  transform: scale(1);
+}
+
 
 .projectImg:before {
   content: '';

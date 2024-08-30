@@ -18,7 +18,6 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
   // const playVideo = () => {
   //   document.querySelector('.iframeVideo').src += '&autoplay=1';
   // };
-  console.log('mediaBlockContent', mediaBlockContent);
   if (mediaBlockContent) {
     return (
       <section

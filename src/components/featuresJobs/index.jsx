@@ -9,6 +9,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
   useEffect(() => {
     AOS.init();
   }, []);
+
   return (
     <div className={`container ${styles.featureBlock}`}>
       <div className={`flex j-s a-e ${styles.contentFeature}`}>
@@ -55,7 +56,7 @@ const FeaturesJobs = ({ contentFeaturesJobs, last, databtn }) => {
             link={true}
             href={databtn.link}
             className={styles.growText}
-            target={databtn.target}
+            target={databtn.target }
           />
           {/* <Link
             style={{ backgroundImage: `url(/icons/${databtn.colorname}.png)` }}

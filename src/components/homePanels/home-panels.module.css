@@ -37,10 +37,11 @@
   align-items: flex-start;
   margin-bottom: 3vh;
 }
-
+/*
 .imgPanelContainer {
   width: 100%;
   aspect-ratio: 16/9;
+  
 }
 
 .imgPanel {
@@ -49,6 +50,27 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
+
+}
+*/
+
+.imgPanelContainer {
+  position: relative;
+  margin: 1.5%;
+  overflow: hidden;
+  aspect-ratio: 16/9;
+  width: 100%;
+}
+
+.imgPanel {
+  object-fit: cover;
+  object-position: center center;  
+  transform: scale(1);
+  transition: all .3s ease-in-out;
+}
+
+.imgPanelContainer:hover .imgPanel{
+  transform: scale(1.2);
 }
 
 .titleCard {

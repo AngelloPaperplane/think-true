@@ -10,9 +10,6 @@ const AboutUsContent = ({ whatdo, whatdo_new }) => {
     AOS.init();
   }, []);
 
-  console.log('whatdo', whatdo);
-  console.log('whatdo_new', whatdo_new);
-
   return (
     <div className={`container ${styles.aboutContainer}`}>
       <h2

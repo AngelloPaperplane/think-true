@@ -8,7 +8,6 @@ const loadIsotope = () => require('isotope-layout');
 let Isotope;
 const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
   const isotope = useRef(null);
-  console.log('gridPictures',gridPictures);
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -26,7 +25,6 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
     });
     return () => isotope.current.destroy();
   }, []);
-  console.log(gridPictures);
   return (
     <section className={`siteSection ${styles.masonrySection}`}>
       <div className={`container filter-container ${styles.masonryContainer}`}>

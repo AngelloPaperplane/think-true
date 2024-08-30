@@ -10,7 +10,6 @@ const FeaturesJobs = ({ dataContent }) => {
   useEffect(() => {
     AOS.init();
   }, []);
-  console.log('dataContent', dataContent);
   return (
     <div className={`container ${styles.panelsContainer}`}>
       <h3
@@ -29,19 +28,20 @@ const FeaturesJobs = ({ dataContent }) => {
             data-aos="fade-up"
             data-aos-duration="600"
             data-aous-delay="0">
+            <div
+              key={i}
+              className={`${styles.imgPanelContainer}`}
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aous-delay="0"
+              data-aos-offset="-100">
 
-            <div className={`${styles.imgPanelContainer}`}>
-              <div
-                data-aos="zoom-in"
-                data-aos-duration="600"
-                data-aous-delay="0"
-                className={`${styles.imgPanel}`}
-                style={{
-                  backgroundImage: `${`url(${
-                    content.img.large ? content.img['super-large'] : ''
-                  })`}`,
-                }}
-              />
+                <Image
+                  src={content.img.large ? content.img['super-large'] : ''}
+                  alt={content.img.alt ? content.img.alt : ''}
+                  fill
+                  className={styles.imgPanel}
+                />
             </div>
             <h2
               className={`news ${styles.titleCard}`}

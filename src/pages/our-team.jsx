@@ -12,7 +12,6 @@ const OurTeam = ({ data }) => {
   const { meta, hero, description, members, featuredtext, grid, formfooter } =
     data;
 
-  console.log(description);
   return (
     <>
       <Metas metadata={meta} />

@@ -12,8 +12,6 @@ import OurNumbers from '@/components/ourNumbers';
 const DetailWork = ({ data }) => {
   const { meta, hero, blocks, moreprojects, formfooter } = data;
 
-  console.log(blocks);
-
   const settings = {
     dots: false,
     arrows: true,

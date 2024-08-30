@@ -405,6 +405,12 @@ a {
 
 .onlyImageSection .slick-arrow {
   top: 50%;
+  left: 0;
+}
+
+.onlyImageSection .slick-next {
+  left: initial;
+  right: 0;
 }
 
 .slick-next {
