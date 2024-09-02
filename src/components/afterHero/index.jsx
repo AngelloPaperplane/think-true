@@ -7,7 +7,6 @@ import { useRouter } from 'next/router';
 import Button from '../button';
 
 const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
-  console.log('mediaBlockContent', mediaBlockContent);
   const router = useRouter();
   const { pathname } = router;
   const isMp4 = mediaBlockContent.video
@@ -84,7 +83,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                       data-aos-duration="600"
                       data-aous-delay="0">
                       <Button
-                        href={'/our-work'}
+                        href={`/${mediaBlockContent.buttonlink}`}
                         link={true}
                         label={mediaBlockContent.buttonlabel}
                         color="#d02e2a"></Button>

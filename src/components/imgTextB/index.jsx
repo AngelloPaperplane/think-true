@@ -102,7 +102,7 @@ const ImgTextB = ({
                   <div className={styles.ballRedLine}>
                     <Button
                       className={styles.linkBallRedLine}
-                      href={'/our-work'}
+                      href={`/${link}`}
                       link={true}
                       label={buttonlabel}
                       color="#faa300"></Button>

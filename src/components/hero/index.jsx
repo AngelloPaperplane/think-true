@@ -11,6 +11,7 @@ const Hero = ({ dataHero }) => {
   const { pathname } = router;
   const heroSection = useRef(null);
   const videoHero = useRef(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false); 
   const [isActiveSound, setIsActiveSound] = useState(false);
 
   let buttonSoundActivated = false;
@@ -20,8 +21,10 @@ const Hero = ({ dataHero }) => {
     if (entry.isIntersecting) {
       entry.target.style.backgroundImage = `url(${entry.target.dataset.image})`;
       observer.unobserve(entry.target);
+      setIsImageLoaded(true); 
     }
   };
+
   const toggleSoundVideo = (entries) => {
     const [entry] = entries;
     if (entry.isIntersecting) {
@@ -38,46 +41,31 @@ const Hero = ({ dataHero }) => {
     rootMargin: '0px',
     threshold: 1.0,
   };
+
   const optionsVideo = {
     root: null,
     rootMargin: '0px',
     threshold: 0,
   };
 
-  const handleRouteChange = () => {
-    if (pathname !== '/' && pathname !== '/about-us') {
-      const observer = new IntersectionObserver(loadImage, options);
-      const currentSect = heroSection.current;
-      if (currentSect) {
-        observer.observe(currentSect);
-      }
-      return () => {
-        observer.unobserve(currentSect);
-      };
-    }
-
-    if (pathname === '/' || pathname === '/about-us') {
-      const currentVideo = videoHero.current;
-      const observerVideo = new IntersectionObserver(
-        toggleSoundVideo,
-        optionsVideo
-      );
-      if (currentVideo) {
-        observerVideo.observe(currentVideo);
-      }
-      return () => {
-        observerVideo.unobserve(currentVideo);
-      };
-    }
-  };
-
   useEffect(() => {
-    router.events.on('routeChangeComplete', handleRouteChange);
+    const currentSect = heroSection.current;
+    const currentVideo = videoHero.current;
+
+    const observer = new IntersectionObserver(loadImage, options);
+    const observerVideo = new IntersectionObserver(toggleSoundVideo, optionsVideo);
+
+    if (pathname !== '/' && pathname !== '/about-us' && currentSect) {
+      observer.observe(currentSect);
+    } else if ((pathname === '/' || pathname === '/about-us') && currentVideo) {
+      observerVideo.observe(currentVideo);
+    }
 
     return () => {
-      router.events.off('routeChangeComplete', handleRouteChange);
+      observer.disconnect();
+      observerVideo.disconnect();
     };
-  }, [pathname]);
+  }, [pathname]); 
 
   useEffect(() => {
     AOS.init();
@@ -136,6 +124,7 @@ const Hero = ({ dataHero }) => {
           }`}
           style={{
             backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
+            backgroundImage: isImageLoaded ? `url(${image['super-large']})` : 'none', 
           }}>
           {videoUrl && videoUrl !== '' && (
             <div className={styles.videoContainer}>

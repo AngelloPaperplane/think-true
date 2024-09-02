@@ -77,7 +77,7 @@ const Agency = ({ image, dataContent }) => {
                 <div className={styles.ballRedLine}>
                   <Button
                     className={styles.linkBallRedLine}
-                    href={'/our-work'}
+                    href={`/${buttonlink}`}
                     link={true}
                     label={buttonlabel}
                     color="#d02e2a"></Button>

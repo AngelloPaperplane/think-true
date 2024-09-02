@@ -9,8 +9,6 @@ const Clients = ({ dataContent }) => {
     AOS.init();
   }, []);
 
-  console.log('clients', clients);
-
   return (
     <section className={`siteSection ${styles.clientsSection}`}>
       <div className={`container ${styles.clientsContainer}`}>
