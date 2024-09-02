@@ -92,7 +92,7 @@
 .textContainerLeft p {
   color: #363233;
   font-weight: 400;
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.4;
   margin-bottom: 5vh;
 }
@@ -111,7 +111,7 @@
 
   .textContainer h3,
   .textContainerLeft h3 {
-    font-size: 25px;
+    font-size: 20px;
   }
   .textContainer p,
   .textContainerLeft p {

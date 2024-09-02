@@ -80,7 +80,7 @@
 .textFeature {
   color: #363233;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1;
   width: calc(100% - 50px);
 }
@@ -170,7 +170,7 @@
     padding: 25px 0;
   }
   .textFeature {
-    font-size: 18px;
+    font-size: 20px;
   }
   .sideText {
     font-size: 20px;
@@ -323,7 +323,7 @@
   }
 
   .textFeature {
-    font-size: 18px;
+    font-size: 20px;
     width: calc(100% - 50px);
   }
 
