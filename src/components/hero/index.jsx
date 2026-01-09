@@ -13,6 +13,7 @@ const Hero = ({ dataHero }) => {
   const videoHero = useRef(null);
   const [isImageLoaded, setIsImageLoaded] = useState(false); 
   const [isActiveSound, setIsActiveSound] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
 
   let buttonSoundActivated = false;
 
@@ -124,7 +125,7 @@ const Hero = ({ dataHero }) => {
           }`}
           style={{
             backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
-            backgroundImage: isImageLoaded ? `url(${image['super-large']})` : 'none', 
+            backgroundImage: !isVideoPlaying && isImageLoaded ? `url(${image['super-large']})` : 'none', 
           }}>
           {videoUrl && videoUrl !== '' && (
             <div className={styles.videoContainer}>
@@ -148,7 +149,10 @@ const Hero = ({ dataHero }) => {
                 muted={!isActiveSound}
                 preload=""
                 autoPlay
-                controls={isActiveSound}>
+                controls={isActiveSound}
+                onCanPlay={() => setIsVideoPlaying(true)}
+                onPlaying={() => setIsVideoPlaying(true)}
+                onPause={() => setIsVideoPlaying(false)}>
                 <source src={videoUrl} />
               </video>
             </div>
