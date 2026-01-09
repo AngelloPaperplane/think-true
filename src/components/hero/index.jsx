@@ -210,4 +210,5 @@ const Hero = ({ dataHero }) => {
   return <></>;
 };
 
+
 export default Hero;
