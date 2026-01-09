@@ -9,22 +9,22 @@ import TitleLine from '@/components/titleLine';
 import React, { useState } from 'react';
 
 const OurTeam = ({ data }) => {
-  
-
   const { meta, hero, description, members, featuredtext, grid, formfooter } =
     data;
+
   return (
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
-      <AfterHero mediaBlockContent={description} />
-      <MeetUs membersData={members}  />
-      <TitleLine featuredText={featuredtext} />
+
+      {description.text && <AfterHero mediaBlockContent={description} />}
+
+      <MeetUs membersData={members} />
+      {/* <TitleLine featuredText={featuredtext} /> */}
       {/* {Object.entries(popUpMember).length === 0 && ( */}
-        <Masonry columns={3} gridPictures={grid} />
+      {/* <Masonry columns={3} gridPictures={grid} /> */}
       {/* )} */}
 
-      
       <Footer dataContent={formfooter} />
     </>
   );

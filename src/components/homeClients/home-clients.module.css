@@ -1,5 +1,6 @@
 .clientsSection {
-  padding: 40vh 0 10vh;
+  /* padding: 40vh 0 ; */
+  margin-top: 100px;
   text-align: center;
 }
 
@@ -9,7 +10,7 @@
 
 .clientsTitle {
   font-weight: 700;
-  font-size: clamp(50px, 13vw, 200px);
+  font-size: 120px;
   color: #363233;
 }
 
@@ -21,7 +22,7 @@
 
 .infoClients,
 .infoCollaborators {
-  font-size: 25px;
+  font-size: 20px;
   line-height: 1.4;
   text-align: center;
   width: 50%;
@@ -34,64 +35,47 @@
 }
 
 .infoClients {
-  margin: 60px auto 30px;
-  margin-bottom: 30px;
+  margin: 20px auto;
 }
 
 .collaboratorsContainer {
   width: 100%;
-  margin: 100px 0 50px;
-  gap: 1%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: translateMembers 25s infinite linear 0s forwards;
+  position: relative;
+  display: inline-block;
+  left: 0%;
 }
 
-.collaboratorsContainer:last-of-type {
-  position: absolute;
-  top: -100px;
-  left: 100%;
-  animation: translateMembersB 25s infinite linear 12.5s forwards;
-}
 
 .collaboratorBox {
-  /* max-width: 250px; */
   width: 10.1111111%;
   aspect-ratio: 1/1;
+  float: left;
+  animation: translateMembers 25s infinite linear 0s forwards;
+  background-size: 70%;
 }
 
 .wrapperCollaborators {
   position: relative;
+  margin: 50px 0;
+  white-space: nowrap;
 }
 
 @keyframes translateMembers {
-  0% {
-    transform: translateX(100%);
+  100% {
+    transform: translateX(calc(-100% * var(--totalClients)));
   }
+}
+@keyframes translateMembersB {
   100% {
     transform: translateX(-100%);
   }
 }
-@keyframes translateMembersB {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
 
-@media  (width <= 1600px) {
-  .infoClients{
-    font-size: 23px;
-  }
-}
 @media only screen and (max-width: 1300px) {
   /* .clientsTitle {
     font-size: 24vw;
   } */
-  .infoClients{
+  .infoClients {
     font-size: 20px;
   }
 }
@@ -100,11 +84,17 @@
   .infoClients {
     width: 80%;
   }
+  .clientsTitle {
+    font-size: 80px;
+  }
 }
 
 @media only screen and (max-width: 520px) {
-  .clientsSection {
-    padding-top: 20vh;
+  /* .clientsSection {
+    padding-top: 35vh;
+  } */
+  .clientsTitle {
+    font-size: 50px;
   }
   .subtitleClients {
     font-size: 30px;

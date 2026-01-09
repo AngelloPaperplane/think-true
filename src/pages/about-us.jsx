@@ -8,6 +8,7 @@ import Hero from '@/components/hero';
 import AfterHero from '@/components/afterHero';
 import ImgTextB from '@/components/imgTextB';
 import Agency from '@/components/agency';
+import AboutUsContent from '@/components/aboutUsContent';
 
 const AboutUs = ({ data }) => {
   const {
@@ -20,7 +21,6 @@ const AboutUs = ({ data }) => {
     team,
     whatdo_new,
   } = data;
-  // console.log(hero);
   const { setPageLoaded } = useContext(ThinkTrue);
   useEffect(() => {
     setTimeout(() => {
@@ -38,11 +38,7 @@ const AboutUs = ({ data }) => {
       {
         // <Agency dataContent={team} />
       }
-      <HorizontalSection
-        blocksToIterate={blocks[0]}
-        classParent="01"
-        type="about-1"
-      />
+      <AboutUsContent whatdo={whatdo} whatdo_new={whatdo_new} />
       <Footer dataContent={formfooter} />
     </>
   );

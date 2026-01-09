@@ -4,6 +4,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Button from '../button';
 
 const Agency = ({ image, dataContent }) => {
   const router = useRouter();
@@ -23,67 +24,69 @@ const Agency = ({ image, dataContent }) => {
       buttonlabel,
     } = dataContent;
     return (
-      <section
-        className={`siteSection bg-cv ${styles.agencySection} ${
-          pathname === '/about-us' ? styles.agencyAbout : ''
-        }`}
-        style={{ backgroundImage: `url(${image['super-large']})` }}>
-        <div
-          className={`${styles.mobileImageHero} bg-cv`}
-          style={{
-            backgroundImage: `url(${image_mobile['super-large']})`,
-          }}></div>
-        <div className={`${styles.agencyContainer} container`}>
-          {title && (
-            <h2
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0"
-              className={`${styles.titleAgency} ${
-                pathname === '/about-us' ? 'aleo' : 'news'
-              } ${pathname === '/about-us' ? styles.aboutTitle : ''}`}
-              dangerouslySetInnerHTML={{ __html: title }}
-            />
-          )}
+      <>
+        <section
+          className={`siteSection bg-cv ${styles.agencySection} ${
+            pathname === '/about-us' ? styles.agencyAbout : ''
+          }`}
+          style={{ backgroundImage: `url(${image['super-large']})` }}>
+          <div
+            className={`${styles.mobileImageHero} bg-cv`}
+            style={{
+              backgroundImage: `url(${image_mobile['super-large']})`,
+            }}></div>
+          <div className={`${styles.agencyContainer} container`}>
+            {title && (
+              <h2
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aous-delay="0"
+                className={`${styles.titleAgency} ${
+                  pathname === '/about-us' ? 'aleo' : 'news'
+                } ${pathname === '/about-us' ? styles.aboutTitle : ''}`}
+                dangerouslySetInnerHTML={{ __html: title }}
+              />
+            )}
 
-          {subtitle && pathname !== '/about-us' && (
-            <h3
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0"
-              className={`news ${styles.subtitleAgency}`}
-              dangerouslySetInnerHTML={{ __html: subtitle }}
-            />
-          )}
+            {subtitle && pathname !== '/about-us' && (
+              <h3
+                data-aos="fade-up"
+                data-aos-duration="600"
+                data-aous-delay="0"
+                className={`news ${styles.subtitleAgency}`}
+                dangerouslySetInnerHTML={{ __html: subtitle }}
+              />
+            )}
+          </div>
+        </section>
 
+        <div className="container">
           <div className={styles.floatInfoAgency}>
+            <p
+              data-aos="fade-up"
+              data-aos-duration="600"
+              data-aous-delay="0"
+              className={styles.infoAgency}
+              dangerouslySetInnerHTML={{ __html: text }}></p>
             {buttonlabel !== '' && buttonlink !== '' && (
               <div
                 className={styles.redLine}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="600"
                 data-aous-delay="0">
                 <div className={styles.ballRedLine}>
-                  <Link
-                    href={buttonlink}
-                    style={{
-                      backgroundImage: `url(/icons/${buttoncolor}.png)`,
-                    }}
-                    className={`news ${styles.linkBallRedLine}`}>
-                    {buttonlabel}
-                  </Link>
+                  <Button
+                    className={styles.linkBallRedLine}
+                    href={`/${buttonlink}`}
+                    link={true}
+                    label={buttonlabel}
+                    color="#d02e2a"></Button>
                 </div>
               </div>
             )}
-            <p
-              data-aos="fade-up"
-              data-aos-duration="900"
-              data-aous-delay="0"
-              className={styles.infoAgency}
-              dangerouslySetInnerHTML={{ __html: text }}></p>
           </div>
         </div>
-      </section>
+      </>
     );
   }
   return (
@@ -95,7 +98,7 @@ const Agency = ({ image, dataContent }) => {
       <div className={`${styles.agencyContainer} container`}>
         <h2
           data-aos="fade-up"
-          data-aos-duration="900"
+          data-aos-duration="600"
           data-aous-delay="0"
           className={`${styles.titleAgency} news ${
             pathname === '/about-us' ? styles.aboutTitle : ''
@@ -106,7 +109,7 @@ const Agency = ({ image, dataContent }) => {
         {pathname !== '/about-us' && (
           <h3
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={`news ${styles.subtitleAgency}`}>
             {' '}
@@ -117,7 +120,7 @@ const Agency = ({ image, dataContent }) => {
         <div className={styles.floatInfoAgency}>
           <p
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={styles.infoAgency}>
             We pride ourselves on having a mighty, nimble, and fierce team
@@ -125,7 +128,7 @@ const Agency = ({ image, dataContent }) => {
           </p>
           <p
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={styles.infoAgency}>
             Our team is passionate about delivering results and exceeding our

@@ -1,8 +1,8 @@
 .containerTitleLine {
   /* width: 100%; */
   position: relative;
-  padding-bottom: 50vh;
-  margin-bottom: 15vh;
+  padding-bottom: 210px;
+  margin-bottom: 50px;
 }
 
 .titleLine {
@@ -17,7 +17,7 @@
   position: absolute;
   top: 110%;
   width: 5px;
-  height: 48vh;
+  height: 200px;
 }
 
 .ballLine {

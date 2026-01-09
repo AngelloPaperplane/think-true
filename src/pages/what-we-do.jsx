@@ -2,6 +2,7 @@ import Metas from '@/components/metaDatas';
 import Footer from '@/components/footer';
 import Hero from '@/components/hero';
 import HorizontalSection from '@/components/horizontalSection';
+import ServicesList from '@/components/servicesList';
 import React from 'react';
 
 const WhatWeDo = ({ data }) => {
@@ -11,11 +12,7 @@ const WhatWeDo = ({ data }) => {
     <>
       <Metas metadata={meta} />
       <Hero dataHero={hero} />
-      <HorizontalSection
-        blocksToIterate={horizontalcontent}
-        classParent="01"
-        type="whatWeDo"
-      />
+      <ServicesList dataContent={horizontalcontent} />
       <Footer dataContent={formfooter} />
     </>
   );

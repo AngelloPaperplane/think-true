@@ -8,7 +8,6 @@ const loadIsotope = () => require('isotope-layout');
 let Isotope;
 const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
   const isotope = useRef(null);
-  // console.log(gridPictures);
   useEffect(() => {
     if (typeof window === 'undefined') {
       return;
@@ -36,7 +35,7 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
               styles[img.sizeClass]
             } filter-item ${layout === 'ourWork' ? styles.ourWorkLayout : ''}`}
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="600"
             data-aous-delay="0"
             data-aos-offset="-100">
             {img.content && (
@@ -46,7 +45,7 @@ const Masonry = ({ columns, gridPictures, heightColumn, layout }) => {
                   className={styles.linkDetailWork}></Link>
                 <div className={styles.contentImgGrid}>
                   <h2 className={`news ${styles.titleGridImg}`}>
-                    {img.content.title}{' '}
+                    {img.content.title}
                     <span
                       className={styles.line}
                       style={{ backgroundColor: img.content.color }}>

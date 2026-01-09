@@ -22,9 +22,9 @@ const MeetUs = ({ membersData }) => {
                   typeof window !== 'undefined' ? window.crypto.randomUUID() : i
                 }
                 className={`${styles.wrapperMember}`}
-                onClick={() => setPopUpMember(member)}
+                // onClick={() => setPopUpMember(member)}
                 data-aos="fade-down"
-                data-aos-duration="900"
+                data-aos-duration="600"
                 data-aous-delay="0">
                 <div className={styles.imgMember}>
                   <Image

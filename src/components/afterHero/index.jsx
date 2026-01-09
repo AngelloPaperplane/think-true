@@ -4,10 +4,14 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
+import Button from '../button';
 
 const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
   const router = useRouter();
   const { pathname } = router;
+  const isMp4 = mediaBlockContent.video
+    ? mediaBlockContent.video.split('.').pop() === 'mp4'
+    : false;
   useEffect(() => {
     AOS.init();
   }, []);
@@ -21,25 +25,25 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
           pathname === '/about-us' && styles.afterHeroAbout
         }`}>
         <div
-          className={`container ${styles.afterHeroContainer} ${
-            pathname === '/work/[id]' ? styles.noPaddingMobile : ''
-          } ${afterhero ? styles.noPadding : ''}`}>
+          className={`container ${styles.afterHeroContainer}  ${
+            afterhero ? styles.noPadding : ''
+          }`}>
           {(mediaBlockContent.layout === 'home' ||
             mediaBlockContent.layout === 'team') && (
             <>
-              {mediaBlockContent.image && pathname !== '/about-us' && (
+              {/* {mediaBlockContent.image && pathname !== '/about-us' && (
                 <div
                   className={`${styles.bigCircle}`}
                   data-aos="zoom-in"
-                  data-aos-duration="1900"
+                  data-aos-duration="600"
                   data-aous-delay="0"></div>
-              )}
+              )} */}
 
               <div className={styles.wrapperAfterHeroHome}>
                 {mediaBlockContent.title && mediaBlockContent.title.text && (
                   <h2
                     data-aos="fade-up"
-                    data-aos-duration="1900"
+                    data-aos-duration="600"
                     data-aous-delay="0"
                     className={`${styles.titleAfterHero} ${
                       pathname === '/about-us' ? 'news' : ''
@@ -47,12 +51,26 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     {mediaBlockContent.title.text}
                   </h2>
                 )}
+                {mediaBlockContent.subtitle &&
+                  mediaBlockContent.subtitle.text && (
+                    <h3
+                      data-aos="fade-up"
+                      data-aos-duration="600"
+                      data-aous-delay="0"
+                      className={`${styles.subTitleAfterHero} ${
+                        pathname === '/about-us' ? 'news' : ''
+                      } ${styles[mediaBlockContent.title.position]}`}>
+                      {mediaBlockContent.title.text}
+                    </h3>
+                  )}
                 {mediaBlockContent.text && (
                   <div
-                    className={styles.textAfterHero}
+                    className={`${styles.textAfterHero} ${
+                      pathname === '/about-us' ? styles.aboutText : ''
+                    }`}
                     dangerouslySetInnerHTML={{ __html: mediaBlockContent.text }}
                     data-aos="fade-up"
-                    data-aos-duration="1900"
+                    data-aos-duration="600"
                     data-aous-delay="0"
                   />
                 )}
@@ -62,15 +80,13 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                     <p
                       className={styles.textAfterHero}
                       data-aos="fade-up"
-                      data-aos-duration="1900"
+                      data-aos-duration="600"
                       data-aous-delay="0">
-                      <Link
-                        href={mediaBlockContent.buttonlink}
-                        style={{
-                          backgroundImage: `url(/icons/${mediaBlockContent.buttoncolor}.png)`,
-                        }}>
-                        {mediaBlockContent.buttonlabel}
-                      </Link>
+                      <Button
+                        href={`/${mediaBlockContent.buttonlink}`}
+                        link={true}
+                        label={mediaBlockContent.buttonlabel}
+                        color="#d02e2a"></Button>
                     </p>
                   )}
                 {mediaBlockContent.video && pathname !== '/' && (
@@ -81,14 +97,24 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                         : ''
                     } bg-cv`}
                     data-aos="zoom-out"
-                    data-aos-duration="1500"
+                    data-aos-duration="600"
                     data-aous-delay="0">
-                    {mediaBlockContent.video && (
+                    {mediaBlockContent.video && !isMp4 && (
                       <iframe
                         src={mediaBlockContent.video}
                         frameBorder="0"
-                        allow="autoplay; fullscreen; picture-in-picture"
+                        allow=" fullscreen; picture-in-picture"
                         className={`iframeVideo ${styles.iframeVideo}`}></iframe>
+                    )}
+                    {mediaBlockContent.video && isMp4 && (
+                      <video
+                        loop
+                        playsInline
+                        controls
+                        preload="true"
+                        src={mediaBlockContent.video}
+                        style={{ width: '100%', height: '100%' }}
+                        poster={mediaBlockContent.image ? mediaBlockContent.image['super-large'] : ''}></video>
                     )}
                   </div>
                 )}
@@ -108,7 +134,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
             {content.posterVideo && content.video && (
               <div
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 className={`${styles.bigCircle}`}></div>
             )}
@@ -118,7 +144,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                 content.text.map((text, i) => (
                   <p
                     data-aos="fade-up"
-                    data-aos-duration="900"
+                    data-aos-duration="600"
                     data-aous-delay="0"
                     key={
                       typeof window !== 'undefined'
@@ -132,7 +158,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
               {content.posterVideo && content.video && (
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.videoContainer} bg-cv`}
                   style={{ backgroundImage: `url(${content.posterVideo})` }}>
@@ -151,7 +177,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
               {content.title && content.title.text && (
                 <h2
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.titleAfterHero} ${
                     styles[content.title.position]
@@ -163,7 +189,7 @@ const AfterHero = ({ content, mediaBlockContent, afterhero }) => {
                 content.text.map((text, i) => (
                   <p
                     data-aos="fade-up"
-                    data-aos-duration="900"
+                    data-aos-duration="600"
                     data-aous-delay="0"
                     key={
                       typeof window !== 'undefined'

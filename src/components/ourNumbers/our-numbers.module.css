@@ -1,5 +1,5 @@
 .ourNumbersSection {
-  padding: 0vh 0 0vh;
+  padding: 50px 0;
 }
 
 .ourNumbersContainer {
@@ -7,10 +7,11 @@
 }
 
 .ourNumbersTitle {
-  font-size: clamp(60px, 15vw, 220px);
+  font-size: clamp(60px, 10vw, 120px);
   text-align: center;
   color: #363233;
-  margin-bottom: 20vh;
+  margin-bottom: 50px;
+  font-weight: 700;
 }
 
 .wrapperOurNumbers {
@@ -21,8 +22,8 @@
 }
 
 .itemNumber {
-  width: 28%;
-  margin-bottom: 5vh;
+  width: 35%;
+  margin-bottom: 20px;
   text-align: center;
 }
 
@@ -37,12 +38,13 @@
 }
 
 .bigNumber {
-  font-size: clamp(50px, 8vw, 150px);
+  font-size: clamp(50px, 8vw, 100px);
   margin-bottom: 30px;
+  font-weight: 700;
 }
 
 .typeNumber {
-  color: #00b099;
+  font-weight: 700;
 }
 
 .infoNumber {
@@ -51,6 +53,8 @@
   line-height: 1.1;
   text-align: center;
   color: #363233;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 @media only screen and (max-width: 768px) {
@@ -63,11 +67,14 @@
   }
 
   .infoNumber {
-    font-size: 16px;
+   /* font-size: 16px;*/
   }
 }
 
 @media only screen and (max-width: 520px) {
+  .ourNumbersSection {
+    padding: 25px 0;
+  }
   .itemNumber {
     width: 100%;
   }
@@ -77,6 +84,6 @@
   }
 
   .infoNumber {
-    font-size: 16px;
+   /* font-size: 16px;*/
   }
 }

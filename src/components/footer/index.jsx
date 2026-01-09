@@ -2,13 +2,44 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React, { useEffect } from 'react';
 import styles from './footer.module.css';
+import Panels from '@/components/homePanels';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Button from '../button';
+import { act } from 'react';
 
 const Footer = ({ dataContent, isContact }) => {
+  const actualYear = new Date().getFullYear().toString();
   useEffect(() => {
     AOS.init();
   }, []);
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  useEffect(() => {
+    if (dataContent && dataContent.locations) {
+      document
+        .querySelectorAll(`.${styles.infoUbication}`)
+        .forEach((container) => {
+          container.querySelectorAll('br').forEach((br) => {
+            const nextSibling = br.nextSibling;
+            if (nextSibling && nextSibling.nodeType === 3) {
+              const text = nextSibling.nodeValue.trim();
+              const match = text.match(/^([A-Z]+\.)\s?/);
+              if (match) {
+                const span = document.createElement('span');
+                span.textContent = match[0];
+                span.style.fontWeight = '700';
+                nextSibling.nodeValue = text.slice(match[0].length);
+                br.parentNode.insertBefore(span, nextSibling);
+              }
+            }
+          });
+        });
+    }
+  }, [dataContent]);
 
   if (dataContent) {
     const {
@@ -84,14 +115,14 @@ const Footer = ({ dataContent, isContact }) => {
               <>
                 <h2
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`titleSec news ${styles.formTitle}`}
                   dangerouslySetInnerHTML={{ __html: title }}
                 />
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoForm}
                   dangerouslySetInnerHTML={{ __html: text }}
@@ -104,7 +135,7 @@ const Footer = ({ dataContent, isContact }) => {
                 className={`${styles.siteForm} flex j-b a-c`}>
                 <input
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   type="text"
                   placeholder="Full name"
@@ -114,7 +145,7 @@ const Footer = ({ dataContent, isContact }) => {
                 />
                 <input
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   type="email"
                   placeholder="Email"
@@ -124,7 +155,7 @@ const Footer = ({ dataContent, isContact }) => {
                 />
                 <textarea
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.inputForm}
                   name=""
@@ -134,20 +165,25 @@ const Footer = ({ dataContent, isContact }) => {
                   <div
                     className={styles.redLine}
                     data-aos="fade-up"
-                    data-aos-duration="900"
+                    data-aos-duration="600"
                     data-aous-delay="0">
                     <div className={styles.ballRedLine}></div>
                   </div>
                   <p id="messageForm" className={styles.textFormSent}></p>
                 </div>
                 <div className={styles.wrapperSendBtnForm}>
-                  <button
-                    data-aos="fade-up"
-                    data-aos-duration="900"
-                    data-aous-delay="0"
-                    className={`news ${styles.sendBtnForm}`}>
-                    SEND
-                  </button>
+                  <Button
+                    color="#faa300"
+                    label="SEND"
+                    className={`news ${styles.sendBtnForm}`}
+                  />
+                </div>
+                <div
+                  data-aos="fade"
+                  data-aos-duration="600"
+                  data-aous-delay="0"
+                  className={`${styles.imgCertfFooter}`}>
+                  <Image src={'/images/NMSDC_CERIFIED.png'} fill alt="" />
                 </div>
               </form>
               <div className={`flex j-s a-s ${styles.contactBlock}`}>
@@ -155,19 +191,19 @@ const Footer = ({ dataContent, isContact }) => {
                   <div key={i} className={styles.directionGroup}>
                     <div
                       data-aos="fade-up"
-                      data-aos-duration="900"
+                      data-aos-duration="600"
                       data-aous-delay="0"
                       className={`${styles.pinIcon} bg-ct`}></div>
                     <h3
                       data-aos="fade-up"
-                      data-aos-duration="900"
+                      data-aos-duration="600"
                       data-aous-delay="0"
                       className={`bold ${styles.cityName}`}
                       dangerouslySetInnerHTML={{ __html: location.name }}
                     />
                     <p
                       data-aos="fade-up"
-                      data-aos-duration="900"
+                      data-aos-duration="600"
                       data-aous-delay="0"
                       className={styles.infoUbication}
                       dangerouslySetInnerHTML={{ __html: location.info }}
@@ -176,7 +212,7 @@ const Footer = ({ dataContent, isContact }) => {
                 ))}
                 <div
                   data-aos="fade"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.imgSiteFooter}`}>
                   <Image src={image.large} fill alt={image.alt} />
@@ -211,7 +247,7 @@ const Footer = ({ dataContent, isContact }) => {
               </ul>
             </div>
             <p className={`flex j-c a-c ${styles.legacyText}`}>
-              © 2023 Think-True /{' '}
+              {`© ${actualYear} Think-True / `}
               {privacy_link && privacy_link !== '' && (
                 <Link href={privacy_link}>{privacy_label}</Link>
               )}
@@ -242,14 +278,14 @@ const Footer = ({ dataContent, isContact }) => {
         <div className={`container ${styles.formContainer}`}>
           <h2
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={`titleSec news ${styles.formTitle}`}>
             LET’S MEET
           </h2>
           <p
             data-aos="fade-up"
-            data-aos-duration="900"
+            data-aos-duration="600"
             data-aous-delay="0"
             className={styles.infoForm}>
             We are more than this website and REAL people. Let’s meet to create
@@ -260,7 +296,7 @@ const Footer = ({ dataContent, isContact }) => {
             <form className={`${styles.siteForm} flex j-b a-c`}>
               <input
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 type="text"
                 placeholder="Full name"
@@ -268,7 +304,7 @@ const Footer = ({ dataContent, isContact }) => {
               />
               <input
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 type="email"
                 placeholder="Email"
@@ -276,52 +312,52 @@ const Footer = ({ dataContent, isContact }) => {
               />
               <textarea
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 className={styles.inputForm}
                 placeholder="Message"></textarea>
               <div
                 className={styles.redLine}
                 data-aos="fade-up"
-                data-aos-duration="900"
+                data-aos-duration="600"
                 data-aous-delay="0">
                 <div className={styles.ballRedLine}></div>
               </div>
               <div className={styles.wrapperSendBtnForm}>
-                <button className={styles.sendBtnForm}>SEND</button>
+                <Button color="" label="SEND" />
               </div>
             </form>
             <div className={`flex j-s a-s ${styles.contactBlock}`}>
               <div className={styles.directionGroup}>
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.pinIcon} bg-ct`}></div>
                 <h3
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`bold ${styles.cityName}`}>
                   Los Angeles
                 </h3>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>A.</span> 5220 Pacific Concourse{' '}
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   Dr. #190 - 90045
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>P.</span> 310.558.0425{' '}
@@ -330,33 +366,33 @@ const Footer = ({ dataContent, isContact }) => {
               <div className={styles.directionGroup}>
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.pinIcon} bg-ct`}></div>
                 <h3
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`bold ${styles.cityName}`}>
                   New York <br /> (Partner hub)
                 </h3>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>A.</span> 18 W. 27th St 2nd{' '}
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   Floor - 10001 CA
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>P.</span> 917.342.0010{' '}
@@ -365,33 +401,33 @@ const Footer = ({ dataContent, isContact }) => {
               <div className={styles.directionGroup}>
                 <div
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`${styles.pinIcon} bg-ct`}></div>
                 <h3
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={`bold ${styles.cityName}`}>
                   Francisco <br /> (Partner hub)
                 </h3>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>A.</span> 100 Shoreline Hwy Suite
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   295B, Mill Valley - 94941
                 </p>
                 <p
                   data-aos="fade-up"
-                  data-aos-duration="900"
+                  data-aos-duration="600"
                   data-aous-delay="0"
                   className={styles.infoUbication}>
                   <span>P.</span> 415.331.4789{' '}
@@ -399,7 +435,7 @@ const Footer = ({ dataContent, isContact }) => {
               </div>
               <div
                 data-aos="fade"
-                data-aos-duration="900"
+                data-aos-duration="600"
                 data-aous-delay="0"
                 className={`${styles.imgSiteFooter}`}>
                 <Image src={'/images/footer.jpg'} fill alt="" />
@@ -438,8 +474,7 @@ const Footer = ({ dataContent, isContact }) => {
               </li>
             </ul>
           </div>
-          <p className={`flex j-c a-c ${styles.legacyText}`}>
-            © 2023 Think-True / All Rights Reserved /{' '}
+          <p className={`flex j-c a-c ${styles.legacyText}`}>{`© ${actualYear} Think-True / All Rights Reserved / `}
             <Link href="/privacy-policy">Terms & Conditions</Link>
           </p>
           <p className={styles.paperplaneText}>

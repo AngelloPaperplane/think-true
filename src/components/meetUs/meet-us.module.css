@@ -1,5 +1,5 @@
-.meetUsContainer {
-  padding-bottom: 5vh;
+.meetUsSection {
+  padding: 100px 0 0px;
 }
 
 .meetUsTitle {
@@ -19,8 +19,8 @@
 .wrapperMember {
   width: 22%;
   position: relative;
-  margin-bottom: 10vh;
-  cursor: pointer;
+  margin-bottom: 50px;
+  /* cursor: pointer; */
 }
 
 .imgMember {
@@ -77,7 +77,7 @@
 
 .memberName {
   font-weight: 700;
-  font-size: 35px;
+  font-size: 26px;
   color: #363233;
   text-align: center;
   margin-top: 32%;
@@ -85,7 +85,7 @@
 
 .profession {
   font-weight: 400;
-  font-size: 20px;
+  font-size: 16px;
   line-height: 16px;
   color: #363233;
   text-align: center;
@@ -115,14 +115,22 @@
   }
 }
 @media only screen and (max-width: 768px) {
+  .meetUsSection {
+    padding: 50px 0 0;
+  }
   .wrapperMember {
     width: 48%;
-    margin-bottom: 5vh;
+    margin-bottom: 20px;
   }
 
   .wrapperTeam {
     align-items: flex-start;
   }
+
+  .innerLine {
+    height: 25%;
+  }
+  
 }
 @media only screen and (max-width: 520px) {
   .memberName {

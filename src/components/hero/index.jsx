@@ -11,6 +11,7 @@ const Hero = ({ dataHero }) => {
   const { pathname } = router;
   const heroSection = useRef(null);
   const videoHero = useRef(null);
+  const [isImageLoaded, setIsImageLoaded] = useState(false); 
   const [isActiveSound, setIsActiveSound] = useState(false);
 
   let buttonSoundActivated = false;
@@ -20,17 +21,17 @@ const Hero = ({ dataHero }) => {
     if (entry.isIntersecting) {
       entry.target.style.backgroundImage = `url(${entry.target.dataset.image})`;
       observer.unobserve(entry.target);
+      setIsImageLoaded(true); 
     }
   };
+
   const toggleSoundVideo = (entries) => {
     const [entry] = entries;
     if (entry.isIntersecting) {
-      // entry.target.setAttribute('muted', false);
       if (buttonSoundActivated) {
         setIsActiveSound(true);
       }
     } else {
-      // entry.target.setAttribute('muted', true);
       setIsActiveSound(false);
     }
   };
@@ -40,6 +41,7 @@ const Hero = ({ dataHero }) => {
     rootMargin: '0px',
     threshold: 1.0,
   };
+
   const optionsVideo = {
     root: null,
     rootMargin: '0px',
@@ -47,37 +49,23 @@ const Hero = ({ dataHero }) => {
   };
 
   useEffect(() => {
-    if (
-      pathname !== '/' &&
-      pathname !== '/about-us' &&
-      pathname !== '/work/[id]'
-    ) {
-      const observer = new IntersectionObserver(loadImage, options);
-      const currentSect = heroSection.current;
-      if (currentSect) {
-        observer.observe(currentSect);
-      }
-      return () => {
-        observer.unobserve(currentSect);
-      };
+    const currentSect = heroSection.current;
+    const currentVideo = videoHero.current;
+
+    const observer = new IntersectionObserver(loadImage, options);
+    const observerVideo = new IntersectionObserver(toggleSoundVideo, optionsVideo);
+
+    if (pathname !== '/' && pathname !== '/about-us' && currentSect) {
+      observer.observe(currentSect);
+    } else if ((pathname === '/' || pathname === '/about-us') && currentVideo) {
+      observerVideo.observe(currentVideo);
     }
 
-    if (pathname === '/' || pathname === '/about-us') {
-      // console.log('entro');
-      const currentVideo = videoHero.current;
-      // console.log(currentVideo);
-      const observerVideo = new IntersectionObserver(
-        toggleSoundVideo,
-        optionsVideo
-      );
-      if (currentVideo) {
-        observerVideo.observe(currentVideo);
-      }
-      return () => {
-        observerVideo.unobserve(currentVideo);
-      };
-    }
-  }, []);
+    return () => {
+      observer.disconnect();
+      observerVideo.disconnect();
+    };
+  }, [pathname]); 
 
   useEffect(() => {
     AOS.init();
@@ -87,15 +75,14 @@ const Hero = ({ dataHero }) => {
         gsap.from(text.chars, {
           opacity: 0,
           y: 50,
-          duration: 1.5,
-          stagger: { amount: 1 },
+          duration: 0.8,
+          stagger: { amount: 0.3 },
         });
       });
     }
   }, []);
+
   if (dataHero) {
-    console.log(dataHero);
-    // es el que va a quedar...
     const {
       title,
       title_color,
@@ -114,6 +101,7 @@ const Hero = ({ dataHero }) => {
       have_sound,
     } = dataHero;
     const logoShow = layout === 'principal';
+
     return (
       <>
         {image['super-large'] && videoUrl && videoUrl !== '' && (
@@ -136,6 +124,7 @@ const Hero = ({ dataHero }) => {
           }`}
           style={{
             backgroundColor: layout !== 'poster' ? 'transparent' : bg_color,
+            backgroundImage: isImageLoaded ? `url(${image['super-large']})` : 'none', 
           }}>
           {videoUrl && videoUrl !== '' && (
             <div className={styles.videoContainer}>
@@ -178,7 +167,7 @@ const Hero = ({ dataHero }) => {
               backgroundImage:
                 layout === 'poster' ? `url(${image['super-large']})` : 'none',
             }}>
-            {title && !logoShow && layout !== 'poster' && (
+            {title && !logoShow && pathname !== '/work/[id]' && (
               <h1
                 className={`news splitText ${styles.titleHero}`}
                 style={{ color: title_color ?? '#fff' }}

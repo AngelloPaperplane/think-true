@@ -17,12 +17,12 @@ const OurNumbers = ({ data }) => {
         <h2
           className={`news ${styles.ourNumbersTitle}`}
           data-aos="fade-up"
-          data-aos-duration="900"
+          data-aos-duration="600"
           data-aous-delay="0"
           dangerouslySetInnerHTML={{ __html: title }}
         />
 
-        <div className={`flex j-b a-s ${styles.wrapperOurNumbers}`}>
+        <div className={`flex j-c a-s ${styles.wrapperOurNumbers}`}>
           {numbers.map((number, i) => (
             <div
               key={
@@ -30,7 +30,7 @@ const OurNumbers = ({ data }) => {
               }
               className={styles.itemNumber}
               data-aos="fade-up"
-              data-aos-duration="900"
+              data-aos-duration="600"
               data-aos-delay={i * 200}>
               {number.title !== '' && (
                 <p className={`news ${styles.textBeforeNumber}`}>
