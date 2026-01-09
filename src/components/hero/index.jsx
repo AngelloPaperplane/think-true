@@ -104,7 +104,7 @@ const Hero = ({ dataHero }) => {
 
     return (
       <>
-        {image['super-large'] && videoUrl && videoUrl !== '' && (
+        {logoShow && image['super-large'] && videoUrl && videoUrl !== '' && (
           <div
             className={`container ${styles.heroContainer} ${styles.heroContainerBefore} flex j-s a-e bg-cv`}>
             <img
