@@ -36,6 +36,7 @@ function Home({ data }) {
 }
 
 export async function getServerSideProps() {
+  
   // Fetch data from external API
   const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}home`);
   const data = await res.json();
