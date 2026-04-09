@@ -8,8 +8,21 @@ import React, { useContext, useEffect } from 'react';
 import { ThinkTrue } from '@/context/ThinkTrueContext';
 
 const AboutTemplate = ({ data }) => {
-  // Verificamos que existan los datos para evitar errores
-  if (!data) return null;
+
+  const { setPageLoaded } = useContext(ThinkTrue);
+
+  useEffect(() => {
+    if (data) {
+      const timer = setTimeout(() => {
+        setPageLoaded(true);
+      }, 1600);
+      return () => clearTimeout(timer);
+    }
+  }, [data, setPageLoaded]);
+
+  if (!data) {
+    return null;
+  }
 
   const {
     meta,
@@ -19,14 +32,6 @@ const AboutTemplate = ({ data }) => {
     whatdo,
     whatdo_new,
   } = data;
-
-  const { setPageLoaded } = useContext(ThinkTrue);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setPageLoaded(true);
-    }, 1600);
-  }, []);
 
   return (
     <>

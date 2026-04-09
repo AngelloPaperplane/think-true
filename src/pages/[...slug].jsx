@@ -4,13 +4,10 @@ const DynamicPage = ({ data }) => {
   // Aquí podrías tener un switch si luego creas más plantillas
   // Por ahora, todas las páginas dinámicas usarán el diseño de "About"
   const templates = {
-    'page-about.php': AboutTemplate,
-    'page-contact.php': ContactTemplate,
-    'default': DefaultTemplate,
+    'page-about.php': AboutTemplate
   };
 
-  // 2. Elegimos la plantilla. Si el nombre que viene de WP no está en nuestro objeto, usamos Default.
-  const SelectedTemplate = templates[data.template] || templates['default'];
+  const SelectedTemplate = templates[data.template] || AboutTemplate; // Si no encuentra la plantilla, usa AboutTemplate por defecto
 
   return <SelectedTemplate data={data} />;
 };
