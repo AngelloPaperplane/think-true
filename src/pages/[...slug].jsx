@@ -10,7 +10,7 @@ export async function getServerSideProps({ params }) {
   // params.slug es un array, ej: ["mi-nueva-pagina"]
   const slug = params.slug.join('/');
 
-  const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}${slug}`);
+  const res = await fetch(`${process.env.NEXT_PUBLIC_ENDPOINT_CONTENT}pagetemplate?slug=${slug}`);
   const data = await res.json();
 
   // Si la página no existe en WP, mandamos 404
