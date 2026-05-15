@@ -8,8 +8,7 @@ const Overlay = () => {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(true);
   // const [count, setCount] = useState(0);
-  //const [isOnline, setIsOnline] = useState(false);
-  const [isOnline, setIsOnline] = useState(true); // deshabilitar el overlay de las palabras
+  const [isOnline, setIsOnline] = useState(false);
   const [showText, setShowText] = useState(false);
 
   const textOverlayContainer = useRef(null);
@@ -53,6 +52,9 @@ const Overlay = () => {
 
   if (isOnline) {
     return <></>;
+  }
+  if (1==1) {
+    return <></>; // disable the overlay for now
   }
   return (
     <div
