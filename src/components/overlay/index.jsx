@@ -53,7 +53,7 @@ const Overlay = () => {
   if (isOnline) {
     return <></>;
   }
-  if (1===1) {
+  if ('deshabilitar'==='deshabilitar') {
     return <></>; // disable the overlay for now
   }
   return (
