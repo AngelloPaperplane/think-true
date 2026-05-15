@@ -8,7 +8,8 @@ const Overlay = () => {
   const [index, setIndex] = useState(0);
   const [show, setShow] = useState(true);
   // const [count, setCount] = useState(0);
-  const [isOnline, setIsOnline] = useState(false);
+  //const [isOnline, setIsOnline] = useState(false);
+  const [isOnline, setIsOnline] = useState(true); // deshabilitar el overlay de las palabras
   const [showText, setShowText] = useState(false);
 
   const textOverlayContainer = useRef(null);
