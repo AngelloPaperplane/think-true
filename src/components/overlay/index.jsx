@@ -28,6 +28,9 @@ const Overlay = () => {
 
     localStorage.setItem('date', Date.now());
 
+
+    setIsOnline(true); // Set isOnline to true after checking localStorage
+
     if (isOnline) {
       return;
     }
@@ -53,9 +56,7 @@ const Overlay = () => {
   if (isOnline) {
     return <></>;
   }
-  if ('deshabilitar'==='deshabilitar') {
-    return <></>; // disable the overlay for now
-  }
+
   return (
     <div
       className={`${index % 2 !== 0 ? styles.grayBg : ''} ${
