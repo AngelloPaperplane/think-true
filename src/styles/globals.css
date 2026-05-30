@@ -448,17 +448,19 @@ a {
 }
 
 .titleFromWisiwig{
+  font-style: normal;
   font-weight: 700;
-  font-size: 120px;
-  line-height: 1;
+  font-size: 60px;
+  line-height: 0.9;
+  width: 65%;
   color: #363233;
-  text-align: center;
-  margin-bottom: 5vh;
+  margin-bottom: 10px;
 }
 
 @media only screen and (max-width: 1300px) {
   .titleFromWisiwig {
-    font-size: 90px;
+    font-size: 4.5vw;
+    line-height: 1;
   }
 }
 
@@ -478,7 +480,8 @@ a {
 }
 @media only screen and (max-width: 768px) {
   .titleFromWisiwig {
-    font-size: 60px;
+    font-size: 7vw;
+    width: 100%;
   }
 
   .slick-arrow {
@@ -493,10 +496,5 @@ a {
 
   .slick-track > div {
     margin: 0 5px;
-  }
-}
-@media only screen and (max-width: 425px) {
-  .titleFromWisiwig {
-    font-size: 40px;
   }
 }
