@@ -446,6 +446,22 @@ a {
 .word {
   white-space: nowrap;
 }
+
+.titleFromWisiwig{
+  font-weight: 700;
+  font-size: 120px;
+  line-height: 1;
+  color: #363233;
+  text-align: center;
+  margin-bottom: 5vh;
+}
+
+@media only screen and (max-width: 1300px) {
+  .titleFromWisiwig {
+    font-size: 90px;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .container {
     width: 90%;
@@ -461,6 +477,10 @@ a {
 }
 }
 @media only screen and (max-width: 768px) {
+  .titleFromWisiwig {
+    font-size: 60px;
+  }
+
   .slick-arrow {
     width: 35px;
     height: 35px;
@@ -473,5 +493,10 @@ a {
 
   .slick-track > div {
     margin: 0 5px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .titleFromWisiwig {
+    font-size: 40px;
   }
 }
