@@ -16,8 +16,8 @@ const AboutUsContent = ({ whatdo, whatdo_new }) => {
 
     const resizeHeights = () => {
       
-      if (section1Ref.current) section1Ref.current.style.height = 'auto';
-      if (section2Ref.current) section2Ref.current.style.height = 'auto';
+      if (section1Ref.current) {section1Ref.current.style.height = 'auto';}
+      if (section2Ref.current) {section2Ref.current.style.height = 'auto';}
 
       setTimeout(() => {
         const height1 = section1Ref.current ? section1Ref.current.offsetHeight : 0;
